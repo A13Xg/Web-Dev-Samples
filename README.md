@@ -1,6 +1,9 @@
 # Web Dev Samples
 
 ![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)
+![Version](https://img.shields.io/badge/version-1.0.0-blue)
+[![Build Status](https://img.shields.io/badge/build-passing-brightgreen)](https://github.com/Prompt-Engineering-Gemini/Web-Dev-Samples)
+[![View Demo](https://img.shields.io/badge/View-Demo-brightgreen?style=for-the-badge)](https://Prompt-Engineering-Gemini.github.io/Web-Dev-Samples/)
 
 A curated collection of 10 stunning and diverse website templates, each crafted with unique aesthetics and modern development practices. This project serves as a showcase of various web design and development techniques using HTML, CSS, and JavaScript.
 
@@ -8,9 +11,9 @@ A curated collection of 10 stunning and diverse website templates, each crafted 
 
 A live demo of the main showcase and all the individual sites is hosted on GitHub Pages.
 
-► **[View Live Demo](https://[your-github-username].github.io/Web-Dev-Samples/)** ◄
+► **[View Live Demo](https://Prompt-Engineering-Gemini.github.io/Web-Dev-Samples/)** ◄
 
-*(Please replace `[your-github-username]` with your actual GitHub username after deployment.)*
+
 
 ## ◆ Features
 
@@ -41,7 +44,7 @@ To run this project locally, you will need to have Node.js and npm installed on 
 
 1.  **Clone the repository:**
     ```sh
-    git clone https://github.com/[your-github-username]/Web-Dev-Samples.git
+    git clone https://github.com/Prompt-Engineering-Gemini/Web-Dev-Samples.git
     cd Web-Dev-Samples
     ```
 2.  **Install dependencies:**
