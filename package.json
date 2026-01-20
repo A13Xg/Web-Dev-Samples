@@ -1,0 +1,23 @@
+{
+  "name": "web-dev-samples",
+  "version": "1.0.0",
+  "description": "10 impressive sample websites showcasing different styles and techniques",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.22.1"
+  },
+  "keywords": [
+    "web-development",
+    "samples",
+    "portfolio",
+    "html",
+    "css",
+    "nodejs"
+  ],
+  "author": "Claude Code",
+  "license": "MIT"
+}

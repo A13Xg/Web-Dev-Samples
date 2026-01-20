@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wanderlust | Adventure Awaits</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Source+Sans+3:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="nav">
+        <div class="nav-container">
+            <a href="#" class="logo">Wanderlust</a>
+            <ul class="nav-links">
+                <li><a href="#destinations">Destinations</a></li>
+                <li><a href="#stories">Stories</a></li>
+                <li><a href="#guides">Guides</a></li>
+                <li><a href="#about">About</a></li>
+            </ul>
+            <div class="nav-actions">
+                <a href="#" class="nav-search" aria-label="Search">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/>
+                    </svg>
+                </a>
+                <a href="#" class="btn btn-nav">Subscribe</a>
+            </div>
+            <button class="menu-toggle" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="hero-bg">
+            <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1920&h=1080&fit=crop" alt="Mountain landscape">
+        </div>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <span class="hero-tag">Featured Destination</span>
+            <h1>The Swiss Alps</h1>
+            <p>Discover the breathtaking beauty of Europe's most iconic mountain range, where adventure meets tranquility.</p>
+            <a href="#" class="btn btn-primary">Read the Story</a>
+        </div>
+        <div class="hero-scroll">
+            <span>Scroll to Explore</span>
+            <div class="scroll-arrow">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 5v14M19 12l-7 7-7-7"/>
+                </svg>
+            </div>
+        </div>
+        <div class="hero-stats">
+            <div class="stat">
+                <span class="stat-number">127</span>
+                <span class="stat-label">Countries Explored</span>
+            </div>
+            <div class="stat">
+                <span class="stat-number">500+</span>
+                <span class="stat-label">Stories Shared</span>
+            </div>
+        </div>
+    </header>
+
+    <section id="destinations" class="destinations">
+        <div class="section-header">
+            <span class="section-tag">Explore</span>
+            <h2>Popular Destinations</h2>
+            <p>From tropical paradises to ancient cities, discover the world's most captivating places.</p>
+        </div>
+
+        <div class="destinations-grid">
+            <a href="#" class="destination-card destination-large">
+                <div class="destination-image">
+                    <img src="https://images.unsplash.com/photo-1512100356356-de1b84283e18?w=800&h=1000&fit=crop" alt="Bali, Indonesia">
+                </div>
+                <div class="destination-content">
+                    <span class="destination-region">Southeast Asia</span>
+                    <h3>Bali, Indonesia</h3>
+                    <p>12 Stories</p>
+                </div>
+            </a>
+
+            <a href="#" class="destination-card">
+                <div class="destination-image">
+                    <img src="https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?w=600&h=400&fit=crop" alt="Kyoto, Japan">
+                </div>
+                <div class="destination-content">
+                    <span class="destination-region">East Asia</span>
+                    <h3>Kyoto, Japan</h3>
+                    <p>8 Stories</p>
+                </div>
+            </a>
+
+            <a href="#" class="destination-card">
+                <div class="destination-image">
+                    <img src="https://images.unsplash.com/photo-1516483638261-f4dbaf036963?w=600&h=400&fit=crop" alt="Amalfi Coast, Italy">
+                </div>
+                <div class="destination-content">
+                    <span class="destination-region">Europe</span>
+                    <h3>Amalfi Coast, Italy</h3>
+                    <p>15 Stories</p>
+                </div>
+            </a>
+
+            <a href="#" class="destination-card">
+                <div class="destination-image">
+                    <img src="https://images.unsplash.com/photo-1539635278303-d4002c07eae3?w=600&h=400&fit=crop" alt="Maldives">
+                </div>
+                <div class="destination-content">
+                    <span class="destination-region">Indian Ocean</span>
+                    <h3>Maldives</h3>
+                    <p>6 Stories</p>
+                </div>
+            </a>
+
+            <a href="#" class="destination-card">
+                <div class="destination-image">
+                    <img src="https://images.unsplash.com/photo-1518548419970-58e3b4079ab2?w=600&h=400&fit=crop" alt="Iceland">
+                </div>
+                <div class="destination-content">
+                    <span class="destination-region">Nordic</span>
+                    <h3>Iceland</h3>
+                    <p>10 Stories</p>
+                </div>
+            </a>
+        </div>
+
+        <div class="section-cta">
+            <a href="#" class="btn btn-outline">View All Destinations</a>
+        </div>
+    </section>
+
+    <section class="parallax-quote">
+        <div class="parallax-bg">
+            <img src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=1920&h=800&fit=crop" alt="Mountain vista">
+        </div>
+        <div class="parallax-content">
+            <blockquote>
+                "The world is a book, and those who do not travel read only one page."
+            </blockquote>
+            <cite>— Saint Augustine</cite>
+        </div>
+    </section>
+
+    <section id="stories" class="stories">
+        <div class="section-header">
+            <span class="section-tag">Recent</span>
+            <h2>Latest Stories</h2>
+            <p>Personal narratives, practical tips, and unforgettable moments from around the globe.</p>
+        </div>
+
+        <div class="stories-grid">
+            <article class="story-card story-featured">
+                <a href="#">
+                    <div class="story-image">
+                        <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?w=1000&h=600&fit=crop" alt="Northern Lights">
+                        <span class="story-category">Adventure</span>
+                    </div>
+                    <div class="story-content">
+                        <div class="story-meta">
+                            <span>March 15, 2024</span>
+                            <span>&bull;</span>
+                            <span>8 min read</span>
+                        </div>
+                        <h3>Chasing the Northern Lights: A Complete Guide to Aurora Hunting</h3>
+                        <p>Everything you need to know to witness one of nature's most spectacular phenomena, from the best locations to timing your trip perfectly.</p>
+                        <div class="story-author">
+                            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=50&h=50&fit=crop" alt="Sarah Mitchell">
+                            <span>Sarah Mitchell</span>
+                        </div>
+                    </div>
+                </a>
+            </article>
+
+            <article class="story-card">
+                <a href="#">
+                    <div class="story-image">
+                        <img src="https://images.unsplash.com/photo-1504598318550-17eba1008a68?w=600&h=400&fit=crop" alt="Morocco">
+                        <span class="story-category">Culture</span>
+                    </div>
+                    <div class="story-content">
+                        <div class="story-meta">
+                            <span>March 10, 2024</span>
+                            <span>&bull;</span>
+                            <span>6 min read</span>
+                        </div>
+                        <h3>Lost in the Medinas: Exploring Morocco's Ancient Cities</h3>
+                        <p>Winding through centuries-old streets where time seems to stand still.</p>
+                    </div>
+                </a>
+            </article>
+
+            <article class="story-card">
+                <a href="#">
+                    <div class="story-image">
+                        <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=600&h=400&fit=crop" alt="Beach">
+                        <span class="story-category">Relaxation</span>
+                    </div>
+                    <div class="story-content">
+                        <div class="story-meta">
+                            <span>March 5, 2024</span>
+                            <span>&bull;</span>
+                            <span>5 min read</span>
+                        </div>
+                        <h3>The Ultimate Beach Guide: 10 Hidden Gems</h3>
+                        <p>Escape the crowds and discover paradise in these secret coastal havens.</p>
+                    </div>
+                </a>
+            </article>
+
+            <article class="story-card">
+                <a href="#">
+                    <div class="story-image">
+                        <img src="https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?w=600&h=400&fit=crop" alt="Lake">
+                        <span class="story-category">Adventure</span>
+                    </div>
+                    <div class="story-content">
+                        <div class="story-meta">
+                            <span>Feb 28, 2024</span>
+                            <span>&bull;</span>
+                            <span>7 min read</span>
+                        </div>
+                        <h3>Kayaking Through Norway's Fjords</h3>
+                        <p>Paddling past dramatic cliffs and cascading waterfalls in Scandinavia.</p>
+                    </div>
+                </a>
+            </article>
+        </div>
+    </section>
+
+    <section id="guides" class="guides">
+        <div class="guides-content">
+            <div class="guides-text">
+                <span class="section-tag">Resources</span>
+                <h2>Travel Guides</h2>
+                <p>Comprehensive guides to help you plan your next adventure. From packing lists to local customs, we've got you covered.</p>
+
+                <div class="guide-list">
+                    <a href="#" class="guide-item">
+                        <div class="guide-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/>
+                                <circle cx="12" cy="10" r="3"/>
+                            </svg>
+                        </div>
+                        <div class="guide-info">
+                            <h4>Destination Guides</h4>
+                            <p>In-depth guides for 50+ countries</p>
+                        </div>
+                        <span class="guide-arrow">&rarr;</span>
+                    </a>
+
+                    <a href="#" class="guide-item">
+                        <div class="guide-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <rect x="2" y="7" width="20" height="14" rx="2"/>
+                                <path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16"/>
+                            </svg>
+                        </div>
+                        <div class="guide-info">
+                            <h4>Packing Guides</h4>
+                            <p>Smart packing for every adventure</p>
+                        </div>
+                        <span class="guide-arrow">&rarr;</span>
+                    </a>
+
+                    <a href="#" class="guide-item">
+                        <div class="guide-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+                            </svg>
+                        </div>
+                        <div class="guide-info">
+                            <h4>Budget Travel</h4>
+                            <p>Make your money go further</p>
+                        </div>
+                        <span class="guide-arrow">&rarr;</span>
+                    </a>
+                </div>
+            </div>
+            <div class="guides-image">
+                <img src="https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=600&h=800&fit=crop" alt="Travel planning">
+            </div>
+        </div>
+    </section>
+
+    <section class="instagram">
+        <div class="section-header">
+            <span class="section-tag">@wanderlusttravel</span>
+            <h2>Follow Our Journey</h2>
+        </div>
+        <div class="instagram-grid">
+            <a href="#" class="instagram-item">
+                <img src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?w=400&h=400&fit=crop" alt="Paris">
+            </a>
+            <a href="#" class="instagram-item">
+                <img src="https://images.unsplash.com/photo-1523906834658-6e24ef2386f9?w=400&h=400&fit=crop" alt="Venice">
+            </a>
+            <a href="#" class="instagram-item">
+                <img src="https://images.unsplash.com/photo-1533105079780-92b9be482077?w=400&h=400&fit=crop" alt="Santorini">
+            </a>
+            <a href="#" class="instagram-item">
+                <img src="https://images.unsplash.com/photo-1504893524553-b855bce32c67?w=400&h=400&fit=crop" alt="Waterfall">
+            </a>
+            <a href="#" class="instagram-item">
+                <img src="https://images.unsplash.com/photo-1530789253388-582c481c54b0?w=400&h=400&fit=crop" alt="Thailand">
+            </a>
+            <a href="#" class="instagram-item">
+                <img src="https://images.unsplash.com/photo-1476610182048-b716b8515aaa?w=400&h=400&fit=crop" alt="Northern Lights">
+            </a>
+        </div>
+    </section>
+
+    <section class="newsletter">
+        <div class="newsletter-content">
+            <div class="newsletter-text">
+                <h2>Get Wanderlust in Your Inbox</h2>
+                <p>Join 50,000+ travelers and receive weekly inspiration, exclusive travel tips, and destination guides.</p>
+            </div>
+            <form class="newsletter-form">
+                <input type="email" placeholder="Enter your email address" required>
+                <button type="submit" class="btn btn-primary">Subscribe</button>
+            </form>
+            <span class="newsletter-note">No spam, ever. Unsubscribe anytime.</span>
+        </div>
+    </section>
+
+    <footer id="about" class="footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <a href="#" class="footer-logo">Wanderlust</a>
+                <p>Inspiring adventures and meaningful connections around the world since 2015.</p>
+                <div class="social-links">
+                    <a href="#">Instagram</a>
+                    <a href="#">YouTube</a>
+                    <a href="#">Pinterest</a>
+                    <a href="#">Twitter</a>
+                </div>
+            </div>
+            <div class="footer-links">
+                <div class="footer-column">
+                    <h4>Explore</h4>
+                    <a href="#">Destinations</a>
+                    <a href="#">Stories</a>
+                    <a href="#">Guides</a>
+                    <a href="#">Photos</a>
+                </div>
+                <div class="footer-column">
+                    <h4>About</h4>
+                    <a href="#">Our Story</a>
+                    <a href="#">Team</a>
+                    <a href="#">Contact</a>
+                    <a href="#">Press</a>
+                </div>
+                <div class="footer-column">
+                    <h4>Legal</h4>
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Use</a>
+                    <a href="#">Cookie Policy</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <span>&copy; 2024 Wanderlust. All rights reserved.</span>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
