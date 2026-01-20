@@ -1,0 +1,1013 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Dev Showcase | 10 Stunning Website Templates</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --bg-primary: #030014;
+            --bg-secondary: #0a0a1f;
+            --accent-purple: #8b5cf6;
+            --accent-blue: #3b82f6;
+            --accent-pink: #ec4899;
+            --accent-cyan: #06b6d4;
+            --text-primary: #ffffff;
+            --text-secondary: #94a3b8;
+            --card-bg: rgba(255, 255, 255, 0.03);
+            --card-border: rgba(255, 255, 255, 0.08);
+        }
+
+        /* Custom Glowing Cursor */
+        *, *::before, *::after {
+            cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 32 32'%3E%3Cdefs%3E%3Cfilter id='glow' x='-50%25' y='-50%25' width='200%25' height='200%25'%3E%3CfeGaussianBlur stdDeviation='2' result='coloredBlur'/%3E%3CfeMerge%3E%3CfeMergeNode in='coloredBlur'/%3E%3CfeMergeNode in='SourceGraphic'/%3E%3C/feMerge%3E%3C/filter%3E%3C/defs%3E%3Cpath d='M4 4 L4 28 L12 20 L18 28 L22 26 L16 18 L26 18 Z' fill='%238b5cf6' stroke='%23c4b5fd' stroke-width='1.5' filter='url(%23glow)'/%3E%3C/svg%3E") 4 4, auto;
+        }
+
+        a, button, .site-card {
+            cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 32 32'%3E%3Cdefs%3E%3Cfilter id='glow' x='-50%25' y='-50%25' width='200%25' height='200%25'%3E%3CfeGaussianBlur stdDeviation='3' result='coloredBlur'/%3E%3CfeMerge%3E%3CfeMergeNode in='coloredBlur'/%3E%3CfeMergeNode in='SourceGraphic'/%3E%3C/feMerge%3E%3C/filter%3E%3ClinearGradient id='grad' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%23a855f7'/%3E%3Cstop offset='100%25' style='stop-color:%233b82f6'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cpath d='M4 4 L4 28 L12 20 L18 28 L22 26 L16 18 L26 18 Z' fill='url(%23grad)' stroke='%23e9d5ff' stroke-width='2' filter='url(%23glow)'/%3E%3C/svg%3E") 4 4, pointer;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        /* Animated Background */
+        .bg-gradient {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: -1;
+            overflow: hidden;
+        }
+
+        .bg-gradient::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle at 20% 80%, rgba(139, 92, 246, 0.15) 0%, transparent 50%),
+                        radial-gradient(circle at 80% 20%, rgba(59, 130, 246, 0.15) 0%, transparent 50%),
+                        radial-gradient(circle at 40% 40%, rgba(236, 72, 153, 0.1) 0%, transparent 40%);
+            animation: bgMove 20s ease-in-out infinite;
+        }
+
+        @keyframes bgMove {
+            0%, 100% { transform: translate(0, 0) rotate(0deg); }
+            25% { transform: translate(2%, 2%) rotate(1deg); }
+            50% { transform: translate(-1%, 3%) rotate(-1deg); }
+            75% { transform: translate(3%, -2%) rotate(2deg); }
+        }
+
+        /* Grid Pattern Overlay */
+        .grid-pattern {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: -1;
+            background-image:
+                linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+            background-size: 60px 60px;
+        }
+
+        /* Container */
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* Header */
+        header {
+            padding: 120px 0 80px;
+            text-align: center;
+            position: relative;
+        }
+
+        .badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 20px;
+            background: linear-gradient(135deg, rgba(139, 92, 246, 0.2), rgba(59, 130, 246, 0.2));
+            border: 1px solid rgba(139, 92, 246, 0.3);
+            border-radius: 50px;
+            font-size: 13px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: var(--accent-purple);
+            margin-bottom: 32px;
+            animation: float 3s ease-in-out infinite;
+        }
+
+        .badge::before {
+            content: '';
+            width: 8px;
+            height: 8px;
+            background: var(--accent-purple);
+            border-radius: 50%;
+            animation: pulse 2s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-5px); }
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.5; transform: scale(1.2); }
+        }
+
+        h1 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: clamp(48px, 8vw, 96px);
+            font-weight: 700;
+            line-height: 1.05;
+            margin-bottom: 24px;
+            background: linear-gradient(135deg, #fff 0%, #fff 40%, var(--accent-purple) 60%, var(--accent-blue) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .subtitle {
+            font-size: 18px;
+            color: var(--text-secondary);
+            max-width: 600px;
+            margin: 0 auto 48px;
+            line-height: 1.7;
+        }
+
+        .stats-row {
+            display: flex;
+            justify-content: center;
+            gap: 64px;
+            flex-wrap: wrap;
+        }
+
+        .stat {
+            text-align: center;
+            min-width: 140px;
+        }
+
+        .stat-value {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 42px;
+            font-weight: 700;
+            background: linear-gradient(135deg, var(--accent-purple), var(--accent-blue));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 4px;
+        }
+
+        .stat-value .counter {
+            min-width: 80px;
+            display: inline-block;
+        }
+
+        .stat-value .suffix {
+            font-size: 28px;
+        }
+
+        .stat-label {
+            font-size: 13px;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-top: 8px;
+        }
+
+        /* Sites Grid */
+        .sites-section {
+            padding: 40px 0 120px;
+        }
+
+        .sites-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 24px;
+        }
+
+        /* Site Card */
+        .site-card {
+            position: relative;
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
+            border-radius: 24px;
+            overflow: hidden;
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+            text-decoration: none;
+            color: inherit;
+            display: block;
+            opacity: 0;
+            transform: translateY(60px);
+        }
+
+        .site-card.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .site-card::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg,
+                rgba(139, 92, 246, 0.1) 0%,
+                transparent 50%,
+                rgba(59, 130, 246, 0.1) 100%);
+            opacity: 0;
+            transition: opacity 0.5s ease;
+            z-index: 1;
+        }
+
+        .site-card:hover {
+            transform: translateY(-8px) scale(1.01);
+            border-color: rgba(139, 92, 246, 0.4);
+            box-shadow:
+                0 25px 50px -12px rgba(139, 92, 246, 0.25),
+                0 0 100px -20px rgba(139, 92, 246, 0.3);
+        }
+
+        .site-card:hover::before {
+            opacity: 1;
+        }
+
+        /* Featured Cards (larger) */
+        .site-card.featured {
+            grid-column: span 2;
+        }
+
+        .site-card.featured .card-preview {
+            height: 400px;
+        }
+
+        /* Card Preview */
+        .card-preview {
+            position: relative;
+            height: 280px;
+            overflow: hidden;
+        }
+
+        .card-preview img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .site-card:hover .card-preview img {
+            transform: scale(1.1);
+        }
+
+        .preview-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(180deg,
+                transparent 0%,
+                rgba(3, 0, 20, 0.4) 50%,
+                rgba(3, 0, 20, 0.95) 100%);
+            transition: background 0.5s ease;
+        }
+
+        .site-card:hover .preview-overlay {
+            background: linear-gradient(180deg,
+                rgba(139, 92, 246, 0.1) 0%,
+                rgba(3, 0, 20, 0.5) 50%,
+                rgba(3, 0, 20, 0.98) 100%);
+        }
+
+        /* Card Number */
+        .card-number {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            width: 48px;
+            height: 48px;
+            background: rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 16px;
+            font-weight: 700;
+            z-index: 2;
+            transition: all 0.3s ease;
+        }
+
+        .site-card:hover .card-number {
+            background: var(--accent-purple);
+            border-color: var(--accent-purple);
+            transform: rotate(-5deg) scale(1.1);
+        }
+
+        /* Card Tags */
+        .card-tags {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            display: flex;
+            gap: 8px;
+            z-index: 2;
+        }
+
+        .tag {
+            padding: 6px 12px;
+            background: rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 8px;
+            font-size: 11px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            transition: all 0.3s ease;
+        }
+
+        .site-card:hover .tag {
+            background: rgba(139, 92, 246, 0.3);
+            border-color: rgba(139, 92, 246, 0.5);
+        }
+
+        /* Card Content */
+        .card-content {
+            position: relative;
+            padding: 28px 32px 32px;
+            z-index: 2;
+        }
+
+        .card-category {
+            display: inline-block;
+            font-size: 12px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--accent-purple);
+            margin-bottom: 12px;
+            transition: color 0.3s ease;
+        }
+
+        .site-card:hover .card-category {
+            color: var(--accent-cyan);
+        }
+
+        .card-title {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 12px;
+            transition: all 0.3s ease;
+        }
+
+        .site-card:hover .card-title {
+            background: linear-gradient(90deg, #fff, var(--accent-purple));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .card-description {
+            font-size: 15px;
+            color: var(--text-secondary);
+            line-height: 1.6;
+            margin-bottom: 24px;
+        }
+
+        /* Card Footer */
+        .card-footer {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .tech-stack {
+            display: flex;
+            gap: 8px;
+        }
+
+        .tech {
+            height: 32px;
+            padding: 0 12px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            white-space: nowrap;
+            overflow: hidden;
+            min-width: 32px;
+        }
+
+        .tech .short {
+            display: inline;
+        }
+
+        .tech .full {
+            display: none;
+        }
+
+        .tech:hover {
+            background: rgba(139, 92, 246, 0.3);
+            border-color: rgba(139, 92, 246, 0.5);
+            padding: 0 16px;
+        }
+
+        .tech:hover .short {
+            display: none;
+        }
+
+        .tech:hover .full {
+            display: inline;
+        }
+
+        .site-card:hover .tech {
+            transform: translateY(-2px);
+        }
+
+        .view-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 12px 24px;
+            background: transparent;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 12px;
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--text-primary);
+            transition: all 0.3s ease;
+        }
+
+        .view-btn svg {
+            width: 18px;
+            height: 18px;
+            transition: transform 0.3s ease;
+        }
+
+        .site-card:hover .view-btn {
+            background: linear-gradient(135deg, var(--accent-purple), var(--accent-blue));
+            border-color: transparent;
+            box-shadow: 0 10px 30px -10px rgba(139, 92, 246, 0.5);
+        }
+
+        .site-card:hover .view-btn svg {
+            transform: translateX(4px);
+        }
+
+        /* Footer */
+        footer {
+            padding: 60px 0;
+            border-top: 1px solid var(--card-border);
+            text-align: center;
+        }
+
+        footer p {
+            color: var(--text-secondary);
+            font-size: 14px;
+        }
+
+        footer a {
+            color: var(--accent-purple);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        footer a:hover {
+            color: var(--accent-cyan);
+        }
+
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .sites-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .site-card.featured {
+                grid-column: span 1;
+            }
+
+            .site-card.featured .card-preview {
+                height: 280px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            header {
+                padding: 80px 0 60px;
+            }
+
+            .stats-row {
+                gap: 32px;
+            }
+
+            .stat-value {
+                font-size: 32px;
+            }
+
+            .card-preview {
+                height: 220px;
+            }
+
+            .card-content {
+                padding: 24px;
+            }
+
+            .card-title {
+                font-size: 22px;
+            }
+        }
+
+        /* Scrollbar */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: var(--bg-primary);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: rgba(139, 92, 246, 0.3);
+            border-radius: 5px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: rgba(139, 92, 246, 0.5);
+        }
+
+        /* Loading animation for cards */
+        @keyframes cardReveal {
+            0% {
+                opacity: 0;
+                transform: translateY(60px) scale(0.95);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0) scale(1);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="bg-gradient"></div>
+    <div class="grid-pattern"></div>
+
+    <div class="container">
+        <header>
+            <div class="badge">
+                <span>2026 Collection</span>
+            </div>
+            <h1>Web Development<br>Showcase</h1>
+            <p class="subtitle">
+                A curated collection of stunning website templates, each crafted with unique aesthetics and modern development practices.
+            </p>
+            <div class="stats-row">
+                <div class="stat">
+                    <div class="stat-value">
+                        <span class="counter" data-target="8453">0</span>
+                    </div>
+                    <div class="stat-label">Lines of Code</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-value">
+                        <span class="counter" data-target="1.2" data-decimals="1">0</span>
+                        <span class="suffix">s</span>
+                    </div>
+                    <div class="stat-label">Avg. Load Time</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-value">
+                        <span class="counter" data-target="475">0</span>
+                        <span class="suffix">+</span>
+                    </div>
+                    <div class="stat-label">Projects Completed</div>
+                </div>
+            </div>
+        </header>
+
+        <section class="sites-section">
+            <div class="sites-grid">
+
+                <!-- Site 1 - Featured -->
+                <a href="/01-minimalist-portfolio/" class="site-card featured">
+                    <div class="card-preview">
+                        <img src="https://images.unsplash.com/photo-1561070791-2526d30994b5?w=1200&h=800&fit=crop" alt="Minimalist Portfolio">
+                        <div class="preview-overlay"></div>
+                        <span class="card-number">01</span>
+                        <div class="card-tags">
+                            <span class="tag">Modern</span>
+                            <span class="tag">Minimal</span>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <span class="card-category">Portfolio</span>
+                        <h2 class="card-title">Minimalist Portfolio</h2>
+                        <p class="card-description">A sleek designer portfolio featuring clean typography, fluid animations, and a carefully crafted grid system that puts the work front and center.</p>
+                        <div class="card-footer">
+                            <div class="tech-stack">
+                                <span class="tech"><span class="short">H</span><span class="full">HTML</span></span>
+                                <span class="tech"><span class="short">CSS</span><span class="full">CSS</span></span>
+                                <span class="tech"><span class="short">JS</span><span class="full">JavaScript</span></span>
+                            </div>
+                            <span class="view-btn">
+                                Explore
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M5 12h14M12 5l7 7-7 7"/>
+                                </svg>
+                            </span>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Site 2 -->
+                <a href="/02-gourmet-restaurant/" class="site-card">
+                    <div class="card-preview">
+                        <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=800&h=600&fit=crop" alt="Gourmet Restaurant">
+                        <div class="preview-overlay"></div>
+                        <span class="card-number">02</span>
+                        <div class="card-tags">
+                            <span class="tag">Elegant</span>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <span class="card-category">Restaurant</span>
+                        <h2 class="card-title">Gourmet Restaurant</h2>
+                        <p class="card-description">Fine dining elegance with rich photography, smooth parallax scrolling, and an integrated reservation system.</p>
+                        <div class="card-footer">
+                            <div class="tech-stack">
+                                <span class="tech"><span class="short">H</span><span class="full">HTML</span></span>
+                                <span class="tech"><span class="short">CSS</span><span class="full">CSS</span></span>
+                                <span class="tech"><span class="short">JS</span><span class="full">JavaScript</span></span>
+                            </div>
+                            <span class="view-btn">
+                                Explore
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M5 12h14M12 5l7 7-7 7"/>
+                                </svg>
+                            </span>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Site 3 -->
+                <a href="/03-tech-startup/" class="site-card">
+                    <div class="card-preview">
+                        <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?w=800&h=600&fit=crop" alt="Tech Startup">
+                        <div class="preview-overlay"></div>
+                        <span class="card-number">03</span>
+                        <div class="card-tags">
+                            <span class="tag">SaaS</span>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <span class="card-category">Technology</span>
+                        <h2 class="card-title">Tech Startup</h2>
+                        <p class="card-description">A vibrant SaaS landing page with gradient effects, animated feature cards, and conversion-optimized call-to-actions.</p>
+                        <div class="card-footer">
+                            <div class="tech-stack">
+                                <span class="tech"><span class="short">H</span><span class="full">HTML</span></span>
+                                <span class="tech"><span class="short">CSS</span><span class="full">CSS</span></span>
+                                <span class="tech"><span class="short">JS</span><span class="full">JavaScript</span></span>
+                            </div>
+                            <span class="view-btn">
+                                Explore
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M5 12h14M12 5l7 7-7 7"/>
+                                </svg>
+                            </span>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Site 4 - Featured -->
+                <a href="/04-fashion-ecommerce/" class="site-card featured">
+                    <div class="card-preview">
+                        <img src="https://images.unsplash.com/photo-1445205170230-053b83016050?w=1200&h=800&fit=crop" alt="Fashion E-commerce">
+                        <div class="preview-overlay"></div>
+                        <span class="card-number">04</span>
+                        <div class="card-tags">
+                            <span class="tag">E-commerce</span>
+                            <span class="tag">Luxury</span>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <span class="card-category">E-commerce</span>
+                        <h2 class="card-title">Fashion E-commerce</h2>
+                        <p class="card-description">A sophisticated online boutique featuring stunning product displays, seamless hover interactions, and an immersive shopping experience designed to convert.</p>
+                        <div class="card-footer">
+                            <div class="tech-stack">
+                                <span class="tech"><span class="short">H</span><span class="full">HTML</span></span>
+                                <span class="tech"><span class="short">CSS</span><span class="full">CSS</span></span>
+                                <span class="tech"><span class="short">JS</span><span class="full">JavaScript</span></span>
+                            </div>
+                            <span class="view-btn">
+                                Explore
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M5 12h14M12 5l7 7-7 7"/>
+                                </svg>
+                            </span>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Site 5 -->
+                <a href="/05-travel-adventure/" class="site-card">
+                    <div class="card-preview">
+                        <img src="https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=800&h=600&fit=crop" alt="Travel Adventure">
+                        <div class="preview-overlay"></div>
+                        <span class="card-number">05</span>
+                        <div class="card-tags">
+                            <span class="tag">Immersive</span>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <span class="card-category">Travel</span>
+                        <h2 class="card-title">Travel Adventure</h2>
+                        <p class="card-description">An immersive travel experience with breathtaking full-width imagery, destination cards, and storytelling that sparks wanderlust.</p>
+                        <div class="card-footer">
+                            <div class="tech-stack">
+                                <span class="tech"><span class="short">H</span><span class="full">HTML</span></span>
+                                <span class="tech"><span class="short">CSS</span><span class="full">CSS</span></span>
+                                <span class="tech"><span class="short">JS</span><span class="full">JavaScript</span></span>
+                            </div>
+                            <span class="view-btn">
+                                Explore
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M5 12h14M12 5l7 7-7 7"/>
+                                </svg>
+                            </span>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Site 6 -->
+                <a href="/06-fitness-studio/" class="site-card">
+                    <div class="card-preview">
+                        <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=800&h=600&fit=crop" alt="Fitness Studio">
+                        <div class="preview-overlay"></div>
+                        <span class="card-number">06</span>
+                        <div class="card-tags">
+                            <span class="tag">Bold</span>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <span class="card-category">Fitness</span>
+                        <h2 class="card-title">Fitness Studio</h2>
+                        <p class="card-description">High-energy gym website with bold typography, dynamic class schedules, and membership tiers that drive signups.</p>
+                        <div class="card-footer">
+                            <div class="tech-stack">
+                                <span class="tech"><span class="short">H</span><span class="full">HTML</span></span>
+                                <span class="tech"><span class="short">CSS</span><span class="full">CSS</span></span>
+                                <span class="tech"><span class="short">JS</span><span class="full">JavaScript</span></span>
+                            </div>
+                            <span class="view-btn">
+                                Explore
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M5 12h14M12 5l7 7-7 7"/>
+                                </svg>
+                            </span>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Site 7 -->
+                <a href="/07-creative-agency/" class="site-card">
+                    <div class="card-preview">
+                        <img src="https://images.unsplash.com/photo-1559136555-9303baea8ebd?w=800&h=600&fit=crop" alt="Creative Agency">
+                        <div class="preview-overlay"></div>
+                        <span class="card-number">07</span>
+                        <div class="card-tags">
+                            <span class="tag">Creative</span>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <span class="card-category">Agency</span>
+                        <h2 class="card-title">Creative Agency</h2>
+                        <p class="card-description">A striking design agency showcase with compelling case studies, team profiles, and a portfolio that demonstrates excellence.</p>
+                        <div class="card-footer">
+                            <div class="tech-stack">
+                                <span class="tech"><span class="short">H</span><span class="full">HTML</span></span>
+                                <span class="tech"><span class="short">CSS</span><span class="full">CSS</span></span>
+                                <span class="tech"><span class="short">JS</span><span class="full">JavaScript</span></span>
+                            </div>
+                            <span class="view-btn">
+                                Explore
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M5 12h14M12 5l7 7-7 7"/>
+                                </svg>
+                            </span>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Site 8 -->
+                <a href="/08-news-magazine/" class="site-card">
+                    <div class="card-preview">
+                        <img src="https://images.unsplash.com/photo-1504711434969-e33886168f5c?w=800&h=600&fit=crop" alt="News Magazine">
+                        <div class="preview-overlay"></div>
+                        <span class="card-number">08</span>
+                        <div class="card-tags">
+                            <span class="tag">Editorial</span>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <span class="card-category">Editorial</span>
+                        <h2 class="card-title">News Magazine</h2>
+                        <p class="card-description">A modern editorial platform with sophisticated article layouts, category navigation, and an engaging reading experience.</p>
+                        <div class="card-footer">
+                            <div class="tech-stack">
+                                <span class="tech"><span class="short">H</span><span class="full">HTML</span></span>
+                                <span class="tech"><span class="short">CSS</span><span class="full">CSS</span></span>
+                                <span class="tech"><span class="short">JS</span><span class="full">JavaScript</span></span>
+                            </div>
+                            <span class="view-btn">
+                                Explore
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M5 12h14M12 5l7 7-7 7"/>
+                                </svg>
+                            </span>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Site 9 - Featured -->
+                <a href="/09-music-festival/" class="site-card featured">
+                    <div class="card-preview">
+                        <img src="https://images.unsplash.com/photo-1459749411175-04bf5292ceea?w=1200&h=800&fit=crop" alt="Music Festival">
+                        <div class="preview-overlay"></div>
+                        <span class="card-number">09</span>
+                        <div class="card-tags">
+                            <span class="tag">Vibrant</span>
+                            <span class="tag">Dynamic</span>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <span class="card-category">Entertainment</span>
+                        <h2 class="card-title">Music Festival</h2>
+                        <p class="card-description">A vibrant entertainment hub featuring artist lineups, ticket integration, and an electric atmosphere that captures the pulse of live music.</p>
+                        <div class="card-footer">
+                            <div class="tech-stack">
+                                <span class="tech"><span class="short">H</span><span class="full">HTML</span></span>
+                                <span class="tech"><span class="short">CSS</span><span class="full">CSS</span></span>
+                                <span class="tech"><span class="short">JS</span><span class="full">JavaScript</span></span>
+                            </div>
+                            <span class="view-btn">
+                                Explore
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M5 12h14M12 5l7 7-7 7"/>
+                                </svg>
+                            </span>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Site 10 -->
+                <a href="/10-law-firm/" class="site-card">
+                    <div class="card-preview">
+                        <img src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=800&h=600&fit=crop" alt="Law Firm">
+                        <div class="preview-overlay"></div>
+                        <span class="card-number">10</span>
+                        <div class="card-tags">
+                            <span class="tag">Corporate</span>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <span class="card-category">Corporate</span>
+                        <h2 class="card-title">Law Firm</h2>
+                        <p class="card-description">A distinguished corporate presence with practice area showcases, attorney profiles, and consultation forms that build trust.</p>
+                        <div class="card-footer">
+                            <div class="tech-stack">
+                                <span class="tech"><span class="short">H</span><span class="full">HTML</span></span>
+                                <span class="tech"><span class="short">CSS</span><span class="full">CSS</span></span>
+                                <span class="tech"><span class="short">JS</span><span class="full">JavaScript</span></span>
+                            </div>
+                            <span class="view-btn">
+                                Explore
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M5 12h14M12 5l7 7-7 7"/>
+                                </svg>
+                            </span>
+                        </div>
+                    </div>
+                </a>
+
+            </div>
+        </section>
+
+        <footer>
+            <p>Crafted with HTML, CSS & JavaScript</p>
+        </footer>
+    </div>
+
+    <script>
+        // Animate counter numbers
+        function animateCounter(element, target, duration = 2000, decimals = 0) {
+            const start = 0;
+            const startTime = performance.now();
+
+            function update(currentTime) {
+                const elapsed = currentTime - startTime;
+                const progress = Math.min(elapsed / duration, 1);
+
+                // Easing function for smoother animation
+                const easeOutQuart = 1 - Math.pow(1 - progress, 4);
+
+                const current = start + (target - start) * easeOutQuart;
+
+                if (decimals > 0) {
+                    element.textContent = current.toFixed(decimals);
+                } else {
+                    element.textContent = Math.floor(current).toLocaleString();
+                }
+
+                if (progress < 1) {
+                    requestAnimationFrame(update);
+                } else {
+                    if (decimals > 0) {
+                        element.textContent = target.toFixed(decimals);
+                    } else {
+                        element.textContent = target.toLocaleString();
+                    }
+                }
+            }
+
+            requestAnimationFrame(update);
+        }
+
+        // Start counter animations when page loads
+        window.addEventListener('load', () => {
+            const counters = document.querySelectorAll('.counter');
+
+            // Slight delay before starting counters
+            setTimeout(() => {
+                counters.forEach((counter, index) => {
+                    const target = parseFloat(counter.dataset.target);
+                    const decimals = parseInt(counter.dataset.decimals) || 0;
+
+                    // Stagger the start of each counter
+                    setTimeout(() => {
+                        animateCounter(counter, target, 2500, decimals);
+                    }, index * 200);
+                });
+            }, 500);
+        });
+
+        // Immediately show cards with staggered animation (don't wait for scroll)
+        const cards = document.querySelectorAll('.site-card');
+
+        window.addEventListener('load', () => {
+            cards.forEach((card, index) => {
+                // Staggered reveal animation
+                setTimeout(() => {
+                    card.style.transition = 'opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1), transform 0.8s cubic-bezier(0.4, 0, 0.2, 1)';
+                    card.classList.add('visible');
+                }, 300 + (index * 120));
+            });
+        });
+
+        // Parallax effect on header
+        const header = document.querySelector('header');
+        window.addEventListener('scroll', () => {
+            const scrolled = window.pageYOffset;
+            if (header) {
+                header.style.transform = `translateY(${scrolled * 0.3}px)`;
+                header.style.opacity = 1 - (scrolled * 0.002);
+            }
+        });
+    </script>
+</body>
+</html>
