@@ -10,7 +10,7 @@
 <body>
     <nav class="nav">
         <div class="nav-container">
-            <a href="#" class="logo">HORIZON</a>
+            <a href="#hero" class="logo">HORIZON</a>
             <ul class="nav-links">
                 <li><a href="#lineup">Lineup</a></li>
                 <li><a href="#experience">Experience</a></li>
@@ -24,7 +24,7 @@
         </div>
     </nav>
 
-    <header class="hero">
+    <header class="hero" id="hero">
         <div class="hero-bg">
             <video autoplay muted loop playsinline poster="https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?w=1920&h=1080&fit=crop">
                 <source src="" type="video/mp4">
@@ -155,7 +155,7 @@
 
         <div class="lineup-more">
             <p>+ 50 more artists across 4 stages</p>
-            <a href="#" class="btn btn-outline">Full Lineup</a>
+            <button class="btn btn-outline" onclick="showFullLineup()">Full Lineup</button>
         </div>
     </section>
 
@@ -218,7 +218,7 @@
                         <li>Art installations</li>
                         <li>Food village access</li>
                     </ul>
-                    <a href="#" class="btn btn-outline">Select Day</a>
+                    <button class="btn btn-outline" onclick="purchaseTicket('Day Pass', '$149')">Select Day</button>
                 </div>
 
                 <div class="ticket-card ticket-featured">
@@ -234,7 +234,7 @@
                         <li>Early entry each day</li>
                         <li>Exclusive merch discount</li>
                     </ul>
-                    <a href="#" class="btn btn-primary">Buy Now</a>
+                    <button class="btn btn-primary" onclick="purchaseTicket('3-Day Pass', '$349')">Buy Now</button>
                 </div>
 
                 <div class="ticket-card">
@@ -249,7 +249,7 @@
                         <li>Premium food & drink</li>
                         <li>Artist meet & greets</li>
                     </ul>
-                    <a href="#" class="btn btn-outline">Buy Now</a>
+                    <button class="btn btn-outline" onclick="purchaseTicket('VIP Pass', '$699')">Buy Now</button>
                 </div>
             </div>
         </div>
@@ -301,7 +301,7 @@
                 </div>
                 <h3>FAQ</h3>
                 <p>Find answers to common questions about the festival.</p>
-                <a href="#" class="info-link">View FAQ →</a>
+                <a href="javascript:void(0)" onclick="showFAQ()" class="info-link">View FAQ →</a>
             </div>
         </div>
     </section>
@@ -321,19 +321,19 @@
                 <span class="footer-logo">HORIZON</span>
                 <p>The ultimate music and arts experience.</p>
                 <div class="social-links">
-                    <a href="#">Instagram</a>
-                    <a href="#">Twitter</a>
-                    <a href="#">TikTok</a>
-                    <a href="#">Spotify</a>
+                    <a href="https://instagram.com" target="_blank">Instagram</a>
+                    <a href="https://twitter.com" target="_blank">Twitter</a>
+                    <a href="https://tiktok.com" target="_blank">TikTok</a>
+                    <a href="https://spotify.com" target="_blank">Spotify</a>
                 </div>
             </div>
             <div class="footer-links">
-                <a href="#">Lineup</a>
-                <a href="#">Tickets</a>
-                <a href="#">FAQ</a>
-                <a href="#">Contact</a>
-                <a href="#">Jobs</a>
-                <a href="#">Press</a>
+                <a href="#lineup">Lineup</a>
+                <a href="#tickets">Tickets</a>
+                <a href="javascript:void(0)" onclick="showFAQ()">FAQ</a>
+                <a href="javascript:void(0)" onclick="showContact()">Contact</a>
+                <a href="javascript:void(0)" onclick="alert('Check our careers page at horizonfest.com/jobs')">Jobs</a>
+                <a href="javascript:void(0)" onclick="alert('Press inquiries: press@horizonfest.com')">Press</a>
             </div>
         </div>
         <div class="footer-bottom">

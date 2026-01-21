@@ -138,6 +138,14 @@ img {
     color: var(--gold);
 }
 
+.contact-bar a {
+    color: var(--gray-300);
+}
+
+.contact-bar a:hover {
+    color: var(--gold);
+}
+
 .nav {
     background: var(--navy);
     padding: 0;
@@ -436,6 +444,7 @@ img {
     padding: 40px;
     border-bottom: 3px solid transparent;
     transition: all 0.3s ease;
+    cursor: pointer;
 }
 
 .practice-card:hover {
@@ -499,6 +508,7 @@ img {
 
 .team-member {
     text-align: center;
+    cursor: pointer;
 }
 
 .member-image {
@@ -637,6 +647,14 @@ img {
     font-size: 15px;
 }
 
+.contact-item p a {
+    color: var(--text);
+}
+
+.contact-item p a:hover {
+    color: var(--gold);
+}
+
 .contact-form {
     background: var(--white);
     padding: 48px;
@@ -755,6 +773,23 @@ img {
     justify-content: space-between;
     align-items: center;
     font-size: 14px;
+    flex-wrap: wrap;
+    gap: 24px;
+}
+
+.footer-social {
+    display: flex;
+    gap: 24px;
+}
+
+.footer-social a {
+    color: var(--gray-300);
+    font-size: 14px;
+    transition: color 0.3s ease;
+}
+
+.footer-social a:hover {
+    color: var(--gold);
 }
 
 .footer-legal {

@@ -22,6 +22,15 @@ const navLinks = document.querySelector('.nav-links');
 
 menuToggle?.addEventListener('click', () => {
     navLinks.classList.toggle('active');
+    menuToggle.classList.toggle('active');
+});
+
+// Close mobile menu when a link is clicked
+document.querySelectorAll('.nav-links a').forEach(link => {
+    link.addEventListener('click', () => {
+        navLinks?.classList.remove('active');
+        menuToggle?.classList.remove('active');
+    });
 });
 
 // Parallax effect on scroll
@@ -80,17 +89,44 @@ if (reservationForm) {
     reservationForm.addEventListener('submit', (e) => {
         e.preventDefault();
 
-        // Simple form validation feedback
+        // Get form data
+        const formData = new FormData(reservationForm);
+        const date = reservationForm.querySelector('input[type="date"]').value;
+        const time = reservationForm.querySelector('select:nth-of-type(1)').value;
+        const guests = reservationForm.querySelector('select:nth-of-type(2)').value;
+        const name = reservationForm.querySelector('input[type="text"]').value;
+        const email = reservationForm.querySelector('input[type="email"]').value;
+        const phone = reservationForm.querySelector('input[type="tel"]').value;
+        const requests = reservationForm.querySelector('textarea').value;
+
+        // Create mailto link with form details
+        const mailtoSubject = encodeURIComponent(`Reservation Request for ${date}`);
+        const mailtoBody = encodeURIComponent(
+            `Reservation Request\n\n` +
+            `Name: ${name}\n` +
+            `Email: ${email}\n` +
+            `Phone: ${phone}\n` +
+            `Date: ${date}\n` +
+            `Time: ${time}\n` +
+            `Party Size: ${guests}\n` +
+            `Special Requests: ${requests || 'None'}\n\n` +
+            `Please confirm this reservation.`
+        );
+
+        // Open email client with pre-filled information
+        window.location.href = `mailto:hello@maisonnoir.com?subject=${mailtoSubject}&body=${mailtoBody}`;
+
+        // Provide visual feedback
         const btn = reservationForm.querySelector('.btn');
         const originalText = btn.textContent;
-        btn.textContent = 'Request Sent!';
+        btn.textContent = 'Opening email client...';
         btn.style.background = '#4a7c59';
 
         setTimeout(() => {
             btn.textContent = originalText;
             btn.style.background = '';
             reservationForm.reset();
-        }, 3000);
+        }, 2000);
     });
 }
 

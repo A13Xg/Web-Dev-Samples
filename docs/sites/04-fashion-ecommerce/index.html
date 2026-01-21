@@ -9,7 +9,7 @@
 </head>
 <body>
     <div class="announcement-bar">
-        <p>Free shipping on orders over $150 | <a href="#">Shop Now</a></p>
+        <p>Free shipping on orders over $150 | <a href="#new" class="shop-now-link">Shop Now</a></p>
     </div>
 
     <nav class="nav">
@@ -23,22 +23,22 @@
                 <li><a href="#men">Men</a></li>
                 <li><a href="#new">New Arrivals</a></li>
             </ul>
-            <a href="#" class="logo">NOIR</a>
+            <a href="#hero" class="logo">NOIR</a>
             <ul class="nav-links nav-right">
-                <li><a href="#">About</a></li>
-                <li><a href="#">Stores</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#stores">Stores</a></li>
                 <li class="nav-icons">
-                    <a href="#" aria-label="Search">
+                    <a href="#search" aria-label="Search" class="search-icon">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
                             <circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/>
                         </svg>
                     </a>
-                    <a href="#" aria-label="Account">
+                    <a href="#account" aria-label="Account" class="account-icon">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
                             <circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 4-6 8-6s8 2 8 6"/>
                         </svg>
                     </a>
-                    <a href="#" aria-label="Cart" class="cart-icon">
+                    <a href="#cart" aria-label="Cart" class="cart-icon">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
                             <path d="M6 6h15l-1.5 9h-12z"/><circle cx="9" cy="20" r="1"/><circle cx="18" cy="20" r="1"/>
                         </svg>
@@ -49,7 +49,7 @@
         </div>
     </nav>
 
-    <header class="hero">
+    <header class="hero" id="hero">
         <div class="hero-slider">
             <div class="hero-slide active">
                 <div class="hero-image">
@@ -60,29 +60,17 @@
                     <h1>The Art of<br><em>Effortless Style</em></h1>
                     <p>Discover our new collection of timeless pieces designed for the modern individual.</p>
                     <div class="hero-cta">
-                        <a href="#" class="btn btn-primary">Shop Women</a>
-                        <a href="#" class="btn btn-outline">Shop Men</a>
+                        <a href="#women" class="btn btn-primary">Shop Women</a>
+                        <a href="#men" class="btn btn-outline">Shop Men</a>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="hero-nav">
-            <button class="hero-nav-btn prev" aria-label="Previous">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                    <path d="M15 19l-7-7 7-7"/>
-                </svg>
-            </button>
-            <button class="hero-nav-btn next" aria-label="Next">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                    <path d="M9 5l7 7-7 7"/>
-                </svg>
-            </button>
-        </div>
     </header>
 
-    <section class="categories">
+    <section class="categories" id="women">
         <div class="category-grid">
-            <a href="#" class="category-card">
+            <a href="#women" class="category-card" title="Women's Collection">
                 <div class="category-image">
                     <img src="https://images.unsplash.com/photo-1487222477894-8943e31ef7b2?w=600&h=800&fit=crop" alt="Women's collection">
                 </div>
@@ -91,7 +79,7 @@
                     <span>Shop Collection</span>
                 </div>
             </a>
-            <a href="#" class="category-card">
+            <a href="#men" class="category-card" title="Men's Collection">
                 <div class="category-image">
                     <img src="https://images.unsplash.com/photo-1507680434567-5739c80be1ac?w=600&h=800&fit=crop" alt="Men's collection">
                 </div>
@@ -100,7 +88,7 @@
                     <span>Shop Collection</span>
                 </div>
             </a>
-            <a href="#" class="category-card">
+            <a href="#accessories" class="category-card" title="Accessories Collection">
                 <div class="category-image">
                     <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=600&h=800&fit=crop" alt="Accessories">
                 </div>
@@ -115,12 +103,12 @@
     <section id="new" class="products">
         <div class="section-header">
             <h2>New Arrivals</h2>
-            <a href="#" class="view-all">View All <span>&rarr;</span></a>
+            <a href="#new" class="view-all" onclick="alert('View all new arrivals products')">View All <span>&rarr;</span></a>
         </div>
 
         <div class="products-grid">
             <article class="product-card">
-                <a href="#">
+                <a href="#" class="product-link" onclick="alert('Oversized Wool Blazer\n\nColor: Black\nSize: M\nPrice: $289\n\nAdd to cart functionality available via the Quick Add button'); return false;">
                     <div class="product-image">
                         <img src="https://images.unsplash.com/photo-1591047139829-d91aecb6caea?w=500&h=650&fit=crop" alt="Oversized Blazer">
                         <img src="https://images.unsplash.com/photo-1594938298603-c8148c4dae35?w=500&h=650&fit=crop" alt="Oversized Blazer Alternate" class="product-image-hover">
@@ -139,7 +127,7 @@
             </article>
 
             <article class="product-card">
-                <a href="#">
+                <a href="#" class="product-link" onclick="alert('Silk Drape Blouse\n\nColor: White\nSize: S\nPrice: $165\n\nAdd to cart functionality available via the Quick Add button'); return false;">
                     <div class="product-image">
                         <img src="https://images.unsplash.com/photo-1594938328870-9623159c8c99?w=500&h=650&fit=crop" alt="Silk Blouse">
                         <img src="https://images.unsplash.com/photo-1485968579580-b6d095142e6e?w=500&h=650&fit=crop" alt="Silk Blouse Alternate" class="product-image-hover">
@@ -157,7 +145,7 @@
             </article>
 
             <article class="product-card">
-                <a href="#">
+                <a href="#" class="product-link" onclick="alert('High-Waist Trousers\n\nColor: Black\nSize: M\nPrice: $136 (was $195, -30% OFF)\n\nAdd to cart functionality available via the Quick Add button'); return false;">
                     <div class="product-image">
                         <img src="https://images.unsplash.com/photo-1584370848010-d7fe6bc767ec?w=500&h=650&fit=crop" alt="Tailored Trousers">
                         <img src="https://images.unsplash.com/photo-1506629082955-511b1aa562c8?w=500&h=650&fit=crop" alt="Tailored Trousers Alternate" class="product-image-hover">
@@ -176,7 +164,7 @@
             </article>
 
             <article class="product-card">
-                <a href="#">
+                <a href="#" class="product-link" onclick="alert('Mini Leather Bag\n\nColor: Tan\nPrice: $245\n\nAdd to cart functionality available via the Quick Add button'); return false;">
                     <div class="product-image">
                         <img src="https://images.unsplash.com/photo-1548036328-c9fa89d128fa?w=500&h=650&fit=crop" alt="Leather Bag">
                         <img src="https://images.unsplash.com/photo-1590874103328-eac38a683ce7?w=500&h=650&fit=crop" alt="Leather Bag Alternate" class="product-image-hover">
@@ -201,7 +189,7 @@
                 <span class="editorial-tag">Editorial</span>
                 <h2>The Pursuit of <em>Timeless</em> Design</h2>
                 <p>Our Spring/Summer collection draws inspiration from architectural minimalism and the natural world. Each piece is crafted to transcend seasons, becoming a lasting part of your wardrobe.</p>
-                <a href="#" class="btn btn-dark">Read the Story</a>
+                <a href="#" class="btn btn-dark" onclick="alert('Editorial: The Pursuit of Timeless Design\n\nOur Spring/Summer collection showcases the intersection of modern design and sustainability. Click to read full story'); return false;">Read the Story</a>
             </div>
             <div class="editorial-image">
                 <img src="https://images.unsplash.com/photo-1509631179647-0177331693ae?w=800&h=1000&fit=crop" alt="Editorial fashion">
@@ -209,7 +197,7 @@
         </div>
     </section>
 
-    <section class="bestsellers">
+    <section id="men" class="bestsellers">
         <div class="section-header">
             <h2>Bestsellers</h2>
             <div class="tab-nav">
@@ -221,7 +209,7 @@
 
         <div class="products-grid">
             <article class="product-card">
-                <a href="#">
+                <a href="#" class="product-link" onclick="alert('Cashmere Crewneck\n\nColors: Black, Tan, Beige\nSize: M\nPrice: $320\n\nAdd to cart functionality available via the Quick Add button'); return false;">
                     <div class="product-image">
                         <img src="https://images.unsplash.com/photo-1434389677669-e08b4cac3105?w=500&h=650&fit=crop" alt="Cashmere Sweater">
                         <button class="quick-add" aria-label="Quick add">
@@ -243,7 +231,7 @@
             </article>
 
             <article class="product-card">
-                <a href="#">
+                <a href="#" class="product-link" onclick="alert('Double-Breasted Coat (Bestseller)\n\nColor: Camel\nSize: M\nPrice: $495\n\nAdd to cart functionality available via the Quick Add button'); return false;">
                     <div class="product-image">
                         <img src="https://images.unsplash.com/photo-1539109136881-3be0616acf4b?w=500&h=650&fit=crop" alt="Wool Coat">
                         <span class="product-badge">Bestseller</span>
@@ -261,7 +249,7 @@
             </article>
 
             <article class="product-card">
-                <a href="#">
+                <a href="#" class="product-link" onclick="alert('Leather Low-Top Sneakers\n\nColor: White\nSize: 10\nPrice: $185\n\nAdd to cart functionality available via the Quick Add button'); return false;">
                     <div class="product-image">
                         <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=500&h=650&fit=crop" alt="Sneakers">
                         <button class="quick-add" aria-label="Quick add">
@@ -278,7 +266,7 @@
             </article>
 
             <article class="product-card">
-                <a href="#">
+                <a href="#" class="product-link" onclick="alert('Minimalist Watch\n\nColor: Silver\nPrice: $275\n\nAdd to cart functionality available via the Quick Add button'); return false;">
                     <div class="product-image">
                         <img src="https://images.unsplash.com/photo-1556306535-0f09a537f0a3?w=500&h=650&fit=crop" alt="Watch">
                         <button class="quick-add" aria-label="Quick add">
@@ -296,7 +284,7 @@
         </div>
     </section>
 
-    <section class="features">
+    <section id="about" class="features">
         <div class="features-grid">
             <div class="feature">
                 <div class="feature-icon">
@@ -307,7 +295,7 @@
                 <h3>Free Shipping</h3>
                 <p>On orders over $150</p>
             </div>
-            <div class="feature">
+            <div class="feature" id="stores">
                 <div class="feature-icon">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
                         <path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"/>
@@ -338,7 +326,7 @@
         </div>
     </section>
 
-    <section class="newsletter">
+    <section id="accessories" class="newsletter">
         <div class="newsletter-content">
             <h2>Join the NOIR community</h2>
             <p>Subscribe for exclusive offers, early access to new arrivals, and 10% off your first order.</p>
@@ -352,45 +340,45 @@
     <footer class="footer">
         <div class="footer-content">
             <div class="footer-brand">
-                <a href="#" class="footer-logo">NOIR</a>
+                <a href="#hero" class="footer-logo">NOIR</a>
                 <p>Contemporary fashion for the modern individual. Quality craftsmanship meets timeless design.</p>
                 <div class="social-links">
-                    <a href="#" aria-label="Instagram">Instagram</a>
-                    <a href="#" aria-label="Facebook">Facebook</a>
-                    <a href="#" aria-label="Pinterest">Pinterest</a>
+                    <a href="https://instagram.com" aria-label="Instagram" target="_blank" rel="noopener noreferrer">Instagram</a>
+                    <a href="https://facebook.com" aria-label="Facebook" target="_blank" rel="noopener noreferrer">Facebook</a>
+                    <a href="https://pinterest.com" aria-label="Pinterest" target="_blank" rel="noopener noreferrer">Pinterest</a>
                 </div>
             </div>
             <div class="footer-links">
                 <div class="footer-column">
                     <h4>Shop</h4>
-                    <a href="#">Women</a>
-                    <a href="#">Men</a>
-                    <a href="#">Accessories</a>
-                    <a href="#">New Arrivals</a>
-                    <a href="#">Sale</a>
+                    <a href="#women">Women</a>
+                    <a href="#men">Men</a>
+                    <a href="#accessories">Accessories</a>
+                    <a href="#new">New Arrivals</a>
+                    <a href="#" onclick="alert('Sale section coming soon!'); return false;">Sale</a>
                 </div>
                 <div class="footer-column">
                     <h4>Help</h4>
-                    <a href="#">Size Guide</a>
-                    <a href="#">Shipping</a>
-                    <a href="#">Returns</a>
-                    <a href="#">FAQ</a>
-                    <a href="#">Contact</a>
+                    <a href="#" onclick="alert('Size Guide\n\nWomen: XS (0-2), S (4-6), M (8-10), L (12-14)\nMen: XS (32-34), S (34-36), M (38-40), L (42-44)'); return false;">Size Guide</a>
+                    <a href="#" onclick="alert('Shipping Information\n\nStandard Shipping: 5-7 business days\nExpress Shipping: 2-3 business days\nFree shipping on orders over $150'); return false;">Shipping</a>
+                    <a href="#" onclick="alert('Returns & Exchanges\n\n30-day return policy on all items in original condition\nFree return shipping on orders over $100'); return false;">Returns</a>
+                    <a href="#" onclick="alert('Frequently Asked Questions\n\nContact our support team at support@noir.com or call 1-800-NOIR-SHOP'); return false;">FAQ</a>
+                    <a href="#" onclick="alert('Contact NOIR\n\nEmail: support@noir.com\nPhone: 1-800-NOIR-SHOP\nHours: Mon-Fri 9AM-6PM EST'); return false;">Contact</a>
                 </div>
                 <div class="footer-column">
                     <h4>About</h4>
-                    <a href="#">Our Story</a>
-                    <a href="#">Sustainability</a>
-                    <a href="#">Stores</a>
-                    <a href="#">Careers</a>
+                    <a href="#" onclick="alert('Our Story\n\nNOIR is dedicated to creating contemporary fashion that celebrates timeless design principles and sustainable craftsmanship.'); return false;">Our Story</a>
+                    <a href="#" onclick="alert('Sustainability\n\nWe are committed to ethical production practices and environmentally responsible materials. Learn more about our initiatives.'); return false;">Sustainability</a>
+                    <a href="#" onclick="alert('Find Our Stores\n\nLocations in: New York, Los Angeles, Chicago, Miami, and London'); return false;">Stores</a>
+                    <a href="#" onclick="alert('Join Our Team\n\nNOIR is always looking for talented individuals. View open positions and apply today!'); return false;">Careers</a>
                 </div>
             </div>
         </div>
         <div class="footer-bottom">
             <span>&copy; 2024 NOIR. All rights reserved.</span>
             <div class="footer-legal">
-                <a href="#">Privacy Policy</a>
-                <a href="#">Terms of Service</a>
+                <a href="#" onclick="alert('Privacy Policy\n\nWe respect your privacy. Read our complete privacy policy for details on how we collect and use your data.'); return false;">Privacy Policy</a>
+                <a href="#" onclick="alert('Terms of Service\n\nBy using our site, you agree to our terms and conditions. Please read them carefully.'); return false;">Terms of Service</a>
             </div>
         </div>
     </footer>

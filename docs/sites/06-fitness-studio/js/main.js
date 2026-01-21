@@ -111,6 +111,17 @@ contactForm?.addEventListener('submit', (e) => {
     }, 2000);
 });
 
+// Pricing plan button handling
+const pricingButtons = document.querySelectorAll('.pricing-join-btn');
+
+pricingButtons.forEach(btn => {
+    btn.addEventListener('click', (e) => {
+        e.preventDefault();
+        const plan = btn.getAttribute('data-plan');
+        alert(`Thank you for your interest in the ${plan} plan!\n\nIn a real application, this would take you to the membership signup form. Please contact us at hello@pulsefitness.com or call (555) 123-4567 to complete your enrollment.`);
+    });
+});
+
 // Smooth scroll for anchor links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function(e) {

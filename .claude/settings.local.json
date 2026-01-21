@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(findstr:*)",
+      "Bash(dir:*)",
+      "Bash(node server.js:*)"
+    ]
+  }
+}

@@ -134,3 +134,54 @@ window.addEventListener('load', () => {
         }, 100);
     }
 });
+
+// Purchase ticket handler
+function purchaseTicket(ticketType, price) {
+    alert(`You selected: ${ticketType} (${price})\n\nRedirecting to payment system...\n\nThis is a demo. In production, this would open a checkout page.`);
+}
+
+// Show full lineup handler
+function showFullLineup() {
+    const lineupSection = document.getElementById('lineup');
+    alert('Full Lineup:\n\nFriday (4 additional artists)\nSaturday (4 additional artists)\nSunday (4 additional artists)\n\nPlus 50+ more artists performing across Main Stage, Horizon Stage, Electric Tent, and Acoustic Grove.\n\nScroll to the lineup section for main headliners!');
+    if (lineupSection) {
+        lineupSection.scrollIntoView({ behavior: 'smooth' });
+    }
+}
+
+// Show FAQ handler
+function showFAQ() {
+    const faqContent = `
+Frequently Asked Questions:
+
+Q: What should I bring?
+A: Tickets, ID, sunscreen, comfortable shoes, and a water bottle.
+
+Q: Are there camping options?
+A: Yes! On-site camping, car camping, tent camping, and glamping packages are available.
+
+Q: Can I bring outside food/drinks?
+A: No outside beverages. Food vendors are available throughout the festival.
+
+Q: What's the parking situation?
+A: Free parking is available in designated lots. Arrive early for best spots.
+
+Q: Are there refunds?
+A: No refunds, but tickets are transferable.
+
+Q: What if it rains?
+A: The festival continues in light rain. Bring a poncho!
+
+Q: Are dogs allowed?
+A: Service animals only at this festival.
+
+Q: Can I re-enter after leaving?
+A: Yes, hand stamps allow re-entry same day.
+    `;
+    alert(faqContent);
+}
+
+// Show contact handler
+function showContact() {
+    alert('Contact Information:\n\nEmail: info@horizonfest.com\nPhone: 1-800-HORIZON-1\nWebsite: www.horizonfest.com\n\nFollow us on social media for updates!');
+}

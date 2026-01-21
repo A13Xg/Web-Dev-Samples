@@ -191,12 +191,44 @@ document.addEventListener('DOMContentLoaded', () => {
     const practiceCards = document.querySelectorAll('.practice-card');
 
     practiceCards.forEach(card => {
+        card.style.cursor = 'pointer';
+
         card.addEventListener('mouseenter', () => {
             card.style.transform = 'translateY(-8px)';
         });
 
         card.addEventListener('mouseleave', () => {
             card.style.transform = 'translateY(0)';
+        });
+
+        // Make practice cards clickable to navigate to contact form
+        card.addEventListener('click', () => {
+            const practiceTitle = card.querySelector('h3').textContent;
+            const practiceDesc = card.querySelector('p').textContent;
+            const contactForm = document.querySelector('.contact-form');
+
+            if (contactForm) {
+                const practiceSelect = contactForm.querySelector('select');
+                const messageField = contactForm.querySelector('textarea');
+
+                if (practiceSelect) {
+                    practiceSelect.value = practiceTitle;
+                }
+
+                if (messageField) {
+                    messageField.value = `I am interested in learning more about ${practiceTitle}. ${practiceDesc}`;
+                    messageField.focus();
+                }
+
+                const contactSection = document.querySelector('#contact');
+                const headerHeight = header.offsetHeight;
+                const targetPosition = contactSection.offsetTop - headerHeight;
+
+                window.scrollTo({
+                    top: targetPosition,
+                    behavior: 'smooth'
+                });
+            }
         });
     });
 
@@ -217,6 +249,31 @@ document.addEventListener('DOMContentLoaded', () => {
             if (image) {
                 image.style.filter = 'grayscale(20%)';
                 image.style.transform = 'scale(1)';
+            }
+        });
+
+        // Make team members clickable to navigate to contact form
+        member.style.cursor = 'pointer';
+        member.addEventListener('click', () => {
+            const memberName = member.querySelector('h3').textContent;
+            const practiceArea = member.querySelector('.member-info p').textContent;
+            const contactForm = document.querySelector('.contact-form');
+
+            if (contactForm) {
+                const messageField = contactForm.querySelector('textarea');
+                if (messageField) {
+                    messageField.value = `I would like to discuss ${practiceArea.toLowerCase()} with ${memberName}.`;
+                    messageField.focus();
+                }
+
+                const contactSection = document.querySelector('#contact');
+                const headerHeight = header.offsetHeight;
+                const targetPosition = contactSection.offsetTop - headerHeight;
+
+                window.scrollTo({
+                    top: targetPosition,
+                    behavior: 'smooth'
+                });
             }
         });
     });

@@ -10,7 +10,7 @@
 <body>
     <nav class="nav">
         <div class="nav-container">
-            <a href="#" class="logo">Wanderlust</a>
+            <a href="#" class="logo" onclick="window.scrollTo({top: 0, behavior: 'smooth'}); return false;">Wanderlust</a>
             <ul class="nav-links">
                 <li><a href="#destinations">Destinations</a></li>
                 <li><a href="#stories">Stories</a></li>
@@ -18,12 +18,12 @@
                 <li><a href="#about">About</a></li>
             </ul>
             <div class="nav-actions">
-                <a href="#" class="nav-search" aria-label="Search">
+                <a href="#" class="nav-search" aria-label="Search" onclick="alert('Search functionality coming soon!'); return false;">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                         <circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/>
                     </svg>
                 </a>
-                <a href="#" class="btn btn-nav">Subscribe</a>
+                <a href="#" class="btn btn-nav" onclick="document.querySelector('.newsletter').scrollIntoView({behavior: 'smooth'}); return false;">Subscribe</a>
             </div>
             <button class="menu-toggle" aria-label="Menu">
                 <span></span>
@@ -42,7 +42,7 @@
             <span class="hero-tag">Featured Destination</span>
             <h1>The Swiss Alps</h1>
             <p>Discover the breathtaking beauty of Europe's most iconic mountain range, where adventure meets tranquility.</p>
-            <a href="#" class="btn btn-primary">Read the Story</a>
+            <a href="#" class="btn btn-primary" onclick="alert('The Swiss Alps: A guide to hiking, skiing, and experiencing the majesty of Europe\'s highest peaks. Perfect for adventure seekers and nature lovers!'); return false;">Read the Story</a>
         </div>
         <div class="hero-scroll">
             <span>Scroll to Explore</span>
@@ -72,7 +72,7 @@
         </div>
 
         <div class="destinations-grid">
-            <a href="#" class="destination-card destination-large">
+            <a href="#" class="destination-card destination-large" onclick="alert('Bali, Indonesia\\n\\nExplore tropical beaches, ancient temples, and vibrant culture. Perfect for beach lovers and spiritual seekers. 12 stories available.'); return false;">
                 <div class="destination-image">
                     <img src="https://images.unsplash.com/photo-1512100356356-de1b84283e18?w=800&h=1000&fit=crop" alt="Bali, Indonesia">
                 </div>
@@ -83,7 +83,7 @@
                 </div>
             </a>
 
-            <a href="#" class="destination-card">
+            <a href="#" class="destination-card" onclick="alert('Kyoto, Japan\\n\\nDiscover ancient temples, traditional gardens, and Japanese culture. Home to thousands of years of history. 8 stories available.'); return false;">
                 <div class="destination-image">
                     <img src="https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?w=600&h=400&fit=crop" alt="Kyoto, Japan">
                 </div>
@@ -94,7 +94,7 @@
                 </div>
             </a>
 
-            <a href="#" class="destination-card">
+            <a href="#" class="destination-card" onclick="alert('Amalfi Coast, Italy\\n\\nWander through colorful villages, taste authentic Italian cuisine, and enjoy stunning coastal views. 15 stories available.'); return false;">
                 <div class="destination-image">
                     <img src="https://images.unsplash.com/photo-1516483638261-f4dbaf036963?w=600&h=400&fit=crop" alt="Amalfi Coast, Italy">
                 </div>
@@ -105,7 +105,7 @@
                 </div>
             </a>
 
-            <a href="#" class="destination-card">
+            <a href="#" class="destination-card" onclick="alert('Maldives\\n\\nRelax in tropical paradise with crystal-clear waters and pristine beaches. An ideal destination for honeymooners and beach enthusiasts. 6 stories available.'); return false;">
                 <div class="destination-image">
                     <img src="https://images.unsplash.com/photo-1539635278303-d4002c07eae3?w=600&h=400&fit=crop" alt="Maldives">
                 </div>
@@ -116,7 +116,7 @@
                 </div>
             </a>
 
-            <a href="#" class="destination-card">
+            <a href="#" class="destination-card" onclick="alert('Iceland\\n\\nExperience otherworldly landscapes including waterfalls, geysers, and glaciers. Perfect for adventure and nature photographers. 10 stories available.'); return false;">
                 <div class="destination-image">
                     <img src="https://images.unsplash.com/photo-1518548419970-58e3b4079ab2?w=600&h=400&fit=crop" alt="Iceland">
                 </div>
@@ -129,7 +129,7 @@
         </div>
 
         <div class="section-cta">
-            <a href="#" class="btn btn-outline">View All Destinations</a>
+            <a href="#" class="btn btn-outline" onclick="alert('Browse our complete collection of 50+ destinations around the world, each with detailed guides, tips, and traveler stories!'); return false;">View All Destinations</a>
         </div>
     </section>
 
@@ -154,7 +154,7 @@
 
         <div class="stories-grid">
             <article class="story-card story-featured">
-                <a href="#">
+                <a href="#" onclick="alert('Chasing the Northern Lights: A Complete Guide to Aurora Hunting\\n\\nEverything you need to know to witness one of nature\'s most spectacular phenomena, from the best locations to timing your trip perfectly.\\n\\nBy Sarah Mitchell - 8 min read'); return false;">
                     <div class="story-image">
                         <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?w=1000&h=600&fit=crop" alt="Northern Lights">
                         <span class="story-category">Adventure</span>
@@ -176,7 +176,7 @@
             </article>
 
             <article class="story-card">
-                <a href="#">
+                <a href="#" onclick="alert('Lost in the Medinas: Exploring Morocco\'s Ancient Cities\\n\\nWinding through centuries-old streets where time seems to stand still. Discover vibrant markets, stunning architecture, and warm hospitality.\\n\\n6 min read'); return false;">
                     <div class="story-image">
                         <img src="https://images.unsplash.com/photo-1504598318550-17eba1008a68?w=600&h=400&fit=crop" alt="Morocco">
                         <span class="story-category">Culture</span>
@@ -194,7 +194,7 @@
             </article>
 
             <article class="story-card">
-                <a href="#">
+                <a href="#" onclick="alert('The Ultimate Beach Guide: 10 Hidden Gems\\n\\nEscape the crowds and discover paradise in these secret coastal havens. From secluded coves to pristine shores, find your perfect beach escape.\\n\\n5 min read'); return false;">
                     <div class="story-image">
                         <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=600&h=400&fit=crop" alt="Beach">
                         <span class="story-category">Relaxation</span>
@@ -212,7 +212,7 @@
             </article>
 
             <article class="story-card">
-                <a href="#">
+                <a href="#" onclick="alert('Kayaking Through Norway\'s Fjords\\n\\nPaddling past dramatic cliffs and cascading waterfalls in Scandinavia. Experience the raw beauty of nature and exhilarating adventure.\\n\\n7 min read'); return false;">
                     <div class="story-image">
                         <img src="https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?w=600&h=400&fit=crop" alt="Lake">
                         <span class="story-category">Adventure</span>
@@ -239,7 +239,7 @@
                 <p>Comprehensive guides to help you plan your next adventure. From packing lists to local customs, we've got you covered.</p>
 
                 <div class="guide-list">
-                    <a href="#" class="guide-item">
+                    <a href="#" class="guide-item" onclick="alert('Destination Guides\\n\\nExplore in-depth guides for 50+ countries covering geography, culture, cuisine, best times to visit, local customs, and must-see attractions!'); return false;">
                         <div class="guide-icon">
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
                                 <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/>
@@ -253,7 +253,7 @@
                         <span class="guide-arrow">&rarr;</span>
                     </a>
 
-                    <a href="#" class="guide-item">
+                    <a href="#" class="guide-item" onclick="alert('Packing Guides\\n\\nSmart packing tips for different climates and trip types. Learn what to bring, how to pack efficiently, and essential items for every adventure!'); return false;">
                         <div class="guide-icon">
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
                                 <rect x="2" y="7" width="20" height="14" rx="2"/>
@@ -267,7 +267,7 @@
                         <span class="guide-arrow">&rarr;</span>
                     </a>
 
-                    <a href="#" class="guide-item">
+                    <a href="#" class="guide-item" onclick="alert('Budget Travel\\n\\nDiscover ways to make your money go further! Learn budget-friendly accommodation, free attractions, affordable dining, and money-saving travel hacks!'); return false;">
                         <div class="guide-icon">
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
                                 <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
@@ -293,22 +293,22 @@
             <h2>Follow Our Journey</h2>
         </div>
         <div class="instagram-grid">
-            <a href="#" class="instagram-item">
+            <a href="https://instagram.com" target="_blank" class="instagram-item">
                 <img src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?w=400&h=400&fit=crop" alt="Paris">
             </a>
-            <a href="#" class="instagram-item">
+            <a href="https://instagram.com" target="_blank" class="instagram-item">
                 <img src="https://images.unsplash.com/photo-1523906834658-6e24ef2386f9?w=400&h=400&fit=crop" alt="Venice">
             </a>
-            <a href="#" class="instagram-item">
+            <a href="https://instagram.com" target="_blank" class="instagram-item">
                 <img src="https://images.unsplash.com/photo-1533105079780-92b9be482077?w=400&h=400&fit=crop" alt="Santorini">
             </a>
-            <a href="#" class="instagram-item">
+            <a href="https://instagram.com" target="_blank" class="instagram-item">
                 <img src="https://images.unsplash.com/photo-1504893524553-b855bce32c67?w=400&h=400&fit=crop" alt="Waterfall">
             </a>
-            <a href="#" class="instagram-item">
+            <a href="https://instagram.com" target="_blank" class="instagram-item">
                 <img src="https://images.unsplash.com/photo-1530789253388-582c481c54b0?w=400&h=400&fit=crop" alt="Thailand">
             </a>
-            <a href="#" class="instagram-item">
+            <a href="https://instagram.com" target="_blank" class="instagram-item">
                 <img src="https://images.unsplash.com/photo-1476610182048-b716b8515aaa?w=400&h=400&fit=crop" alt="Northern Lights">
             </a>
         </div>
@@ -331,35 +331,35 @@
     <footer id="about" class="footer">
         <div class="footer-content">
             <div class="footer-brand">
-                <a href="#" class="footer-logo">Wanderlust</a>
+                <a href="#" class="footer-logo" onclick="window.scrollTo({top: 0, behavior: 'smooth'}); return false;">Wanderlust</a>
                 <p>Inspiring adventures and meaningful connections around the world since 2015.</p>
                 <div class="social-links">
-                    <a href="#">Instagram</a>
-                    <a href="#">YouTube</a>
-                    <a href="#">Pinterest</a>
-                    <a href="#">Twitter</a>
+                    <a href="https://instagram.com" target="_blank">Instagram</a>
+                    <a href="https://youtube.com" target="_blank">YouTube</a>
+                    <a href="https://pinterest.com" target="_blank">Pinterest</a>
+                    <a href="https://twitter.com" target="_blank">Twitter</a>
                 </div>
             </div>
             <div class="footer-links">
                 <div class="footer-column">
                     <h4>Explore</h4>
-                    <a href="#">Destinations</a>
-                    <a href="#">Stories</a>
-                    <a href="#">Guides</a>
-                    <a href="#">Photos</a>
+                    <a href="#destinations">Destinations</a>
+                    <a href="#stories">Stories</a>
+                    <a href="#guides">Guides</a>
+                    <a href="#" onclick="alert('Explore our photo gallery featuring stunning travel photography from around the world!'); return false;">Photos</a>
                 </div>
                 <div class="footer-column">
                     <h4>About</h4>
-                    <a href="#">Our Story</a>
-                    <a href="#">Team</a>
-                    <a href="#">Contact</a>
-                    <a href="#">Press</a>
+                    <a href="#" onclick="alert('Our Story: Started in 2015, Wanderlust is dedicated to inspiring travel and connecting people through authentic experiences.'); return false;">Our Story</a>
+                    <a href="#" onclick="alert('Meet our team of passionate travelers and storytellers who bring the world to you!'); return false;">Team</a>
+                    <a href="#" onclick="alert('Contact Us: hello@wanderlust.com or visit our social media @wanderlusttravel'); return false;">Contact</a>
+                    <a href="#" onclick="alert('Press: For media inquiries and partnership opportunities, reach out to press@wanderlust.com'); return false;">Press</a>
                 </div>
                 <div class="footer-column">
                     <h4>Legal</h4>
-                    <a href="#">Privacy Policy</a>
-                    <a href="#">Terms of Use</a>
-                    <a href="#">Cookie Policy</a>
+                    <a href="#" onclick="alert('Privacy Policy: We respect your privacy and protect your personal data in accordance with regulations.'); return false;">Privacy Policy</a>
+                    <a href="#" onclick="alert('Terms of Use: Please read our terms and conditions for using Wanderlust website and services.'); return false;">Terms of Use</a>
+                    <a href="#" onclick="alert('Cookie Policy: We use cookies to enhance your browsing experience. Learn more about how we use them.'); return false;">Cookie Policy</a>
                 </div>
             </div>
         </div>

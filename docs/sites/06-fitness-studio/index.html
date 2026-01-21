@@ -10,14 +10,14 @@
 <body>
     <nav class="nav">
         <div class="nav-container">
-            <a href="#" class="logo">PULSE</a>
+            <a href="#hero" class="logo">PULSE</a>
             <ul class="nav-links">
                 <li><a href="#classes">Classes</a></li>
                 <li><a href="#trainers">Trainers</a></li>
                 <li><a href="#pricing">Pricing</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
-            <a href="#" class="btn btn-primary">Join Now</a>
+            <a href="#pricing" class="btn btn-primary">Join Now</a>
             <button class="menu-toggle" aria-label="Menu">
                 <span></span>
                 <span></span>
@@ -25,7 +25,7 @@
         </div>
     </nav>
 
-    <header class="hero">
+    <header class="hero" id="hero">
         <div class="hero-video">
             <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=1920&h=1080&fit=crop" alt="Fitness training">
             <div class="hero-overlay"></div>
@@ -34,8 +34,8 @@
             <h1>PUSH YOUR<br><span>LIMITS</span></h1>
             <p>Transform your body and mind at the city's most innovative fitness studio. State-of-the-art equipment, expert trainers, and a community that motivates.</p>
             <div class="hero-cta">
-                <a href="#" class="btn btn-primary btn-large">Start Free Trial</a>
-                <a href="#" class="btn btn-outline-light">View Schedule</a>
+                <a href="#pricing" class="btn btn-primary btn-large">Start Free Trial</a>
+                <a href="#classes" class="btn btn-outline-light">View Schedule</a>
             </div>
         </div>
         <div class="hero-stats">
@@ -212,7 +212,7 @@
         </div>
 
         <div class="section-cta">
-            <a href="#" class="btn btn-primary">View Full Schedule</a>
+            <a href="#pricing" class="btn btn-primary">View Full Schedule</a>
         </div>
     </section>
 
@@ -223,7 +223,7 @@
         <div class="cta-content">
             <h2>Ready to Transform?</h2>
             <p>Start your 7-day free trial today. No commitment, no credit card required.</p>
-            <a href="#" class="btn btn-primary btn-large">Claim Your Free Week</a>
+            <a href="#pricing" class="btn btn-primary btn-large">Claim Your Free Week</a>
         </div>
     </section>
 
@@ -239,7 +239,7 @@
                 <div class="trainer-image">
                     <img src="https://images.unsplash.com/photo-1567013127542-490d757e51fc?w=400&h=500&fit=crop" alt="Marcus Chen">
                     <div class="trainer-social">
-                        <a href="#">IG</a>
+                        <a href="https://instagram.com" target="_blank">IG</a>
                     </div>
                 </div>
                 <div class="trainer-info">
@@ -252,7 +252,7 @@
                 <div class="trainer-image">
                     <img src="https://images.unsplash.com/photo-1548690312-e3b507d8c110?w=400&h=500&fit=crop" alt="Sarah Williams">
                     <div class="trainer-social">
-                        <a href="#">IG</a>
+                        <a href="https://instagram.com" target="_blank">IG</a>
                     </div>
                 </div>
                 <div class="trainer-info">
@@ -265,7 +265,7 @@
                 <div class="trainer-image">
                     <img src="https://images.unsplash.com/photo-1571731956672-f2b94d7dd0cb?w=400&h=500&fit=crop" alt="David Park">
                     <div class="trainer-social">
-                        <a href="#">IG</a>
+                        <a href="https://instagram.com" target="_blank">IG</a>
                     </div>
                 </div>
                 <div class="trainer-info">
@@ -278,7 +278,7 @@
                 <div class="trainer-image">
                     <img src="https://images.unsplash.com/photo-1518310383802-640c2de311b2?w=400&h=500&fit=crop" alt="Emma Rodriguez">
                     <div class="trainer-social">
-                        <a href="#">IG</a>
+                        <a href="https://instagram.com" target="_blank">IG</a>
                     </div>
                 </div>
                 <div class="trainer-info">
@@ -312,7 +312,7 @@
                     <li>2 group classes/week</li>
                     <li>Basic fitness assessment</li>
                 </ul>
-                <a href="#" class="btn btn-outline">Get Started</a>
+                <a href="#" class="btn btn-outline pricing-join-btn" data-plan="Basic">Get Started</a>
             </div>
 
             <div class="pricing-card pricing-featured">
@@ -332,7 +332,7 @@
                     <li>Nutrition consultation</li>
                     <li>PULSE app premium</li>
                 </ul>
-                <a href="#" class="btn btn-primary">Get Started</a>
+                <a href="#" class="btn btn-primary pricing-join-btn" data-plan="Pro">Get Started</a>
             </div>
 
             <div class="pricing-card">
@@ -351,7 +351,7 @@
                     <li>Custom meal plans</li>
                     <li>Priority class booking</li>
                 </ul>
-                <a href="#" class="btn btn-outline">Get Started</a>
+                <a href="#" class="btn btn-outline pricing-join-btn" data-plan="Elite">Get Started</a>
             </div>
         </div>
     </section>
@@ -418,27 +418,27 @@
     <footer class="footer">
         <div class="footer-content">
             <div class="footer-brand">
-                <a href="#" class="footer-logo">PULSE</a>
+                <a href="#hero" class="footer-logo">PULSE</a>
                 <p>Premium fitness studio in the heart of the city. Transform your body, elevate your mind.</p>
                 <div class="social-links">
-                    <a href="#">Instagram</a>
-                    <a href="#">Facebook</a>
-                    <a href="#">YouTube</a>
+                    <a href="https://instagram.com" target="_blank">Instagram</a>
+                    <a href="https://facebook.com" target="_blank">Facebook</a>
+                    <a href="https://youtube.com" target="_blank">YouTube</a>
                 </div>
             </div>
             <div class="footer-links">
                 <div class="footer-column">
                     <h4>Quick Links</h4>
-                    <a href="#">Classes</a>
-                    <a href="#">Trainers</a>
-                    <a href="#">Pricing</a>
-                    <a href="#">Schedule</a>
+                    <a href="#classes">Classes</a>
+                    <a href="#trainers">Trainers</a>
+                    <a href="#pricing">Pricing</a>
+                    <a href="#classes">Schedule</a>
                 </div>
                 <div class="footer-column">
                     <h4>Support</h4>
-                    <a href="#">FAQ</a>
-                    <a href="#">Contact</a>
-                    <a href="#">Careers</a>
+                    <a href="#contact">Contact</a>
+                    <a href="mailto:hello@pulsefitness.com">Email Support</a>
+                    <a href="tel:(555) 123-4567">Call Us</a>
                 </div>
             </div>
         </div>

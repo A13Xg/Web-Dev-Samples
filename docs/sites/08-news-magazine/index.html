@@ -11,9 +11,9 @@
     <header class="header">
         <div class="header-top">
             <div class="header-date">Monday, March 18, 2024</div>
-            <a href="#" class="logo">The Chronicle</a>
+            <a href="#featured" class="logo">The Chronicle</a>
             <div class="header-actions">
-                <a href="#" class="btn-subscribe">Subscribe</a>
+                <button class="btn-subscribe">Subscribe</button>
                 <button class="btn-search" aria-label="Search">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                         <circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/>
@@ -23,22 +23,22 @@
         </div>
         <nav class="nav">
             <ul class="nav-links">
-                <li><a href="#" class="active">Home</a></li>
-                <li><a href="#">Politics</a></li>
-                <li><a href="#">Business</a></li>
-                <li><a href="#">Technology</a></li>
-                <li><a href="#">Science</a></li>
-                <li><a href="#">Culture</a></li>
-                <li><a href="#">Opinion</a></li>
-                <li><a href="#">Sports</a></li>
+                <li><a href="#featured" class="active">Home</a></li>
+                <li><a href="#latest" data-category="Politics">Politics</a></li>
+                <li><a href="#latest" data-category="Business">Business</a></li>
+                <li><a href="#latest" data-category="Technology">Technology</a></li>
+                <li><a href="#latest" data-category="Science">Science</a></li>
+                <li><a href="#latest" data-category="Culture">Culture</a></li>
+                <li><a href="#latest" data-category="Opinion">Opinion</a></li>
+                <li><a href="#latest" data-category="Sports">Sports</a></li>
             </ul>
         </nav>
     </header>
 
     <main class="main">
-        <section class="featured">
-            <article class="featured-main">
-                <a href="#">
+        <section class="featured" id="featured">
+            <article class="featured-main" data-article="nasa-breakthrough">
+                <a href="javascript:void(0)">
                     <div class="article-image">
                         <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1200&h=700&fit=crop" alt="Space exploration">
                     </div>
@@ -55,8 +55,8 @@
             </article>
 
             <div class="featured-secondary">
-                <article class="article-card">
-                    <a href="#">
+                <article class="article-card" data-article="markets-rally">
+                    <a href="javascript:void(0)">
                         <div class="article-image">
                             <img src="https://images.unsplash.com/photo-1526304640581-d334cdbbf45e?w=400&h=300&fit=crop" alt="Economy">
                         </div>
@@ -70,8 +70,8 @@
                     </a>
                 </article>
 
-                <article class="article-card">
-                    <a href="#">
+                <article class="article-card" data-article="urban-architecture">
+                    <a href="javascript:void(0)">
                         <div class="article-image">
                             <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&h=300&fit=crop" alt="Architecture">
                         </div>
@@ -88,11 +88,11 @@
         </section>
 
         <div class="content-grid">
-            <section class="latest">
+            <section class="latest" id="latest">
                 <h3 class="section-title">Latest News</h3>
 
-                <article class="article-row">
-                    <a href="#">
+                <article class="article-row" data-article="climate-bill">
+                    <a href="javascript:void(0)">
                         <div class="article-image">
                             <img src="https://images.unsplash.com/photo-1504711434969-e33886168f5c?w=300&h=200&fit=crop" alt="News">
                         </div>
@@ -108,8 +108,8 @@
                     </a>
                 </article>
 
-                <article class="article-row">
-                    <a href="#">
+                <article class="article-row" data-article="ai-breakthrough">
+                    <a href="javascript:void(0)">
                         <div class="article-image">
                             <img src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=300&h=200&fit=crop" alt="AI">
                         </div>
@@ -125,8 +125,8 @@
                     </a>
                 </article>
 
-                <article class="article-row">
-                    <a href="#">
+                <article class="article-row" data-article="sports-upset">
+                    <a href="javascript:void(0)">
                         <div class="article-image">
                             <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=300&h=200&fit=crop" alt="Sports">
                         </div>
@@ -142,8 +142,8 @@
                     </a>
                 </article>
 
-                <article class="article-row">
-                    <a href="#">
+                <article class="article-row" data-article="mediterranean-diet">
+                    <a href="javascript:void(0)">
                         <div class="article-image">
                             <img src="https://images.unsplash.com/photo-1532938911079-1b06ac7ceec7?w=300&h=200&fit=crop" alt="Health">
                         </div>
@@ -163,15 +163,15 @@
             <aside class="sidebar">
                 <div class="sidebar-section">
                     <h3 class="section-title">Opinion</h3>
-                    <article class="opinion-card">
-                        <a href="#">
+                    <article class="opinion-card" data-article="future-of-work">
+                        <a href="javascript:void(0)">
                             <h4>The Future of Work Is Already Here</h4>
                             <p>Remote work has fundamentally changed how we think about productivity and collaboration.</p>
                             <span class="author">By Michael Torres</span>
                         </a>
                     </article>
-                    <article class="opinion-card">
-                        <a href="#">
+                    <article class="opinion-card" data-article="urban-transportation">
+                        <a href="javascript:void(0)">
                             <h4>Why We Need to Rethink Urban Transportation</h4>
                             <p>Cities must embrace sustainable mobility solutions now.</p>
                             <span class="author">By Dr. Lisa Chen</span>
@@ -182,11 +182,11 @@
                 <div class="sidebar-section trending">
                     <h3 class="section-title">Trending</h3>
                     <ol class="trending-list">
-                        <li><a href="#">Climate Summit Reaches Unprecedented Agreement</a></li>
-                        <li><a href="#">Tech Giants Face New Antitrust Scrutiny</a></li>
-                        <li><a href="#">The Art World's Digital Revolution</a></li>
-                        <li><a href="#">Space Tourism Takes Off</a></li>
-                        <li><a href="#">Electric Vehicles Hit Record Sales</a></li>
+                        <li><a href="javascript:void(0)" data-article="climate-summit">Climate Summit Reaches Unprecedented Agreement</a></li>
+                        <li><a href="javascript:void(0)" data-article="antitrust-tech">Tech Giants Face New Antitrust Scrutiny</a></li>
+                        <li><a href="javascript:void(0)" data-article="art-digital">The Art World's Digital Revolution</a></li>
+                        <li><a href="javascript:void(0)" data-article="space-tourism">Space Tourism Takes Off</a></li>
+                        <li><a href="javascript:void(0)" data-article="ev-sales">Electric Vehicles Hit Record Sales</a></li>
                     </ol>
                 </div>
 
@@ -204,8 +204,8 @@
         <section class="category-section">
             <h3 class="section-title">Technology</h3>
             <div class="category-grid">
-                <article class="article-card">
-                    <a href="#">
+                <article class="article-card" data-article="chip-shortage">
+                    <a href="javascript:void(0)">
                         <div class="article-image">
                             <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=400&h=300&fit=crop" alt="Tech">
                         </div>
@@ -217,8 +217,8 @@
                         </div>
                     </a>
                 </article>
-                <article class="article-card">
-                    <a href="#">
+                <article class="article-card" data-article="cybersecurity-threat">
+                    <a href="javascript:void(0)">
                         <div class="article-image">
                             <img src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=400&h=300&fit=crop" alt="Cyber">
                         </div>
@@ -230,8 +230,8 @@
                         </div>
                     </a>
                 </article>
-                <article class="article-card">
-                    <a href="#">
+                <article class="article-card" data-article="bigdata-healthcare">
+                    <a href="javascript:void(0)">
                         <div class="article-image">
                             <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=400&h=300&fit=crop" alt="Data">
                         </div>
@@ -256,32 +256,42 @@
             <div class="footer-links">
                 <div class="footer-column">
                     <h4>Sections</h4>
-                    <a href="#">Politics</a>
-                    <a href="#">Business</a>
-                    <a href="#">Technology</a>
-                    <a href="#">Science</a>
+                    <a href="#latest" data-category="Politics">Politics</a>
+                    <a href="#latest" data-category="Business">Business</a>
+                    <a href="#latest" data-category="Technology">Technology</a>
+                    <a href="#latest" data-category="Science">Science</a>
                 </div>
                 <div class="footer-column">
                     <h4>More</h4>
-                    <a href="#">Opinion</a>
-                    <a href="#">Culture</a>
-                    <a href="#">Sports</a>
-                    <a href="#">Podcasts</a>
+                    <a href="#latest" data-category="Opinion">Opinion</a>
+                    <a href="#latest" data-category="Culture">Culture</a>
+                    <a href="#latest" data-category="Sports">Sports</a>
+                    <a href="javascript:void(0)" onclick="alert('Podcasts coming soon!')">Podcasts</a>
                 </div>
                 <div class="footer-column">
                     <h4>About</h4>
-                    <a href="#">About Us</a>
-                    <a href="#">Careers</a>
-                    <a href="#">Contact</a>
-                    <a href="#">Advertise</a>
+                    <a href="javascript:void(0)" onclick="alert('Learn more about The Chronicle - your trusted source for quality journalism since 1892.')">About Us</a>
+                    <a href="javascript:void(0)" onclick="alert('Visit our careers page at careers.thechronicle.com')">Careers</a>
+                    <a href="javascript:void(0)" onclick="alert('Contact us at contact@thechronicle.com or call 1-800-CHRONICLE')">Contact</a>
+                    <a href="javascript:void(0)" onclick="alert('Advertise with us: ads@thechronicle.com')">Advertise</a>
+                </div>
+            </div>
+            <div class="footer-social">
+                <h4>Follow Us</h4>
+                <div class="social-links">
+                    <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" title="Facebook">f</a>
+                    <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" title="Twitter/X">𝕏</a>
+                    <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" title="Instagram">📷</a>
+                    <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" title="LinkedIn">in</a>
+                    <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" title="YouTube">▶</a>
                 </div>
             </div>
         </div>
         <div class="footer-bottom">
             <span>&copy; 2024 The Chronicle. All rights reserved.</span>
             <div class="footer-legal">
-                <a href="#">Privacy</a>
-                <a href="#">Terms</a>
+                <a href="javascript:void(0)" onclick="alert('Privacy Policy: We respect your data and privacy.')">Privacy</a>
+                <a href="javascript:void(0)" onclick="alert('Terms of Service: Please read our complete terms.')">Terms</a>
             </div>
         </div>
     </footer>

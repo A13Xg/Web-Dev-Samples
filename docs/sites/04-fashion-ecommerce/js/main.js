@@ -146,6 +146,20 @@ cartIcon?.addEventListener('click', (e) => {
     openCart();
 });
 
+// Search icon handler
+const searchIcon = document.querySelector('.search-icon');
+searchIcon?.addEventListener('click', (e) => {
+    e.preventDefault();
+    alert('Search functionality: Type to search for products, collections, or articles');
+});
+
+// Account icon handler
+const accountIcon = document.querySelector('.account-icon');
+accountIcon?.addEventListener('click', (e) => {
+    e.preventDefault();
+    alert('Account\n\nSign In to access your profile, orders, and wishlist\n\nNew customer? Create an account to get started');
+});
+
 cartClose?.addEventListener('click', closeCart);
 cartOverlay?.addEventListener('click', closeCart);
 cartContinue?.addEventListener('click', closeCart);
@@ -321,18 +335,6 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             });
         }
     });
-});
-
-// ===== HERO SLIDER =====
-const prevBtn = document.querySelector('.hero-nav-btn.prev');
-const nextBtn = document.querySelector('.hero-nav-btn.next');
-
-prevBtn?.addEventListener('click', () => {
-    console.log('Previous slide');
-});
-
-nextBtn?.addEventListener('click', () => {
-    console.log('Next slide');
 });
 
 // ===== CHECKOUT BUTTON =====
