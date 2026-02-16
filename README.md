@@ -10,7 +10,6 @@ A live demo of the main showcase and all the individual sites is hosted on GitHu
 
 ► **[View Live Demo](https://a13xg.github.io/Web-Dev-Samples/)** ◄
 
-*(Please replace `[your-github-username]` with your actual GitHub username after deployment.)*
 
 ## ◆ Features
 
