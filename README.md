@@ -8,7 +8,7 @@ A curated collection of 10 stunning and diverse website templates, each crafted 
 
 A live demo of the main showcase and all the individual sites is hosted on GitHub Pages.
 
-► **[View Live Demo](https://[your-github-username].github.io/Web-Dev-Samples/)** ◄
+► **[View Live Demo](https://a13xg.github.io/Web-Dev-Samples/)** ◄
 
 *(Please replace `[your-github-username]` with your actual GitHub username after deployment.)*
 
