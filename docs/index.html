@@ -580,6 +580,230 @@
                 transform: translateY(0) scale(1);
             }
         }
+
+        /* Hero / Spotlight Card */
+        .site-card.hero::after {
+            content: '';
+            position: absolute;
+            inset: -2px;
+            border-radius: 26px;
+            background: linear-gradient(135deg,
+                var(--accent-purple),
+                var(--accent-cyan),
+                var(--accent-pink),
+                var(--accent-blue),
+                var(--accent-purple));
+            background-size: 300% 300%;
+            animation: heroGlow 4s ease infinite;
+            z-index: -1;
+            opacity: 0.85;
+        }
+
+        @keyframes heroGlow {
+            0%   { background-position: 0% 50%; }
+            50%  { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .site-card.hero .card-preview {
+            height: 480px;
+        }
+
+        .site-card.hero .card-number {
+            background: linear-gradient(135deg, var(--accent-purple), var(--accent-blue));
+            border-color: rgba(139, 92, 246, 0.6);
+            box-shadow: 0 0 18px rgba(139, 92, 246, 0.6);
+            font-size: 18px;
+        }
+
+        .site-card.hero:hover {
+            transform: translateY(-10px) scale(1.01);
+            box-shadow:
+                0 35px 70px -12px rgba(139, 92, 246, 0.45),
+                0 0 140px -20px rgba(59, 130, 246, 0.4);
+        }
+
+        .hero-badge {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 7px 18px;
+            background: linear-gradient(135deg, rgba(139, 92, 246, 0.85), rgba(59, 130, 246, 0.85));
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.25);
+            border-radius: 100px;
+            font-size: 11px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: #fff;
+            z-index: 3;
+            white-space: nowrap;
+        }
+
+        .hero-badge::before {
+            content: '';
+            width: 6px;
+            height: 6px;
+            background: var(--accent-cyan);
+            border-radius: 50%;
+            animation: pulse 2s ease-in-out infinite;
+        }
+
+        /* Settings Panel */
+        .settings-panel {
+            position: fixed;
+            right: 24px;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 1000;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            gap: 10px;
+        }
+
+        .settings-toggle {
+            width: 46px;
+            height: 46px;
+            background: rgba(10, 10, 30, 0.85);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(139, 92, 246, 0.35);
+            border-radius: 13px;
+            color: rgba(139, 92, 246, 0.8);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.35);
+        }
+
+        .settings-toggle:hover,
+        .settings-toggle.active {
+            background: rgba(139, 92, 246, 0.18);
+            border-color: rgba(139, 92, 246, 0.6);
+            color: var(--accent-purple);
+            box-shadow: 0 4px 24px rgba(139, 92, 246, 0.35);
+        }
+
+        .settings-toggle svg {
+            width: 20px;
+            height: 20px;
+            transition: transform 0.5s ease;
+        }
+
+        .settings-toggle.active svg {
+            transform: rotate(60deg);
+        }
+
+        .settings-content {
+            background: rgba(8, 8, 28, 0.94);
+            backdrop-filter: blur(18px);
+            -webkit-backdrop-filter: blur(18px);
+            border: 1px solid rgba(139, 92, 246, 0.22);
+            border-radius: 18px;
+            padding: 18px;
+            width: 210px;
+            display: none;
+            flex-direction: column;
+            gap: 15px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.55), 0 0 40px rgba(139, 92, 246, 0.08);
+        }
+
+        .settings-content.open {
+            display: flex;
+        }
+
+        .settings-group {
+            display: flex;
+            flex-direction: column;
+            gap: 7px;
+        }
+
+        .settings-label {
+            font-size: 10px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: rgba(148, 163, 184, 0.55);
+        }
+
+        .settings-row {
+            display: flex;
+            gap: 5px;
+            flex-wrap: wrap;
+        }
+
+        .opt-btn {
+            padding: 5px 10px;
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid rgba(255, 255, 255, 0.09);
+            border-radius: 8px;
+            font-size: 11px;
+            font-weight: 600;
+            color: rgba(148, 163, 184, 0.75);
+            cursor: pointer;
+            transition: all 0.2s ease;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .opt-btn:hover {
+            background: rgba(139, 92, 246, 0.14);
+            border-color: rgba(139, 92, 246, 0.4);
+            color: #c4b5fd;
+        }
+
+        .opt-btn.active {
+            background: rgba(139, 92, 246, 0.24);
+            border-color: rgba(139, 92, 246, 0.55);
+            color: #a78bfa;
+        }
+
+        .color-swatch {
+            width: 26px;
+            height: 26px;
+            border-radius: 8px;
+            border: 2px solid transparent;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            flex-shrink: 0;
+        }
+
+        .color-swatch:hover {
+            transform: scale(1.15);
+        }
+
+        .color-swatch.active {
+            border-color: rgba(255, 255, 255, 0.8);
+            box-shadow: 0 0 12px rgba(255, 255, 255, 0.25);
+        }
+
+        @media (max-width: 768px) {
+            .settings-panel {
+                right: 12px;
+                top: auto;
+                bottom: 80px;
+                transform: none;
+            }
+        }
+
+        /* Particle canvas */
+        #particle-canvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            pointer-events: none;
+            z-index: 9998;
+            width: 100%;
+            height: 100%;
+        }
     </style>
 </head>
 <body>
@@ -622,12 +846,74 @@
         <section class="sites-section">
             <div class="sites-grid">
 
-                <!-- Site 11 - Featured (NEW) -->
-                <a href="./sites/11-outdoor-trail-guide/" class="site-card featured">
+                <!-- #1 Theme Atlas - Featured Hero -->
+                <a href="./sites/13-theme-showcase/" class="site-card featured hero">
                     <div class="card-preview">
-                        <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1200&h=800&fit=crop" alt="Outdoor Trail Guide">
+                        <img src="https://images.unsplash.com/photo-1542831371-29b0f74f9713?w=1200&h=800&fit=crop" alt="The Theme Atlas">
                         <div class="preview-overlay"></div>
-                        <span class="card-number">11</span>
+                        <span class="card-number">01</span>
+                        <div class="card-tags">
+                            <span class="tag">UI Reference</span>
+                            <span class="tag">50 Themes</span>
+                        </div>
+                        <div class="hero-badge">✦ Spotlight Pick</div>
+                    </div>
+                    <div class="card-content">
+                        <span class="card-category">Design Systems</span>
+                        <h2 class="card-title">The Theme Atlas</h2>
+                        <p class="card-description">A comprehensive library of 50 named web design themes — Glassmorphism, Brutalism, Vaporwave, Tokyo Night, Bento Grid, Holographic Foil, and more — each with a live sample block, color palette swatches, and a copyable CSS snippet.</p>
+                        <div class="card-footer">
+                            <div class="tech-stack">
+                                <span class="tech"><span class="short">H</span><span class="full">HTML</span></span>
+                                <span class="tech"><span class="short">CSS</span><span class="full">CSS</span></span>
+                                <span class="tech"><span class="short">JS</span><span class="full">JavaScript</span></span>
+                            </div>
+                            <span class="view-btn">
+                                Explore Library
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M5 12h14M12 5l7 7-7 7"/>
+                                </svg>
+                            </span>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- #2 Indie Game Dev -->
+                <a href="./sites/12-indie-game-dev/" class="site-card">
+                    <div class="card-preview">
+                        <img src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?w=800&h=600&fit=crop" alt="Indie Game Dev">
+                        <div class="preview-overlay"></div>
+                        <span class="card-number">02</span>
+                        <div class="card-tags">
+                            <span class="tag">Cyberpunk</span>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <span class="card-category">Gaming</span>
+                        <h2 class="card-title">Indie Game Dev</h2>
+                        <p class="card-description">Neon Rift — a cyberpunk roguelike in-development game page with glitch text, scanline FX, CSS scene gallery, devlog cards, roadmap timeline, and a wishlist email form.</p>
+                        <div class="card-footer">
+                            <div class="tech-stack">
+                                <span class="tech"><span class="short">H</span><span class="full">HTML</span></span>
+                                <span class="tech"><span class="short">CSS</span><span class="full">CSS</span></span>
+                                <span class="tech"><span class="short">JS</span><span class="full">JavaScript</span></span>
+                            </div>
+                            <span class="view-btn">
+                                Explore
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M5 12h14M12 5l7 7-7 7"/>
+                                </svg>
+                            </span>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- #3 Outdoor Trail Guide -->
+                <a href="./sites/11-outdoor-trail-guide/" class="site-card">
+                    <div class="card-preview">
+                        <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&h=600&fit=crop" alt="Outdoor Trail Guide">
+                        <div class="preview-overlay"></div>
+                        <span class="card-number">03</span>
                         <div class="card-tags">
                             <span class="tag">Outdoors</span>
                             <span class="tag">Adventure</span>
@@ -653,73 +939,12 @@
                     </div>
                 </a>
 
-                <!-- Site 12 (NEW) -->
-                <a href="./sites/12-indie-game-dev/" class="site-card">
-                    <div class="card-preview">
-                        <img src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?w=800&h=600&fit=crop" alt="Indie Game Dev">
-                        <div class="preview-overlay"></div>
-                        <span class="card-number">12</span>
-                        <div class="card-tags">
-                            <span class="tag">Cyberpunk</span>
-                        </div>
-                    </div>
-                    <div class="card-content">
-                        <span class="card-category">Gaming</span>
-                        <h2 class="card-title">Indie Game Dev</h2>
-                        <p class="card-description">Neon Rift — a cyberpunk roguelike in-development game page with glitch text, scanline FX, CSS scene gallery, devlog cards, roadmap timeline, and a wishlist email form.</p>
-                        <div class="card-footer">
-                            <div class="tech-stack">
-                                <span class="tech"><span class="short">H</span><span class="full">HTML</span></span>
-                                <span class="tech"><span class="short">CSS</span><span class="full">CSS</span></span>
-                                <span class="tech"><span class="short">JS</span><span class="full">JavaScript</span></span>
-                            </div>
-                            <span class="view-btn">
-                                Explore
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <path d="M5 12h14M12 5l7 7-7 7"/>
-                                </svg>
-                            </span>
-                        </div>
-                    </div>
-                </a>
-
-                <!-- Site 13 - Featured (NEW) -->
-                <a href="./sites/13-theme-showcase/" class="site-card featured">
-                    <div class="card-preview">
-                        <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1200&h=800&fit=crop" alt="Theme Showcase">
-                        <div class="preview-overlay"></div>
-                        <span class="card-number">13</span>
-                        <div class="card-tags">
-                            <span class="tag">Reference</span>
-                            <span class="tag">30 Themes</span>
-                        </div>
-                    </div>
-                    <div class="card-content">
-                        <span class="card-category">UI Reference</span>
-                        <h2 class="card-title">The Theme Atlas</h2>
-                        <p class="card-description">A comprehensive library of 30 named web design themes — Glassmorphism, Brutalism, Vaporwave, Art Deco, Claymorphism, and more — each with a live sample block, color palette swatches, and a copyable CSS snippet.</p>
-                        <div class="card-footer">
-                            <div class="tech-stack">
-                                <span class="tech"><span class="short">H</span><span class="full">HTML</span></span>
-                                <span class="tech"><span class="short">CSS</span><span class="full">CSS</span></span>
-                                <span class="tech"><span class="short">JS</span><span class="full">JavaScript</span></span>
-                            </div>
-                            <span class="view-btn">
-                                Explore
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <path d="M5 12h14M12 5l7 7-7 7"/>
-                                </svg>
-                            </span>
-                        </div>
-                    </div>
-                </a>
-
-                <!-- Site 1 - Featured -->
+                <!-- #4 Minimalist Portfolio - Featured -->
                 <a href="./sites/01-minimalist-portfolio/" class="site-card featured">
                     <div class="card-preview">
                         <img src="https://images.unsplash.com/photo-1561070791-2526d30994b5?w=1200&h=800&fit=crop" alt="Minimalist Portfolio">
                         <div class="preview-overlay"></div>
-                        <span class="card-number">01</span>
+                        <span class="card-number">04</span>
                         <div class="card-tags">
                             <span class="tag">Modern</span>
                             <span class="tag">Minimal</span>
@@ -745,12 +970,12 @@
                     </div>
                 </a>
 
-                <!-- Site 2 -->
+                <!-- #5 Gourmet Restaurant -->
                 <a href="./sites/02-gourmet-restaurant/" class="site-card">
                     <div class="card-preview">
                         <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=800&h=600&fit=crop" alt="Gourmet Restaurant">
                         <div class="preview-overlay"></div>
-                        <span class="card-number">02</span>
+                        <span class="card-number">05</span>
                         <div class="card-tags">
                             <span class="tag">Elegant</span>
                         </div>
@@ -775,12 +1000,12 @@
                     </div>
                 </a>
 
-                <!-- Site 3 -->
+                <!-- #6 Tech Startup -->
                 <a href="./sites/03-tech-startup/" class="site-card">
                     <div class="card-preview">
                         <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?w=800&h=600&fit=crop" alt="Tech Startup">
                         <div class="preview-overlay"></div>
-                        <span class="card-number">03</span>
+                        <span class="card-number">06</span>
                         <div class="card-tags">
                             <span class="tag">SaaS</span>
                         </div>
@@ -805,12 +1030,12 @@
                     </div>
                 </a>
 
-                <!-- Site 4 - Featured -->
+                <!-- #7 Fashion E-commerce - Featured -->
                 <a href="./sites/04-fashion-ecommerce/" class="site-card featured">
                     <div class="card-preview">
                         <img src="https://images.unsplash.com/photo-1445205170230-053b83016050?w=1200&h=800&fit=crop" alt="Fashion E-commerce">
                         <div class="preview-overlay"></div>
-                        <span class="card-number">04</span>
+                        <span class="card-number">07</span>
                         <div class="card-tags">
                             <span class="tag">E-commerce</span>
                             <span class="tag">Luxury</span>
@@ -836,12 +1061,12 @@
                     </div>
                 </a>
 
-                <!-- Site 5 -->
+                <!-- #8 Travel Adventure -->
                 <a href="./sites/05-travel-adventure/" class="site-card">
                     <div class="card-preview">
                         <img src="https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=800&h=600&fit=crop" alt="Travel Adventure">
                         <div class="preview-overlay"></div>
-                        <span class="card-number">05</span>
+                        <span class="card-number">08</span>
                         <div class="card-tags">
                             <span class="tag">Immersive</span>
                         </div>
@@ -866,12 +1091,12 @@
                     </div>
                 </a>
 
-                <!-- Site 6 -->
+                <!-- #9 Fitness Studio -->
                 <a href="./sites/06-fitness-studio/" class="site-card">
                     <div class="card-preview">
                         <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=800&h=600&fit=crop" alt="Fitness Studio">
                         <div class="preview-overlay"></div>
-                        <span class="card-number">06</span>
+                        <span class="card-number">09</span>
                         <div class="card-tags">
                             <span class="tag">Bold</span>
                         </div>
@@ -896,12 +1121,12 @@
                     </div>
                 </a>
 
-                <!-- Site 7 -->
+                <!-- #10 Creative Agency -->
                 <a href="./sites/07-creative-agency/" class="site-card">
                     <div class="card-preview">
                         <img src="https://images.unsplash.com/photo-1559136555-9303baea8ebd?w=800&h=600&fit=crop" alt="Creative Agency">
                         <div class="preview-overlay"></div>
-                        <span class="card-number">07</span>
+                        <span class="card-number">10</span>
                         <div class="card-tags">
                             <span class="tag">Creative</span>
                         </div>
@@ -926,12 +1151,12 @@
                     </div>
                 </a>
 
-                <!-- Site 8 -->
+                <!-- #11 News Magazine -->
                 <a href="./sites/08-news-magazine/" class="site-card">
                     <div class="card-preview">
                         <img src="https://images.unsplash.com/photo-1504711434969-e33886168f5c?w=800&h=600&fit=crop" alt="News Magazine">
                         <div class="preview-overlay"></div>
-                        <span class="card-number">08</span>
+                        <span class="card-number">11</span>
                         <div class="card-tags">
                             <span class="tag">Editorial</span>
                         </div>
@@ -956,12 +1181,12 @@
                     </div>
                 </a>
 
-                <!-- Site 9 - Featured -->
+                <!-- #12 Music Festival - Featured -->
                 <a href="./sites/09-music-festival/" class="site-card featured">
                     <div class="card-preview">
                         <img src="https://images.unsplash.com/photo-1459749411175-04bf5292ceea?w=1200&h=800&fit=crop" alt="Music Festival">
                         <div class="preview-overlay"></div>
-                        <span class="card-number">09</span>
+                        <span class="card-number">12</span>
                         <div class="card-tags">
                             <span class="tag">Vibrant</span>
                             <span class="tag">Dynamic</span>
@@ -987,14 +1212,15 @@
                     </div>
                 </a>
 
-                <!-- Site 10 -->
-                <a href="./sites/10-law-firm/" class="site-card">
+                <!-- #13 Law Firm - Featured (evens out bottom row) -->
+                <a href="./sites/10-law-firm/" class="site-card featured">
                     <div class="card-preview">
-                        <img src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=800&h=600&fit=crop" alt="Law Firm">
+                        <img src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=1200&h=800&fit=crop" alt="Law Firm">
                         <div class="preview-overlay"></div>
-                        <span class="card-number">10</span>
+                        <span class="card-number">13</span>
                         <div class="card-tags">
                             <span class="tag">Corporate</span>
+                            <span class="tag">Trust</span>
                         </div>
                     </div>
                     <div class="card-content">
@@ -1021,12 +1247,70 @@
         </section>
 
         <footer>
-            <p>Crafted with HTML, CSS & JavaScript</p>
+            <p>Crafted with HTML, CSS &amp; JavaScript</p>
         </footer>
     </div>
 
+    <!-- Particle Canvas -->
+    <canvas id="particle-canvas"></canvas>
+
+    <!-- Settings Panel -->
+    <div class="settings-panel" id="settingsPanel">
+        <div class="settings-content" id="settingsContent">
+            <div class="settings-group">
+                <div class="settings-label">Cursor Style</div>
+                <div class="settings-row">
+                    <button class="opt-btn active" data-cursor="default">Default</button>
+                    <button class="opt-btn" data-cursor="glow">Glow</button>
+                    <button class="opt-btn" data-cursor="crosshair">Cross</button>
+                </div>
+            </div>
+            <div class="settings-group">
+                <div class="settings-label">Accent Color</div>
+                <div class="settings-row">
+                    <span class="color-swatch active" data-color="purple" style="background:#8b5cf6" title="Purple"></span>
+                    <span class="color-swatch" data-color="cyan" style="background:#06b6d4" title="Cyan"></span>
+                    <span class="color-swatch" data-color="pink" style="background:#ec4899" title="Pink"></span>
+                    <span class="color-swatch" data-color="green" style="background:#22c55e" title="Green"></span>
+                    <span class="color-swatch" data-color="orange" style="background:#f97316" title="Orange"></span>
+                </div>
+            </div>
+            <div class="settings-group">
+                <div class="settings-label">Particles</div>
+                <div class="settings-row">
+                    <button class="opt-btn active" data-particles="on">On</button>
+                    <button class="opt-btn" data-particles="off">Off</button>
+                </div>
+            </div>
+        </div>
+        <button class="settings-toggle" id="settingsToggle" title="Display Settings" aria-label="Display Settings">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="3"/>
+                <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/>
+            </svg>
+        </button>
+    </div>
+
     <script>
-        // Animate counter numbers
+        // ── Accent color palette ──────────────────────────────────────────
+        const colorMap = {
+            purple: { main: '#8b5cf6', blue: '#3b82f6', pink: '#ec4899', cyan: '#06b6d4' },
+            cyan:   { main: '#06b6d4', blue: '#0ea5e9', pink: '#818cf8', cyan: '#22d3ee' },
+            pink:   { main: '#ec4899', blue: '#a855f7', pink: '#f472b6', cyan: '#fb7185' },
+            green:  { main: '#22c55e', blue: '#16a34a', pink: '#86efac', cyan: '#4ade80' },
+            orange: { main: '#f97316', blue: '#fb923c', pink: '#fbbf24', cyan: '#fdba74' },
+        };
+
+        function applyAccentColor(name) {
+            const c = colorMap[name] || colorMap.purple;
+            document.documentElement.style.setProperty('--accent-purple', c.main);
+            document.documentElement.style.setProperty('--accent-blue',   c.blue);
+            document.documentElement.style.setProperty('--accent-pink',   c.pink);
+            document.documentElement.style.setProperty('--accent-cyan',   c.cyan);
+            particleColor = c.main;
+        }
+
+        // ── Counter animation ─────────────────────────────────────────────
         function animateCounter(element, target, duration = 2000, decimals = 0) {
             const start = 0;
             const startTime = performance.now();
@@ -1034,10 +1318,7 @@
             function update(currentTime) {
                 const elapsed = currentTime - startTime;
                 const progress = Math.min(elapsed / duration, 1);
-
-                // Easing function for smoother animation
                 const easeOutQuart = 1 - Math.pow(1 - progress, 4);
-
                 const current = start + (target - start) * easeOutQuart;
 
                 if (decimals > 0) {
@@ -1049,41 +1330,27 @@
                 if (progress < 1) {
                     requestAnimationFrame(update);
                 } else {
-                    if (decimals > 0) {
-                        element.textContent = target.toFixed(decimals);
-                    } else {
-                        element.textContent = target.toLocaleString();
-                    }
+                    element.textContent = decimals > 0 ? target.toFixed(decimals) : target.toLocaleString();
                 }
             }
-
             requestAnimationFrame(update);
         }
 
-        // Start counter animations when page loads
         window.addEventListener('load', () => {
             const counters = document.querySelectorAll('.counter');
-
-            // Slight delay before starting counters
             setTimeout(() => {
                 counters.forEach((counter, index) => {
                     const target = parseFloat(counter.dataset.target);
                     const decimals = parseInt(counter.dataset.decimals) || 0;
-
-                    // Stagger the start of each counter
-                    setTimeout(() => {
-                        animateCounter(counter, target, 2500, decimals);
-                    }, index * 200);
+                    setTimeout(() => animateCounter(counter, target, 2500, decimals), index * 200);
                 });
             }, 500);
         });
 
-        // Immediately show cards with staggered animation (don't wait for scroll)
+        // ── Card reveal animation ─────────────────────────────────────────
         const cards = document.querySelectorAll('.site-card');
-
         window.addEventListener('load', () => {
             cards.forEach((card, index) => {
-                // Staggered reveal animation
                 setTimeout(() => {
                     card.style.transition = 'opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1), transform 0.8s cubic-bezier(0.4, 0, 0.2, 1)';
                     card.classList.add('visible');
@@ -1091,7 +1358,7 @@
             });
         });
 
-        // Parallax effect on header
+        // ── Header parallax ───────────────────────────────────────────────
         const header = document.querySelector('header');
         window.addEventListener('scroll', () => {
             const scrolled = window.pageYOffset;
@@ -1099,6 +1366,171 @@
                 header.style.transform = `translateY(${scrolled * 0.3}px)`;
                 header.style.opacity = 1 - (scrolled * 0.002);
             }
+        });
+
+        // ── Cursor particle system ────────────────────────────────────────
+        const canvas = document.getElementById('particle-canvas');
+        const ctx = canvas.getContext('2d');
+        let particlesEnabled = true;
+        let particleColor = '#8b5cf6';
+        let particles = [];
+
+        function resizeCanvas() {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+        }
+        resizeCanvas();
+        window.addEventListener('resize', resizeCanvas);
+
+        let mouseX = 0, mouseY = 0, lastX = 0, lastY = 0;
+        let spawnThrottle = 0;
+
+        document.addEventListener('mousemove', (e) => {
+            mouseX = e.clientX;
+            mouseY = e.clientY;
+
+            if (!particlesEnabled) return;
+
+            const dist = Math.hypot(mouseX - lastX, mouseY - lastY);
+            spawnThrottle++;
+            if (dist > 4 || spawnThrottle % 3 === 0) {
+                spawnParticles(mouseX, mouseY, Math.min(Math.floor(dist / 6) + 1, 4));
+                lastX = mouseX;
+                lastY = mouseY;
+            }
+        });
+
+        function spawnParticles(x, y, count) {
+            for (let i = 0; i < count; i++) {
+                const angle = Math.random() * Math.PI * 2;
+                const speed = Math.random() * 1.8 + 0.4;
+                const type = Math.random();
+                particles.push({
+                    x: x + (Math.random() - 0.5) * 8,
+                    y: y + (Math.random() - 0.5) * 8,
+                    vx: Math.cos(angle) * speed * 0.6,
+                    vy: Math.sin(angle) * speed - 1.2,
+                    size: type > 0.7 ? Math.random() * 3 + 1 : Math.random() * 2 + 0.5,
+                    life: 1,
+                    decay: Math.random() * 0.025 + 0.012,
+                    shape: type > 0.85 ? 'star' : 'circle',
+                    color: particleColor,
+                });
+            }
+        }
+
+        function drawStar(cx, cy, r) {
+            ctx.beginPath();
+            for (let i = 0; i < 5; i++) {
+                const a = (i * 4 * Math.PI) / 5 - Math.PI / 2;
+                const ra = a + (2 * Math.PI) / 10;
+                if (i === 0) ctx.moveTo(cx + r * Math.cos(a), cy + r * Math.sin(a));
+                else ctx.lineTo(cx + r * Math.cos(a), cy + r * Math.sin(a));
+                ctx.lineTo(cx + (r * 0.45) * Math.cos(ra), cy + (r * 0.45) * Math.sin(ra));
+            }
+            ctx.closePath();
+        }
+
+        function animateParticles() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+            for (let i = particles.length - 1; i >= 0; i--) {
+                const p = particles[i];
+                p.x += p.vx;
+                p.y += p.vy;
+                p.vy -= 0.04;
+                p.vx *= 0.98;
+                p.life -= p.decay;
+
+                if (p.life <= 0) { particles.splice(i, 1); continue; }
+
+                ctx.save();
+                ctx.globalAlpha = p.life * 0.85;
+                ctx.fillStyle = p.color;
+                ctx.shadowBlur = 10;
+                ctx.shadowColor = p.color;
+
+                if (p.shape === 'star') {
+                    drawStar(p.x, p.y, p.size * 1.5);
+                    ctx.fill();
+                } else {
+                    ctx.beginPath();
+                    ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
+                    ctx.fill();
+                }
+                ctx.restore();
+            }
+
+            // Limit particle pool
+            if (particles.length > 300) particles.length = 300;
+
+            requestAnimationFrame(animateParticles);
+        }
+        animateParticles();
+
+        // ── Settings panel ────────────────────────────────────────────────
+        const settingsToggle = document.getElementById('settingsToggle');
+        const settingsContent = document.getElementById('settingsContent');
+
+        settingsToggle.addEventListener('click', () => {
+            const isOpen = settingsContent.classList.toggle('open');
+            settingsToggle.classList.toggle('active', isOpen);
+        });
+
+        // Close panel when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!e.target.closest('#settingsPanel')) {
+                settingsContent.classList.remove('open');
+                settingsToggle.classList.remove('active');
+            }
+        });
+
+        // Cursor style options
+        const cursorStyles = {
+            default: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 32 32'%3E%3Cdefs%3E%3Cfilter id='glow' x='-50%25' y='-50%25' width='200%25' height='200%25'%3E%3CfeGaussianBlur stdDeviation='2' result='coloredBlur'/%3E%3CfeMerge%3E%3CfeMergeNode in='coloredBlur'/%3E%3CfeMergeNode in='SourceGraphic'/%3E%3C/feMerge%3E%3C/filter%3E%3C/defs%3E%3Cpath d='M4 4 L4 28 L12 20 L18 28 L22 26 L16 18 L26 18 Z' fill='%238b5cf6' stroke='%23c4b5fd' stroke-width='1.5' filter='url(%23glow)'/%3E%3C/svg%3E") 4 4, auto`,
+            glow: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='36' height='36' viewBox='0 0 36 36'%3E%3Cdefs%3E%3CradialGradient id='g'%3E%3Cstop offset='0%25' stop-color='%23ffffff' stop-opacity='1'/%3E%3Cstop offset='40%25' stop-color='%238b5cf6' stop-opacity='0.8'/%3E%3Cstop offset='100%25' stop-color='%238b5cf6' stop-opacity='0'/%3E%3C/radialGradient%3E%3C/defs%3E%3Ccircle cx='18' cy='18' r='16' fill='url(%23g)'/%3E%3Ccircle cx='18' cy='18' r='4' fill='%23fff'/%3E%3C/svg%3E") 18 18, auto`,
+            crosshair: `crosshair`,
+        };
+
+        document.querySelectorAll('[data-cursor]').forEach(btn => {
+            btn.addEventListener('click', () => {
+                document.querySelectorAll('[data-cursor]').forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                const style = cursorStyles[btn.dataset.cursor] || 'auto';
+                document.documentElement.style.setProperty('--cursor-default', style);
+                const styleTag = document.getElementById('cursor-override') || (() => {
+                    const s = document.createElement('style');
+                    s.id = 'cursor-override';
+                    document.head.appendChild(s);
+                    return s;
+                })();
+                if (btn.dataset.cursor === 'crosshair') {
+                    styleTag.textContent = '*, *::before, *::after { cursor: crosshair !important; }';
+                } else if (btn.dataset.cursor === 'glow') {
+                    styleTag.textContent = `*, *::before, *::after { cursor: ${cursorStyles.glow} !important; }`;
+                } else {
+                    styleTag.textContent = '';
+                }
+            });
+        });
+
+        // Accent color swatches
+        document.querySelectorAll('[data-color]').forEach(swatch => {
+            swatch.addEventListener('click', () => {
+                document.querySelectorAll('[data-color]').forEach(s => s.classList.remove('active'));
+                swatch.classList.add('active');
+                applyAccentColor(swatch.dataset.color);
+            });
+        });
+
+        // Particles toggle
+        document.querySelectorAll('[data-particles]').forEach(btn => {
+            btn.addEventListener('click', () => {
+                document.querySelectorAll('[data-particles]').forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                particlesEnabled = btn.dataset.particles === 'on';
+                if (!particlesEnabled) particles = [];
+            });
         });
     </script>
 </body>

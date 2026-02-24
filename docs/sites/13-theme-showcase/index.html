@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>The Theme Atlas — 30 Web Design Themes</title>
+<title>The Theme Atlas — 50 Web Design Themes</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
@@ -303,16 +303,191 @@ body{font-family:'Space Grotesk','Inter',sans-serif;background:#12121a;color:#e8
 .s-max .sbtn{background:#4b0082;border:2px solid #ffd700;border-radius:3px;color:#ffd700;padding:5px 12px;font-size:.72rem;font-weight:900;cursor:pointer;margin-bottom:10px;display:inline-block;text-shadow:0 0 6px rgba(255,215,0,.5);box-shadow:3px 3px 0 rgba(0,0,0,.4);text-transform:uppercase;letter-spacing:.07em;font-family:inherit}
 .s-max .spanel{background:rgba(75,0,130,.5);border:2px solid #ff8c00;border-radius:3px;padding:7px 10px;margin-bottom:8px;color:#ffd700;font-size:.72rem;font-weight:700;font-family:'Playfair Display',serif}
 .s-max .sinput{background:rgba(0,0,0,.3);border:2px solid #ffd700;border-radius:3px;padding:5px 8px;color:#fff;font-size:.72rem;width:100%;outline:none;font-family:'Playfair Display',serif;font-weight:600}
+
+/* 31. Terminal CLI */
+.s-term{background:#0c0c0c;border-radius:6px;border:1px solid #1a1a1a;font-family:'Space Grotesk',monospace}
+.s-term .sh{color:#00ff41;font-weight:600;font-size:.86rem;margin-bottom:5px;letter-spacing:.05em}
+.s-term .sh::before{content:'$ ';color:#666}
+.s-term .sp{color:#4a7c59;font-size:.74rem;margin-bottom:10px;line-height:1.6}
+.s-term .sbtn{background:transparent;border:1px solid #00ff41;border-radius:2px;color:#00ff41;padding:4px 12px;font-size:.72rem;font-weight:600;cursor:pointer;margin-bottom:10px;display:inline-block;text-transform:lowercase;box-shadow:0 0 6px rgba(0,255,65,.2);text-shadow:0 0 4px rgba(0,255,65,.5)}
+.s-term .spanel{background:#0a1a0a;border:1px solid #1a2a1a;border-left:3px solid #00ff41;padding:7px 10px;margin-bottom:8px;color:#4a7c59;font-size:.72rem}
+.s-term .sinput{background:#050505;border:1px solid #1a2a1a;border-bottom:2px solid #00ff41;border-radius:2px;padding:5px 8px;color:#00ff41;font-size:.72rem;width:100%;outline:none;caret-color:#00ff41}
+.s-term .sinput::placeholder{color:#1a3a1a}
+
+/* 32. Bento Grid */
+.s-bento{background:#f0ede8;border-radius:14px;border:1px solid #ddd9d0}
+.s-bento .sh{color:#1a1a1a;font-weight:700;font-size:.94rem;margin-bottom:5px;font-family:'Space Grotesk',sans-serif;letter-spacing:-.02em}
+.s-bento .sp{color:#6e6b64;font-size:.77rem;margin-bottom:10px;line-height:1.5}
+.s-bento .sbtn{background:#1a1a1a;border:none;border-radius:8px;color:#f0ede8;padding:6px 14px;font-size:.72rem;font-weight:700;cursor:pointer;margin-bottom:10px;display:inline-block;letter-spacing:-.01em}
+.s-bento .spanel{display:grid;grid-template-columns:1fr 1fr;gap:5px;margin-bottom:8px}
+.s-bento .spanel span{background:#fff;border:1px solid #ddd9d0;border-radius:8px;padding:6px 8px;color:#4a4740;font-size:.68rem;font-weight:600;text-align:center}
+.s-bento .sinput{background:#fff;border:1px solid #ddd9d0;border-radius:8px;padding:6px 10px;color:#1a1a1a;font-size:.72rem;width:100%;outline:none}
+
+/* 33. Frosted iOS */
+.s-ios{background:linear-gradient(145deg,#1c1c2e,#2d1b69,#1c1c2e);border-radius:22px;position:relative;overflow:hidden}
+.s-ios::before{content:'';position:absolute;top:-40%;left:-40%;width:180%;height:180%;background:radial-gradient(circle at 40% 35%,rgba(168,85,247,.25),transparent 55%),radial-gradient(circle at 70% 70%,rgba(59,130,246,.18),transparent 45%);pointer-events:none}
+.s-ios .sh{color:#fff;font-weight:700;font-size:.94rem;margin-bottom:5px;letter-spacing:-.01em}
+.s-ios .sp{color:rgba(255,255,255,.55);font-size:.75rem;margin-bottom:10px;line-height:1.5}
+.s-ios .sbtn{background:rgba(255,255,255,.14);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);border:1px solid rgba(255,255,255,.22);border-radius:100px;color:#fff;padding:6px 16px;font-size:.72rem;font-weight:600;cursor:pointer;margin-bottom:10px;display:inline-block}
+.s-ios .spanel{background:rgba(255,255,255,.08);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border:1px solid rgba(255,255,255,.14);border-radius:14px;padding:8px 12px;margin-bottom:8px;color:rgba(255,255,255,.9);font-size:.72rem}
+.s-ios .sinput{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);border-radius:10px;padding:7px 12px;color:#fff;font-size:.72rem;width:100%;outline:none}
+.s-ios .sinput::placeholder{color:rgba(255,255,255,.35)}
+
+/* 34. Matrix Code */
+.s-matrix{background:#000;border-radius:4px;position:relative;overflow:hidden}
+.s-matrix::before{content:'01 10 11 00 10 01 11 10 00 01';position:absolute;top:4px;left:0;right:0;color:rgba(0,255,65,.1);font-size:.6rem;font-family:'Space Grotesk',monospace;letter-spacing:3px;white-space:nowrap}
+.s-matrix .sh{color:#00ff41;font-weight:700;font-size:.9rem;margin-bottom:4px;font-family:'Space Grotesk',monospace;text-shadow:0 0 12px rgba(0,255,65,.8);letter-spacing:.1em;text-transform:uppercase}
+.s-matrix .sp{color:#008f11;font-size:.72rem;margin-bottom:10px;font-family:'Space Grotesk',monospace;letter-spacing:.05em}
+.s-matrix .sbtn{background:transparent;border:1px solid #00ff41;border-radius:2px;color:#00ff41;padding:4px 10px;font-size:.7rem;font-weight:700;cursor:pointer;margin-bottom:10px;display:inline-block;letter-spacing:.12em;text-transform:uppercase;box-shadow:0 0 10px rgba(0,255,65,.3);font-family:'Space Grotesk',monospace}
+.s-matrix .spanel{background:rgba(0,255,65,.04);border:1px solid rgba(0,255,65,.18);padding:7px 10px;margin-bottom:8px;color:#00b83a;font-size:.7rem;font-family:'Space Grotesk',monospace}
+.s-matrix .sinput{background:rgba(0,255,65,.03);border:1px solid rgba(0,255,65,.2);padding:5px 8px;color:#00ff41;font-size:.7rem;width:100%;outline:none;font-family:'Space Grotesk',monospace;caret-color:#00ff41}
+
+/* 35. Kawaii Pastel */
+.s-kawaii{background:linear-gradient(135deg,#fde8f5,#e8d8ff,#d8f0ff);border-radius:20px;border:2px solid rgba(255,182,193,.5)}
+.s-kawaii .sh{color:#7c3b8c;font-weight:700;font-size:.94rem;margin-bottom:5px;font-family:'Space Grotesk',sans-serif}
+.s-kawaii .sh::after{content:' ✿';color:#ff9ec8}
+.s-kawaii .sp{color:#a06bb0;font-size:.75rem;margin-bottom:10px;line-height:1.5}
+.s-kawaii .sbtn{background:linear-gradient(135deg,#ff9ec8,#c79eff);border:none;border-radius:100px;color:#fff;padding:6px 16px;font-size:.72rem;font-weight:700;cursor:pointer;margin-bottom:10px;display:inline-block;box-shadow:0 3px 10px rgba(199,158,255,.35)}
+.s-kawaii .spanel{background:rgba(255,255,255,.6);border:1.5px solid rgba(255,182,193,.6);border-radius:12px;padding:7px 10px;margin-bottom:8px;color:#7c3b8c;font-size:.72rem}
+.s-kawaii .sinput{background:rgba(255,255,255,.7);border:1.5px solid rgba(255,182,193,.5);border-radius:12px;padding:6px 12px;color:#7c3b8c;font-size:.72rem;width:100%;outline:none}
+
+/* 36. Liquid Chrome */
+.s-chrome{background:linear-gradient(145deg,#9e9e9e,#e8e8e8,#bdbdbd,#f5f5f5,#9e9e9e);background-size:200% 200%;animation:auroraMove 5s ease infinite;border-radius:10px;border:1px solid rgba(255,255,255,.5)}
+.s-chrome .sh{color:#212121;font-weight:800;font-size:.94rem;margin-bottom:5px;font-family:'Space Grotesk',sans-serif;letter-spacing:-.02em;text-shadow:0 1px 2px rgba(255,255,255,.8)}
+.s-chrome .sp{color:#424242;font-size:.75rem;margin-bottom:10px}
+.s-chrome .sbtn{background:linear-gradient(145deg,#424242,#212121);border:1px solid rgba(255,255,255,.3);border-radius:6px;color:#e0e0e0;padding:6px 14px;font-size:.72rem;font-weight:700;cursor:pointer;margin-bottom:10px;display:inline-block;box-shadow:0 2px 8px rgba(0,0,0,.35),inset 0 1px 0 rgba(255,255,255,.15)}
+.s-chrome .spanel{background:rgba(255,255,255,.45);border:1px solid rgba(255,255,255,.6);border-radius:7px;padding:8px 12px;margin-bottom:8px;color:#212121;font-size:.72rem;box-shadow:inset 0 1px 3px rgba(0,0,0,.1)}
+.s-chrome .sinput{background:rgba(255,255,255,.5);border:1px solid rgba(255,255,255,.7);border-radius:6px;padding:6px 10px;color:#212121;font-size:.72rem;width:100%;outline:none}
+
+/* 37. Blueprint */
+.s-blueprint{background:#1a3a6b;border-radius:4px;background-image:linear-gradient(rgba(255,255,255,.08) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.08) 1px,transparent 1px);background-size:18px 18px}
+.s-blueprint .sh{color:#fff;font-weight:700;font-size:.88rem;margin-bottom:4px;font-family:'Space Grotesk',sans-serif;letter-spacing:.08em;text-transform:uppercase}
+.s-blueprint .sp{color:#90b8e8;font-size:.74rem;margin-bottom:10px;line-height:1.5;font-family:'Space Grotesk',monospace}
+.s-blueprint .sbtn{background:transparent;border:1.5px solid #90b8e8;border-radius:2px;color:#90b8e8;padding:5px 12px;font-size:.72rem;font-weight:600;cursor:pointer;margin-bottom:10px;display:inline-block;letter-spacing:.06em;text-transform:uppercase}
+.s-blueprint .spanel{background:rgba(255,255,255,.05);border:1px dashed rgba(144,184,232,.4);padding:7px 10px;margin-bottom:8px;color:#c0d8f0;font-size:.72rem;font-family:'Space Grotesk',monospace}
+.s-blueprint .sinput{background:rgba(255,255,255,.06);border:1px solid rgba(144,184,232,.3);border-bottom:2px solid #90b8e8;padding:5px 8px;color:#fff;font-size:.72rem;width:100%;outline:none}
+
+/* 38. Comic Book Pop */
+.s-comic{background:#fff;border:3px solid #000;border-radius:4px;position:relative;overflow:hidden;box-shadow:5px 5px 0 #000}
+.s-comic::before{content:'';position:absolute;top:0;left:0;right:0;bottom:0;background-image:radial-gradient(circle,rgba(0,0,0,.08) 1px,transparent 1px);background-size:8px 8px;pointer-events:none}
+.s-comic .sh{color:#000;font-weight:900;font-size:.98rem;margin-bottom:5px;font-family:'Space Grotesk',sans-serif;text-transform:uppercase;letter-spacing:.02em;text-shadow:2px 2px 0 #ff0}
+.s-comic .sp{color:#333;font-size:.77rem;margin-bottom:10px;font-weight:700}
+.s-comic .sbtn{background:#ff0;border:2.5px solid #000;border-radius:0;color:#000;padding:5px 12px;font-size:.74rem;font-weight:900;cursor:pointer;margin-bottom:10px;display:inline-block;text-transform:uppercase;box-shadow:3px 3px 0 #000;letter-spacing:.04em}
+.s-comic .spanel{background:#00c8ff;border:2.5px solid #000;padding:7px 10px;margin-bottom:8px;color:#000;font-size:.72rem;font-weight:700;box-shadow:3px 3px 0 #000}
+.s-comic .sinput{background:#fff;border:2.5px solid #000;padding:5px 8px;color:#000;font-size:.72rem;font-weight:700;width:100%;outline:none;box-shadow:2px 2px 0 #000}
+
+/* 39. Amber Terminal */
+.s-amber{background:#0d0900;border-radius:5px;border:1px solid #2a1800}
+.s-amber .sh{color:#ff8c00;font-weight:700;font-size:.9rem;margin-bottom:4px;font-family:'Space Grotesk',monospace;text-shadow:0 0 8px rgba(255,140,0,.6);letter-spacing:.06em}
+.s-amber .sh::before{content:'▶ ';color:#a05000;font-size:.8em}
+.s-amber .sp{color:#804000;font-size:.72rem;margin-bottom:10px;font-family:'Space Grotesk',monospace}
+.s-amber .sbtn{background:transparent;border:1px solid #ff8c00;border-radius:2px;color:#ff8c00;padding:4px 12px;font-size:.7rem;font-weight:600;cursor:pointer;margin-bottom:10px;display:inline-block;letter-spacing:.08em;text-shadow:0 0 5px rgba(255,140,0,.5);font-family:'Space Grotesk',monospace}
+.s-amber .spanel{background:rgba(255,140,0,.05);border:1px solid rgba(255,140,0,.2);border-left:3px solid #ff8c00;padding:7px 10px;margin-bottom:8px;color:#cc6600;font-size:.7rem;font-family:'Space Grotesk',monospace}
+.s-amber .sinput{background:#080500;border:1px solid #2a1800;border-bottom:2px solid #ff8c00;padding:5px 8px;color:#ff8c00;font-size:.7rem;width:100%;outline:none;font-family:'Space Grotesk',monospace;caret-color:#ff8c00}
+
+/* 40. Sunset Horizon */
+.s-sunset{background:linear-gradient(180deg,#1a0a2e,#4a1a7a,#c2185b,#ff6f00,#ffca28);border-radius:10px;position:relative;overflow:hidden}
+.s-sunset::before{content:'';position:absolute;top:55%;left:0;right:0;height:2px;background:rgba(255,200,40,.4)}
+.s-sunset .sh{color:#fff;font-weight:700;font-size:.94rem;margin-bottom:5px;text-shadow:0 1px 4px rgba(0,0,0,.4)}
+.s-sunset .sp{color:rgba(255,255,255,.8);font-size:.75rem;margin-bottom:10px}
+.s-sunset .sbtn{background:rgba(255,100,50,.7);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border:1px solid rgba(255,200,80,.5);border-radius:100px;color:#fff;padding:5px 14px;font-size:.72rem;font-weight:600;cursor:pointer;margin-bottom:10px;display:inline-block}
+.s-sunset .spanel{background:rgba(0,0,0,.2);border:1px solid rgba(255,200,80,.2);border-radius:7px;padding:8px 12px;margin-bottom:8px;color:rgba(255,255,255,.9);font-size:.72rem}
+.s-sunset .sinput{background:rgba(0,0,0,.2);border:1px solid rgba(255,200,80,.3);border-radius:6px;padding:6px 10px;color:#fff;font-size:.72rem;width:100%;outline:none}
+
+/* 41. Holographic Foil */
+.s-holo{background:linear-gradient(135deg,#ff007f,#ff4500,#ffd700,#00ff80,#00bfff,#8000ff,#ff007f);background-size:400% 400%;animation:gradShift 5s ease infinite;border-radius:12px;border:2px solid rgba(255,255,255,.3)}
+.s-holo .sh{color:#fff;font-weight:800;font-size:.94rem;margin-bottom:5px;letter-spacing:-.01em;text-shadow:0 1px 6px rgba(0,0,0,.3),0 0 20px rgba(255,255,255,.2)}
+.s-holo .sp{color:rgba(255,255,255,.85);font-size:.75rem;margin-bottom:10px}
+.s-holo .sbtn{background:rgba(255,255,255,.25);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,.5);border-radius:8px;color:#fff;padding:6px 14px;font-size:.72rem;font-weight:700;cursor:pointer;margin-bottom:10px;display:inline-block;text-shadow:0 1px 2px rgba(0,0,0,.2)}
+.s-holo .spanel{background:rgba(255,255,255,.15);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,.35);border-radius:8px;padding:8px 12px;margin-bottom:8px;color:#fff;font-size:.72rem}
+.s-holo .sinput{background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.4);border-radius:7px;padding:6px 10px;color:#fff;font-size:.72rem;width:100%;outline:none}
+
+/* 42. Hex Data */
+.s-hexdata{background:#050508;border-radius:4px;border:1px solid #0d1117;font-family:'Space Grotesk',monospace}
+.s-hexdata .sh{color:#58a6ff;font-weight:600;font-size:.8rem;margin-bottom:4px;letter-spacing:.08em;text-transform:uppercase}
+.s-hexdata .sh::before{content:'0x';color:#3d5a80;font-size:.9em}
+.s-hexdata .sp{color:#30363d;font-size:.68rem;margin-bottom:10px;line-height:1.6;letter-spacing:.04em}
+.s-hexdata .sbtn{background:rgba(88,166,255,.1);border:1px solid rgba(88,166,255,.35);border-radius:3px;color:#58a6ff;padding:4px 10px;font-size:.7rem;font-weight:600;cursor:pointer;margin-bottom:10px;display:inline-block;letter-spacing:.08em;text-transform:uppercase}
+.s-hexdata .spanel{background:#0d1117;border:1px solid #21262d;border-left:3px solid #58a6ff;padding:6px 10px;margin-bottom:8px;color:#8b949e;font-size:.68rem;letter-spacing:.04em}
+.s-hexdata .sinput{background:#0d1117;border:1px solid #21262d;border-bottom:2px solid #58a6ff;border-radius:3px;padding:5px 8px;color:#c9d1d9;font-size:.68rem;width:100%;outline:none;caret-color:#58a6ff}
+
+/* 43. Neon Sign */
+.s-neon{background:#1a0a00;border-radius:6px;border:1px solid #2a1400;position:relative;overflow:hidden}
+.s-neon::before{content:'';position:absolute;top:0;left:0;right:0;bottom:0;background-image:repeating-linear-gradient(0deg,transparent,transparent 3px,rgba(255,50,0,.03) 3px,rgba(255,50,0,.03) 4px);pointer-events:none}
+.s-neon .sh{color:#ff3300;font-weight:900;font-size:.98rem;margin-bottom:5px;font-family:'Space Grotesk',sans-serif;text-shadow:0 0 10px rgba(255,51,0,.9),0 0 30px rgba(255,51,0,.5),0 0 60px rgba(255,51,0,.25);letter-spacing:.04em}
+.s-neon .sp{color:#ff6600;font-size:.75rem;margin-bottom:10px;text-shadow:0 0 6px rgba(255,102,0,.5)}
+.s-neon .sbtn{background:transparent;border:2px solid #ff3300;border-radius:4px;color:#ff3300;padding:5px 12px;font-size:.72rem;font-weight:700;cursor:pointer;margin-bottom:10px;display:inline-block;text-shadow:0 0 8px rgba(255,51,0,.8);box-shadow:0 0 10px rgba(255,51,0,.2),inset 0 0 8px rgba(255,51,0,.1);letter-spacing:.05em}
+.s-neon .spanel{background:rgba(255,51,0,.05);border:1px solid rgba(255,51,0,.2);padding:7px 10px;margin-bottom:8px;color:#ff6600;font-size:.72rem;text-shadow:0 0 4px rgba(255,102,0,.4)}
+.s-neon .sinput{background:rgba(255,51,0,.04);border:1px solid rgba(255,51,0,.2);border-radius:3px;padding:5px 8px;color:#ff9955;font-size:.72rem;width:100%;outline:none}
+
+/* 44. Noir Detective */
+.s-noir{background:#111;border-radius:4px;border:1px solid #222;position:relative;overflow:hidden}
+.s-noir::before{content:'';position:absolute;top:0;left:0;right:0;bottom:0;background:repeating-linear-gradient(0deg,transparent,transparent 2px,rgba(255,255,255,.015) 2px,rgba(255,255,255,.015) 3px);pointer-events:none}
+.s-noir .sh{color:#fff;font-weight:700;font-size:.94rem;margin-bottom:5px;font-family:'Playfair Display',serif;font-style:italic;letter-spacing:.02em}
+.s-noir .sp{color:#666;font-size:.75rem;margin-bottom:10px;line-height:1.6;font-family:'Playfair Display',serif}
+.s-noir .sbtn{background:transparent;border:1px solid #cc0000;border-radius:2px;color:#cc0000;padding:5px 12px;font-size:.72rem;font-weight:600;cursor:pointer;margin-bottom:10px;display:inline-block;text-transform:uppercase;letter-spacing:.1em}
+.s-noir .spanel{background:#1a1a1a;border:1px solid #2a2a2a;border-left:3px solid #cc0000;padding:7px 10px;margin-bottom:8px;color:#999;font-size:.72rem;font-family:'Playfair Display',serif;font-style:italic}
+.s-noir .sinput{background:#0a0a0a;border:none;border-bottom:2px solid #333;padding:5px 6px;color:#ccc;font-size:.72rem;width:100%;outline:none;font-family:'Playfair Display',serif}
+
+/* 45. Dark Forest */
+.s-forest{background:linear-gradient(160deg,#0a1a0a,#1a2e1a,#0d2010);border-radius:8px;border:1px solid #1a3a1a}
+.s-forest .sh{color:#86efac;font-weight:700;font-size:.94rem;margin-bottom:5px;font-family:'Space Grotesk',sans-serif;text-shadow:0 0 8px rgba(134,239,172,.3)}
+.s-forest .sp{color:#4a7c5a;font-size:.75rem;margin-bottom:10px;line-height:1.6}
+.s-forest .sbtn{background:rgba(134,239,172,.1);border:1px solid rgba(134,239,172,.35);border-radius:6px;color:#86efac;padding:5px 14px;font-size:.72rem;font-weight:600;cursor:pointer;margin-bottom:10px;display:inline-block;letter-spacing:.03em}
+.s-forest .spanel{background:rgba(16,48,16,.8);border:1px solid rgba(74,124,90,.3);border-left:3px solid #4a7c5a;border-radius:4px;padding:7px 10px;margin-bottom:8px;color:#5c9c6c;font-size:.72rem}
+.s-forest .sinput{background:rgba(10,26,10,.8);border:1px solid rgba(74,124,90,.25);border-radius:5px;padding:5px 8px;color:#86efac;font-size:.72rem;width:100%;outline:none}
+
+/* 46. Ocean Abyss */
+.s-ocean{background:linear-gradient(180deg,#001a2e,#003355,#00254a,#001428);border-radius:8px;border:1px solid rgba(0,120,200,.2);position:relative;overflow:hidden}
+.s-ocean::before{content:'';position:absolute;bottom:0;left:0;right:0;height:3px;background:linear-gradient(90deg,transparent,rgba(0,200,255,.3),transparent)}
+.s-ocean .sh{color:#00d4ff;font-weight:700;font-size:.94rem;margin-bottom:5px;text-shadow:0 0 10px rgba(0,212,255,.5)}
+.s-ocean .sp{color:#0077aa;font-size:.75rem;margin-bottom:10px;line-height:1.5}
+.s-ocean .sbtn{background:rgba(0,212,255,.1);border:1px solid rgba(0,212,255,.35);border-radius:100px;color:#00d4ff;padding:5px 14px;font-size:.72rem;font-weight:600;cursor:pointer;margin-bottom:10px;display:inline-block;text-shadow:0 0 6px rgba(0,212,255,.5)}
+.s-ocean .spanel{background:rgba(0,30,60,.7);border:1px solid rgba(0,120,200,.2);border-left:3px solid rgba(0,212,255,.4);padding:7px 10px;margin-bottom:8px;color:#0099cc;font-size:.72rem}
+.s-ocean .sinput{background:rgba(0,20,40,.6);border:1px solid rgba(0,120,200,.2);border-bottom:2px solid rgba(0,212,255,.4);padding:5px 8px;color:#00d4ff;font-size:.72rem;width:100%;outline:none}
+
+/* 47. Infrared */
+.s-ir{background:linear-gradient(135deg,#000,#3d0000,#8b0000,#cc4400);border-radius:6px;border:1px solid #3d0000}
+.s-ir .sh{color:#ffff00;font-weight:700;font-size:.88rem;margin-bottom:4px;font-family:'Space Grotesk',monospace;text-transform:uppercase;letter-spacing:.08em;text-shadow:0 0 8px rgba(255,255,0,.5)}
+.s-ir .sp{color:#ff4400;font-size:.72rem;margin-bottom:10px;font-family:'Space Grotesk',monospace;letter-spacing:.04em}
+.s-ir .sbtn{background:rgba(255,200,0,.15);border:1px solid rgba(255,200,0,.5);border-radius:2px;color:#ffcc00;padding:4px 10px;font-size:.7rem;font-weight:700;cursor:pointer;margin-bottom:10px;display:inline-block;text-transform:uppercase;letter-spacing:.1em;text-shadow:0 0 5px rgba(255,200,0,.6)}
+.s-ir .spanel{background:rgba(200,0,0,.25);border:1px solid rgba(255,100,0,.2);padding:7px 10px;margin-bottom:8px;color:#ff8800;font-size:.7rem;font-family:'Space Grotesk',monospace}
+.s-ir .sinput{background:rgba(100,0,0,.4);border:1px solid rgba(200,50,0,.3);border-bottom:2px solid #ffcc00;padding:5px 8px;color:#ffcc00;font-size:.7rem;width:100%;outline:none;font-family:'Space Grotesk',monospace}
+
+/* 48. Chalk Blackboard */
+.s-chalk{background:#2d3a2d;border-radius:4px;border:6px solid #5c4a3a;box-shadow:inset 0 0 30px rgba(0,0,0,.4)}
+.s-chalk .sh{color:rgba(255,255,255,.9);font-weight:700;font-size:.94rem;margin-bottom:5px;font-family:'Playfair Display',serif;text-shadow:1px 1px 2px rgba(0,0,0,.5);letter-spacing:.02em}
+.s-chalk .sp{color:rgba(255,255,255,.65);font-size:.75rem;margin-bottom:10px;line-height:1.6;font-family:'Playfair Display',serif}
+.s-chalk .sbtn{background:rgba(255,255,255,.15);border:1.5px dashed rgba(255,255,255,.6);border-radius:3px;color:rgba(255,255,255,.9);padding:5px 12px;font-size:.72rem;font-weight:700;cursor:pointer;margin-bottom:10px;display:inline-block;font-family:'Playfair Display',serif;letter-spacing:.04em}
+.s-chalk .spanel{background:rgba(255,255,255,.07);border:1px dashed rgba(255,255,255,.25);padding:7px 10px;margin-bottom:8px;color:rgba(255,255,255,.7);font-size:.72rem;font-family:'Playfair Display',serif;font-style:italic}
+.s-chalk .sinput{background:rgba(255,255,255,.07);border:none;border-bottom:1.5px dashed rgba(255,255,255,.4);padding:5px 6px;color:rgba(255,255,255,.9);font-size:.72rem;width:100%;outline:none;font-family:'Playfair Display',serif}
+
+/* 49. Tokyo Night */
+.s-tokyo{background:#1a1b26;border-radius:8px;border:1px solid #24283b}
+.s-tokyo .sh{color:#7aa2f7;font-weight:600;font-size:.9rem;margin-bottom:4px;font-family:'Space Grotesk',monospace;letter-spacing:.04em}
+.s-tokyo .sp{color:#565f89;font-size:.72rem;margin-bottom:10px;line-height:1.6;font-family:'Space Grotesk',monospace}
+.s-tokyo .sbtn{background:rgba(122,162,247,.12);border:1px solid rgba(122,162,247,.3);border-radius:5px;color:#7aa2f7;padding:5px 12px;font-size:.72rem;font-weight:600;cursor:pointer;margin-bottom:10px;display:inline-block;font-family:'Space Grotesk',monospace}
+.s-tokyo .spanel{background:#16161e;border:1px solid #24283b;border-left:3px solid #bb9af7;padding:7px 10px;margin-bottom:8px;color:#9ece6a;font-size:.72rem;font-family:'Space Grotesk',monospace}
+.s-tokyo .sinput{background:#16161e;border:1px solid #24283b;border-bottom:2px solid #7aa2f7;border-radius:4px;padding:5px 8px;color:#c0caf5;font-size:.72rem;width:100%;outline:none;font-family:'Space Grotesk',monospace;caret-color:#7aa2f7}
+
+/* 50. Synthwave Racing */
+.s-synth{background:linear-gradient(180deg,#0a001a,#1a0038,#2a0055 60%,#c800ff 90%,#ff2d78);border-radius:6px;position:relative;overflow:hidden}
+.s-synth::before{content:'';position:absolute;bottom:0;left:50%;transform:translateX(-50%);width:300%;height:40%;background:repeating-linear-gradient(90deg,rgba(255,45,120,.3) 0,rgba(255,45,120,.3) 1px,transparent 1px,transparent 20px);clip-path:polygon(40% 0%,60% 0%,100% 100%,0% 100%)}
+.s-synth .sh{color:#ff2d78;font-weight:900;font-size:.94rem;margin-bottom:4px;font-family:'Space Grotesk',sans-serif;text-shadow:0 0 12px rgba(255,45,120,.9),0 0 30px rgba(255,45,120,.5);text-transform:uppercase;letter-spacing:.06em}
+.s-synth .sp{color:#c800ff;font-size:.75rem;margin-bottom:10px;text-shadow:0 0 6px rgba(200,0,255,.5)}
+.s-synth .sbtn{background:transparent;border:2px solid #ff2d78;border-radius:3px;color:#ff2d78;padding:5px 12px;font-size:.72rem;font-weight:700;cursor:pointer;margin-bottom:10px;display:inline-block;text-transform:uppercase;letter-spacing:.1em;box-shadow:0 0 12px rgba(255,45,120,.3),inset 0 0 6px rgba(255,45,120,.1);text-shadow:0 0 6px rgba(255,45,120,.8)}
+.s-synth .spanel{background:rgba(200,0,255,.08);border:1px solid rgba(200,0,255,.25);border-top:2px solid #c800ff;padding:7px 10px;margin-bottom:8px;color:#c800ff;font-size:.72rem;text-shadow:0 0 4px rgba(200,0,255,.4)}
+.s-synth .sinput{background:rgba(200,0,255,.06);border:1px solid rgba(200,0,255,.2);border-bottom:2px solid #ff2d78;padding:5px 8px;color:#ff2d78;font-size:.72rem;width:100%;outline:none;caret-color:#ff2d78}
 </style>
 </head>
 <body>
 
 <header class="site-header">
   <h1 class="header-title">THE THEME ATLAS</h1>
-  <p class="header-subtitle">A comprehensive reference library of 30 web design themes &amp; styles</p>
+  <p class="header-subtitle">A comprehensive reference library of 50 web design themes &amp; styles</p>
   <div class="header-badges">
-    <span class="badge">30 Themes</span>
-    <span class="badge">150+ Components</span>
+    <span class="badge">50 Themes</span>
+    <span class="badge">250+ Components</span>
     <span class="badge">Interactive</span>
   </div>
 </header>
@@ -929,6 +1104,406 @@ body{font-family:'Space Grotesk','Inter',sans-serif;background:#12121a;color:#e8
     <div class="card-actions"><button class="copy-btn" data-theme="30">&#8984; Copy CSS</button></div>
   </article>
 
+  <!-- 31 -->
+  <article class="theme-card" data-category="dark">
+    <div class="card-header">
+      <h2 class="card-title">Terminal CLI</h2>
+      <div class="card-meta"><span class="category-tag cat-dark">Dark</span></div>
+      <p class="card-description">Classic green-on-black command line. Monospace everything. The hacker's canvas.</p>
+    </div>
+    <div class="color-palette">
+      <span class="swatch" style="background:#0c0c0c;border-color:#1a1a1a"></span><span class="swatch" style="background:#0a1a0a"></span><span class="swatch" style="background:#00ff41"></span><span class="swatch" style="background:#4a7c59"></span>
+    </div>
+    <div class="sample-block s-term">
+      <div class="sh">root@atlas:~</div>
+      <div class="sp">$ Connection established. Terminal ready. All systems online.</div>
+      <div class="sbtn">./execute.sh</div>
+      <div class="spanel">&#9658; Process 1337: running // CPU 2% // MEM 128MB</div>
+      <input class="sinput" type="text" placeholder="Enter command_">
+    </div>
+    <div class="card-actions"><button class="copy-btn" data-theme="31">&#8984; Copy CSS</button></div>
+  </article>
+
+  <!-- 32 -->
+  <article class="theme-card" data-category="modern">
+    <div class="card-header">
+      <h2 class="card-title">Bento Grid</h2>
+      <div class="card-meta"><span class="category-tag cat-modern">Modern</span></div>
+      <p class="card-description">Japanese lunch-box compartments as UI. Clean cards in a warm off-white grid.</p>
+    </div>
+    <div class="color-palette">
+      <span class="swatch" style="background:#f0ede8;border-color:#ddd9d0"></span><span class="swatch" style="background:#ddd9d0"></span><span class="swatch" style="background:#1a1a1a"></span><span class="swatch" style="background:#6e6b64"></span>
+    </div>
+    <div class="sample-block s-bento">
+      <div class="sh">Bento Layout</div>
+      <div class="sp">Compartmentalised design. Every element in its own box.</div>
+      <div class="sbtn">Open Box</div>
+      <div class="spanel"><span>Stats</span><span>Charts</span></div>
+      <input class="sinput" type="text" placeholder="Search items&#8230;">
+    </div>
+    <div class="card-actions"><button class="copy-btn" data-theme="32">&#8984; Copy CSS</button></div>
+  </article>
+
+  <!-- 33 -->
+  <article class="theme-card" data-category="modern">
+    <div class="card-header">
+      <h2 class="card-title">Frosted iOS</h2>
+      <div class="card-meta"><span class="category-tag cat-modern">Modern</span></div>
+      <p class="card-description">Apple-style deep glassmorphism. Ultra-blur, vivid underlayer, absolute refinement.</p>
+    </div>
+    <div class="color-palette">
+      <span class="swatch" style="background:#1c1c2e;border-color:#333"></span><span class="swatch" style="background:#a855f7"></span><span class="swatch" style="background:#3b82f6"></span><span class="swatch" style="background:rgba(255,255,255,.14);border-color:#555"></span>
+    </div>
+    <div class="sample-block s-ios">
+      <div class="sh">Dynamic Island</div>
+      <div class="sp">Layers of translucency over a vibrant depth. iOS refinement.</div>
+      <div class="sbtn">Unlock</div>
+      <div class="spanel">Frosted glass card &#8212; content floats above the glow.</div>
+      <input class="sinput" type="text" placeholder="Search&#8230;">
+    </div>
+    <div class="card-actions"><button class="copy-btn" data-theme="33">&#8984; Copy CSS</button></div>
+  </article>
+
+  <!-- 34 -->
+  <article class="theme-card" data-category="dark">
+    <div class="card-header">
+      <h2 class="card-title">Matrix Code</h2>
+      <div class="card-meta"><span class="category-tag cat-dark">Dark</span></div>
+      <p class="card-description">Digital rain on pure black. The simulation is running. There is no spoon.</p>
+    </div>
+    <div class="color-palette">
+      <span class="swatch" style="background:#000000"></span><span class="swatch" style="background:#003300"></span><span class="swatch" style="background:#008f11"></span><span class="swatch" style="background:#00ff41"></span>
+    </div>
+    <div class="sample-block s-matrix">
+      <div class="sh">WAKE UP, NEO.</div>
+      <div class="sp">SYS: MATRIX_ONLINE // NODE: 127.0.0.1 // PASS: ******</div>
+      <div class="sbtn">RED PILL</div>
+      <div class="spanel">&#9658; DECRYPT: 5f4dcc3b5aa765d61d8327deb882cf99</div>
+      <input class="sinput" type="text" placeholder="Follow the white rabbit_">
+    </div>
+    <div class="card-actions"><button class="copy-btn" data-theme="34">&#8984; Copy CSS</button></div>
+  </article>
+
+  <!-- 35 -->
+  <article class="theme-card" data-category="artistic">
+    <div class="card-header">
+      <h2 class="card-title">Kawaii Pastel</h2>
+      <div class="card-meta"><span class="category-tag cat-artistic">Artistic</span></div>
+      <p class="card-description">Japanese cute culture in digital form. Soft pink and lavender, ultra-rounded, full of joy.</p>
+    </div>
+    <div class="color-palette">
+      <span class="swatch" style="background:#fde8f5"></span><span class="swatch" style="background:#e8d8ff"></span><span class="swatch" style="background:#ff9ec8"></span><span class="swatch" style="background:#c79eff"></span>
+    </div>
+    <div class="sample-block s-kawaii">
+      <div class="sh">So Kawaii</div>
+      <div class="sp">Everything is soft and cute and full of sparkles and love always.</div>
+      <div class="sbtn">&#10022; Hug</div>
+      <div class="spanel">Fluffy panel &#8212; handle with maximum gentleness and care.</div>
+      <input class="sinput" type="text" placeholder="Write something cute&#8230;">
+    </div>
+    <div class="card-actions"><button class="copy-btn" data-theme="35">&#8984; Copy CSS</button></div>
+  </article>
+
+  <!-- 36 -->
+  <article class="theme-card" data-category="modern">
+    <div class="card-header">
+      <h2 class="card-title">Liquid Chrome</h2>
+      <div class="card-meta"><span class="category-tag cat-modern">Modern</span></div>
+      <p class="card-description">Shifting metallic silver gradients with reflective depth. High-end industrial finish.</p>
+    </div>
+    <div class="color-palette">
+      <span class="swatch" style="background:#9e9e9e"></span><span class="swatch" style="background:#e8e8e8"></span><span class="swatch" style="background:#bdbdbd"></span><span class="swatch" style="background:#212121"></span>
+    </div>
+    <div class="sample-block s-chrome">
+      <div class="sh">Mirror Finish</div>
+      <div class="sp">Polished to a reflective perfection. Pure metallic industrial design.</div>
+      <div class="sbtn">Reflect</div>
+      <div class="spanel">Chrome panel &#8212; caught between light and shadow.</div>
+      <input class="sinput" type="text" placeholder="Input field&#8230;">
+    </div>
+    <div class="card-actions"><button class="copy-btn" data-theme="36">&#8984; Copy CSS</button></div>
+  </article>
+
+  <!-- 37 -->
+  <article class="theme-card" data-category="minimal">
+    <div class="card-header">
+      <h2 class="card-title">Blueprint</h2>
+      <div class="card-meta"><span class="category-tag cat-minimal">Minimal</span></div>
+      <p class="card-description">Technical drawing aesthetic. White on cobalt blue with precise grid lines. Engineer&#8217;s canvas.</p>
+    </div>
+    <div class="color-palette">
+      <span class="swatch" style="background:#1a3a6b"></span><span class="swatch" style="background:#2a5298"></span><span class="swatch" style="background:#90b8e8"></span><span class="swatch" style="background:#ffffff"></span>
+    </div>
+    <div class="sample-block s-blueprint">
+      <div class="sh">SECTION A-3</div>
+      <div class="sp">SCALE 1:100 // REV. 4 // TOLERANCES ±0.5mm // APPROVED</div>
+      <div class="sbtn">VIEW PLAN</div>
+      <div class="spanel">-- SPECIFICATION NOTE: All dimensions in millimetres --</div>
+      <input class="sinput" type="text" placeholder="ANNOTATION_">
+    </div>
+    <div class="card-actions"><button class="copy-btn" data-theme="37">&#8984; Copy CSS</button></div>
+  </article>
+
+  <!-- 38 -->
+  <article class="theme-card" data-category="artistic">
+    <div class="card-header">
+      <h2 class="card-title">Comic Book Pop</h2>
+      <div class="card-meta"><span class="category-tag cat-artistic">Artistic</span></div>
+      <p class="card-description">Halftone dots, stark black borders, offset shadows, POW energy. Pure panel power.</p>
+    </div>
+    <div class="color-palette">
+      <span class="swatch" style="background:#ffffff"></span><span class="swatch" style="background:#000000"></span><span class="swatch" style="background:#ffff00"></span><span class="swatch" style="background:#00c8ff"></span>
+    </div>
+    <div class="sample-block s-comic" style="padding:16px">
+      <div class="sh">POW! ZAP!</div>
+      <div class="sp">KAPOW! The hero arrives and the villain trembles in pure terror!</div>
+      <div class="sbtn">BAM!</div>
+      <div class="spanel">SPEECH BUBBLE: &#8220;To the rescue!&#8221;</div>
+      <input class="sinput" type="text" placeholder="Narration box text&#8230;">
+    </div>
+    <div class="card-actions"><button class="copy-btn" data-theme="38">&#8984; Copy CSS</button></div>
+  </article>
+
+  <!-- 39 -->
+  <article class="theme-card" data-category="retro">
+    <div class="card-header">
+      <h2 class="card-title">Amber Terminal</h2>
+      <div class="card-meta"><span class="category-tag cat-retro">Retro</span></div>
+      <p class="card-description">Classic phosphor amber monochrome CRT monitor. 1980s workstation warmth.</p>
+    </div>
+    <div class="color-palette">
+      <span class="swatch" style="background:#0d0900;border-color:#2a1800"></span><span class="swatch" style="background:#2a1800"></span><span class="swatch" style="background:#a05000"></span><span class="swatch" style="background:#ff8c00"></span>
+    </div>
+    <div class="sample-block s-amber">
+      <div class="sh">SYSTEM READY</div>
+      <div class="sp">IBM PC XT // 4.77 MHz // 640K RAM // DOS 3.3 // READY</div>
+      <div class="sbtn">EXECUTE</div>
+      <div class="spanel">C:\&gt; DIR /W // 12 file(s) // 14,336 bytes free</div>
+      <input class="sinput" type="text" placeholder="C:\&gt;_">
+    </div>
+    <div class="card-actions"><button class="copy-btn" data-theme="39">&#8984; Copy CSS</button></div>
+  </article>
+
+  <!-- 40 -->
+  <article class="theme-card" data-category="modern">
+    <div class="card-header">
+      <h2 class="card-title">Sunset Horizon</h2>
+      <div class="card-meta"><span class="category-tag cat-modern">Modern</span></div>
+      <p class="card-description">Warm gradient from deep violet to amber gold. Sky at the golden hour, digitised.</p>
+    </div>
+    <div class="color-palette">
+      <span class="swatch" style="background:#1a0a2e"></span><span class="swatch" style="background:#c2185b"></span><span class="swatch" style="background:#ff6f00"></span><span class="swatch" style="background:#ffca28"></span>
+    </div>
+    <div class="sample-block s-sunset">
+      <div class="sh">Golden Hour</div>
+      <div class="sp">The sun dissolves into the horizon. Everything turns warm and golden.</div>
+      <div class="sbtn">Watch Sunset</div>
+      <div class="spanel">The sky gradient shifts — violet to amber in twenty breathtaking steps.</div>
+      <input class="sinput" type="text" placeholder="Set a reminder&#8230;">
+    </div>
+    <div class="card-actions"><button class="copy-btn" data-theme="40">&#8984; Copy CSS</button></div>
+  </article>
+
+  <!-- 41 -->
+  <article class="theme-card" data-category="modern">
+    <div class="card-header">
+      <h2 class="card-title">Holographic Foil</h2>
+      <div class="card-meta"><span class="category-tag cat-modern">Modern</span></div>
+      <p class="card-description">Iridescent full-spectrum rainbow shift on a foil surface. Light in motion.</p>
+    </div>
+    <div class="color-palette">
+      <span class="swatch" style="background:#ff007f"></span><span class="swatch" style="background:#ffd700"></span><span class="swatch" style="background:#00ff80"></span><span class="swatch" style="background:#00bfff"></span>
+    </div>
+    <div class="sample-block s-holo">
+      <div class="sh">Iridescent</div>
+      <div class="sp">Every angle reveals a different color. Light bends into the spectrum.</div>
+      <div class="sbtn">Shift</div>
+      <div class="spanel">Foil panel — color changes with every viewing angle.</div>
+      <input class="sinput" type="text" placeholder="Catch the light&#8230;">
+    </div>
+    <div class="card-actions"><button class="copy-btn" data-theme="41">&#8984; Copy CSS</button></div>
+  </article>
+
+  <!-- 42 -->
+  <article class="theme-card" data-category="dark">
+    <div class="card-header">
+      <h2 class="card-title">Hex Data</h2>
+      <div class="card-meta"><span class="category-tag cat-dark">Dark</span></div>
+      <p class="card-description">Raw hex dump aesthetic. Low-level code style. Every byte counts in this minimal void.</p>
+    </div>
+    <div class="color-palette">
+      <span class="swatch" style="background:#050508;border-color:#111"></span><span class="swatch" style="background:#0d1117;border-color:#222"></span><span class="swatch" style="background:#21262d"></span><span class="swatch" style="background:#58a6ff"></span>
+    </div>
+    <div class="sample-block s-hexdata">
+      <div class="sh">FF A0 3D 0C</div>
+      <div class="sp">48 65 78 20 44 61 74 61 20 2F 2F 20 52 41 57 20 42 59 54 45 53</div>
+      <div class="sbtn">PARSE</div>
+      <div class="spanel">0000: 89 50 4E 47 0D 0A 1A 0A 00 00 00 0D 49 48 44 52</div>
+      <input class="sinput" type="text" placeholder="0x00000000_">
+    </div>
+    <div class="card-actions"><button class="copy-btn" data-theme="42">&#8984; Copy CSS</button></div>
+  </article>
+
+  <!-- 43 -->
+  <article class="theme-card" data-category="dark">
+    <div class="card-header">
+      <h2 class="card-title">Neon Sign</h2>
+      <div class="card-meta"><span class="category-tag cat-dark">Dark</span></div>
+      <p class="card-description">Glowing red neon tubes on a dark background. Late-night diner energy in pure CSS.</p>
+    </div>
+    <div class="color-palette">
+      <span class="swatch" style="background:#1a0a00;border-color:#2a1400"></span><span class="swatch" style="background:#2a1400"></span><span class="swatch" style="background:#ff3300"></span><span class="swatch" style="background:#ff6600"></span>
+    </div>
+    <div class="sample-block s-neon">
+      <div class="sh">OPEN 24/7</div>
+      <div class="sp">The sign buzzes and flickers. A warm red glow spills onto the wet street.</div>
+      <div class="sbtn">VACANCY</div>
+      <div class="spanel">&#9135; Bar &amp; Grill &#8212; Est. 1988 &#9135; Neon still glowing strong</div>
+      <input class="sinput" type="text" placeholder="Leave a message&#8230;">
+    </div>
+    <div class="card-actions"><button class="copy-btn" data-theme="43">&#8984; Copy CSS</button></div>
+  </article>
+
+  <!-- 44 -->
+  <article class="theme-card" data-category="minimal">
+    <div class="card-header">
+      <h2 class="card-title">Noir Detective</h2>
+      <div class="card-meta"><span class="category-tag cat-minimal">Minimal</span></div>
+      <p class="card-description">Film noir black-and-white with a single sharp red accent. Shadow, mystery, suspense.</p>
+    </div>
+    <div class="color-palette">
+      <span class="swatch" style="background:#111111;border-color:#222"></span><span class="swatch" style="background:#333333"></span><span class="swatch" style="background:#999999"></span><span class="swatch" style="background:#cc0000"></span>
+    </div>
+    <div class="sample-block s-noir">
+      <div class="sh">It was a dark night&#8230;</div>
+      <div class="sp">The rain never stopped that October. Neither did the questions.</div>
+      <div class="sbtn">INVESTIGATE</div>
+      <div class="spanel">&#8220;Everyone&#8217;s hiding something in this city. Everyone.&#8221;</div>
+      <input class="sinput" type="text" placeholder="File your report&#8230;">
+    </div>
+    <div class="card-actions"><button class="copy-btn" data-theme="44">&#8984; Copy CSS</button></div>
+  </article>
+
+  <!-- 45 -->
+  <article class="theme-card" data-category="dark">
+    <div class="card-header">
+      <h2 class="card-title">Dark Forest</h2>
+      <div class="card-meta"><span class="category-tag cat-dark">Dark</span></div>
+      <p class="card-description">Deep layered greens, mossy shadow, bioluminescent accent. Nature after dark.</p>
+    </div>
+    <div class="color-palette">
+      <span class="swatch" style="background:#0a1a0a;border-color:#1a3a1a"></span><span class="swatch" style="background:#1a2e1a"></span><span class="swatch" style="background:#4a7c5a"></span><span class="swatch" style="background:#86efac"></span>
+    </div>
+    <div class="sample-block s-forest">
+      <div class="sh">Into the Trees</div>
+      <div class="sp">Where the canopy closes, the light turns green and the world goes quiet.</div>
+      <div class="sbtn">Step Inside</div>
+      <div class="spanel">&#127807; Coordinates: 51°N 0°W // Canopy density: 94%</div>
+      <input class="sinput" type="text" placeholder="Log your sighting&#8230;">
+    </div>
+    <div class="card-actions"><button class="copy-btn" data-theme="45">&#8984; Copy CSS</button></div>
+  </article>
+
+  <!-- 46 -->
+  <article class="theme-card" data-category="dark">
+    <div class="card-header">
+      <h2 class="card-title">Ocean Abyss</h2>
+      <div class="card-meta"><span class="category-tag cat-dark">Dark</span></div>
+      <p class="card-description">Deep navy darkness, bioluminescent cyan accents. The midnight zone of the ocean floor.</p>
+    </div>
+    <div class="color-palette">
+      <span class="swatch" style="background:#001a2e;border-color:#003"></span><span class="swatch" style="background:#003355"></span><span class="swatch" style="background:#0077aa"></span><span class="swatch" style="background:#00d4ff"></span>
+    </div>
+    <div class="sample-block s-ocean">
+      <div class="sh">Depth: 4,200m</div>
+      <div class="sp">No sunlight reaches here. Only pressure, darkness, and cold wonder.</div>
+      <div class="sbtn">Dive Deeper</div>
+      <div class="spanel">&#9634; Thermocline: 400m // Salinity: 35ppt // Visibility: 0m</div>
+      <input class="sinput" type="text" placeholder="Log depth reading&#8230;">
+    </div>
+    <div class="card-actions"><button class="copy-btn" data-theme="46">&#8984; Copy CSS</button></div>
+  </article>
+
+  <!-- 47 -->
+  <article class="theme-card" data-category="artistic">
+    <div class="card-header">
+      <h2 class="card-title">Infrared</h2>
+      <div class="card-meta"><span class="category-tag cat-artistic">Artistic</span></div>
+      <p class="card-description">False-color thermal imaging palette. Heat as color, dark to white-hot extremes.</p>
+    </div>
+    <div class="color-palette">
+      <span class="swatch" style="background:#000000"></span><span class="swatch" style="background:#8b0000"></span><span class="swatch" style="background:#ff4400"></span><span class="swatch" style="background:#ffff00"></span>
+    </div>
+    <div class="sample-block s-ir">
+      <div class="sh">THERMAL SCAN</div>
+      <div class="sp">TEMP: 38.7°C // HOT ZONE DETECTED // ALERT LEVEL: HIGH</div>
+      <div class="sbtn">SCAN</div>
+      <div class="spanel">&#9650; ANOMALY AT GRID REF 7-C // SOURCE TEMP: 312K</div>
+      <input class="sinput" type="text" placeholder="QUERY SENSOR_">
+    </div>
+    <div class="card-actions"><button class="copy-btn" data-theme="47">&#8984; Copy CSS</button></div>
+  </article>
+
+  <!-- 48 -->
+  <article class="theme-card" data-category="artistic">
+    <div class="card-header">
+      <h2 class="card-title">Chalk Blackboard</h2>
+      <div class="card-meta"><span class="category-tag cat-artistic">Artistic</span></div>
+      <p class="card-description">Dusty chalk on a deep green slate. The classroom aesthetic. Ideas scratched in white.</p>
+    </div>
+    <div class="color-palette">
+      <span class="swatch" style="background:#2d3a2d"></span><span class="swatch" style="background:#5c4a3a"></span><span class="swatch" style="background:rgba(255,255,255,.65);border-color:#666"></span><span class="swatch" style="background:rgba(255,255,255,.9);border-color:#999"></span>
+    </div>
+    <div class="sample-block s-chalk" style="padding:18px">
+      <div class="sh">Today&#8217;s Lesson</div>
+      <div class="sp">The best ideas are written in chalk &#8212; easy to change, hard to forget.</div>
+      <div class="sbtn">Take Notes</div>
+      <div class="spanel">&#8220;In theory there is no difference between theory and practice.&#8221;</div>
+      <input class="sinput" type="text" placeholder="Write on the board&#8230;">
+    </div>
+    <div class="card-actions"><button class="copy-btn" data-theme="48">&#8984; Copy CSS</button></div>
+  </article>
+
+  <!-- 49 -->
+  <article class="theme-card" data-category="dark">
+    <div class="card-header">
+      <h2 class="card-title">Tokyo Night</h2>
+      <div class="card-meta"><span class="category-tag cat-dark">Dark</span></div>
+      <p class="card-description">The beloved dark code editor color scheme. Purple-blue midnight, soft syntax glow.</p>
+    </div>
+    <div class="color-palette">
+      <span class="swatch" style="background:#1a1b26;border-color:#24283b"></span><span class="swatch" style="background:#24283b"></span><span class="swatch" style="background:#7aa2f7"></span><span class="swatch" style="background:#9ece6a"></span>
+    </div>
+    <div class="sample-block s-tokyo">
+      <div class="sh">function render()</div>
+      <div class="sp">// Tokyo Night &#8212; where code meets craft and dark themes find beauty.</div>
+      <div class="sbtn">Run</div>
+      <div class="spanel">&#9654; console.log(&#39;Tokyo Night initialized&#39;) // output: &#10003;</div>
+      <input class="sinput" type="text" placeholder="// comment your code&#8230;">
+    </div>
+    <div class="card-actions"><button class="copy-btn" data-theme="49">&#8984; Copy CSS</button></div>
+  </article>
+
+  <!-- 50 -->
+  <article class="theme-card" data-category="retro">
+    <div class="card-header">
+      <h2 class="card-title">Synthwave Racing</h2>
+      <div class="card-meta"><span class="category-tag cat-retro">Retro</span></div>
+      <p class="card-description">80s arcade racing aesthetics. Perspective grid, hot pink and electric purple, full throttle.</p>
+    </div>
+    <div class="color-palette">
+      <span class="swatch" style="background:#0a001a;border-color:#1a0038"></span><span class="swatch" style="background:#2a0055"></span><span class="swatch" style="background:#c800ff"></span><span class="swatch" style="background:#ff2d78"></span>
+    </div>
+    <div class="sample-block s-synth">
+      <div class="sh">FULL THROTTLE</div>
+      <div class="sp">Speed: 240km/h // Gear: 6th // Lap: 3/3 // TURBO ACTIVE</div>
+      <div class="sbtn">ACCELERATE</div>
+      <div class="spanel">&#9670; CHECKPOINT &#8212; LAP TIME: 01:24.88 &#8212; RECORD &#9670;</div>
+      <input class="sinput" type="text" placeholder="ENTER INITIALS_">
+    </div>
+    <div class="card-actions"><button class="copy-btn" data-theme="50">&#8984; Copy CSS</button></div>
+  </article>
+
 </main>
 
 <footer class="site-footer">
@@ -986,7 +1561,27 @@ body{font-family:'Space Grotesk','Inter',sans-serif;background:#12121a;color:#e8
     27:'.blob{border-radius:38% 62% 56% 44%/44% 38% 62% 56%;background:#e8f5e9;}.blob-btn{border-radius:50% 20% 40% 30%/30% 50% 20% 40%;}',
     28:'.nordic{background:#f5f5f0;color:#2d3436;border:1px solid #e0e0d8;font-family:Inter,sans-serif;border-radius:8px;}',
     29:'.hud{background:#000814;color:#90e0ef;border:1px solid rgba(0,180,216,.3);font-family:"Space Grotesk",monospace;letter-spacing:.1em;text-transform:uppercase;}',
-    30:'.max{background:linear-gradient(135deg,#8b0000,#ff8c00,#ffd700);border:4px solid #4b0082;color:#fff;font-family:"Playfair Display",serif;}'
+    30:'.max{background:linear-gradient(135deg,#8b0000,#ff8c00,#ffd700);border:4px solid #4b0082;color:#fff;font-family:"Playfair Display",serif;}',
+    31:'.term{background:#0c0c0c;color:#00ff41;font-family:monospace;}.term-btn{background:transparent;border:1px solid #00ff41;color:#00ff41;text-shadow:0 0 6px rgba(0,255,65,.5);}',
+    32:'.bento{background:#f0ede8;border-radius:14px;border:1px solid #ddd9d0;}.bento-cell{background:#fff;border:1px solid #ddd9d0;border-radius:8px;padding:12px;}',
+    33:'.ios-glass{background:rgba(255,255,255,.1);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border:1px solid rgba(255,255,255,.18);border-radius:16px;}',
+    34:'.matrix{background:#000;color:#00ff41;font-family:monospace;}.matrix-btn{background:transparent;border:1px solid #00ff41;box-shadow:0 0 10px rgba(0,255,65,.3);}',
+    35:'.kawaii{background:linear-gradient(135deg,#fde8f5,#e8d8ff);border-radius:20px;border:2px solid rgba(255,182,193,.5);}.kawaii-btn{background:linear-gradient(135deg,#ff9ec8,#c79eff);border-radius:100px;color:#fff;}',
+    36:'.chrome{background:linear-gradient(145deg,#9e9e9e,#e8e8e8,#bdbdbd);border-radius:8px;}.chrome-btn{background:linear-gradient(145deg,#424242,#212121);color:#e0e0e0;box-shadow:0 2px 8px rgba(0,0,0,.3);}',
+    37:'.blueprint{background:#1a3a6b;background-image:linear-gradient(rgba(255,255,255,.08) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.08) 1px,transparent 1px);background-size:18px 18px;color:#90b8e8;}',
+    38:'.comic{background:#fff;border:3px solid #000;box-shadow:5px 5px 0 #000;}.comic-btn{background:#ff0;border:2.5px solid #000;box-shadow:3px 3px 0 #000;color:#000;font-weight:900;}',
+    39:'.amber{background:#0d0900;color:#ff8c00;font-family:monospace;text-shadow:0 0 8px rgba(255,140,0,.5);border:1px solid #2a1800;}',
+    40:'.sunset{background:linear-gradient(180deg,#1a0a2e,#4a1a7a,#c2185b,#ff6f00,#ffca28);color:#fff;border-radius:10px;}',
+    41:'.holo{background:linear-gradient(135deg,#ff007f,#ffd700,#00ff80,#00bfff,#8000ff);background-size:400% 400%;animation:shift 5s ease infinite;border:2px solid rgba(255,255,255,.3);}',
+    42:'.hexdata{background:#050508;color:#58a6ff;font-family:monospace;border:1px solid #0d1117;letter-spacing:.06em;}',
+    43:'.neon{background:#1a0a00;color:#ff3300;text-shadow:0 0 10px rgba(255,51,0,.9),0 0 30px rgba(255,51,0,.5);}.neon-btn{border:2px solid #ff3300;box-shadow:0 0 12px rgba(255,51,0,.3),inset 0 0 8px rgba(255,51,0,.1);}',
+    44:'.noir{background:#111;color:#fff;font-family:"Playfair Display",serif;font-style:italic;}.noir-accent{color:#cc0000;border-color:#cc0000;}',
+    45:'.forest{background:linear-gradient(160deg,#0a1a0a,#1a2e1a);border:1px solid #1a3a1a;color:#86efac;text-shadow:0 0 8px rgba(134,239,172,.3);}',
+    46:'.ocean{background:linear-gradient(180deg,#001a2e,#003355,#001428);color:#00d4ff;text-shadow:0 0 10px rgba(0,212,255,.5);}',
+    47:'.ir{background:linear-gradient(135deg,#000,#8b0000,#cc4400);color:#ffff00;font-family:monospace;text-transform:uppercase;letter-spacing:.08em;}',
+    48:'.chalk{background:#2d3a2d;border:6px solid #5c4a3a;color:rgba(255,255,255,.9);font-family:"Playfair Display",serif;box-shadow:inset 0 0 30px rgba(0,0,0,.4);}',
+    49:'.tokyo{background:#1a1b26;color:#7aa2f7;font-family:monospace;border:1px solid #24283b;}.tokyo-string{color:#9ece6a;}.tokyo-comment{color:#565f89;}',
+    50:'.synth{background:linear-gradient(180deg,#0a001a,#2a0055,#c800ff);color:#ff2d78;text-shadow:0 0 12px rgba(255,45,120,.9);font-weight:900;text-transform:uppercase;}'
   };
 
   // COPY
