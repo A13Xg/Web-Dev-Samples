@@ -83,52 +83,150 @@ style.textContent = `
 `;
 document.head.appendChild(style);
 
+// Toast notification helper
+function showToast(message) {
+    const existing = document.querySelector('.toast-notification');
+    if (existing) existing.remove();
+    const toast = document.createElement('div');
+    toast.className = 'toast-notification';
+    toast.textContent = message;
+    document.body.appendChild(toast);
+    requestAnimationFrame(() => toast.classList.add('toast-visible'));
+    setTimeout(() => {
+        toast.classList.remove('toast-visible');
+        setTimeout(() => toast.remove(), 300);
+    }, 3500);
+}
+
 // Form handling
 const reservationForm = document.querySelector('.reservation-form');
+const reservationSuccess = document.querySelector('.reservation-success');
+
 if (reservationForm) {
     reservationForm.addEventListener('submit', (e) => {
         e.preventDefault();
 
-        // Get form data
-        const formData = new FormData(reservationForm);
-        const date = reservationForm.querySelector('input[type="date"]').value;
-        const time = reservationForm.querySelector('select:nth-of-type(1)').value;
-        const guests = reservationForm.querySelector('select:nth-of-type(2)').value;
-        const name = reservationForm.querySelector('input[type="text"]').value;
-        const email = reservationForm.querySelector('input[type="email"]').value;
-        const phone = reservationForm.querySelector('input[type="tel"]').value;
-        const requests = reservationForm.querySelector('textarea').value;
+        const dateInput = reservationForm.querySelector('input[type="date"]');
+        const timeSelect = reservationForm.querySelector('select:nth-of-type(1)');
+        const guestsSelect = reservationForm.querySelector('select:nth-of-type(2)');
+        const nameInput = reservationForm.querySelector('input[type="text"]');
+        const emailInput = reservationForm.querySelector('input[type="email"]');
+        const phoneInput = reservationForm.querySelector('input[type="tel"]');
 
-        // Create mailto link with form details
-        const mailtoSubject = encodeURIComponent(`Reservation Request for ${date}`);
-        const mailtoBody = encodeURIComponent(
-            `Reservation Request\n\n` +
-            `Name: ${name}\n` +
-            `Email: ${email}\n` +
-            `Phone: ${phone}\n` +
-            `Date: ${date}\n` +
-            `Time: ${time}\n` +
-            `Party Size: ${guests}\n` +
-            `Special Requests: ${requests || 'None'}\n\n` +
-            `Please confirm this reservation.`
-        );
+        const date = dateInput.value;
+        const time = timeSelect.value;
+        const guests = guestsSelect.value;
+        const name = nameInput.value.trim();
+        const email = emailInput.value.trim();
+        const phone = phoneInput.value.trim();
 
-        // Open email client with pre-filled information
-        window.location.href = `mailto:hello@maisonnoir.com?subject=${mailtoSubject}&body=${mailtoBody}`;
+        if (!date || !time || !guests || !name || !email || !phone) {
+            showToast('Please fill in all required fields.');
+            return;
+        }
 
-        // Provide visual feedback
-        const btn = reservationForm.querySelector('.btn');
-        const originalText = btn.textContent;
-        btn.textContent = 'Opening email client...';
-        btn.style.background = '#4a7c59';
+        const today = new Date();
+        today.setHours(0, 0, 0, 0);
+        const selectedDate = new Date(date + 'T00:00:00');
+        if (selectedDate < today) {
+            showToast('Please select today or a future date for your reservation.');
+            return;
+        }
 
-        setTimeout(() => {
-            btn.textContent = originalText;
-            btn.style.background = '';
-            reservationForm.reset();
-        }, 2000);
+        const dateFormatted = selectedDate.toLocaleDateString('en-US', {
+            weekday: 'long', year: 'numeric', month: 'long', day: 'numeric'
+        });
+        document.getElementById('confirm-date').textContent = dateFormatted;
+        document.getElementById('confirm-time').textContent = time;
+        document.getElementById('confirm-guests').textContent = guests;
+        document.getElementById('confirm-name').textContent = name;
+
+        reservationForm.style.display = 'none';
+        reservationSuccess.style.display = 'block';
+    });
+
+    document.getElementById('new-reservation-btn')?.addEventListener('click', () => {
+        reservationSuccess.style.display = 'none';
+        reservationForm.style.display = '';
+        reservationForm.reset();
     });
 }
+
+const reservationStyles = document.createElement('style');
+reservationStyles.textContent = `
+    .toast-notification {
+        position: fixed;
+        top: 24px;
+        left: 50%;
+        transform: translateX(-50%) translateY(-80px);
+        background: #111;
+        color: #fff;
+        padding: 14px 24px;
+        border-radius: 3px;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 0.8rem;
+        letter-spacing: 0.08em;
+        z-index: 9999;
+        transition: transform 0.3s ease, opacity 0.3s ease;
+        opacity: 0;
+        box-shadow: 0 4px 24px rgba(0,0,0,0.4);
+        border-left: 3px solid #c9a96e;
+        white-space: nowrap;
+    }
+    .toast-notification.toast-visible {
+        transform: translateX(-50%) translateY(0);
+        opacity: 1;
+    }
+    .reservation-success {
+        text-align: center;
+        padding: 3rem 1rem;
+        color: #fff;
+    }
+    .reservation-success .success-icon {
+        width: 72px;
+        height: 72px;
+        border-radius: 50%;
+        border: 1px solid #c9a96e;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 2rem;
+        color: #c9a96e;
+        margin: 0 auto 1.5rem;
+    }
+    .reservation-success h3 {
+        font-family: 'Cormorant Garamond', serif;
+        font-size: 2.5rem;
+        font-weight: 300;
+        letter-spacing: 0.05em;
+        margin-bottom: 2rem;
+    }
+    .success-summary {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem 2rem;
+        max-width: 440px;
+        margin: 0 auto 2.5rem;
+        text-align: left;
+    }
+    .summary-item {
+        border-bottom: 1px solid rgba(201,169,110,0.25);
+        padding-bottom: 0.75rem;
+    }
+    .summary-label {
+        display: block;
+        font-size: 0.65rem;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        color: #c9a96e;
+        margin-bottom: 0.3rem;
+    }
+    .summary-value {
+        font-size: 0.9rem;
+        color: rgba(255,255,255,0.88);
+    }
+`;
+document.head.appendChild(reservationStyles);
 
 // Smooth scroll for anchor links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {

@@ -111,16 +111,222 @@ contactForm?.addEventListener('submit', (e) => {
     }, 2000);
 });
 
-// Pricing plan button handling
+// Modal helpers
+function openModal(id) {
+    const modal = document.getElementById(id);
+    if (!modal) return;
+    modal.style.display = 'flex';
+    document.body.style.overflow = 'hidden';
+}
+
+function closeModal(id) {
+    const modal = document.getElementById(id);
+    if (!modal) return;
+    modal.style.display = 'none';
+    document.body.style.overflow = '';
+}
+
+// Close buttons and overlay click
+document.querySelectorAll('.modal-close').forEach(btn => {
+    btn.addEventListener('click', () => {
+        const modal = btn.closest('.modal-overlay');
+        if (modal) { modal.style.display = 'none'; document.body.style.overflow = ''; }
+    });
+});
+
+document.querySelectorAll('.modal-overlay').forEach(overlay => {
+    overlay.addEventListener('click', (e) => {
+        if (e.target === overlay) { overlay.style.display = 'none'; document.body.style.overflow = ''; }
+    });
+});
+
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+        document.querySelectorAll('.modal-overlay').forEach(m => { m.style.display = 'none'; });
+        document.body.style.overflow = '';
+    }
+});
+
+// Pricing plan button handling — open membership modal
 const pricingButtons = document.querySelectorAll('.pricing-join-btn');
+const planPrices = { Basic: '$49/month', Pro: '$89/month', Elite: '$149/month' };
 
 pricingButtons.forEach(btn => {
     btn.addEventListener('click', (e) => {
         e.preventDefault();
         const plan = btn.getAttribute('data-plan');
-        alert(`Thank you for your interest in the ${plan} plan!\n\nIn a real application, this would take you to the membership signup form. Please contact us at hello@pulsefitness.com or call (555) 123-4567 to complete your enrollment.`);
+        document.getElementById('modal-plan-name').textContent = plan + ' Plan';
+        document.getElementById('modal-plan-price').textContent = planPrices[plan] || '';
+        document.getElementById('membership-form').reset();
+        document.querySelector('#membership-modal .modal-form-state').style.display = '';
+        document.querySelector('#membership-modal .modal-success-state').style.display = 'none';
+        openModal('membership-modal');
     });
 });
+
+// Membership form submit
+document.getElementById('membership-form')?.addEventListener('submit', (e) => {
+    e.preventDefault();
+    document.querySelector('#membership-modal .modal-form-state').style.display = 'none';
+    document.querySelector('#membership-modal .modal-success-state').style.display = 'block';
+});
+
+// Class booking buttons
+document.querySelectorAll('.book-class-btn').forEach(btn => {
+    btn.addEventListener('click', (e) => {
+        e.preventDefault();
+        const className = btn.getAttribute('data-class');
+        document.getElementById('booking-class-name').textContent = className;
+        const today = new Date().toISOString().split('T')[0];
+        const dateInput = document.getElementById('booking-date');
+        document.getElementById('booking-form').reset();
+        dateInput.min = today;
+        document.querySelector('#class-booking-modal .modal-booking-state').style.display = '';
+        document.querySelector('#class-booking-modal .modal-booking-success').style.display = 'none';
+        openModal('class-booking-modal');
+    });
+});
+
+// Class booking form submit
+document.getElementById('booking-form')?.addEventListener('submit', (e) => {
+    e.preventDefault();
+    document.querySelector('#class-booking-modal .modal-booking-state').style.display = 'none';
+    document.querySelector('#class-booking-modal .modal-booking-success').style.display = 'block';
+});
+
+// Modal styles
+const modalStyles = document.createElement('style');
+modalStyles.textContent = `
+    .modal-overlay {
+        position: fixed;
+        inset: 0;
+        background: rgba(0,0,0,0.75);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 1000;
+        padding: 20px;
+    }
+    .modal-container {
+        background: #1c1c1e;
+        border-radius: 10px;
+        padding: 2.5rem;
+        width: 100%;
+        max-width: 460px;
+        position: relative;
+        color: #fff;
+        box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+    }
+    .modal-close {
+        position: absolute;
+        top: 1rem;
+        right: 1.25rem;
+        background: none;
+        border: none;
+        font-size: 1.75rem;
+        color: rgba(255,255,255,0.4);
+        cursor: pointer;
+        line-height: 1;
+        padding: 0;
+        transition: color 0.2s;
+    }
+    .modal-close:hover { color: #fff; }
+    .modal-plan-header {
+        display: flex;
+        align-items: baseline;
+        gap: 1rem;
+        margin-bottom: 1.75rem;
+        padding-bottom: 1rem;
+        border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+    .modal-plan-header h3 {
+        font-size: 1.4rem;
+        font-weight: 700;
+        letter-spacing: 0.05em;
+        color: #fff;
+        margin: 0;
+    }
+    .modal-plan-price {
+        color: #f97316;
+        font-size: 1rem;
+        font-weight: 600;
+    }
+    .modal-form-row {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 0.75rem;
+        margin-bottom: 0.75rem;
+    }
+    #membership-form .form-group,
+    #booking-form .form-group {
+        margin-bottom: 0.75rem;
+    }
+    #membership-form input,
+    #booking-form input {
+        width: 100%;
+        padding: 0.8rem 1rem;
+        background: rgba(255,255,255,0.07);
+        border: 1px solid rgba(255,255,255,0.15);
+        border-radius: 6px;
+        color: #fff;
+        font-size: 0.9rem;
+        box-sizing: border-box;
+        transition: border-color 0.2s;
+    }
+    #membership-form input::placeholder,
+    #booking-form input::placeholder { color: rgba(255,255,255,0.35); }
+    #membership-form input:focus,
+    #booking-form input:focus {
+        outline: none;
+        border-color: #f97316;
+        background: rgba(249,115,22,0.06);
+    }
+    #booking-date { color-scheme: dark; }
+    .btn-block { width: 100%; margin-top: 0.5rem; }
+    .modal-success-state,
+    .modal-booking-success {
+        text-align: center;
+        padding: 1.5rem 0;
+    }
+    .modal-success-icon {
+        width: 64px;
+        height: 64px;
+        border-radius: 50%;
+        background: #22c55e;
+        color: #fff;
+        font-size: 1.75rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto 1.25rem;
+    }
+    .modal-success-state h3,
+    .modal-booking-success h3 {
+        font-size: 1.5rem;
+        font-weight: 700;
+        margin-bottom: 0.5rem;
+    }
+    .modal-success-state p,
+    .modal-booking-success p { color: rgba(255,255,255,0.65); }
+    .modal-booking-state h3 {
+        font-size: 1.4rem;
+        font-weight: 700;
+        margin-bottom: 0.25rem;
+    }
+    .modal-class-name {
+        color: #f97316;
+        font-size: 1rem;
+        font-weight: 600;
+        margin-bottom: 1.5rem;
+    }
+    .book-class-btn {
+        margin-top: 1rem;
+        width: 100%;
+        text-align: center;
+        display: block;
+    }
+`;
+document.head.appendChild(modalStyles);
 
 // Smooth scroll for anchor links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {

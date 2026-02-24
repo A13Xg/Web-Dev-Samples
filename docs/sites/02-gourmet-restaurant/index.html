@@ -292,6 +292,30 @@
                 <button type="submit" class="btn btn-primary btn-large">Request Reservation</button>
             </form>
 
+            <div class="reservation-success" style="display:none;">
+                <div class="success-icon">✓</div>
+                <h3>Reservation Confirmed!</h3>
+                <div class="success-summary">
+                    <div class="summary-item">
+                        <span class="summary-label">Date</span>
+                        <span class="summary-value" id="confirm-date"></span>
+                    </div>
+                    <div class="summary-item">
+                        <span class="summary-label">Time</span>
+                        <span class="summary-value" id="confirm-time"></span>
+                    </div>
+                    <div class="summary-item">
+                        <span class="summary-label">Guests</span>
+                        <span class="summary-value" id="confirm-guests"></span>
+                    </div>
+                    <div class="summary-item">
+                        <span class="summary-label">Name</span>
+                        <span class="summary-value" id="confirm-name"></span>
+                    </div>
+                </div>
+                <button class="btn btn-outline" id="new-reservation-btn">Make Another Reservation</button>
+            </div>
+
             <div class="reservations-info">
                 <div class="info-item">
                     <span class="info-label">Hours</span>
