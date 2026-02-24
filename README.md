@@ -2,70 +2,84 @@
 
 ![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)
 
-A curated collection of 10 stunning and diverse website templates, each crafted with unique aesthetics and modern development practices. This project serves as a showcase of various web design and development techniques using HTML, CSS, and JavaScript.
+A curated collection of **13 stunning, fully self-contained website templates**, each built with unique aesthetics and modern HTML/CSS/JS techniques. This project is a showcase of diverse web design styles — from minimalist portfolios to cyberpunk game pages to a 30-theme reference library.
+
+---
 
 ## ◆ Live Demo
 
-A live demo of the main showcase and all the individual sites is hosted on GitHub Pages.
-
 ► **[View Live Demo](https://a13xg.github.io/Web-Dev-Samples/)** ◄
 
+---
+
+## ◆ Templates
+
+### 🆕 New Additions
+
+| # | Name | Category | Highlights |
+|---|------|----------|------------|
+| 11 | **Outdoor Trail Guide** | Adventure / Outdoors | Trail cards, difficulty badges, pricing packages, accordion guide, SVG elevation chart, weather widget |
+| 12 | **Indie Game Dev** | Gaming / Cyberpunk | Glitch text, scanlines, neon grid hero, CSS-art gallery with lightbox, devlog, roadmap timeline, email form |
+| 13 | **The Theme Atlas** | UI Reference | 30 named themes (Glassmorphism → Futurism), each with live sample, palette swatches, copy-CSS button, category filter |
+
+### Original Collection
+
+| # | Name | Category | Highlights |
+|---|------|----------|------------|
+| 01 | **Minimalist Portfolio** | Portfolio | Clean typography, fluid animations, grid-based layout |
+| 02 | **Gourmet Restaurant** | Restaurant | Rich photography, parallax scrolling, reservation system |
+| 03 | **Tech Startup** | Technology | Gradient effects, animated feature cards, conversion-focused CTAs |
+| 04 | **Fashion E-commerce** | E-commerce | Product displays, hover interactions, immersive shopping experience |
+| 05 | **Travel Adventure** | Travel | Full-width imagery, destination cards, wanderlust storytelling |
+| 06 | **Fitness Studio** | Fitness | Bold typography, class schedules, membership tiers |
+| 07 | **Creative Agency** | Agency | Case studies, team profiles, portfolio showcase |
+| 08 | **News Magazine** | Editorial | Article layouts, category navigation, reading experience |
+| 09 | **Music Festival** | Entertainment | Artist lineups, ticket integration, electric atmosphere |
+| 10 | **Law Firm** | Corporate | Practice areas, attorney profiles, consultation forms |
+
+---
 
 ## ◆ Features
 
-*   **10 Unique Website Templates:** A diverse collection of websites, each with its own distinct style and purpose.
-*   **Modern Design:** Clean, modern, and responsive design for all templates.
-*   **Pure HTML, CSS & JS:** No external frameworks or libraries are used for the core website templates.
-*   **Local Development Server:** Includes a Node.js/Express server for easy local development and testing.
-*   **GitHub Pages Ready:** Configured for seamless deployment to GitHub Pages.
+- **13 Unique Templates** — diverse subjects, each with its own distinct visual identity
+- **Pure HTML, CSS & JS** — no frameworks, no build steps, no dependencies
+- **Fully Responsive** — all templates work on desktop, tablet, and mobile
+- **Rich Interactions** — animations, hover effects, sliders, accordions, lightboxes, forms
+- **Local Dev Server** — included Node.js/Express server for easy local testing
+- **GitHub Pages Ready** — deploy directly from the `/docs` folder
 
-## ◆ Showcase
-
-Here is a list of the 10 website templates included in this collection:
-
-1.  **Minimalist Portfolio:** A sleek and modern portfolio for designers and creatives.
-2.  **Gourmet Restaurant:** An elegant and sophisticated website for a fine dining restaurant.
-3.  **Tech Startup:** A vibrant and energetic landing page for a tech startup or SaaS company.
-4.  **Fashion E-commerce:** A chic and stylish e-commerce website for a fashion brand.
-5.  **Travel Adventure:** An immersive and inspiring website for a travel agency or blog.
-6.  **Fitness Studio:** A bold and dynamic website for a fitness studio or gym.
-7.  **Creative Agency:** A professional and creative website for a design or marketing agency.
-8.  **News Magazine:** A clean and organized layout for a news or magazine website.
-9.  **Music Festival:** A vibrant and exciting website for a music festival or event.
-10. **Law Firm:** A professional and trustworthy website for a law firm or corporate business.
+---
 
 ## ◆ Local Development
 
-To run this project locally, you will need to have Node.js and npm installed on your machine.
+**Requirements:** Node.js and npm
 
-1.  **Clone the repository:**
-    ```sh
-    git clone https://github.com/[your-github-username]/Web-Dev-Samples.git
-    cd Web-Dev-Samples
-    ```
-2.  **Install dependencies:**
-    ```sh
-    npm install
-    ```
-3.  **Start the development server:**
-    ```sh
-    npm start
-    ```
-4.  Open your browser and navigate to `http://localhost:3000`.
+```sh
+# 1. Clone the repo
+git clone https://github.com/A13Xg/Web-Dev-Samples.git
+cd Web-Dev-Samples
 
-## ◆ Deployment
+# 2. Install dependencies
+npm install
 
-This project is configured to be easily deployed to GitHub Pages.
+# 3. Start the dev server
+npm start
+```
 
-1.  **Push your changes:** Make sure all your changes are committed and pushed to your GitHub repository.
-2.  **Go to repository settings:** Navigate to the "Settings" tab of your repository on GitHub.
-3.  **Go to Pages settings:** In the "Code and automation" section of the sidebar, click on "Pages".
-4.  **Configure the source:** Under "Build and deployment", for the "Source", select "Deploy from a branch".
-5.  **Select the branch and folder:** Under "Branch", select your main branch (e.g., `main` or `master`) and choose the `/docs` folder.
-6.  **Save the changes:** Click "Save".
+Then open **http://localhost:3000** in your browser.
 
-GitHub will then build and deploy your website. The live URL will be displayed in the "Pages" settings.
+---
+
+## ◆ Deployment (GitHub Pages)
+
+1. Push all changes to your main branch
+2. Go to **Settings → Pages**
+3. Under *Build and deployment*, set Source to **Deploy from a branch**
+4. Select your main branch and the **`/docs`** folder
+5. Click **Save** — GitHub will publish the site and display the URL
+
+---
 
 ## ◆ License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the [MIT License](LICENSE).
