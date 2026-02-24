@@ -73,7 +73,7 @@
 
         <div class="projects">
             <article class="project" id="project-lumina">
-                <a href="#project-lumina">
+                <a href="https://example.com/linkID-70142" target="_blank" rel="noopener noreferrer">
                     <div class="project-image">
                         <img src="https://images.unsplash.com/photo-1561070791-2526d30994b5?w=1000&h=700&fit=crop" alt="Lumina Project">
                     </div>
@@ -86,7 +86,7 @@
             </article>
 
             <article class="project" id="project-prism">
-                <a href="#project-prism">
+                <a href="https://example.com/linkID-70243" target="_blank" rel="noopener noreferrer">
                     <div class="project-image">
                         <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=1000&h=700&fit=crop" alt="Prism Project">
                     </div>
@@ -99,7 +99,7 @@
             </article>
 
             <article class="project" id="project-horizon">
-                <a href="#project-horizon">
+                <a href="https://example.com/linkID-70142" target="_blank" rel="noopener noreferrer">
                     <div class="project-image">
                         <img src="https://images.unsplash.com/photo-1558655146-d09347e92766?w=1000&h=700&fit=crop" alt="Horizon Project">
                     </div>
@@ -112,7 +112,7 @@
             </article>
 
             <article class="project" id="project-apex">
-                <a href="#project-apex">
+                <a href="https://example.com/linkID-70243" target="_blank" rel="noopener noreferrer">
                     <div class="project-image">
                         <img src="https://images.unsplash.com/photo-1611532736597-de2d4265fba3?w=1000&h=700&fit=crop" alt="Apex Project">
                     </div>
@@ -284,6 +284,60 @@
                     <h4>Location</h4>
                     <p>San Francisco, CA</p>
                 </div>
+            </div>
+        </div>
+
+        <div class="contact-form-wrap">
+            <form id="contact-form" class="contact-form" novalidate>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="cf-name">Name <span class="req">*</span></label>
+                        <input type="text" id="cf-name" name="name" placeholder="Your name" required>
+                        <span class="error-msg">Please enter your name.</span>
+                    </div>
+                    <div class="form-group">
+                        <label for="cf-company">Company <span class="optional">(optional)</span></label>
+                        <input type="text" id="cf-company" name="company" placeholder="Your company">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="cf-email">Email <span class="req">*</span></label>
+                    <input type="email" id="cf-email" name="email" placeholder="your@email.com" required>
+                    <span class="error-msg">Please enter a valid email address.</span>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="cf-project-type">Project Type <span class="req">*</span></label>
+                        <select id="cf-project-type" name="project_type" required>
+                            <option value="">Select type</option>
+                            <option value="brand">Brand Identity</option>
+                            <option value="web">Website Design</option>
+                            <option value="app">App Design</option>
+                            <option value="other">Other</option>
+                        </select>
+                        <span class="error-msg">Please select a project type.</span>
+                    </div>
+                    <div class="form-group">
+                        <label for="cf-budget">Budget Range <span class="req">*</span></label>
+                        <select id="cf-budget" name="budget" required>
+                            <option value="">Select budget</option>
+                            <option value="under10k">Under $10k</option>
+                            <option value="10k-25k">$10k–$25k</option>
+                            <option value="25k-50k">$25k–$50k</option>
+                            <option value="50k+">$50k+</option>
+                        </select>
+                        <span class="error-msg">Please select a budget range.</span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="cf-message">Message <span class="req">*</span></label>
+                    <textarea id="cf-message" name="message" placeholder="Tell us about your project…" rows="5" required></textarea>
+                    <span class="error-msg">Please enter a message.</span>
+                </div>
+                <button type="submit" class="btn btn-primary">Send Message</button>
+            </form>
+            <div id="contact-success" class="form-success" style="display:none;">
+                <p>Thank you! We'll be in touch within 24 hours.</p>
             </div>
         </div>
     </section>

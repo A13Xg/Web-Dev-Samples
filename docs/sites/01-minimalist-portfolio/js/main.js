@@ -108,3 +108,67 @@ document.querySelectorAll('a, button').forEach(el => {
     el.addEventListener('mouseenter', () => cursor.classList.add('hover'));
     el.addEventListener('mouseleave', () => cursor.classList.remove('hover'));
 });
+
+// Contact form handling
+const contactForm = document.getElementById('contact-form');
+const contactSuccess = document.getElementById('contact-success');
+
+if (contactForm) {
+    contactForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        let valid = true;
+
+        // Validate name
+        const nameField = contactForm.querySelector('#cf-name');
+        const nameGroup = nameField.closest('.form-group');
+        if (!nameField.value.trim()) {
+            nameGroup.classList.add('has-error');
+            valid = false;
+        } else {
+            nameGroup.classList.remove('has-error');
+        }
+
+        // Validate email
+        const emailField = contactForm.querySelector('#cf-email');
+        const emailGroup = emailField.closest('.form-group');
+        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailPattern.test(emailField.value.trim())) {
+            emailGroup.classList.add('has-error');
+            valid = false;
+        } else {
+            emailGroup.classList.remove('has-error');
+        }
+
+        // Validate subject
+        const subjectField = contactForm.querySelector('#cf-subject');
+        const subjectGroup = subjectField.closest('.form-group');
+        if (!subjectField.value) {
+            subjectGroup.classList.add('has-error');
+            valid = false;
+        } else {
+            subjectGroup.classList.remove('has-error');
+        }
+
+        // Validate message
+        const messageField = contactForm.querySelector('#cf-message');
+        const messageGroup = messageField.closest('.form-group');
+        if (!messageField.value.trim()) {
+            messageGroup.classList.add('has-error');
+            valid = false;
+        } else {
+            messageGroup.classList.remove('has-error');
+        }
+
+        if (valid) {
+            contactForm.style.display = 'none';
+            contactSuccess.style.display = 'block';
+        }
+    });
+
+    // Clear error on input
+    contactForm.querySelectorAll('input, select, textarea').forEach(field => {
+        field.addEventListener('input', () => {
+            field.closest('.form-group').classList.remove('has-error');
+        });
+    });
+}
