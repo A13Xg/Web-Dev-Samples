@@ -1931,7 +1931,7 @@
       if (!date) { err.textContent = 'Please select a date.'; err.style.display = ''; return; }
       err.style.display = 'none';
 
-      const ref     = Math.random().toString(36).substr(2, 6).toUpperCase();
+      const ref     = Math.random().toString(36).slice(2, 8).toUpperCase();
       const party   = document.getElementById('bm-party').value;
       const pkgName = document.getElementById('bm-pkg-name').textContent;
       const d       = new Date(date + 'T12:00:00');
