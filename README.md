@@ -1,6 +1,7 @@
 # Web Dev Samples
 
 ![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)
+[![Changelog](https://img.shields.io/badge/changelog-view-informational)](CHANGELOG.md)
 
 A curated collection of **13 stunning, fully self-contained website templates**, each built with unique aesthetics and modern HTML/CSS/JS techniques. This project is a showcase of diverse web design styles — from minimalist portfolios to cyberpunk game pages to a 30-theme reference library.
 
@@ -77,6 +78,12 @@ Then open **http://localhost:3000** in your browser.
 3. Under *Build and deployment*, set Source to **Deploy from a branch**
 4. Select your main branch and the **`/docs`** folder
 5. Click **Save** — GitHub will publish the site and display the URL
+
+---
+
+## ◆ Changelog
+
+See [CHANGELOG.md](CHANGELOG.md) for a full history of additions and changes.
 
 ---
 
