@@ -7,6 +7,7 @@
 ![Status](https://img.shields.io/badge/Status-Active-success.svg)
 [![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Live-brightgreen.svg)](https://a13xg.github.io/Web-Dev-Samples/)
 [![Changelog](https://img.shields.io/badge/Changelog-View-informational.svg)](CHANGELOG.md)
+[![Wiki](https://img.shields.io/badge/Wiki-View-lightgrey.svg)](WIKI.md)
 
 ![Made with HTML](https://img.shields.io/badge/Made_with-HTML5-E34F26?logo=html5&logoColor=white)
 ![Made with CSS](https://img.shields.io/badge/Made_with-CSS3-1572B6?logo=css3&logoColor=white)
@@ -44,7 +45,7 @@ A curated collection of **13 fully interactive, self-contained website templates
 |---|------|----------|------------|
 | 11 | **Outdoor Trail Guide** | Adventure | Trail cards with difficulty ratings, package booking modal with confirmation, accordion trail guide, SVG elevation chart, weather widget |
 | 12 | **Indie Game Dev** | Gaming | Cyberpunk glitch hero, CSS-art gallery with lightbox, devlog, roadmap timeline, working email wishlist form |
-| 13 | **The Theme Atlas** | UI Reference | 60 named design themes each with live sample, color swatches, category filter, copy-CSS button |
+| 13 | **The Theme Atlas** | UI Reference | 65 named design themes each with live sample, color swatches, category filter, copy-CSS button |
 
 ### Original Collection
 
@@ -108,6 +109,12 @@ Then open **http://localhost:3000** in your browser.
 ## ◆ Changelog
 
 See [CHANGELOG.md](CHANGELOG.md) for a full history of additions and changes.
+
+---
+
+## ◆ Wiki
+
+See [WIKI.md](WIKI.md) for a full theme list, category reference, copy-CSS guide, and project structure details.
 
 ---
 

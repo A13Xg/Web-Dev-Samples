@@ -5,6 +5,27 @@ Format follows [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ---
 
+## [Unreleased] — 2026-02-25
+
+### Added
+
+#### The Theme Atlas (`docs/sites/13-theme-showcase/`)
+- **Added 5 new themes** expanding the library from 60 to **65 themes**:
+  - **Vampire** (Dark) — Gothic crimson on obsidian black; blood-red glow and ancient serif typography evoke the eternal night
+  - **Luxury Modern** (Dark) — Obsidian black with gold and silver metallics; premium dark luxury for high-end brands
+  - **Pastel Bloom** (Light) — Soft lilac and rose gradients on near-white; clean, modern, and warmly approachable
+  - **Cubism** (Artistic) — Angular planes and flat polygons inspired by geometric low-poly art; hard borders and offset shadows
+  - **Cosmic Concrete** (Dark) — Brutalist dark concrete fused with a galactic star field and nebula purple accents
+- Updated header badge count from "60 Themes" to **"65 Themes"** and page subtitle to match
+- Updated `<title>` from "50 Web Design Themes" to **"65 Web Design Themes"**
+- Added CSS snippets for all 5 new themes to the copy-to-clipboard functionality
+
+#### Main Page (`docs/index.html`)
+- Updated Theme Atlas card tag from "60 Themes" to **"65 Themes"**
+- Updated Theme Atlas card description to reference the 5 new themes by name
+
+---
+
 ## [Unreleased] — 2026-02-24
 
 ### Changed
