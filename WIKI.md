@@ -64,7 +64,7 @@ The flagship template, **The Theme Atlas** (Site 13), is a comprehensive CSS/des
 | 53 | Space Galaxy | Deep space nebula, cosmic purples and starlight |
 | 61 | **Vampire** | Gothic crimson on obsidian black, eternal night |
 | 62 | **Luxury Modern** | Obsidian black with gold and silver metallics |
-| 65 | **Cosmic Concrete** | Brutalist dark concrete meets galactic nebula |
+| 65 | **Cosmic Concrete** | Near-black with dense galaxy star field, nebula glows, and purple accents |
 
 ### Light (9 themes)
 
@@ -78,7 +78,7 @@ The flagship template, **The Theme Atlas** (Site 13), is a comprehensive CSS/des
 | 51 | Paper Vintage | Aged paper texture, letterpress warmth |
 | 56 | Luxury Gold | Warm gold on cream, sophisticated serif |
 | 57 | Arctic Ice | Crystal-clear cyan and white, frozen water |
-| 63 | **Pastel Bloom** | Soft lilac and rose on near-white, warm and clean |
+| 63 | **Pastel Bloom** | Flat pastel Light Blue, Light Red, and Light Green — calm, airy, no gradients |
 
 ### Retro (7 themes)
 
@@ -119,14 +119,14 @@ The flagship template, **The Theme Atlas** (Site 13), is a comprehensive CSS/des
 | 3 | Brutalism | Bold black borders, raw red, newspaper weight |
 | 11 | Memphis Style | Yellow background, black borders, offset shadows |
 | 17 | Bauhaus | Primary colours, geometric shapes, bold rules |
-| 27 | Organic Biomorphic | Blob border-radius shapes, natural curves |
+| 27 | Organic Biomorphic | Blob shapes on organic child elements, flowing curves, nature-inspired forms |
 | 38 | Comic Book | Bold outlines, offset shadows, halftone energy |
 | 40 | Infrared | False-colour thermal palette, heat as hue |
 | 47 | Chalk Blackboard | Dusty chalk marks on deep green slate |
 | 52 | Steampunk Brass | Victorian brass on dark leather with copper rivets |
 | 55 | Glitch Art | RGB-shift digital corruption, data-mosh aesthetic |
 | 59 | Velvet Dreams | Deep purples and gold, luxurious velvet texture |
-| 64 | **Cubism** | Angular planes and flat polygons, low-poly geometry |
+| 64 | **Cubism** | Isometric grid on deep navy; gold, orange, and teal geometric planes |
 
 ### Minimal (6 themes)
 
