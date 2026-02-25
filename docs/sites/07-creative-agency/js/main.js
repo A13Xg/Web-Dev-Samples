@@ -156,3 +156,42 @@ document.querySelectorAll('.project-image').forEach(img => {
         img.querySelector('img').style.transform = 'scale(1)';
     });
 });
+
+// Contact form handling
+const contactForm = document.getElementById('contact-form');
+const contactSuccess = document.getElementById('contact-success');
+
+if (contactForm) {
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    const validateField = (field) => {
+        const group = field.closest('.form-group');
+        if (!field.required) return true;
+        const empty = !field.value.trim();
+        const invalidEmail = field.type === 'email' && !emailPattern.test(field.value.trim());
+        if (empty || invalidEmail) {
+            group.classList.add('has-error');
+            return false;
+        }
+        group.classList.remove('has-error');
+        return true;
+    };
+
+    contactForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const fields = contactForm.querySelectorAll('input[required], select[required], textarea[required]');
+        let valid = true;
+        fields.forEach(field => { if (!validateField(field)) valid = false; });
+
+        if (valid) {
+            contactForm.style.display = 'none';
+            contactSuccess.style.display = 'block';
+        }
+    });
+
+    contactForm.querySelectorAll('input, select, textarea').forEach(field => {
+        field.addEventListener('input', () => {
+            field.closest('.form-group').classList.remove('has-error');
+        });
+    });
+}

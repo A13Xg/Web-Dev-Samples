@@ -1257,7 +1257,7 @@
             <li><span class="check">✦</span> Emergency communication device</li>
             <li><span class="check">✦</span> Post-hike group debrief</li>
           </ul>
-          <a href="#" class="btn btn-outline" style="justify-content:center;">Choose Explorer</a>
+          <a href="#" class="btn btn-outline" style="justify-content:center;" onclick="openBookingModal('Weekend Explorer','$149');return false;">Choose Explorer</a>
         </div>
 
         <!-- Summit Seeker (featured) -->
@@ -1276,7 +1276,7 @@
             <li><span class="check">✦</span> Satellite GPS tracker</li>
             <li><span class="check">✦</span> Digital trip journal &amp; photos</li>
           </ul>
-          <a href="#" class="btn btn-primary" style="justify-content:center;">Choose Summit</a>
+          <a href="#" class="btn btn-primary" style="justify-content:center;" onclick="openBookingModal('Summit Seeker','$299');return false;">Choose Summit</a>
         </div>
 
         <!-- Ultimate Trek -->
@@ -1295,7 +1295,7 @@
             <li><span class="check">✦</span> Hardcover photo book keepsake</li>
             <li><span class="check">✦</span> Private shuttle to trailhead</li>
           </ul>
-          <a href="#" class="btn btn-outline" style="justify-content:center;">Choose Ultimate</a>
+          <a href="#" class="btn btn-outline" style="justify-content:center;" onclick="openBookingModal('Ultimate Trek','$549');return false;">Choose Ultimate</a>
         </div>
 
       </div>
@@ -1746,5 +1746,208 @@
     checkAboutGrid();
     window.addEventListener('resize', checkAboutGrid, { passive: true });
   </script>
+  <!-- Booking Modal -->
+  <div id="booking-modal" class="bm-overlay" style="display:none;" onclick="bmOverlayClick(event)">
+    <div class="bm-container" role="dialog" aria-modal="true" aria-labelledby="bm-title">
+      <button class="bm-close" onclick="closeBookingModal()" aria-label="Close">&times;</button>
+
+      <!-- Form view -->
+      <div id="bm-form-view">
+        <div class="bm-header">
+          <h2 id="bm-title">Book Your Adventure</h2>
+          <div class="bm-pkg-row">
+            <span id="bm-pkg-name">Weekend Explorer</span>
+            <span id="bm-pkg-price" class="bm-price">$149</span>
+          </div>
+        </div>
+        <div class="bm-body">
+          <div class="bm-row2">
+            <div class="bm-field">
+              <label for="bm-date">Date</label>
+              <input type="date" id="bm-date">
+            </div>
+            <div class="bm-field">
+              <label for="bm-party">Party Size</label>
+              <select id="bm-party">
+                <option value="1">1 person</option>
+                <option value="2">2 people</option>
+                <option value="3">3 people</option>
+                <option value="4">4 people</option>
+                <option value="5">5 people</option>
+                <option value="6">6 people</option>
+                <option value="7">7 people</option>
+                <option value="8">8 people</option>
+                <option value="9">9 people</option>
+                <option value="10">10 people</option>
+                <option value="11">11 people</option>
+                <option value="12">12 people</option>
+              </select>
+            </div>
+          </div>
+          <div class="bm-row2">
+            <div class="bm-field">
+              <label for="bm-fname">First Name</label>
+              <input type="text" id="bm-fname" placeholder="Jane" autocomplete="given-name">
+            </div>
+            <div class="bm-field">
+              <label for="bm-lname">Last Name</label>
+              <input type="text" id="bm-lname" placeholder="Doe" autocomplete="family-name">
+            </div>
+          </div>
+          <div class="bm-row2">
+            <div class="bm-field">
+              <label for="bm-email">Email</label>
+              <input type="email" id="bm-email" placeholder="you@example.com" autocomplete="email">
+            </div>
+            <div class="bm-field">
+              <label for="bm-phone">Phone</label>
+              <input type="tel" id="bm-phone" placeholder="+1 555 000 0000" autocomplete="tel">
+            </div>
+          </div>
+          <div class="bm-field">
+            <label for="bm-requests">Special Requests <span style="font-weight:400;opacity:.6;">(optional)</span></label>
+            <textarea id="bm-requests" rows="3" placeholder="Any dietary needs, accessibility requirements, etc."></textarea>
+          </div>
+          <div id="bm-error" class="bm-error" style="display:none;"></div>
+          <button class="bm-submit" onclick="submitBooking()">Book Adventure</button>
+        </div>
+      </div>
+
+      <!-- Confirmation view -->
+      <div id="bm-confirm-view" style="display:none;" class="bm-confirm">
+        <div class="bm-check">&#10003;</div>
+        <h2>Adventure Booked!</h2>
+        <p>You're all set, <strong id="bc-name"></strong>! A confirmation has been sent to <strong id="bc-email"></strong>.</p>
+        <div class="bm-confirm-details">
+          <div><span>Booking Ref</span><strong id="bc-ref"></strong></div>
+          <div><span>Package</span><strong id="bc-pkg"></strong></div>
+          <div><span>Date</span><strong id="bc-date"></strong></div>
+          <div><span>Party Size</span><strong id="bc-party"></strong></div>
+        </div>
+        <button class="bm-submit" style="margin-top:1.5rem;" onclick="closeBookingModal()">Done</button>
+      </div>
+    </div>
+  </div>
+
+  <style>
+  .bm-overlay {
+    position: fixed; inset: 0; background: rgba(0,0,0,.72);
+    z-index: 9999; display: flex; align-items: center; justify-content: center; padding: 1rem;
+  }
+  .bm-container {
+    background: #fff; border-radius: 14px; padding: 2rem 1.75rem;
+    width: 100%; max-width: 540px; position: relative;
+    max-height: 90vh; overflow-y: auto; color: #1a1a1a;
+  }
+  .bm-close {
+    position: absolute; top: .9rem; right: 1.1rem; background: none;
+    border: none; font-size: 1.75rem; cursor: pointer; color: #666; line-height: 1;
+  }
+  .bm-close:hover { color: #111; }
+  .bm-header { margin-bottom: 1.25rem; }
+  .bm-header h2 { margin: 0 0 .4rem; font-size: 1.35rem; color: #1a1a1a; }
+  .bm-pkg-row { display: flex; align-items: center; gap: .75rem; }
+  .bm-pkg-row span:first-child { color: #555; font-size: .95rem; }
+  .bm-price { font-size: 1.6rem; font-weight: 700; color: var(--amber, #e07d2e); }
+  .bm-body { display: flex; flex-direction: column; gap: .1rem; }
+  .bm-field { margin-bottom: .85rem; }
+  .bm-field label { display: block; font-size: .8rem; font-weight: 600; color: #444; margin-bottom: .3rem; }
+  .bm-field input, .bm-field select, .bm-field textarea {
+    width: 100%; padding: .55rem .75rem; border: 1px solid #d0d0d0;
+    border-radius: 7px; font-size: .9rem; color: #1a1a1a;
+    background: #fafafa; box-sizing: border-box;
+  }
+  .bm-field input:focus, .bm-field select:focus, .bm-field textarea:focus {
+    outline: 2px solid var(--amber, #e07d2e); border-color: transparent;
+  }
+  .bm-field textarea { resize: vertical; }
+  .bm-row2 { display: grid; grid-template-columns: 1fr 1fr; gap: .75rem; }
+  @media (max-width: 420px) { .bm-row2 { grid-template-columns: 1fr; } }
+  .bm-error { color: #dc2626; font-size: .82rem; padding: .25rem 0 .5rem; }
+  .bm-submit {
+    width: 100%; padding: .75rem; border: none; border-radius: 8px;
+    background: var(--amber, #e07d2e); color: #fff; font-size: 1rem;
+    font-weight: 700; cursor: pointer; letter-spacing: .03em;
+  }
+  .bm-submit:hover { opacity: .9; }
+  .bm-confirm { text-align: center; }
+  .bm-confirm h2 { color: #1a1a1a; margin: .5rem 0; }
+  .bm-confirm > p { color: #555; font-size: .9rem; margin-bottom: 1.25rem; }
+  .bm-check {
+    width: 60px; height: 60px; background: #22c55e; border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1.8rem; color: #fff; margin: 0 auto .75rem;
+  }
+  .bm-confirm-details {
+    background: #f5f5f5; border-radius: 9px; padding: .9rem 1.1rem; text-align: left;
+  }
+  .bm-confirm-details div {
+    display: flex; justify-content: space-between;
+    padding: .3rem 0; border-bottom: 1px solid #e5e5e5; font-size: .88rem;
+  }
+  .bm-confirm-details div:last-child { border-bottom: none; }
+  .bm-confirm-details span { color: #777; }
+  .bm-confirm-details strong { color: #1a1a1a; }
+  </style>
+
+  <script>
+    function openBookingModal(pkgName, pkgPrice) {
+      document.getElementById('bm-pkg-name').textContent = pkgName;
+      document.getElementById('bm-pkg-price').textContent = pkgPrice;
+      document.getElementById('bm-date').value = '';
+      document.getElementById('bm-party').value = '1';
+      document.getElementById('bm-fname').value = '';
+      document.getElementById('bm-lname').value = '';
+      document.getElementById('bm-email').value = '';
+      document.getElementById('bm-phone').value = '';
+      document.getElementById('bm-requests').value = '';
+      document.getElementById('bm-error').style.display = 'none';
+      document.getElementById('bm-form-view').style.display = '';
+      document.getElementById('bm-confirm-view').style.display = 'none';
+      document.getElementById('booking-modal').style.display = 'flex';
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeBookingModal() {
+      document.getElementById('booking-modal').style.display = 'none';
+      document.body.style.overflow = '';
+    }
+
+    function bmOverlayClick(e) {
+      if (e.target === document.getElementById('booking-modal')) closeBookingModal();
+    }
+
+    function submitBooking() {
+      const fname  = document.getElementById('bm-fname').value.trim();
+      const lname  = document.getElementById('bm-lname').value.trim();
+      const email  = document.getElementById('bm-email').value.trim();
+      const phone  = document.getElementById('bm-phone').value.trim();
+      const date   = document.getElementById('bm-date').value;
+      const err    = document.getElementById('bm-error');
+
+      if (!fname || !lname) { err.textContent = 'Please enter your first and last name.'; err.style.display = ''; return; }
+      if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) { err.textContent = 'Please enter a valid email address.'; err.style.display = ''; return; }
+      if (!phone) { err.textContent = 'Please enter a phone number.'; err.style.display = ''; return; }
+      if (!date) { err.textContent = 'Please select a date.'; err.style.display = ''; return; }
+      err.style.display = 'none';
+
+      const ref     = Math.random().toString(36).slice(2, 8).toUpperCase();
+      const party   = document.getElementById('bm-party').value;
+      const pkgName = document.getElementById('bm-pkg-name').textContent;
+      const d       = new Date(date + 'T12:00:00');
+      const dateStr = d.toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' });
+
+      document.getElementById('bc-name').textContent  = fname + ' ' + lname;
+      document.getElementById('bc-email').textContent = email;
+      document.getElementById('bc-ref').textContent   = ref;
+      document.getElementById('bc-pkg').textContent   = pkgName;
+      document.getElementById('bc-date').textContent  = dateStr;
+      document.getElementById('bc-party').textContent = party + (party === '1' ? ' person' : ' people');
+
+      document.getElementById('bm-form-view').style.display  = 'none';
+      document.getElementById('bm-confirm-view').style.display = '';
+    }
+  </script>
+
 </body>
 </html>

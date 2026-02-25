@@ -117,6 +117,7 @@
                         <span class="intensity high">High Intensity</span>
                         <span class="calories">500-700 cal</span>
                     </div>
+                    <a href="#" class="btn btn-outline book-class-btn" data-class="HIIT Training">Book Class</a>
                 </div>
             </div>
 
@@ -135,6 +136,7 @@
                         <span class="intensity high">High Intensity</span>
                         <span class="calories">400-600 cal</span>
                     </div>
+                    <a href="#" class="btn btn-outline book-class-btn" data-class="Power Lifting">Book Class</a>
                 </div>
             </div>
 
@@ -153,6 +155,7 @@
                         <span class="intensity medium">Medium Intensity</span>
                         <span class="calories">200-400 cal</span>
                     </div>
+                    <a href="#" class="btn btn-outline book-class-btn" data-class="Power Yoga">Book Class</a>
                 </div>
             </div>
 
@@ -171,6 +174,7 @@
                         <span class="intensity high">High Intensity</span>
                         <span class="calories">600-800 cal</span>
                     </div>
+                    <a href="#" class="btn btn-outline book-class-btn" data-class="Boxing Fit">Book Class</a>
                 </div>
             </div>
 
@@ -189,6 +193,7 @@
                         <span class="intensity high">High Intensity</span>
                         <span class="calories">500-700 cal</span>
                     </div>
+                    <a href="#" class="btn btn-outline book-class-btn" data-class="Spin Studio">Book Class</a>
                 </div>
             </div>
 
@@ -207,6 +212,7 @@
                         <span class="intensity low">Low Intensity</span>
                         <span class="calories">200-300 cal</span>
                     </div>
+                    <a href="#" class="btn btn-outline book-class-btn" data-class="Pilates Core">Book Class</a>
                 </div>
             </div>
         </div>
@@ -446,6 +452,69 @@
             <span>&copy; 2024 PULSE Fitness. All rights reserved.</span>
         </div>
     </footer>
+
+    <!-- Membership Modal -->
+    <div id="membership-modal" class="modal-overlay" style="display:none;" aria-modal="true" role="dialog">
+        <div class="modal-container">
+            <button class="modal-close" aria-label="Close">&times;</button>
+            <div class="modal-form-state">
+                <div class="modal-plan-header">
+                    <h3 id="modal-plan-name">Pro Plan</h3>
+                    <span id="modal-plan-price" class="modal-plan-price">$89/month</span>
+                </div>
+                <form id="membership-form" novalidate>
+                    <div class="modal-form-row">
+                        <div class="form-group">
+                            <input type="text" id="member-first-name" placeholder="First Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" id="member-last-name" placeholder="Last Name" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="member-email" placeholder="Email Address" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="tel" id="member-phone" placeholder="Phone Number" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block">Start Membership</button>
+                </form>
+            </div>
+            <div class="modal-success-state" style="display:none;">
+                <div class="modal-success-icon">✓</div>
+                <h3>Welcome to Pulse!</h3>
+                <p>Check your email for next steps.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Class Booking Modal -->
+    <div id="class-booking-modal" class="modal-overlay" style="display:none;" aria-modal="true" role="dialog">
+        <div class="modal-container">
+            <button class="modal-close" aria-label="Close">&times;</button>
+            <div class="modal-booking-state">
+                <h3>Book a Class</h3>
+                <p class="modal-class-name" id="booking-class-name"></p>
+                <form id="booking-form" novalidate>
+                    <div class="form-group">
+                        <input type="date" id="booking-date" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="booking-name" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="booking-email" placeholder="Email Address" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block">Book Class</button>
+                </form>
+            </div>
+            <div class="modal-booking-success" style="display:none;">
+                <div class="modal-success-icon">✓</div>
+                <h3>You're Booked!</h3>
+                <p>We'll send a confirmation to your email.</p>
+            </div>
+        </div>
+    </div>
 
     <script src="js/main.js"></script>
 </body>

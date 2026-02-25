@@ -135,9 +135,67 @@ window.addEventListener('load', () => {
     }
 });
 
-// Purchase ticket handler
+// Ticket modal helpers
+let _ticketPrice = 0;
+
 function purchaseTicket(ticketType, price) {
-    alert(`You selected: ${ticketType} (${price})\n\nRedirecting to payment system...\n\nThis is a demo. In production, this would open a checkout page.`);
+    const modal = document.getElementById('ticket-modal');
+    document.getElementById('modal-ticket-type').textContent = ticketType;
+    document.getElementById('modal-ticket-price').textContent = price;
+    document.getElementById('modal-qty').value = '1';
+    document.getElementById('modal-name').value = '';
+    document.getElementById('modal-email').value = '';
+    document.getElementById('ticket-modal-error').style.display = 'none';
+    document.getElementById('ticket-modal-form').style.display = '';
+    document.getElementById('ticket-modal-confirmation').style.display = 'none';
+    _ticketPrice = parseInt(price.replace(/[^0-9]/g, ''), 10) || 0;
+    document.getElementById('modal-total').textContent = price;
+    modal.style.display = 'flex';
+    document.body.style.overflow = 'hidden';
+}
+
+function updateModalTotal() {
+    const qty = parseInt(document.getElementById('modal-qty').value, 10) || 1;
+    const total = _ticketPrice * qty;
+    document.getElementById('modal-total').textContent = '$' + total;
+}
+
+function closeTicketModal(event) {
+    if (event && event.target !== document.getElementById('ticket-modal')) return;
+    document.getElementById('ticket-modal').style.display = 'none';
+    document.body.style.overflow = '';
+}
+
+function submitTicketPurchase() {
+    const name = document.getElementById('modal-name').value.trim();
+    const email = document.getElementById('modal-email').value.trim();
+    const errorEl = document.getElementById('ticket-modal-error');
+
+    if (!name) {
+        errorEl.textContent = 'Please enter your full name.';
+        errorEl.style.display = '';
+        return;
+    }
+    if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+        errorEl.textContent = 'Please enter a valid email address.';
+        errorEl.style.display = '';
+        return;
+    }
+    errorEl.style.display = 'none';
+
+    const qty = parseInt(document.getElementById('modal-qty').value, 10) || 1;
+    const ticketType = document.getElementById('modal-ticket-type').textContent;
+    const total = '$' + (_ticketPrice * qty);
+    const orderNum = String(Math.floor(100000 + Math.random() * 900000));
+
+    document.getElementById('confirm-name').textContent = name;
+    document.getElementById('confirm-email').textContent = email;
+    document.getElementById('confirm-order').textContent = orderNum;
+    document.getElementById('confirm-tickets').textContent = qty + 'x ' + ticketType;
+    document.getElementById('confirm-total').textContent = total;
+
+    document.getElementById('ticket-modal-form').style.display = 'none';
+    document.getElementById('ticket-modal-confirmation').style.display = '';
 }
 
 // Show full lineup handler

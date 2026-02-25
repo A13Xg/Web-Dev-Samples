@@ -341,5 +341,166 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 const checkoutBtn = document.querySelector('.cart-checkout');
 
 checkoutBtn?.addEventListener('click', () => {
-    alert('Checkout functionality would be implemented here!');
+    if (cart.length === 0) return;
+
+    const total = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
+    const itemCount = cart.reduce((sum, item) => sum + item.quantity, 0);
+
+    // Build checkout modal
+    const existing = document.getElementById('checkout-modal');
+    if (existing) existing.remove();
+
+    const modal = document.createElement('div');
+    modal.id = 'checkout-modal';
+    modal.innerHTML = `
+        <div class="checkout-overlay"></div>
+        <div class="checkout-dialog">
+            <button class="checkout-close" aria-label="Close">&times;</button>
+            <div id="checkout-form-view">
+                <h3 class="checkout-title">Checkout</h3>
+                <div class="checkout-order-summary">
+                    <p>${itemCount} item${itemCount !== 1 ? 's' : ''} — <strong>$${total}</strong></p>
+                </div>
+                <form id="checkout-form" novalidate>
+                    <div class="co-section-label">Contact Information</div>
+                    <div class="co-row">
+                        <div class="co-field">
+                            <label>First Name</label>
+                            <input type="text" id="co-fname" placeholder="Jane" required>
+                        </div>
+                        <div class="co-field">
+                            <label>Last Name</label>
+                            <input type="text" id="co-lname" placeholder="Smith" required>
+                        </div>
+                    </div>
+                    <div class="co-field">
+                        <label>Email</label>
+                        <input type="email" id="co-email" placeholder="jane@example.com" required>
+                    </div>
+                    <div class="co-section-label">Shipping Address</div>
+                    <div class="co-field">
+                        <label>Address</label>
+                        <input type="text" id="co-address" placeholder="123 Main St" required>
+                    </div>
+                    <div class="co-row">
+                        <div class="co-field">
+                            <label>City</label>
+                            <input type="text" id="co-city" placeholder="New York" required>
+                        </div>
+                        <div class="co-field">
+                            <label>ZIP Code</label>
+                            <input type="text" id="co-zip" placeholder="10001" required>
+                        </div>
+                    </div>
+                    <div class="co-section-label">Payment</div>
+                    <div class="co-field">
+                        <label>Card Number</label>
+                        <input type="text" id="co-card" placeholder="4242 4242 4242 4242" maxlength="19" required>
+                    </div>
+                    <div class="co-row">
+                        <div class="co-field">
+                            <label>Expiry</label>
+                            <input type="text" id="co-expiry" placeholder="MM / YY" maxlength="7" required>
+                        </div>
+                        <div class="co-field">
+                            <label>CVV</label>
+                            <input type="text" id="co-cvv" placeholder="123" maxlength="3" required>
+                        </div>
+                    </div>
+                    <p class="co-error" id="co-error" style="display:none;"></p>
+                    <button type="submit" class="co-submit-btn">Place Order — $${total}</button>
+                </form>
+            </div>
+            <div id="checkout-confirm-view" style="display:none;" class="checkout-confirm">
+                <div class="checkout-confirm-icon">✓</div>
+                <h3>Order Placed!</h3>
+                <p>Thank you for your order. A confirmation has been sent to your email.</p>
+                <p class="co-order-num">Order #<span id="co-order-number"></span></p>
+                <a href="https://example.com/linkID-04001" target="_blank" rel="noopener noreferrer" class="co-track-btn">Track Order</a>
+                <button class="co-close-btn">Continue Shopping</button>
+            </div>
+        </div>
+    `;
+    document.body.appendChild(modal);
+
+    // Inject styles once
+    if (!document.getElementById('checkout-modal-styles')) {
+        const s = document.createElement('style');
+        s.id = 'checkout-modal-styles';
+        s.textContent = `
+            #checkout-modal { position:fixed; inset:0; z-index:10000; display:flex; align-items:center; justify-content:center; }
+            .checkout-overlay { position:absolute; inset:0; background:rgba(0,0,0,0.6); }
+            .checkout-dialog { position:relative; background:#fff; width:min(460px,96vw); max-height:90vh; overflow-y:auto; border-radius:16px; padding:32px; box-shadow:0 24px 60px rgba(0,0,0,0.3); }
+            .checkout-close { position:absolute; top:16px; right:16px; background:none; border:none; font-size:22px; cursor:pointer; color:#666; padding:4px; }
+            .checkout-title { font-size:20px; font-weight:700; margin-bottom:12px; letter-spacing:0.5px; }
+            .checkout-order-summary { background:#f8f8f8; border-radius:8px; padding:10px 14px; margin-bottom:20px; font-size:14px; color:#444; }
+            .co-section-label { font-size:11px; font-weight:700; text-transform:uppercase; letter-spacing:1.5px; color:#999; margin:18px 0 8px; }
+            .co-row { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+            .co-field { display:flex; flex-direction:column; gap:4px; margin-bottom:12px; }
+            .co-field label { font-size:12px; font-weight:600; color:#333; }
+            .co-field input { padding:10px 12px; border:1px solid #ddd; border-radius:8px; font-size:14px; font-family:inherit; outline:none; transition:border-color .2s; }
+            .co-field input:focus { border-color:#1a1a1a; }
+            .co-error { color:#e53e3e; font-size:13px; margin-bottom:10px; }
+            .co-submit-btn { width:100%; background:#1a1a1a; color:#fff; border:none; border-radius:10px; padding:14px; font-size:15px; font-weight:700; cursor:pointer; letter-spacing:0.5px; transition:background .2s; margin-top:4px; }
+            .co-submit-btn:hover { background:#333; }
+            .checkout-confirm { text-align:center; padding:20px 0 10px; }
+            .checkout-confirm-icon { width:60px; height:60px; background:#1a1a1a; color:#fff; border-radius:50%; font-size:26px; display:flex; align-items:center; justify-content:center; margin:0 auto 16px; }
+            .checkout-confirm h3 { font-size:22px; margin-bottom:8px; }
+            .checkout-confirm p { color:#666; font-size:14px; margin-bottom:8px; }
+            .co-order-num { font-weight:700; color:#1a1a1a !important; font-size:16px !important; }
+            .co-track-btn { display:inline-block; margin:12px auto 8px; background:#1a1a1a; color:#fff; text-decoration:none; padding:11px 24px; border-radius:8px; font-size:14px; font-weight:600; }
+            .co-close-btn { display:block; width:100%; background:none; border:1px solid #ddd; border-radius:8px; padding:10px; font-size:14px; cursor:pointer; margin-top:10px; }
+        `;
+        document.head.appendChild(s);
+    }
+
+    // Card number formatting
+    document.getElementById('co-card')?.addEventListener('input', (e) => {
+        e.target.value = e.target.value.replace(/\D/g, '').replace(/(.{4})/g, '$1 ').trim().slice(0, 19);
+    });
+    document.getElementById('co-expiry')?.addEventListener('input', (e) => {
+        let v = e.target.value.replace(/\D/g, '');
+        if (v.length >= 3) v = v.slice(0, 2) + ' / ' + v.slice(2, 4);
+        e.target.value = v;
+    });
+
+    // Close
+    const closeModal = () => modal.remove();
+    modal.querySelector('.checkout-close')?.addEventListener('click', closeModal);
+    modal.querySelector('.checkout-overlay')?.addEventListener('click', closeModal);
+    modal.querySelector('.co-close-btn')?.addEventListener('click', () => {
+        closeModal();
+        closeCart();
+    });
+
+    // Form submit
+    document.getElementById('checkout-form')?.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const errEl = document.getElementById('co-error');
+        const fname = document.getElementById('co-fname').value.trim();
+        const lname = document.getElementById('co-lname').value.trim();
+        const email = document.getElementById('co-email').value.trim();
+        const address = document.getElementById('co-address').value.trim();
+        const city = document.getElementById('co-city').value.trim();
+        const zip = document.getElementById('co-zip').value.trim();
+        const card = document.getElementById('co-card').value.replace(/\s/g, '');
+        const expiry = document.getElementById('co-expiry').value.trim();
+        const cvv = document.getElementById('co-cvv').value.trim();
+
+        if (!fname || !lname) { errEl.textContent = 'Please enter your full name.'; errEl.style.display = 'block'; return; }
+        if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) { errEl.textContent = 'Please enter a valid email address.'; errEl.style.display = 'block'; return; }
+        if (!address || !city || !zip) { errEl.textContent = 'Please fill in your shipping address.'; errEl.style.display = 'block'; return; }
+        if (card.length < 16) { errEl.textContent = 'Please enter a valid card number.'; errEl.style.display = 'block'; return; }
+        if (!expiry || cvv.length < 3) { errEl.textContent = 'Please enter valid expiry and CVV.'; errEl.style.display = 'block'; return; }
+
+        // Show confirmation
+        const orderNum = Math.floor(100000 + Math.random() * 900000);
+        document.getElementById('co-order-number').textContent = orderNum;
+        document.getElementById('checkout-form-view').style.display = 'none';
+        document.getElementById('checkout-confirm-view').style.display = 'block';
+
+        // Clear cart
+        cart = [];
+        renderCart();
+    });
 });

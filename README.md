@@ -3,7 +3,7 @@
 ![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)
 [![Changelog](https://img.shields.io/badge/changelog-view-informational)](CHANGELOG.md)
 
-A curated collection of **13 stunning, fully self-contained website templates**, each built with unique aesthetics and modern HTML/CSS/JS techniques. This project is a showcase of diverse web design styles — from minimalist portfolios to cyberpunk game pages to a 30-theme reference library.
+A curated collection of **13 fully interactive, self-contained website templates**, each built with distinct aesthetics and modern HTML/CSS/JS techniques. Every template functions as a real website — working forms, cart interactions, booking modals, article readers, search filters, and more — not just static mockups.
 
 ---
 
@@ -15,37 +15,38 @@ A curated collection of **13 stunning, fully self-contained website templates**,
 
 ## ◆ Templates
 
-### 🆕 New Additions
+### 🆕 Featured Additions
 
 | # | Name | Category | Highlights |
 |---|------|----------|------------|
-| 11 | **Outdoor Trail Guide** | Adventure / Outdoors | Trail cards, difficulty badges, pricing packages, accordion guide, SVG elevation chart, weather widget |
-| 12 | **Indie Game Dev** | Gaming / Cyberpunk | Glitch text, scanlines, neon grid hero, CSS-art gallery with lightbox, devlog, roadmap timeline, email form |
-| 13 | **The Theme Atlas** | UI Reference | 30 named themes (Glassmorphism → Futurism), each with live sample, palette swatches, copy-CSS button, category filter |
+| 11 | **Outdoor Trail Guide** | Adventure | Trail cards with difficulty ratings, package booking modal with confirmation, accordion trail guide, SVG elevation chart, weather widget |
+| 12 | **Indie Game Dev** | Gaming | Cyberpunk glitch hero, CSS-art gallery with lightbox, devlog, roadmap timeline, working email wishlist form |
+| 13 | **The Theme Atlas** | UI Reference | 30 named design themes each with live sample, color swatches, category filter, copy-CSS button |
 
 ### Original Collection
 
 | # | Name | Category | Highlights |
 |---|------|----------|------------|
-| 01 | **Minimalist Portfolio** | Portfolio | Clean typography, fluid animations, grid-based layout |
-| 02 | **Gourmet Restaurant** | Restaurant | Rich photography, parallax scrolling, reservation system |
-| 03 | **Tech Startup** | Technology | Gradient effects, animated feature cards, conversion-focused CTAs |
-| 04 | **Fashion E-commerce** | E-commerce | Product displays, hover interactions, immersive shopping experience |
-| 05 | **Travel Adventure** | Travel | Full-width imagery, destination cards, wanderlust storytelling |
-| 06 | **Fitness Studio** | Fitness | Bold typography, class schedules, membership tiers |
-| 07 | **Creative Agency** | Agency | Case studies, team profiles, portfolio showcase |
-| 08 | **News Magazine** | Editorial | Article layouts, category navigation, reading experience |
-| 09 | **Music Festival** | Entertainment | Artist lineups, ticket integration, electric atmosphere |
-| 10 | **Law Firm** | Corporate | Practice areas, attorney profiles, consultation forms |
+| 01 | **Minimalist Portfolio** | Portfolio | Working contact form (Name, Email, Subject, Message) with inline validation + success state |
+| 02 | **Gourmet Restaurant** | Restaurant | Full reservation form with in-page confirmation showing booking summary; toast error handling |
+| 03 | **Tech Startup** | Technology | Monthly/annual pricing toggle, working feature cards, trial & demo CTAs, newsletter |
+| 04 | **Fashion E-commerce** | E-commerce | Live cart sidebar (add/remove/quantity), full checkout modal (address + card payment), order confirmation |
+| 05 | **Travel Adventure** | Travel | Search overlay with live destination/story filtering, validated newsletter subscribe, smooth-scroll nav |
+| 06 | **Fitness Studio** | Fitness | Membership signup modal (per plan), class booking modal, contact form with success state |
+| 07 | **Creative Agency** | Agency | Project inquiry form (Name, Company, Project Type, Budget), inline validation + success state |
+| 08 | **News Magazine** | Editorial | Article modal with full content, live search filter, newsletter validation, keyboard-accessible |
+| 09 | **Music Festival** | Entertainment | Ticket purchase modal (type, quantity, total), order confirmation with reference number, countdown timer |
+| 10 | **Law Firm** | Corporate | Consultation request form, practice-area cards click to pre-fill form, attorney profiles |
 
 ---
 
 ## ◆ Features
 
 - **13 Unique Templates** — diverse subjects, each with its own distinct visual identity
-- **Pure HTML, CSS & JS** — no frameworks, no build steps, no dependencies
+- **Pure HTML, CSS & JS** — no frameworks, no build steps, no external dependencies
 - **Fully Responsive** — all templates work on desktop, tablet, and mobile
-- **Rich Interactions** — animations, hover effects, sliders, accordions, lightboxes, forms
+- **Real Interactions** — working cart, booking modals, article readers, search, forms with validation
+- **Display Settings** — accent color picker, particle toggle, custom cursor options (Default / Glow / X-style)
 - **Local Dev Server** — included Node.js/Express server for easy local testing
 - **GitHub Pages Ready** — deploy directly from the `/docs` folder
 
@@ -53,7 +54,7 @@ A curated collection of **13 stunning, fully self-contained website templates**,
 
 ## ◆ Local Development
 
-**Requirements:** Node.js and npm
+**Requirements:** Node.js (v14+) and npm
 
 ```sh
 # 1. Clone the repo

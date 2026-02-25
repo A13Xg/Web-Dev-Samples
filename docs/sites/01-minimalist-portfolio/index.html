@@ -184,6 +184,39 @@
             <p>Have a project in mind? I'd love to hear about it.</p>
             <a href="mailto:hello@elenavoss.design" class="contact-email">hello@elenavoss.design</a>
 
+            <form id="contact-form" class="contact-form" novalidate>
+                <div class="form-group">
+                    <label for="cf-name">Name</label>
+                    <input type="text" id="cf-name" name="name" placeholder="Your name" required>
+                    <span class="error-msg">Please enter your name.</span>
+                </div>
+                <div class="form-group">
+                    <label for="cf-email">Email</label>
+                    <input type="email" id="cf-email" name="email" placeholder="your@email.com" required>
+                    <span class="error-msg">Please enter a valid email address.</span>
+                </div>
+                <div class="form-group">
+                    <label for="cf-subject">Subject</label>
+                    <select id="cf-subject" name="subject" required>
+                        <option value="">Select a subject</option>
+                        <option value="general">General Inquiry</option>
+                        <option value="collaboration">Project Collaboration</option>
+                        <option value="speaking">Speaking</option>
+                        <option value="other">Other</option>
+                    </select>
+                    <span class="error-msg">Please select a subject.</span>
+                </div>
+                <div class="form-group">
+                    <label for="cf-message">Message</label>
+                    <textarea id="cf-message" name="message" placeholder="Tell me about your project…" rows="5" required></textarea>
+                    <span class="error-msg">Please enter a message.</span>
+                </div>
+                <button type="submit" class="submit-btn">Send Message</button>
+            </form>
+            <div id="contact-success" class="form-success" style="display:none;">
+                <p>Thank you, I'll be in touch soon!</p>
+            </div>
+
             <div class="social-links">
                 <a href="https://dribbble.com" target="_blank" rel="noopener noreferrer">Dribbble</a>
                 <a href="https://behance.net" target="_blank" rel="noopener noreferrer">Behance</a>
