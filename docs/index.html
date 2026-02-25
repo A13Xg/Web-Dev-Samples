@@ -280,6 +280,7 @@
             position: relative;
             height: 280px;
             overflow: hidden;
+            border-radius: 24px 24px 0 0;
         }
 
         .card-preview img {
@@ -287,10 +288,13 @@
             height: 100%;
             object-fit: cover;
             transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+            backface-visibility: hidden;
+            will-change: transform;
+            transform: translate3d(0, 0, 0);
         }
 
         .site-card:hover .card-preview img {
-            transform: scale(1.1);
+            transform: scale3d(1.1, 1.1, 1);
         }
 
         .preview-overlay {
@@ -827,13 +831,13 @@
                         <span class="card-number">01</span>
                         <div class="card-tags">
                             <span class="tag">UI Reference</span>
-                            <span class="tag">58 Themes</span>
+                            <span class="tag">60 Themes</span>
                         </div>
                     </div>
                     <div class="card-content">
                         <span class="card-category">Design Systems</span>
                         <h2 class="card-title">The Theme Atlas</h2>
-                        <p class="card-description">A comprehensive library of 58 named web design themes — Glassmorphism, Brutalism, Vaporwave, Tokyo Night, Bento Grid, Holographic Foil, Steampunk Brass, Space Galaxy, and more — each with a live sample block, color palette swatches, and a copyable CSS snippet.</p>
+                        <p class="card-description">A comprehensive library of 60 named web design themes — Glassmorphism, Brutalism, Vaporwave, Tokyo Night, Bento Grid, Holographic Foil, Steampunk Brass, Space Galaxy, Velvet Dreams, Circuit Board, and more — each with a live sample block, color palette swatches, and a copyable CSS snippet.</p>
                         <div class="card-footer">
                             <div class="tech-stack">
                                 <span class="tech"><span class="short">H</span><span class="full">HTML</span></span>
