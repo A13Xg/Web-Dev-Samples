@@ -7,18 +7,22 @@ Format follows [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ## [Unreleased] — 2026-02-25
 
+### Changed
+
+#### The Theme Atlas (`docs/sites/13-theme-showcase/`)
+- **Pastel Bloom** (theme 63) — Redesigned with flat solid pastel colors (no gradients): Light Blue (`#aad4f5`) background, Light Red (`#ffaaaa`) button, Light Green (`#aaf0c4`) panel. Updated card swatches and description.
+- **Cubism** (theme 64) — Rebuilt as geometric/isometric, clearly distinct from Brutalism: deep navy (`#1a2e50`) background with isometric grid lines (60°/−60°/0°), gold heading, terracotta-orange trapezoid button (`clip-path`), teal left-border panel with `skewX` tilt, gold bottom-border input. Removed all heavy black borders and offset box-shadows. Updated card swatches and description.
+- **Cosmic Concrete** (theme 65) — Enhanced star field with 24 radial-gradient star points (small white/coloured dots) plus two large elliptical nebula glows (purple and blue). Background darkened to near-black (`#06040f`) for deeper space feel.
+- **Organic Biomorphic** (theme 27) — Fixed sample block showing as an oval mask: removed the asymmetric `border-radius` from `.s-organic` container (replaced with standard `12px`); child elements retain their organic blob shapes.
+
+---
+
+## [Unreleased] — 2026-02-25 (prior)
+
 ### Added
 
 #### The Theme Atlas (`docs/sites/13-theme-showcase/`)
 - **Added 5 new themes** expanding the library from 60 to **65 themes**:
-  - **Vampire** (Dark) — Gothic crimson on obsidian black; blood-red glow and ancient serif typography evoke the eternal night
-  - **Luxury Modern** (Dark) — Obsidian black with gold and silver metallics; premium dark luxury for high-end brands
-  - **Pastel Bloom** (Light) — Soft lilac and rose gradients on near-white; clean, modern, and warmly approachable
-  - **Cubism** (Artistic) — Angular planes and flat polygons inspired by geometric low-poly art; hard borders and offset shadows
-  - **Cosmic Concrete** (Dark) — Brutalist dark concrete fused with a galactic star field and nebula purple accents
-- Updated header badge count from "60 Themes" to **"65 Themes"** and page subtitle to match
-- Updated `<title>` from "50 Web Design Themes" to **"65 Web Design Themes"**
-- Added CSS snippets for all 5 new themes to the copy-to-clipboard functionality
 
 #### Main Page (`docs/index.html`)
 - Updated Theme Atlas card tag from "60 Themes" to **"65 Themes"**
