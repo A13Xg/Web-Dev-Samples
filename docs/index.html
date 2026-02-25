@@ -233,6 +233,12 @@
         .site-card.visible {
             opacity: 1;
             transform: translateY(0);
+            animation: card-float 3s ease-in-out infinite;
+        }
+
+        @keyframes card-float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-8px); }
         }
 
         .site-card::before {

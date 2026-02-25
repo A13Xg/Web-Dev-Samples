@@ -13,12 +13,15 @@ Format follows [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 - **Theme Atlas card** — Removed all shimmer/animation effects from the hero card; now displays a subtle static glowing outline instead of animated rainbow border
 - **Spotlight badge** — Removed "✦ Spotlight Pick" badge from Theme Atlas card for cleaner appearance
 - **Settings button** — Moved from middle-right to bottom-right of viewport for less intrusive positioning
-- **Cross cursor** — Replaced OS default crosshair with custom SVG sprite featuring purple glow effect and crosshair design
+- **Cross cursor** — Replaced "Cross" with "Dot" label in cursor style settings
 - **Particle color** — Changed default particle color from dark purple (#8b5cf6) to lighter shade (#c4b5fd) for improved visibility
 - **Accent color** — Updated default purple accent color to lighter variant for better contrast
+- **Card animations** — Added subtle scroll-triggered float animation to site cards; cards now gently float up and down after entering viewport for more dynamic feel
+
+Added
 
 #### The Theme Atlas (`docs/sites/13-theme-showcase/`)
-- **Added 8 new themes** expanding the library from 50 to **58 themes**:
+- **Added 10 new themes** expanding the library from 50 to **60 themes**:
   - **Paper Vintage** (Light) — Realistic aged paper texture with subtle grain and letterpress aesthetic
   - **Steampunk Brass** (Artistic) — Victorian industrial with polished brass on dark leather and copper accents
   - **Space Galaxy** (Dark) — Deep space nebula with cosmic colors and starlight across void
@@ -27,8 +30,11 @@ Format follows [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
   - **Luxury Gold** (Light) — Premium elegance with warm gold on cream and sophisticated serif typography
   - **Arctic Ice** (Modern) — Crystal-clear cyan and white mimicking frozen water
   - **Desert Sunset** (Modern) — Warm sand tones to burning orange capturing Sahara at golden hour
-- Updated header badge count from "50 Themes" to **"58 Themes"** and "250+ Components" to **"290+ Components"**
-- Added CSS snippets for all 8 new themes to the copy-to-clipboard functionality
+  - **Velvet Dreams** (Artistic) — Luxurious deep purples and gold with elegant, sophisticated aesthetic
+  - **Circuit Board** (Modern) — Tech-inspired monochrome with circuit patterns and digital precision
+- Updated header badge count from "50 Themes" to **"60 Themes"** and "250+ Components" to **"290+ Components"**
+- Added CSS snippets for all 10 new themes to the copy-to-clipboard functionality
+- **Card animations** — Implemented scroll-triggered float animation for theme cards; cards float subtly into view as user scrolls down page
 
 ### Added
 

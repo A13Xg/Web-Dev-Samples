@@ -44,7 +44,7 @@ A curated collection of **13 fully interactive, self-contained website templates
 |---|------|----------|------------|
 | 11 | **Outdoor Trail Guide** | Adventure | Trail cards with difficulty ratings, package booking modal with confirmation, accordion trail guide, SVG elevation chart, weather widget |
 | 12 | **Indie Game Dev** | Gaming | Cyberpunk glitch hero, CSS-art gallery with lightbox, devlog, roadmap timeline, working email wishlist form |
-| 13 | **The Theme Atlas** | UI Reference | 58 named design themes each with live sample, color swatches, category filter, copy-CSS button |
+| 13 | **The Theme Atlas** | UI Reference | 60 named design themes each with live sample, color swatches, category filter, copy-CSS button |
 
 ### Original Collection
 

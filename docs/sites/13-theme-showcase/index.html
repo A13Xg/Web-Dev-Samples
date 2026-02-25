@@ -548,15 +548,55 @@ body{font-family:'Space Grotesk','Inter',sans-serif;background:#12121a;color:#e8
 .s-desert .sbtn{background:linear-gradient(135deg,#ff6f00,#e65100);border:none;border-radius:6px;color:#fff;padding:6px 14px;font-size:.72rem;font-weight:600;cursor:pointer;margin-bottom:10px;display:inline-block;box-shadow:0 3px 10px rgba(230,81,0,.35)}
 .s-desert .spanel{background:rgba(255,255,255,.5);border:2px solid #ffb74d;border-radius:8px;padding:8px 12px;margin-bottom:8px;color:#e65100;font-size:.72rem}
 .s-desert .sinput{background:rgba(255,255,255,.6);border:2px solid #ffb74d;border-radius:8px;padding:6px 12px;color:#e65100;font-size:.72rem;width:100%;outline:none}
+
+/* 59. Velvet Dreams */
+.s-velvet{background:linear-gradient(135deg,#1a0a2e,#2a0a4e,#3a0a5e);border-radius:12px;position:relative}
+.s-velvet::before{content:'';position:absolute;top:0;left:0;right:0;bottom:0;background:radial-gradient(circle at top left,rgba(212,175,55,.15),transparent 50%);border-radius:12px}
+.s-velvet .sh{color:#d4af37;font-weight:700;font-size:.94rem;margin-bottom:5px;text-shadow:0 0 12px rgba(212,175,55,.4)}
+.s-velvet .sp{color:#c9a96e;font-size:.75rem;margin-bottom:10px;line-height:1.6}
+.s-velvet .sbtn{background:linear-gradient(135deg,#d4af37,#aa8c2a);border:none;border-radius:100px;color:#1a0a2e;padding:6px 14px;font-size:.72rem;font-weight:600;cursor:pointer;margin-bottom:10px;display:inline-block;box-shadow:0 4px 12px rgba(212,175,55,.3)}
+.s-velvet .spanel{background:rgba(212,175,55,.1);border:2px solid rgba(212,175,55,.3);border-radius:8px;padding:8px 12px;margin-bottom:8px;color:#d4af37;font-size:.72rem}
+.s-velvet .sinput{background:rgba(255,255,255,.07);border:2px solid rgba(212,175,55,.25);border-radius:8px;padding:6px 12px;color:#d4af37;font-size:.72rem;width:100%;outline:none}
+
+/* 60. Circuit Board */
+.s-circuit{background:#0d1117;border:2px solid #333;border-radius:0;position:relative;overflow:hidden}
+.s-circuit::before{content:'';position:absolute;top:0;left:0;right:0;bottom:0;background-image:linear-gradient(0deg,transparent 24%,rgba(0,255,136,.05) 25%,rgba(0,255,136,.05) 26%,transparent 27%,transparent 74%,rgba(0,255,136,.05) 75%,rgba(0,255,136,.05) 76%,transparent 77%,transparent),linear-gradient(90deg,transparent 24%,rgba(0,255,136,.05) 25%,rgba(0,255,136,.05) 26%,transparent 27%,transparent 74%,rgba(0,255,136,.05) 75%,rgba(0,255,136,.05) 76%,transparent 77%,transparent);background-size:50px 50px;pointer-events:none}
+.s-circuit .sh{color:#00ff88;font-weight:700;font-size:.94rem;margin-bottom:5px;font-family:monospace;text-shadow:0 0 8px rgba(0,255,136,.5)}
+.s-circuit .sp{color:#00dd66;font-size:.75rem;margin-bottom:10px;line-height:1.6;font-family:monospace}
+.s-circuit .sbtn{background:transparent;border:2px solid #00ff88;border-radius:0;color:#00ff88;padding:6px 14px;font-size:.72rem;font-weight:700;cursor:pointer;margin-bottom:10px;display:inline-block;text-transform:uppercase;letter-spacing:.08em;box-shadow:0 0 8px rgba(0,255,136,.2);font-family:monospace}
+.s-circuit .spanel{background:rgba(0,255,136,.08);border:2px solid #004d2e;border-radius:0;padding:8px 12px;margin-bottom:8px;color:#00ff88;font-size:.72rem;font-family:monospace}
+.s-circuit .sinput{background:#050607;border:2px solid #00dd66;border-radius:0;padding:6px 12px;color:#00ff88;font-size:.72rem;width:100%;outline:none;font-family:monospace;text-shadow:0 0 4px rgba(0,255,136,.3)}
+
+/* Scroll float animation */
+@keyframes float-in {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.theme-card {
+  animation: float-in 0.6s ease-out forwards;
+  animation-play-state: paused;
+}
+
+.theme-card.in-view {
+  animation-play-state: running;
+}
+
 </style>
 </head>
 <body>
 
 <header class="site-header">
   <h1 class="header-title">THE THEME ATLAS</h1>
-  <p class="header-subtitle">A comprehensive reference library of 58 web design themes &amp; styles</p>
+  <p class="header-subtitle">A comprehensive reference library of 60 web design themes &amp; styles</p>
   <div class="header-badges">
-    <span class="badge">58 Themes</span>
+    <span class="badge">60 Themes</span>
     <span class="badge">290+ Components</span>
     <span class="badge">Interactive</span>
   </div>
@@ -1734,6 +1774,46 @@ body{font-family:'Space Grotesk','Inter',sans-serif;background:#12121a;color:#e8
     <div class="card-actions"><button class="copy-btn" data-theme="58">&#8984; Copy CSS</button></div>
   </article>
 
+  <!-- 59 -->
+  <article class="theme-card" data-category="artistic">
+    <div class="card-header">
+      <h2 class="card-title">Velvet Dreams</h2>
+      <div class="card-meta"><span class="category-tag cat-artistic">Artistic</span></div>
+      <p class="card-description">Luxurious deep purples and gold. Elegant and sophisticated. Velvet texture in digital form.</p>
+    </div>
+    <div class="color-palette">
+      <span class="swatch" style="background:#1a0a2e;border-color:#3a0a5e"></span><span class="swatch" style="background:#2a0a4e"></span><span class="swatch" style="background:#d4af37"></span><span class="swatch" style="background:#aa8c2a"></span>
+    </div>
+    <div class="sample-block s-velvet">
+      <div class="sh">Luxury Experience</div>
+      <div class="sp">Soft as velvet. Rich as burgundy wine. Dreams wrapped in gold and shadow.</div>
+      <div class="sbtn">Indulge</div>
+      <div class="spanel">Premium Tier // Exclusive Members Only // VIP Access</div>
+      <input class="sinput" type="text" placeholder="Enter your desires&#8230;">
+    </div>
+    <div class="card-actions"><button class="copy-btn" data-theme="59">&#8984; Copy CSS</button></div>
+  </article>
+
+  <!-- 60 -->
+  <article class="theme-card" data-category="modern">
+    <div class="card-header">
+      <h2 class="card-title">Circuit Board</h2>
+      <div class="card-meta"><span class="category-tag cat-modern">Modern</span></div>
+      <p class="card-description">Tech-inspired monochrome with circuit patterns. Digital, precise, and computational.</p>
+    </div>
+    <div class="color-palette">
+      <span class="swatch" style="background:#0d1117;border-color:#333"></span><span class="swatch" style="background:#1a1a1a"></span><span class="swatch" style="background:#00ff88"></span><span class="swatch" style="background:#00dd66"></span>
+    </div>
+    <div class="sample-block s-circuit">
+      <div class="sh">SYSTEM ONLINE</div>
+      <div class="sp">Logic gates hum. Data flows. Silicon dreams in binary rhythm.</div>
+      <div class="sbtn">EXECUTE</div>
+      <div class="spanel">PROCESSOR: ACTIVE // MEMORY: 99% // STATUS: OPTIMAL</div>
+      <input class="sinput" type="text" placeholder="Input command&#8230;">
+    </div>
+    <div class="card-actions"><button class="copy-btn" data-theme="60">&#8984; Copy CSS</button></div>
+  </article>
+
 </main>
 
 <footer class="site-footer">
@@ -1819,7 +1899,9 @@ body{font-family:'Space Grotesk','Inter',sans-serif;background:#12121a;color:#e8
     55:'.glitch{background:#0a0014;color:#ff006e;font-family:monospace;text-transform:uppercase;}.glitch-btn{border:2px solid #ff006e;box-shadow:2px 2px 0 #00f5ff,-2px -2px 0 #39ff14;}',
     56:'.luxury{background:linear-gradient(135deg,#fff8e1,#fffde7,#fff8e1);border:3px solid #ffd700;color:#9c6f19;font-family:"Playfair Display",serif;}.luxury-btn{background:linear-gradient(135deg,#ffd700,#daa520);}',
     57:'.arctic{background:linear-gradient(145deg,#e0f2f7,#b2ebf2,#e0f2f7);border:2px solid #80deea;color:#006064;}.arctic-btn{background:linear-gradient(135deg,#00acc1,#0097a7);border-radius:100px;color:#fff;}',
-    58:'.desert{background:linear-gradient(180deg,#fff3e0,#ffe0b2,#ffcc80,#ffb74d);color:#e65100;}.desert-btn{background:linear-gradient(135deg,#ff6f00,#e65100);color:#fff;}'
+    58:'.desert{background:linear-gradient(180deg,#fff3e0,#ffe0b2,#ffcc80,#ffb74d);color:#e65100;}.desert-btn{background:linear-gradient(135deg,#ff6f00,#e65100);color:#fff;}',
+    59:'.velvet{background:linear-gradient(135deg,#1a0a2e,#2a0a4e,#3a0a5e);}.velvet-heading{color:#d4af37;}.velvet-btn{background:linear-gradient(135deg,#d4af37,#aa8c2a);color:#1a0a2e;box-shadow:0 4px 12px rgba(212,175,55,.3);}',
+    60:'.circuit{background:#0d1117;border:2px solid #333;}.circuit-heading{color:#00ff88;font-family:monospace;text-shadow:0 0 8px rgba(0,255,136,.5);}.circuit-btn{background:transparent;border:2px solid #00ff88;color:#00ff88;font-family:monospace;text-transform:uppercase;}.circuit-text{color:#00dd66;font-family:monospace;}'
   };
 
   // COPY
@@ -1854,6 +1936,21 @@ body{font-family:'Space Grotesk','Inter',sans-serif;background:#12121a;color:#e8
   },{passive:true});
   scrollBtn.addEventListener('click',function(){
     window.scrollTo({top:0,behavior:'smooth'});
+  });
+
+  // SCROLL ANIMATION - Float cards in on scroll
+  var cards = document.querySelectorAll('.theme-card');
+  var observer = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('in-view');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, {threshold: 0.1});
+
+  cards.forEach(function(card) {
+    observer.observe(card);
   });
 })();
 </script>
