@@ -478,16 +478,86 @@ body{font-family:'Space Grotesk','Inter',sans-serif;background:#12121a;color:#e8
 .s-synth .sbtn{background:transparent;border:2px solid #ff2d78;border-radius:3px;color:#ff2d78;padding:5px 12px;font-size:.72rem;font-weight:700;cursor:pointer;margin-bottom:10px;display:inline-block;text-transform:uppercase;letter-spacing:.1em;box-shadow:0 0 12px rgba(255,45,120,.3),inset 0 0 6px rgba(255,45,120,.1);text-shadow:0 0 6px rgba(255,45,120,.8)}
 .s-synth .spanel{background:rgba(200,0,255,.08);border:1px solid rgba(200,0,255,.25);border-top:2px solid #c800ff;padding:7px 10px;margin-bottom:8px;color:#c800ff;font-size:.72rem;text-shadow:0 0 4px rgba(200,0,255,.4)}
 .s-synth .sinput{background:rgba(200,0,255,.06);border:1px solid rgba(200,0,255,.2);border-bottom:2px solid #ff2d78;padding:5px 8px;color:#ff2d78;font-size:.72rem;width:100%;outline:none;caret-color:#ff2d78}
+
+/* 51. Paper Vintage */
+.s-paper{background:#f9f6ed;border-radius:2px;border:1px solid #d4cab4;box-shadow:0 2px 8px rgba(139,105,20,.15),inset 0 0 60px rgba(210,180,140,.08)}
+.s-paper .sh{color:#3e2723;font-weight:700;font-size:.94rem;margin-bottom:5px;font-family:'Playfair Display',serif}
+.s-paper .sp{color:#6d4c41;font-size:.75rem;margin-bottom:10px;line-height:1.7;font-family:'Playfair Display',serif}
+.s-paper .sbtn{background:#8d6e63;border:1px solid #5d4037;border-radius:2px;color:#f9f6ed;padding:6px 14px;font-size:.72rem;font-weight:600;cursor:pointer;margin-bottom:10px;display:inline-block;font-family:'Playfair Display',serif;letter-spacing:.04em}
+.s-paper .spanel{background:rgba(210,180,140,.25);border:1px solid #d4cab4;border-radius:2px;padding:8px 12px;margin-bottom:8px;color:#3e2723;font-size:.72rem;font-family:'Playfair Display',serif}
+.s-paper .sinput{background:#fff;border:none;border-bottom:1px solid #bcaaa4;padding:5px 6px;color:#3e2723;font-size:.72rem;width:100%;outline:none;font-family:'Playfair Display',serif}
+
+/* 52. Steampunk Brass */
+.s-steam{background:radial-gradient(circle at 30% 40%,#4e3b31,#2c1810);border:3px solid #cd7f32;border-radius:8px;position:relative}
+.s-steam::before{content:'⚙';position:absolute;top:6px;right:8px;font-size:1.4rem;color:rgba(205,127,50,.2);transform:rotate(12deg)}
+.s-steam .sh{color:#cd7f32;font-weight:700;font-size:.94rem;margin-bottom:5px;font-family:'Playfair Display',serif;text-shadow:0 1px 2px rgba(0,0,0,.5)}
+.s-steam .sp{color:#916f5a;font-size:.75rem;margin-bottom:10px;line-height:1.6;font-family:'Playfair Display',serif}
+.s-steam .sbtn{background:linear-gradient(145deg,#cd7f32,#b8860b);border:2px solid #8b4513;border-radius:4px;color:#1a0f08;padding:6px 14px;font-size:.72rem;font-weight:700;cursor:pointer;margin-bottom:10px;display:inline-block;box-shadow:0 2px 4px rgba(0,0,0,.4),inset 0 1px 0 rgba(255,215,100,.3);font-family:'Playfair Display',serif}
+.s-steam .spanel{background:rgba(139,69,19,.3);border:2px solid #8b4513;border-radius:3px;padding:7px 10px;margin-bottom:8px;color:#daa520;font-size:.72rem;font-family:'Playfair Display',serif}
+.s-steam .sinput{background:rgba(0,0,0,.2);border:2px solid #8b4513;border-radius:3px;padding:5px 8px;color:#cd7f32;font-size:.72rem;width:100%;outline:none;font-family:'Playfair Display',serif}
+
+/* 53. Space Galaxy */
+.s-space{background:radial-gradient(ellipse at 20% 30%,#1a0033,#000011 50%,#000000);border-radius:10px;position:relative;overflow:hidden}
+.s-space::before{content:'✦ ✧ ✦';position:absolute;top:14%;left:15%;font-size:.6rem;color:rgba(255,255,255,.4);letter-spacing:8px}
+.s-space::after{content:'★';position:absolute;bottom:20%;right:18%;font-size:.7rem;color:rgba(255,220,150,.5)}
+.s-space .sh{color:#b39ddb;font-weight:700;font-size:.94rem;margin-bottom:5px;text-shadow:0 0 10px rgba(179,157,219,.5)}
+.s-space .sp{color:#7e57c2;font-size:.75rem;margin-bottom:10px;line-height:1.5}
+.s-space .sbtn{background:linear-gradient(135deg,#5e35b1,#311b92);border:1px solid #7e57c2;border-radius:100px;color:#e1bee7;padding:5px 14px;font-size:.72rem;font-weight:600;cursor:pointer;margin-bottom:10px;display:inline-block;box-shadow:0 0 12px rgba(126,87,194,.3)}
+.s-space .spanel{background:rgba(94,53,177,.08);border:1px solid rgba(126,87,194,.2);border-radius:6px;padding:8px 12px;margin-bottom:8px;color:#b39ddb;font-size:.72rem}
+.s-space .sinput{background:rgba(26,0,51,.6);border:1px solid rgba(126,87,194,.3);border-radius:100px;padding:6px 12px;color:#e1bee7;font-size:.72rem;width:100%;outline:none}
+
+/* 54. Eco Green */
+.s-eco{background:linear-gradient(135deg,#f1f8e9,#dcedc8);border:2px solid #9ccc65;border-radius:12px}
+.s-eco .sh{color:#33691e;font-weight:700;font-size:.94rem;margin-bottom:5px;font-family:'Space Grotesk',sans-serif}
+.s-eco .sh::before{content:'🌱 ';font-size:.85em}
+.s-eco .sp{color:#558b2f;font-size:.75rem;margin-bottom:10px;line-height:1.6}
+.s-eco .sbtn{background:#7cb342;border:none;border-radius:100px;color:#fff;padding:6px 16px;font-size:.72rem;font-weight:600;cursor:pointer;margin-bottom:10px;display:inline-block;box-shadow:0 2px 8px rgba(124,179,66,.3)}
+.s-eco .spanel{background:#fff;border:2px solid #aed581;border-radius:8px;padding:8px 12px;margin-bottom:8px;color:#33691e;font-size:.72rem}
+.s-eco .sinput{background:#fff;border:2px solid #aed581;border-radius:20px;padding:6px 12px;color:#33691e;font-size:.72rem;width:100%;outline:none}
+
+/* 55. Glitch Art */
+.s-glitch{background:#0a0014;border-radius:4px;position:relative;overflow:hidden}
+.s-glitch::before{content:'ERROR';position:absolute;top:6px;right:10px;font-size:.6rem;color:rgba(255,0,100,.3);font-family:monospace;font-weight:700;letter-spacing:.2em}
+.s-glitch .sh{color:#ff006e;font-weight:900;font-size:.94rem;margin-bottom:5px;font-family:'Space Grotesk',sans-serif;text-transform:uppercase;letter-spacing:.04em;position:relative}
+.s-glitch .sh::after{content:attr(data-text);position:absolute;left:2px;top:0;color:#00f5ff;opacity:.7;mix-blend-mode:screen}
+.s-glitch .sp{color:#666;font-size:.75rem;margin-bottom:10px}
+.s-glitch .sbtn{background:transparent;border:2px solid #ff006e;border-radius:2px;color:#ff006e;padding:5px 12px;font-size:.72rem;font-weight:700;cursor:pointer;margin-bottom:10px;display:inline-block;text-transform:uppercase;letter-spacing:.08em;box-shadow:2px 2px 0 #00f5ff,-2px -2px 0 #39ff14}
+.s-glitch .spanel{background:rgba(255,0,110,.05);border:1px solid rgba(255,0,110,.2);border-left:3px solid #ff006e;padding:7px 10px;margin-bottom:8px;color:#ff006e;font-size:.72rem;font-family:monospace}
+.s-glitch .sinput{background:rgba(0,245,255,.03);border:1px solid rgba(0,245,255,.2);padding:5px 8px;color:#00f5ff;font-size:.72rem;width:100%;outline:none;font-family:monospace}
+
+/* 56. Luxury Gold */
+.s-luxury{background:linear-gradient(135deg,#fff8e1,#fffde7,#fff8e1);border:3px solid #ffd700;border-radius:10px;box-shadow:0 4px 16px rgba(255,215,0,.25)}
+.s-luxury .sh{color:#9c6f19;font-weight:700;font-size:1rem;margin-bottom:5px;font-family:'Playfair Display',serif;letter-spacing:.02em}
+.s-luxury .sp{color:#b8860b;font-size:.75rem;margin-bottom:10px;line-height:1.7;font-family:'Playfair Display',serif}
+.s-luxury .sbtn{background:linear-gradient(135deg,#ffd700,#daa520);border:2px solid #b8860b;border-radius:6px;color:#3e2723;padding:6px 16px;font-size:.72rem;font-weight:700;cursor:pointer;margin-bottom:10px;display:inline-block;box-shadow:0 3px 10px rgba(218,165,32,.4),inset 0 1px 0 rgba(255,235,150,.5)}
+.s-luxury .spanel{background:rgba(255,215,0,.12);border:2px solid #f4e1a1;border-radius:8px;padding:8px 12px;margin-bottom:8px;color:#9c6f19;font-size:.72rem;font-family:'Playfair Display',serif}
+.s-luxury .sinput{background:#fff;border:2px solid #ffd700;border-radius:6px;padding:6px 12px;color:#9c6f19;font-size:.72rem;width:100%;outline:none;font-family:'Playfair Display',serif}
+
+/* 57. Arctic Ice */
+.s-arctic{background:linear-gradient(145deg,#e0f2f7,#b2ebf2,#e0f2f7);border:2px solid #80deea;border-radius:10px}
+.s-arctic .sh{color:#006064;font-weight:700;font-size:.94rem;margin-bottom:5px;font-family:'Space Grotesk',sans-serif}
+.s-arctic .sp{color:#00838f;font-size:.75rem;margin-bottom:10px;line-height:1.5}
+.s-arctic .sbtn{background:linear-gradient(135deg,#00acc1,#0097a7);border:none;border-radius:100px;color:#fff;padding:6px 16px;font-size:.72rem;font-weight:600;cursor:pointer;margin-bottom:10px;display:inline-block;box-shadow:0 3px 12px rgba(0,151,167,.3)}
+.s-arctic .spanel{background:rgba(255,255,255,.7);border:2px solid #b2ebf2;border-radius:10px;padding:8px 12px;margin-bottom:8px;color:#006064;font-size:.72rem}
+.s-arctic .sinput{background:rgba(255,255,255,.8);border:2px solid #80deea;border-radius:20px;padding:6px 12px;color:#006064;font-size:.72rem;width:100%;outline:none}
+
+/* 58. Desert Sunset */
+.s-desert{background:linear-gradient(180deg,#fff3e0,#ffe0b2,#ffcc80,#ffb74d);border-radius:12px}
+.s-desert .sh{color:#e65100;font-weight:700;font-size:.94rem;margin-bottom:5px;text-shadow:0 1px 2px rgba(0,0,0,.15)}
+.s-desert .sp{color:#bf360c;font-size:.75rem;margin-bottom:10px;line-height:1.6}
+.s-desert .sbtn{background:linear-gradient(135deg,#ff6f00,#e65100);border:none;border-radius:6px;color:#fff;padding:6px 14px;font-size:.72rem;font-weight:600;cursor:pointer;margin-bottom:10px;display:inline-block;box-shadow:0 3px 10px rgba(230,81,0,.35)}
+.s-desert .spanel{background:rgba(255,255,255,.5);border:2px solid #ffb74d;border-radius:8px;padding:8px 12px;margin-bottom:8px;color:#e65100;font-size:.72rem}
+.s-desert .sinput{background:rgba(255,255,255,.6);border:2px solid #ffb74d;border-radius:8px;padding:6px 12px;color:#e65100;font-size:.72rem;width:100%;outline:none}
 </style>
 </head>
 <body>
 
 <header class="site-header">
   <h1 class="header-title">THE THEME ATLAS</h1>
-  <p class="header-subtitle">A comprehensive reference library of 50 web design themes &amp; styles</p>
+  <p class="header-subtitle">A comprehensive reference library of 58 web design themes &amp; styles</p>
   <div class="header-badges">
-    <span class="badge">50 Themes</span>
-    <span class="badge">250+ Components</span>
+    <span class="badge">58 Themes</span>
+    <span class="badge">290+ Components</span>
     <span class="badge">Interactive</span>
   </div>
 </header>
@@ -1504,6 +1574,166 @@ body{font-family:'Space Grotesk','Inter',sans-serif;background:#12121a;color:#e8
     <div class="card-actions"><button class="copy-btn" data-theme="50">&#8984; Copy CSS</button></div>
   </article>
 
+  <!-- 51 -->
+  <article class="theme-card" data-category="light">
+    <div class="card-header">
+      <h2 class="card-title">Paper Vintage</h2>
+      <div class="card-meta"><span class="category-tag cat-light">Light</span></div>
+      <p class="card-description">Realistic aged paper texture with subtle grain. Tactile warmth of printed letterpress.</p>
+    </div>
+    <div class="color-palette">
+      <span class="swatch" style="background:#f9f6ed;border-color:#d4cab4"></span><span class="swatch" style="background:#d2b48c"></span><span class="swatch" style="background:#8d6e63"></span><span class="swatch" style="background:#3e2723"></span>
+    </div>
+    <div class="sample-block s-paper">
+      <div class="sh">Aged Manuscript</div>
+      <div class="sp">Each page carries the weight of years. Grain and texture tell their own story.</div>
+      <div class="sbtn">Turn Page</div>
+      <div class="spanel">Parchment note — carefully preserved, lovingly restored.</div>
+      <input class="sinput" type="text" placeholder="Pen your thoughts&#8230;">
+    </div>
+    <div class="card-actions"><button class="copy-btn" data-theme="51">&#8984; Copy CSS</button></div>
+  </article>
+
+  <!-- 52 -->
+  <article class="theme-card" data-category="artistic">
+    <div class="card-header">
+      <h2 class="card-title">Steampunk Brass</h2>
+      <div class="card-meta"><span class="category-tag cat-artistic">Artistic</span></div>
+      <p class="card-description">Victorian industrial machinery. Polished brass on dark leather with copper rivets.</p>
+    </div>
+    <div class="color-palette">
+      <span class="swatch" style="background:#2c1810"></span><span class="swatch" style="background:#8b4513"></span><span class="swatch" style="background:#cd7f32"></span><span class="swatch" style="background:#daa520"></span>
+    </div>
+    <div class="sample-block s-steam">
+      <div class="sh">Clockwork Mechanism</div>
+      <div class="sp">Gears turn. Steam hisses. Brass gleams in gaslight glow always.</div>
+      <div class="sbtn">Engage</div>
+      <div class="spanel">&#9881; Pressure gauge reading: 87 PSI // Status: Optimal</div>
+      <input class="sinput" type="text" placeholder="Log entry&#8230;">
+    </div>
+    <div class="card-actions"><button class="copy-btn" data-theme="52">&#8984; Copy CSS</button></div>
+  </article>
+
+  <!-- 53 -->
+  <article class="theme-card" data-category="dark">
+    <div class="card-header">
+      <h2 class="card-title">Space Galaxy</h2>
+      <div class="card-meta"><span class="category-tag cat-dark">Dark</span></div>
+      <p class="card-description">Deep space nebula colors. Cosmic dust and distant starlight across the void.</p>
+    </div>
+    <div class="color-palette">
+      <span class="swatch" style="background:#000000"></span><span class="swatch" style="background:#1a0033;border-color:#33006a"></span><span class="swatch" style="background:#5e35b1"></span><span class="swatch" style="background:#b39ddb"></span>
+    </div>
+    <div class="sample-block s-space">
+      <div class="sh">Distant Nebula</div>
+      <div class="sp">Light years away, colors we&#8217;ve never named spiral in the dark.</div>
+      <div class="sbtn">Launch</div>
+      <div class="spanel">Coordinates: Sector 7G // Luminosity: 4.3x10^26 watts</div>
+      <input class="sinput" type="text" placeholder="Set destination&#8230;">
+    </div>
+    <div class="card-actions"><button class="copy-btn" data-theme="53">&#8984; Copy CSS</button></div>
+  </article>
+
+  <!-- 54 -->
+  <article class="theme-card" data-category="modern">
+    <div class="card-header">
+      <h2 class="card-title">Eco Green</h2>
+      <div class="card-meta"><span class="category-tag cat-modern">Modern</span></div>
+      <p class="card-description">Sustainable freshness. Natural greens and soft whites. Earth-conscious design language.</p>
+    </div>
+    <div class="color-palette">
+      <span class="swatch" style="background:#f1f8e9;border-color:#c5e1a5"></span><span class="swatch" style="background:#aed581"></span><span class="swatch" style="background:#7cb342"></span><span class="swatch" style="background:#33691e"></span>
+    </div>
+    <div class="sample-block s-eco">
+      <div class="sh">Sustainable Future</div>
+      <div class="sp">Every choice matters. Design that respects the earth we all share.</div>
+      <div class="sbtn">Join Movement</div>
+      <div class="spanel">Carbon offset: -12 tons // Renewable: 100%</div>
+      <input class="sinput" type="text" placeholder="Take action&#8230;">
+    </div>
+    <div class="card-actions"><button class="copy-btn" data-theme="54">&#8984; Copy CSS</button></div>
+  </article>
+
+  <!-- 55 -->
+  <article class="theme-card" data-category="artistic">
+    <div class="card-header">
+      <h2 class="card-title">Glitch Art</h2>
+      <div class="card-meta"><span class="category-tag cat-artistic">Artistic</span></div>
+      <p class="card-description">Digital corruption as aesthetic. RGB shift, data moshing, beautiful broken pixels.</p>
+    </div>
+    <div class="color-palette">
+      <span class="swatch" style="background:#0a0014;border-color:#1a0028"></span><span class="swatch" style="background:#ff006e"></span><span class="swatch" style="background:#00f5ff"></span><span class="swatch" style="background:#39ff14"></span>
+    </div>
+    <div class="sample-block s-glitch">
+      <div class="sh" data-text="DATA CORRUPTION">DATA CORRUPTION</div>
+      <div class="sp">//ERROR: 0x4F4E // REALITY_MATRIX_FAILED // REBOOT_RECOMMENDED</div>
+      <div class="sbtn">OVERRIDE</div>
+      <div class="spanel">&#9888; WARN: Integrity check failed at 0xFF3A92</div>
+      <input class="sinput" type="text" placeholder="[REDACTED]_">
+    </div>
+    <div class="card-actions"><button class="copy-btn" data-theme="55">&#8984; Copy CSS</button></div>
+  </article>
+
+  <!-- 56 -->
+  <article class="theme-card" data-category="light">
+    <div class="card-header">
+      <h2 class="card-title">Luxury Gold</h2>
+      <div class="card-meta"><span class="category-tag cat-light">Light</span></div>
+      <p class="card-description">Premium elegance. Warm gold on cream with sophisticated serif typography.</p>
+    </div>
+    <div class="color-palette">
+      <span class="swatch" style="background:#fff8e1;border-color:#f4e1a1"></span><span class="swatch" style="background:#ffd700"></span><span class="swatch" style="background:#daa520"></span><span class="swatch" style="background:#9c6f19"></span>
+    </div>
+    <div class="sample-block s-luxury">
+      <div class="sh">Refined Elegance</div>
+      <div class="sp">Where craftsmanship meets uncompromising quality and timeless taste.</div>
+      <div class="sbtn">Discover</div>
+      <div class="spanel">&#9733; Premium Collection — Curated since 1847</div>
+      <input class="sinput" type="text" placeholder="Inquire here&#8230;">
+    </div>
+    <div class="card-actions"><button class="copy-btn" data-theme="56">&#8984; Copy CSS</button></div>
+  </article>
+
+  <!-- 57 -->
+  <article class="theme-card" data-category="modern">
+    <div class="card-header">
+      <h2 class="card-title">Arctic Ice</h2>
+      <div class="card-meta"><span class="category-tag cat-modern">Modern</span></div>
+      <p class="card-description">Crystal-clear cyan and white. Frozen water in digital form. Cool and refreshing.</p>
+    </div>
+    <div class="color-palette">
+      <span class="swatch" style="background:#e0f2f7;border-color:#b2ebf2"></span><span class="swatch" style="background:#80deea"></span><span class="swatch" style="background:#00acc1"></span><span class="swatch" style="background:#006064"></span>
+    </div>
+    <div class="sample-block s-arctic">
+      <div class="sh">Frozen Clarity</div>
+      <div class="sp">Pure as glacial melt. Clear as the arctic sky at midnight in winter.</div>
+      <div class="sbtn">Explore</div>
+      <div class="spanel">Temperature: -18°C // Ice density: 0.92 g/cm³</div>
+      <input class="sinput" type="text" placeholder="Search the ice&#8230;">
+    </div>
+    <div class="card-actions"><button class="copy-btn" data-theme="57">&#8984; Copy CSS</button></div>
+  </article>
+
+  <!-- 58 -->
+  <article class="theme-card" data-category="modern">
+    <div class="card-header">
+      <h2 class="card-title">Desert Sunset</h2>
+      <div class="card-meta"><span class="category-tag cat-modern">Modern</span></div>
+      <p class="card-description">Warm sand tones to burning orange. The Sahara at golden hour captured in pixels.</p>
+    </div>
+    <div class="color-palette">
+      <span class="swatch" style="background:#fff3e0;border-color:#ffcc80"></span><span class="swatch" style="background:#ffb74d"></span><span class="swatch" style="background:#ff6f00"></span><span class="swatch" style="background:#e65100"></span>
+    </div>
+    <div class="sample-block s-desert">
+      <div class="sh">Endless Dunes</div>
+      <div class="sp">Heat waves shimmer. Sand stretches forever. The sun burns low and gold.</div>
+      <div class="sbtn">Wander</div>
+      <div class="spanel">Location: 25°N 15°E // Humidity: 12% // Wind: Light breeze</div>
+      <input class="sinput" type="text" placeholder="Leave your mark&#8230;">
+    </div>
+    <div class="card-actions"><button class="copy-btn" data-theme="58">&#8984; Copy CSS</button></div>
+  </article>
+
 </main>
 
 <footer class="site-footer">
@@ -1581,7 +1811,15 @@ body{font-family:'Space Grotesk','Inter',sans-serif;background:#12121a;color:#e8
     47:'.ir{background:linear-gradient(135deg,#000,#8b0000,#cc4400);color:#ffff00;font-family:monospace;text-transform:uppercase;letter-spacing:.08em;}',
     48:'.chalk{background:#2d3a2d;border:6px solid #5c4a3a;color:rgba(255,255,255,.9);font-family:"Playfair Display",serif;box-shadow:inset 0 0 30px rgba(0,0,0,.4);}',
     49:'.tokyo{background:#1a1b26;color:#7aa2f7;font-family:monospace;border:1px solid #24283b;}.tokyo-string{color:#9ece6a;}.tokyo-comment{color:#565f89;}',
-    50:'.synth{background:linear-gradient(180deg,#0a001a,#2a0055,#c800ff);color:#ff2d78;text-shadow:0 0 12px rgba(255,45,120,.9);font-weight:900;text-transform:uppercase;}'
+    50:'.synth{background:linear-gradient(180deg,#0a001a,#2a0055,#c800ff);color:#ff2d78;text-shadow:0 0 12px rgba(255,45,120,.9);font-weight:900;text-transform:uppercase;}',
+    51:'.paper{background:#f9f6ed;border:1px solid #d4cab4;box-shadow:0 2px 8px rgba(139,105,20,.15),inset 0 0 60px rgba(210,180,140,.08);color:#3e2723;font-family:"Playfair Display",serif;}',
+    52:'.steam{background:radial-gradient(circle at 30% 40%,#4e3b31,#2c1810);border:3px solid #cd7f32;color:#cd7f32;font-family:"Playfair Display",serif;}.steam-btn{background:linear-gradient(145deg,#cd7f32,#b8860b);box-shadow:0 2px 4px rgba(0,0,0,.4);}',
+    53:'.space{background:radial-gradient(ellipse at 20% 30%,#1a0033,#000011 50%,#000);color:#b39ddb;text-shadow:0 0 10px rgba(179,157,219,.5);}.space-btn{background:linear-gradient(135deg,#5e35b1,#311b92);border-radius:100px;}',
+    54:'.eco{background:linear-gradient(135deg,#f1f8e9,#dcedc8);border:2px solid #9ccc65;color:#33691e;}.eco-btn{background:#7cb342;border-radius:100px;color:#fff;}',
+    55:'.glitch{background:#0a0014;color:#ff006e;font-family:monospace;text-transform:uppercase;}.glitch-btn{border:2px solid #ff006e;box-shadow:2px 2px 0 #00f5ff,-2px -2px 0 #39ff14;}',
+    56:'.luxury{background:linear-gradient(135deg,#fff8e1,#fffde7,#fff8e1);border:3px solid #ffd700;color:#9c6f19;font-family:"Playfair Display",serif;}.luxury-btn{background:linear-gradient(135deg,#ffd700,#daa520);}',
+    57:'.arctic{background:linear-gradient(145deg,#e0f2f7,#b2ebf2,#e0f2f7);border:2px solid #80deea;color:#006064;}.arctic-btn{background:linear-gradient(135deg,#00acc1,#0097a7);border-radius:100px;color:#fff;}',
+    58:'.desert{background:linear-gradient(180deg,#fff3e0,#ffe0b2,#ffcc80,#ffb74d);color:#e65100;}.desert-btn{background:linear-gradient(135deg,#ff6f00,#e65100);color:#fff;}'
   };
 
   // COPY

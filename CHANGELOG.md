@@ -7,6 +7,29 @@ Format follows [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ## [Unreleased] — 2026-02-24
 
+### Changed
+
+#### Main Page (`docs/index.html`)
+- **Theme Atlas card** — Removed all shimmer/animation effects from the hero card; now displays a subtle static glowing outline instead of animated rainbow border
+- **Spotlight badge** — Removed "✦ Spotlight Pick" badge from Theme Atlas card for cleaner appearance
+- **Settings button** — Moved from middle-right to bottom-right of viewport for less intrusive positioning
+- **Cross cursor** — Replaced OS default crosshair with custom SVG sprite featuring purple glow effect and crosshair design
+- **Particle color** — Changed default particle color from dark purple (#8b5cf6) to lighter shade (#c4b5fd) for improved visibility
+- **Accent color** — Updated default purple accent color to lighter variant for better contrast
+
+#### The Theme Atlas (`docs/sites/13-theme-showcase/`)
+- **Added 8 new themes** expanding the library from 50 to **58 themes**:
+  - **Paper Vintage** (Light) — Realistic aged paper texture with subtle grain and letterpress aesthetic
+  - **Steampunk Brass** (Artistic) — Victorian industrial with polished brass on dark leather and copper accents
+  - **Space Galaxy** (Dark) — Deep space nebula with cosmic colors and starlight across void
+  - **Eco Green** (Modern) — Sustainable fresh design with natural greens and earth-conscious palette  
+  - **Glitch Art** (Artistic) — Digital corruption aesthetic with RGB shift and data moshing effects
+  - **Luxury Gold** (Light) — Premium elegance with warm gold on cream and sophisticated serif typography
+  - **Arctic Ice** (Modern) — Crystal-clear cyan and white mimicking frozen water
+  - **Desert Sunset** (Modern) — Warm sand tones to burning orange capturing Sahara at golden hour
+- Updated header badge count from "50 Themes" to **"58 Themes"** and "250+ Components" to **"290+ Components"**
+- Added CSS snippets for all 8 new themes to the copy-to-clipboard functionality
+
 ### Added
 
 #### Site 11 — Outdoor Trail Guide (`docs/sites/11-outdoor-trail-guide/`)
