@@ -232,10 +232,85 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Team Member Image Effects
+    // Team Member Bio Modal
     const teamMembers = document.querySelectorAll('.team-member');
 
+    const attorneyData = {
+        'robert-sterling': {
+            name: 'Robert Sterling',
+            title: 'Managing Partner',
+            image: 'https://images.unsplash.com/photo-1560250097-0b93528c311a?w=600&h=750&fit=crop',
+            barAdmissions: 'New York, New Jersey, U.S. Supreme Court',
+            lawSchool: 'Columbia Law School, J.D. 1987',
+            experience: '37 Years',
+            practiceAreas: ['Corporate Law', 'Mergers & Acquisitions', 'Securities', 'Private Equity'],
+            bio: 'Robert Sterling founded the firm in 1984 after a distinguished tenure at Sullivan & Cromwell. Nationally recognised for his expertise in complex mergers and acquisitions, Robert has advised on transactions exceeding $40 billion in combined deal value throughout his career. He has been consistently named a "Top 100 Super Lawyer" by New York Magazine and recognised by Chambers USA for his Corporate/M&A work. Robert serves on the board of the New York Legal Aid Society and is a frequent lecturer at Columbia Law School.'
+        },
+        'patricia-chen': {
+            name: 'Patricia Chen',
+            title: 'Senior Partner',
+            image: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=600&h=750&fit=crop',
+            barAdmissions: 'New York, California, Federal Courts',
+            lawSchool: 'Yale Law School, J.D. 1995',
+            experience: '29 Years',
+            practiceAreas: ['Litigation', 'Intellectual Property', 'Commercial Disputes', 'Trade Secrets'],
+            bio: 'Patricia Chen joined Sterling & Associates in 1998 after serving as a federal law clerk in the Southern District of New York. She has tried over 60 cases to verdict and has an unparalleled record in high-stakes IP litigation. Patricia is widely regarded as one of the foremost intellectual property litigators in the country, with successful representations before the U.S. Court of Appeals and the International Trade Commission. She lectures annually at Yale Law School and publishes extensively in leading legal journals.'
+        },
+        'michael-thompson': {
+            name: 'Michael Thompson',
+            title: 'Partner',
+            image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=600&h=750&fit=crop',
+            barAdmissions: 'New York, Connecticut',
+            lawSchool: 'NYU School of Law, J.D. 2003',
+            experience: '21 Years',
+            practiceAreas: ['Real Estate', 'Employment Law', 'Lease Negotiation', 'Land Use'],
+            bio: 'Michael Thompson leads the firm\'s real estate and employment practice groups, bringing a cross-disciplinary approach that has proven especially valuable for corporate clients navigating complex workplace and property matters simultaneously. He has overseen real estate transactions exceeding $2 billion in aggregate value, including landmark commercial developments across Manhattan and Brooklyn. Michael is a member of the New York State Bar Association\'s Real Property Law Committee.'
+        },
+        'sarah-williams': {
+            name: 'Sarah Williams',
+            title: 'Associate',
+            image: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?w=600&h=750&fit=crop',
+            barAdmissions: 'New York',
+            lawSchool: 'Georgetown University Law Center, J.D. 2018',
+            experience: '6 Years',
+            practiceAreas: ['Estate Planning', 'Trusts & Estates', 'Probate Administration', 'Wealth Transfer'],
+            bio: 'Sarah Williams joined the firm in 2019 following a clerkship with the New York Surrogate\'s Court. She has developed a highly regarded estate planning practice serving high-net-worth individuals and multigenerational families. Sarah takes a holistic approach to estate planning, working closely with clients\' financial advisors and accountants to ensure comprehensive wealth transfer strategies. She is a member of the Society of Trusts and Estate Practitioners (STEP).'
+        }
+    };
+
+    const bioModal = document.getElementById('bio-modal');
+    const bioModalClose = document.querySelector('.bio-modal-close');
+
+    function openBioModal(memberKey) {
+        const data = attorneyData[memberKey];
+        if (!data || !bioModal) return;
+
+        document.getElementById('bio-modal-img').src = data.image;
+        document.getElementById('bio-modal-img').alt = data.name;
+        document.getElementById('bio-modal-title').textContent = data.title;
+        document.getElementById('bio-modal-name').textContent = data.name;
+        document.getElementById('bio-modal-bar').textContent = data.barAdmissions;
+        document.getElementById('bio-modal-school').textContent = data.lawSchool;
+        document.getElementById('bio-modal-exp').textContent = data.experience;
+        document.getElementById('bio-modal-areas-list').innerHTML =
+            data.practiceAreas.map(a => `<span>${a}</span>`).join('');
+        document.getElementById('bio-modal-bio').textContent = data.bio;
+
+        bioModal.setAttribute('aria-hidden', 'false');
+        bioModal.classList.add('is-open');
+        document.body.style.overflow = 'hidden';
+        requestAnimationFrame(() => bioModalClose.focus());
+    }
+
+    function closeBioModal() {
+        bioModal.classList.remove('is-open');
+        bioModal.setAttribute('aria-hidden', 'true');
+        document.body.style.overflow = '';
+    }
+
     teamMembers.forEach(member => {
+        member.style.cursor = 'pointer';
+
         const image = member.querySelector('.member-image img');
 
         member.addEventListener('mouseenter', () => {
@@ -252,28 +327,57 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
 
-        // Make team members clickable to navigate to contact form
-        member.style.cursor = 'pointer';
         member.addEventListener('click', () => {
-            const memberName = member.querySelector('h3').textContent;
-            const practiceArea = member.querySelector('.member-info p').textContent;
-            const contactForm = document.querySelector('.contact-form');
+            if (member.dataset.member) openBioModal(member.dataset.member);
+        });
+    });
 
-            if (contactForm) {
-                const messageField = contactForm.querySelector('textarea');
-                if (messageField) {
-                    messageField.value = `I would like to discuss ${practiceArea.toLowerCase()} with ${memberName}.`;
-                    messageField.focus();
-                }
+    if (bioModalClose) {
+        bioModalClose.addEventListener('click', closeBioModal);
+    }
 
+    if (bioModal) {
+        bioModal.addEventListener('click', (e) => {
+            if (e.target === bioModal) closeBioModal();
+        });
+
+        // "Schedule Consultation" closes modal and scrolls to contact
+        const bioCta = bioModal.querySelector('.bio-modal-cta');
+        if (bioCta) {
+            bioCta.addEventListener('click', (e) => {
+                e.preventDefault();
+                closeBioModal();
                 const contactSection = document.querySelector('#contact');
-                const headerHeight = header.offsetHeight;
-                const targetPosition = contactSection.offsetTop - headerHeight;
+                if (contactSection) {
+                    const headerHeight = header ? header.offsetHeight : 0;
+                    window.scrollTo({ top: contactSection.offsetTop - headerHeight, behavior: 'smooth' });
+                }
+            });
+        }
+    }
 
-                window.scrollTo({
-                    top: targetPosition,
-                    behavior: 'smooth'
-                });
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') {
+            if (bioModal && bioModal.classList.contains('is-open')) closeBioModal();
+        }
+    });
+
+    // FAQ Accordion
+    document.querySelectorAll('.faq-question').forEach(btn => {
+        btn.addEventListener('click', () => {
+            const answer = btn.nextElementSibling;
+            const isOpen = btn.getAttribute('aria-expanded') === 'true';
+
+            // Close all open items
+            document.querySelectorAll('.faq-question').forEach(b => {
+                b.setAttribute('aria-expanded', 'false');
+                b.nextElementSibling.hidden = true;
+            });
+
+            // Toggle clicked item
+            if (!isOpen) {
+                btn.setAttribute('aria-expanded', 'true');
+                answer.hidden = false;
             }
         });
     });

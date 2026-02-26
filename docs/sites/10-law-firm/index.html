@@ -189,18 +189,18 @@
         </div>
 
         <div class="team-grid">
-            <div class="team-member">
+            <div class="team-member" data-member="robert-sterling">
                 <div class="member-image">
                     <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400&h=500&fit=crop" alt="Robert Sterling">
                 </div>
                 <div class="member-info">
                     <h3>Robert Sterling</h3>
                     <span class="member-title">Managing Partner</span>
-                    <p>Corporate Law, M&A</p>
+                    <p>Corporate Law, M&amp;A</p>
                 </div>
             </div>
 
-            <div class="team-member">
+            <div class="team-member" data-member="patricia-chen">
                 <div class="member-image">
                     <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&h=500&fit=crop" alt="Patricia Chen">
                 </div>
@@ -211,7 +211,7 @@
                 </div>
             </div>
 
-            <div class="team-member">
+            <div class="team-member" data-member="michael-thompson">
                 <div class="member-image">
                     <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=500&fit=crop" alt="Michael Thompson">
                 </div>
@@ -222,7 +222,7 @@
                 </div>
             </div>
 
-            <div class="team-member">
+            <div class="team-member" data-member="sarah-williams">
                 <div class="member-image">
                     <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=400&h=500&fit=crop" alt="Sarah Williams">
                 </div>
@@ -347,6 +347,107 @@
         </div>
     </section>
 
+    <!-- FAQ Section -->
+    <section id="faq" class="faq">
+        <div class="section-header">
+            <span class="section-tag">Quick Answers</span>
+            <h2>Frequently Asked Questions</h2>
+            <p>Answers to common questions about working with our firm.</p>
+        </div>
+        <div class="faq-list" role="list">
+            <div class="faq-item" role="listitem">
+                <button class="faq-question" aria-expanded="false">
+                    How do I schedule a consultation?
+                    <span class="faq-icon" aria-hidden="true">+</span>
+                </button>
+                <div class="faq-answer" hidden>
+                    <p>Scheduling a consultation is straightforward. You can call our office at (555) 123-4567 during business hours, email us at contact@sterlinglaw.com, or submit the form on this page. Initial consultations are free and completely confidential. We aim to respond to all enquiries within one business day and can often accommodate same-week appointments.</p>
+                </div>
+            </div>
+            <div class="faq-item" role="listitem">
+                <button class="faq-question" aria-expanded="false">
+                    What are your fees?
+                    <span class="faq-icon" aria-hidden="true">+</span>
+                </button>
+                <div class="faq-answer" hidden>
+                    <p>Our fees vary based on the nature and complexity of your matter. We offer several arrangements including hourly billing, flat fees for clearly scoped projects, and contingency arrangements for qualifying litigation matters. Every engagement begins with a transparent fee estimate so there are no surprises. Fee structures are discussed fully during your initial free consultation.</p>
+                </div>
+            </div>
+            <div class="faq-item" role="listitem">
+                <button class="faq-question" aria-expanded="false">
+                    How long will my case take?
+                    <span class="faq-icon" aria-hidden="true">+</span>
+                </button>
+                <div class="faq-answer" hidden>
+                    <p>Timelines vary significantly by matter type. Contract reviews and estate planning documents can often be completed within days. Business transactions typically span weeks to months depending on complexity. Litigation can range from several months to a number of years, particularly if a matter proceeds to trial or involves appeals. Your attorney will provide a realistic timeline estimate at the outset and keep you updated on any changes throughout.</p>
+                </div>
+            </div>
+            <div class="faq-item" role="listitem">
+                <button class="faq-question" aria-expanded="false">
+                    Do you offer payment plans?
+                    <span class="faq-icon" aria-hidden="true">+</span>
+                </button>
+                <div class="faq-answer" hidden>
+                    <p>Yes. We understand that legal costs can be a significant concern and we are committed to making quality representation accessible. We offer flexible payment arrangements for qualifying clients, including monthly payment plans for ongoing matters and deferred payment structures in certain cases. We encourage you to discuss your situation candidly during your consultation and we will work to find an arrangement that suits your needs.</p>
+                </div>
+            </div>
+            <div class="faq-item" role="listitem">
+                <button class="faq-question" aria-expanded="false">
+                    What should I bring to my first consultation?
+                    <span class="faq-icon" aria-hidden="true">+</span>
+                </button>
+                <div class="faq-answer" hidden>
+                    <p>Bring any documents directly relevant to your matter — contracts, correspondence, court papers, property records, or corporate documents as applicable. A brief written summary of the key facts and the outcome you are seeking is also very helpful. If you are unsure what to bring, our staff can advise when you call to schedule. Everything you share with us is strictly confidential under attorney-client privilege.</p>
+                </div>
+            </div>
+            <div class="faq-item" role="listitem">
+                <button class="faq-question" aria-expanded="false">
+                    Do you handle cases outside the local area?
+                    <span class="faq-icon" aria-hidden="true">+</span>
+                </button>
+                <div class="faq-answer" hidden>
+                    <p>Yes. While our primary office is in New York, our attorneys are licensed across multiple jurisdictions and we regularly handle matters throughout the United States. For jurisdictions where we are not admitted, we maintain trusted co-counsel relationships nationwide. In our core practice areas — corporate law, complex litigation, and intellectual property — we serve clients nationally and internationally.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Attorney Bio Modal -->
+    <div id="bio-modal" class="bio-modal-overlay" aria-hidden="true">
+        <div class="bio-modal-card" role="dialog" aria-modal="true" aria-labelledby="bio-modal-name">
+            <button class="bio-modal-close" aria-label="Close">&times;</button>
+            <div class="bio-modal-inner">
+                <div class="bio-modal-photo">
+                    <img id="bio-modal-img" src="" alt="">
+                </div>
+                <div class="bio-modal-content">
+                    <span id="bio-modal-title" class="bio-modal-attorney-title"></span>
+                    <h2 id="bio-modal-name" class="bio-modal-name"></h2>
+                    <div class="bio-modal-details">
+                        <div class="bio-detail">
+                            <span class="bio-detail-label">Bar Admissions</span>
+                            <span id="bio-modal-bar" class="bio-detail-value"></span>
+                        </div>
+                        <div class="bio-detail">
+                            <span class="bio-detail-label">Education</span>
+                            <span id="bio-modal-school" class="bio-detail-value"></span>
+                        </div>
+                        <div class="bio-detail">
+                            <span class="bio-detail-label">Experience</span>
+                            <span id="bio-modal-exp" class="bio-detail-value"></span>
+                        </div>
+                    </div>
+                    <div class="bio-modal-areas">
+                        <span class="bio-detail-label">Practice Areas</span>
+                        <div id="bio-modal-areas-list" class="bio-areas-list"></div>
+                    </div>
+                    <p id="bio-modal-bio" class="bio-modal-bio"></p>
+                    <a href="#contact" class="btn btn-primary bio-modal-cta">Schedule Consultation</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <footer class="footer">
         <div class="footer-content">
             <div class="footer-brand">
@@ -378,9 +479,9 @@
                 <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" title="Facebook">Facebook</a>
             </div>
             <div class="footer-legal">
-                <a href="mailto:privacy@sterlinglaw.com">Privacy Policy</a>
-                <a href="mailto:legal@sterlinglaw.com">Terms of Use</a>
-                <a href="mailto:disclaimer@sterlinglaw.com">Disclaimer</a>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Use</a>
+                <a href="#">Disclaimer</a>
             </div>
         </div>
     </footer>
