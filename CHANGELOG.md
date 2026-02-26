@@ -5,6 +5,47 @@ Format follows [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ---
 
+## [Unreleased] — 2026-02-26
+
+### Changed
+
+#### Site 01 — Minimalist Portfolio (`docs/sites/01-minimalist-portfolio/`)
+- **Project cards**: replaced external Dribbble/Behance links with in-page **case study modals** for all 6 projects (Lumina, Horizon, Mono Studio, Verve, Fragments, Nova); each modal shows full-width image, Challenge/Approach/Result sections, skill tags, and a "View Live" external link
+
+#### Site 03 — Tech Startup / Nexus AI (`docs/sites/03-tech-startup/`)
+- **Sign In** nav link: replaced `alert()` with a proper **Sign In modal** (email + password, forgot-password link, success state)
+- **Start Free Trial** (all instances): replaced `alert()` with a **Trial Signup modal** (first/last name, work email, company, plan select, password, terms checkbox, success confirmation)
+- **Watch Demo**: replaced `alert()` with a **Demo Preview modal** (CSS mock video player, description, trial CTA)
+- **Schedule a Demo**: replaced `alert()` with a **Schedule Demo modal** (full name, email, company, team size, date/time pickers generated dynamically, message, confirmation state)
+- **14 footer links**: removed all inline `alert()` calls; replaced with `href="https://example.com/nexus-[slug]"` + `target="_blank"`
+
+#### Site 04 — Fashion E-commerce / NOIR (`docs/sites/04-fashion-ecommerce/`)
+- **8 product cards**: replaced `onclick="alert(...)"` with `openProductModal({...})` — a full **Product Detail modal** (large image, color swatches, size selector, "Add to Cart" integrating with the existing cart sidebar, "Add to Wishlist" toast)
+- **"Read the Story" editorial button**: replaced `alert()` with a proper **Story modal** (image + editorial copy)
+- **12 footer links**: removed all `alert()` calls; replaced with `href="https://example.com/noir-[slug]"` + `target="_blank"`
+
+#### Site 05 — Travel Adventure / Wanderlust (`docs/sites/05-travel-adventure/`)
+- **5 destination cards**: replaced `onclick="alert(...)"` with `openDestinationModal(key)` — a full **Destination modal** per destination (hero image, quick-facts bar, description, highlights grid, CTA buttons) for Bali, Kyoto, Amalfi Coast, Maldives, Iceland
+- **5 story cards + hero "Read the Story"**: replaced `alert()` with `openStoryModal(key)` — a full **Story Reader modal** with article content, author, read time for all stories
+- **3 guide items**: converted to `href="https://example.com/wanderlust-[slug]"` external links
+- **8 footer links**: removed all `alert()` calls; replaced with external links
+
+#### Site 07 — Creative Agency / Studio Nova (`docs/sites/07-creative-agency/`)
+- **4 project cards**: replaced `example.com` external links with in-page **Case Study modals** (Lumina, Prism, Horizon, Apex) — each shows full image, Challenge/Approach/Result, skill tags, live link
+
+#### Site 09 — Music Festival / Horizon Fest (`docs/sites/09-music-festival/`)
+- **`showFAQ()`**: replaced `alert()` with a proper **FAQ accordion modal** (9 questions, expand/collapse)
+- **`showContact()`**: replaced `alert()` with a **Contact modal** (address, email, phone, contact form with validation + success state)
+- **`showFullLineup()`**: replaced `alert()` with a **Full Lineup modal** (day tabs Fri/Sat/Sun, 4 stages, 50+ artists, clickable rows)
+- **Artist cards**: all 12 artist cards now open an **Artist Detail modal** (bio, genre, time/stage badge, social links)
+- **Jobs / Press footer links**: replaced `alert()` with `href="https://example.com/horizonfest-[slug]"` + `target="_blank"`
+
+#### Site 10 — Law Firm / Sterling & Associates (`docs/sites/10-law-firm/`)
+- **Attorney bio modals**: all 4 team member cards now open a **Bio modal** (photo, name, bar admissions, law school, practice areas, bio text, "Schedule Consultation" CTA)
+- **FAQ section**: added a new `#faq` accordion section before the footer with 6 questions (fees, scheduling, case duration, payment plans, first consultation, regional coverage)
+
+---
+
 ## [Unreleased] — 2026-02-25
 
 ### Changed
