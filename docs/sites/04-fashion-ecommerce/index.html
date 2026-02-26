@@ -103,12 +103,12 @@
     <section id="new" class="products">
         <div class="section-header">
             <h2>New Arrivals</h2>
-            <a href="#new" class="view-all" onclick="alert('View all new arrivals products')">View All <span>&rarr;</span></a>
+            <a href="https://example.com/noir-new-arrivals" class="view-all" target="_blank" rel="noopener noreferrer">View All <span>&rarr;</span></a>
         </div>
 
         <div class="products-grid">
             <article class="product-card">
-                <a href="#" class="product-link" onclick="alert('Oversized Wool Blazer\n\nColor: Black\nSize: M\nPrice: $289\n\nAdd to cart functionality available via the Quick Add button'); return false;">
+                <a href="#" class="product-link" onclick="openProductModal({name:'Oversized Wool Blazer',category:'Women',price:289,colors:[{name:'Black',hex:'#1a1a1a'}],sizes:['XS','S','M','L','XL'],image:'https://images.unsplash.com/photo-1591047139829-d91aecb6caea?w=800&h=1040&fit=crop',description:'A contemporary take on the classic blazer, crafted from premium Italian wool. The oversized silhouette offers a modern, relaxed fit perfect for layering.'}); return false;">
                     <div class="product-image">
                         <img src="https://images.unsplash.com/photo-1591047139829-d91aecb6caea?w=500&h=650&fit=crop" alt="Oversized Blazer">
                         <img src="https://images.unsplash.com/photo-1594938298603-c8148c4dae35?w=500&h=650&fit=crop" alt="Oversized Blazer Alternate" class="product-image-hover">
@@ -127,7 +127,7 @@
             </article>
 
             <article class="product-card">
-                <a href="#" class="product-link" onclick="alert('Silk Drape Blouse\n\nColor: White\nSize: S\nPrice: $165\n\nAdd to cart functionality available via the Quick Add button'); return false;">
+                <a href="#" class="product-link" onclick="openProductModal({name:'Silk Drape Blouse',category:'Women',price:165,colors:[{name:'Ivory',hex:'#fffff0'},{name:'White',hex:'#f0f0f0'}],sizes:['XS','S','M','L','XL'],image:'https://images.unsplash.com/photo-1594938328870-9623159c8c99?w=800&h=1040&fit=crop',description:'Luxurious silk drape blouse with a fluid silhouette. The airy fabric flows beautifully, making it ideal for both day and evening wear.'}); return false;">
                     <div class="product-image">
                         <img src="https://images.unsplash.com/photo-1594938328870-9623159c8c99?w=500&h=650&fit=crop" alt="Silk Blouse">
                         <img src="https://images.unsplash.com/photo-1485968579580-b6d095142e6e?w=500&h=650&fit=crop" alt="Silk Blouse Alternate" class="product-image-hover">
@@ -145,7 +145,7 @@
             </article>
 
             <article class="product-card">
-                <a href="#" class="product-link" onclick="alert('High-Waist Trousers\n\nColor: Black\nSize: M\nPrice: $136 (was $195, -30% OFF)\n\nAdd to cart functionality available via the Quick Add button'); return false;">
+                <a href="#" class="product-link" onclick="openProductModal({name:'High-Waist Trousers',category:'Women',price:136,originalPrice:195,colors:[{name:'Black',hex:'#1a1a1a'}],sizes:['XS','S','M','L','XL'],image:'https://images.unsplash.com/photo-1584370848010-d7fe6bc767ec?w=800&h=1040&fit=crop',description:'Tailored high-waist trousers with a clean, structured silhouette. Cut from premium fabric with a flattering fit that elongates the figure.'}); return false;">
                     <div class="product-image">
                         <img src="https://images.unsplash.com/photo-1584370848010-d7fe6bc767ec?w=500&h=650&fit=crop" alt="Tailored Trousers">
                         <img src="https://images.unsplash.com/photo-1506629082955-511b1aa562c8?w=500&h=650&fit=crop" alt="Tailored Trousers Alternate" class="product-image-hover">
@@ -164,7 +164,7 @@
             </article>
 
             <article class="product-card">
-                <a href="#" class="product-link" onclick="alert('Mini Leather Bag\n\nColor: Tan\nPrice: $245\n\nAdd to cart functionality available via the Quick Add button'); return false;">
+                <a href="#" class="product-link" onclick="openProductModal({name:'Mini Leather Bag',category:'Accessories',price:245,colors:[{name:'Tan',hex:'#c8a882'},{name:'Brown',hex:'#8b6438'}],sizes:['One Size'],image:'https://images.unsplash.com/photo-1548036328-c9fa89d128fa?w=800&h=1040&fit=crop',description:'A compact mini bag crafted from full-grain leather. Features an adjustable crossbody strap, internal zip pocket, and gold-tone hardware.'}); return false;">
                     <div class="product-image">
                         <img src="https://images.unsplash.com/photo-1548036328-c9fa89d128fa?w=500&h=650&fit=crop" alt="Leather Bag">
                         <img src="https://images.unsplash.com/photo-1590874103328-eac38a683ce7?w=500&h=650&fit=crop" alt="Leather Bag Alternate" class="product-image-hover">
@@ -189,7 +189,7 @@
                 <span class="editorial-tag">Editorial</span>
                 <h2>The Pursuit of <em>Timeless</em> Design</h2>
                 <p>Our Spring/Summer collection draws inspiration from architectural minimalism and the natural world. Each piece is crafted to transcend seasons, becoming a lasting part of your wardrobe.</p>
-                <a href="#" class="btn btn-dark" onclick="alert('Editorial: The Pursuit of Timeless Design\n\nOur Spring/Summer collection showcases the intersection of modern design and sustainability. Click to read full story'); return false;">Read the Story</a>
+                <a href="#" class="btn btn-dark" onclick="openStoryModal(); return false;">Read the Story</a>
             </div>
             <div class="editorial-image">
                 <img src="https://images.unsplash.com/photo-1509631179647-0177331693ae?w=800&h=1000&fit=crop" alt="Editorial fashion">
@@ -209,7 +209,7 @@
 
         <div class="products-grid">
             <article class="product-card">
-                <a href="#" class="product-link" onclick="alert('Cashmere Crewneck\n\nColors: Black, Tan, Beige\nSize: M\nPrice: $320\n\nAdd to cart functionality available via the Quick Add button'); return false;">
+                <a href="#" class="product-link" onclick="openProductModal({name:'Cashmere Crewneck',category:'Women',price:320,colors:[{name:'Black',hex:'#1a1a1a'},{name:'Tan',hex:'#8b7355'},{name:'Beige',hex:'#f5f5dc'}],sizes:['XS','S','M','L','XL'],image:'https://images.unsplash.com/photo-1434389677669-e08b4cac3105?w=800&h=1040&fit=crop',description:'An everyday essential crafted from pure Grade-A cashmere. Exceptionally soft with a classic crewneck fit that transitions seamlessly from casual to refined.'}); return false;">
                     <div class="product-image">
                         <img src="https://images.unsplash.com/photo-1434389677669-e08b4cac3105?w=500&h=650&fit=crop" alt="Cashmere Sweater">
                         <button class="quick-add" aria-label="Quick add">
@@ -231,7 +231,7 @@
             </article>
 
             <article class="product-card">
-                <a href="#" class="product-link" onclick="alert('Double-Breasted Coat (Bestseller)\n\nColor: Camel\nSize: M\nPrice: $495\n\nAdd to cart functionality available via the Quick Add button'); return false;">
+                <a href="#" class="product-link" onclick="openProductModal({name:'Double-Breasted Coat',category:'Bestseller',price:495,colors:[{name:'Camel',hex:'#c19a6b'}],sizes:['XS','S','M','L','XL'],image:'https://images.unsplash.com/photo-1539109136881-3be0616acf4b?w=800&h=1040&fit=crop',description:'Our signature double-breasted coat, tailored in a luxurious camel wool blend. A timeless investment piece with peak lapels and structured shoulders.'}); return false;">
                     <div class="product-image">
                         <img src="https://images.unsplash.com/photo-1539109136881-3be0616acf4b?w=500&h=650&fit=crop" alt="Wool Coat">
                         <span class="product-badge">Bestseller</span>
@@ -249,7 +249,7 @@
             </article>
 
             <article class="product-card">
-                <a href="#" class="product-link" onclick="alert('Leather Low-Top Sneakers\n\nColor: White\nSize: 10\nPrice: $185\n\nAdd to cart functionality available via the Quick Add button'); return false;">
+                <a href="#" class="product-link" onclick="openProductModal({name:'Leather Low-Top Sneakers',category:'Footwear',price:185,colors:[{name:'White',hex:'#f8f8f8'}],sizes:['7','8','9','10','11','12'],image:'https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=800&h=1040&fit=crop',description:'Clean, minimal leather sneakers built for everyday wear. Hand-finished with premium leather upper and cushioned insole for all-day comfort.'}); return false;">
                     <div class="product-image">
                         <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=500&h=650&fit=crop" alt="Sneakers">
                         <button class="quick-add" aria-label="Quick add">
@@ -266,7 +266,7 @@
             </article>
 
             <article class="product-card">
-                <a href="#" class="product-link" onclick="alert('Minimalist Watch\n\nColor: Silver\nPrice: $275\n\nAdd to cart functionality available via the Quick Add button'); return false;">
+                <a href="#" class="product-link" onclick="openProductModal({name:'Minimalist Watch',category:'Accessories',price:275,colors:[{name:'Silver',hex:'#c0c0c0'}],sizes:['One Size'],image:'https://images.unsplash.com/photo-1556306535-0f09a537f0a3?w=800&h=1040&fit=crop',description:'A refined minimalist watch with a slim stainless-steel case and clean dial. Swiss movement with sapphire crystal glass and a genuine leather strap.'}); return false;">
                     <div class="product-image">
                         <img src="https://images.unsplash.com/photo-1556306535-0f09a537f0a3?w=500&h=650&fit=crop" alt="Watch">
                         <button class="quick-add" aria-label="Quick add">
@@ -355,33 +355,102 @@
                     <a href="#men">Men</a>
                     <a href="#accessories">Accessories</a>
                     <a href="#new">New Arrivals</a>
-                    <a href="#" onclick="alert('Sale section coming soon!'); return false;">Sale</a>
+                    <a href="https://example.com/noir-sale" target="_blank" rel="noopener noreferrer">Sale</a>
                 </div>
                 <div class="footer-column">
                     <h4>Help</h4>
-                    <a href="#" onclick="alert('Size Guide\n\nWomen: XS (0-2), S (4-6), M (8-10), L (12-14)\nMen: XS (32-34), S (34-36), M (38-40), L (42-44)'); return false;">Size Guide</a>
-                    <a href="#" onclick="alert('Shipping Information\n\nStandard Shipping: 5-7 business days\nExpress Shipping: 2-3 business days\nFree shipping on orders over $150'); return false;">Shipping</a>
-                    <a href="#" onclick="alert('Returns & Exchanges\n\n30-day return policy on all items in original condition\nFree return shipping on orders over $100'); return false;">Returns</a>
-                    <a href="#" onclick="alert('Frequently Asked Questions\n\nContact our support team at support@noir.com or call 1-800-NOIR-SHOP'); return false;">FAQ</a>
-                    <a href="#" onclick="alert('Contact NOIR\n\nEmail: support@noir.com\nPhone: 1-800-NOIR-SHOP\nHours: Mon-Fri 9AM-6PM EST'); return false;">Contact</a>
+                    <a href="https://example.com/noir-size-guide" target="_blank" rel="noopener noreferrer">Size Guide</a>
+                    <a href="https://example.com/noir-shipping" target="_blank" rel="noopener noreferrer">Shipping</a>
+                    <a href="https://example.com/noir-returns" target="_blank" rel="noopener noreferrer">Returns</a>
+                    <a href="https://example.com/noir-faq" target="_blank" rel="noopener noreferrer">FAQ</a>
+                    <a href="https://example.com/noir-contact" target="_blank" rel="noopener noreferrer">Contact</a>
                 </div>
                 <div class="footer-column">
                     <h4>About</h4>
-                    <a href="#" onclick="alert('Our Story\n\nNOIR is dedicated to creating contemporary fashion that celebrates timeless design principles and sustainable craftsmanship.'); return false;">Our Story</a>
-                    <a href="#" onclick="alert('Sustainability\n\nWe are committed to ethical production practices and environmentally responsible materials. Learn more about our initiatives.'); return false;">Sustainability</a>
-                    <a href="#" onclick="alert('Find Our Stores\n\nLocations in: New York, Los Angeles, Chicago, Miami, and London'); return false;">Stores</a>
-                    <a href="#" onclick="alert('Join Our Team\n\nNOIR is always looking for talented individuals. View open positions and apply today!'); return false;">Careers</a>
+                    <a href="https://example.com/noir-our-story" target="_blank" rel="noopener noreferrer">Our Story</a>
+                    <a href="https://example.com/noir-sustainability" target="_blank" rel="noopener noreferrer">Sustainability</a>
+                    <a href="https://example.com/noir-stores" target="_blank" rel="noopener noreferrer">Stores</a>
+                    <a href="https://example.com/noir-careers" target="_blank" rel="noopener noreferrer">Careers</a>
                 </div>
             </div>
         </div>
         <div class="footer-bottom">
             <span>&copy; 2024 NOIR. All rights reserved.</span>
             <div class="footer-legal">
-                <a href="#" onclick="alert('Privacy Policy\n\nWe respect your privacy. Read our complete privacy policy for details on how we collect and use your data.'); return false;">Privacy Policy</a>
-                <a href="#" onclick="alert('Terms of Service\n\nBy using our site, you agree to our terms and conditions. Please read them carefully.'); return false;">Terms of Service</a>
+                <a href="https://example.com/noir-privacy-policy" target="_blank" rel="noopener noreferrer">Privacy Policy</a>
+                <a href="https://example.com/noir-terms-of-service" target="_blank" rel="noopener noreferrer">Terms of Service</a>
             </div>
         </div>
     </footer>
+
+    <!-- Product Detail Modal -->
+    <div id="product-modal" class="product-modal" aria-hidden="true" role="dialog" aria-labelledby="product-modal-name">
+        <div class="product-modal-overlay"></div>
+        <div class="product-modal-dialog">
+            <button class="product-modal-close" aria-label="Close modal">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <path d="M18 6L6 18M6 6l12 12"/>
+                </svg>
+            </button>
+            <div class="product-modal-body">
+                <div class="product-modal-image-col">
+                    <img id="product-modal-img" src="" alt="">
+                </div>
+                <div class="product-modal-details-col">
+                    <span id="product-modal-category" class="product-modal-category"></span>
+                    <h2 id="product-modal-name" class="product-modal-name"></h2>
+                    <div id="product-modal-price" class="product-modal-price"></div>
+                    <div class="product-modal-section">
+                        <p class="product-modal-label">Color: <span id="product-modal-color-name"></span></p>
+                        <div id="product-modal-colors" class="product-modal-colors"></div>
+                    </div>
+                    <div class="product-modal-section">
+                        <p class="product-modal-label">Size</p>
+                        <div id="product-modal-sizes" class="product-modal-sizes"></div>
+                    </div>
+                    <p id="product-modal-description" class="product-modal-description"></p>
+                    <div class="product-modal-actions">
+                        <button id="product-modal-add-to-cart" class="btn btn-primary product-modal-cart-btn">Add to Cart</button>
+                        <button id="product-modal-wishlist" class="product-modal-wishlist-btn" aria-label="Add to Wishlist">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/>
+                            </svg>
+                            Add to Wishlist
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Story Modal -->
+    <div id="story-modal" class="story-modal" aria-hidden="true" role="dialog">
+        <div class="story-modal-overlay"></div>
+        <div class="story-modal-dialog">
+            <button class="story-modal-close" aria-label="Close">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <path d="M18 6L6 18M6 6l12 12"/>
+                </svg>
+            </button>
+            <div class="story-modal-inner">
+                <div class="story-modal-image">
+                    <img src="https://images.unsplash.com/photo-1509631179647-0177331693ae?w=800&h=1000&fit=crop" alt="Editorial fashion">
+                </div>
+                <div class="story-modal-content">
+                    <span class="editorial-tag">Editorial</span>
+                    <h2>The Pursuit of <em>Timeless</em> Design</h2>
+                    <p>Our Spring/Summer collection draws inspiration from architectural minimalism and the natural world — clean lines, refined proportions, and an intentional restraint in both material and form.</p>
+                    <p>Each piece begins with a question: will this still feel right in ten years? We partner with artisan workshops in Italy and Portugal, sourcing only Grade-A wools, silks, and full-grain leathers.</p>
+                    <p>This season we explore the tension between structure and softness — oversized blazers paired with fluid silk, tailored trousers softened by draped tops. The collection invites you to dress with intention.</p>
+                    <blockquote class="story-blockquote">"Good design is as little design as possible." — Dieter Rams</blockquote>
+                    <a href="https://example.com/noir-editorial" target="_blank" rel="noopener noreferrer" class="btn btn-dark">Read Full Story</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="toast" aria-live="polite"></div>
 
     <!-- Cart Overlay -->
     <div class="cart-overlay"></div>
