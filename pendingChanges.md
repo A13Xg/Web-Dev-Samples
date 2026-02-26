@@ -15,6 +15,7 @@
 ## Additional Change Details
 
 ### Details for CHG-001:
-* Combine the current stlye of Cosmic Concrete with the existing style of Space Galaxy to create a 'best of both' theme.
-* Modify the Cosmic Concrete to feature more grey and sharp geometric corners to fit the concrete design.
-
+1. Cosmic Concrete vs Space Galaxy
+    - Combine the current stlye of Cosmic Concrete with the existing style of Space Galaxy to create a 'best of both' theme.
+2. Modify the Cosmic Concrete 
+    - Change style to feature more grey and sharp geometric corners to fit the concrete design, while still maintaining the dark blue, purple, and star shimmer style.
