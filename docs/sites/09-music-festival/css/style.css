@@ -764,3 +764,410 @@ section {
         gap: 1.5rem;
     }
 }
+
+/* ===== MODALS (shared base) ===== */
+.modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.82);
+    z-index: 10000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    overflow-y: auto;
+}
+
+.modal-container {
+    background: #0f0f1a;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 16px;
+    padding: 2.5rem 2rem;
+    width: 100%;
+    max-width: 600px;
+    position: relative;
+    max-height: 90vh;
+    overflow-y: auto;
+    margin: auto;
+}
+
+.modal-close {
+    position: absolute;
+    top: 1rem;
+    right: 1.25rem;
+    background: none;
+    border: none;
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 1.75rem;
+    cursor: pointer;
+    line-height: 1;
+    z-index: 10;
+    transition: color var(--transition);
+}
+
+.modal-close:hover { color: #fff; }
+
+.modal-title {
+    font-family: var(--font-display);
+    font-size: 1.75rem;
+    font-weight: 800;
+    margin-bottom: 0.4rem;
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.modal-subtitle {
+    color: var(--color-text-muted);
+    font-size: 0.9rem;
+    margin-bottom: 2rem;
+}
+
+/* ===== FAQ MODAL ===== */
+.faq-list { list-style: none; }
+
+.faq-item {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.faq-item:last-child { border-bottom: none; }
+
+.faq-question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    background: none;
+    border: none;
+    color: #fff;
+    font-family: var(--font-body);
+    font-size: 0.95rem;
+    font-weight: 600;
+    text-align: left;
+    padding: 1.1rem 0;
+    cursor: pointer;
+    gap: 1rem;
+    transition: color var(--transition);
+}
+
+.faq-question:hover { color: var(--color-primary); }
+
+.faq-icon {
+    flex-shrink: 0;
+    width: 22px;
+    height: 22px;
+    border: 2px solid currentColor;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+    line-height: 1;
+    transition: transform var(--transition);
+    font-style: normal;
+}
+
+.faq-item.open .faq-icon { transform: rotate(45deg); }
+
+.faq-answer {
+    color: var(--color-text-muted);
+    font-size: 0.9rem;
+    line-height: 1.75;
+    padding: 0 1rem 1.1rem 0;
+    display: none;
+}
+
+.faq-item.open .faq-answer { display: block; }
+
+/* ===== CONTACT MODAL ===== */
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.9rem;
+    margin-bottom: 1.75rem;
+}
+
+.contact-info-item {
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 10px;
+    padding: 0.9rem 1.1rem;
+}
+
+.contact-label {
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--color-primary);
+    margin-bottom: 0.3rem;
+    font-weight: 700;
+}
+
+.contact-value {
+    font-size: 0.88rem;
+    color: #fff;
+    word-break: break-word;
+}
+
+.contact-divider {
+    border: none;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    margin: 0 0 1.5rem;
+}
+
+.contact-form-title {
+    font-family: var(--font-display);
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 1.1rem;
+    color: rgba(255, 255, 255, 0.85);
+}
+
+.contact-field { margin-bottom: 1rem; }
+
+.contact-field label {
+    display: block;
+    font-size: 0.8rem;
+    color: var(--color-text-muted);
+    margin-bottom: 0.35rem;
+}
+
+.contact-field input,
+.contact-field textarea,
+.contact-field select {
+    width: 100%;
+    padding: 0.65rem 0.9rem;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    color: #fff;
+    font-size: 0.9rem;
+    font-family: var(--font-body);
+    box-sizing: border-box;
+    transition: border-color var(--transition);
+}
+
+.contact-field select option { background: #1a1a2e; }
+
+.contact-field input:focus,
+.contact-field textarea:focus,
+.contact-field select:focus {
+    outline: none;
+    border-color: var(--color-primary);
+}
+
+.contact-field textarea { resize: vertical; min-height: 100px; }
+
+.contact-success {
+    text-align: center;
+    padding: 2rem 0 1rem;
+}
+
+.contact-success-icon {
+    width: 60px;
+    height: 60px;
+    background: var(--gradient-primary);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.75rem;
+    margin: 0 auto 1.25rem;
+    color: var(--color-bg);
+}
+
+.contact-success h3 {
+    font-family: var(--font-display);
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: #fff;
+}
+
+.contact-success p {
+    color: var(--color-text-muted);
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+/* ===== ARTIST MODAL ===== */
+.artist-modal-hero {
+    width: calc(100% + 4rem);
+    margin: -2.5rem -2rem 0;
+    border-radius: 16px 16px 0 0;
+    overflow: hidden;
+    height: 240px;
+    position: relative;
+}
+
+.artist-modal-hero img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.artist-modal-hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(15, 15, 26, 1) 0%, rgba(15, 15, 26, 0.3) 55%, transparent 100%);
+}
+
+.artist-modal-name {
+    position: absolute;
+    bottom: 1.25rem;
+    left: 1.5rem;
+    right: 1.5rem;
+    font-family: var(--font-display);
+    font-size: 2rem;
+    font-weight: 900;
+    color: #fff;
+    text-shadow: 0 2px 12px rgba(0, 0, 0, 0.5);
+}
+
+.artist-modal-no-hero {
+    padding-top: 0.5rem;
+    margin-bottom: 0.25rem;
+}
+
+.artist-modal-name-top {
+    font-family: var(--font-display);
+    font-size: 2rem;
+    font-weight: 900;
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 0.25rem;
+}
+
+.artist-modal-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+    margin: 1.25rem 0 1.1rem;
+}
+
+.artist-modal-tag {
+    background: rgba(255, 0, 255, 0.12);
+    border: 1px solid rgba(255, 0, 255, 0.35);
+    color: var(--color-primary);
+    padding: 0.3rem 0.85rem;
+    border-radius: 100px;
+    font-size: 0.78rem;
+    font-weight: 600;
+}
+
+.artist-modal-time {
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: rgba(255, 255, 255, 0.75);
+    padding: 0.3rem 0.85rem;
+    border-radius: 100px;
+    font-size: 0.78rem;
+}
+
+.artist-modal-bio {
+    color: var(--color-text-muted);
+    font-size: 0.9rem;
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+}
+
+.artist-modal-socials {
+    display: flex;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+}
+
+.artist-modal-socials a {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    padding: 0.5rem 1rem;
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.8);
+    transition: var(--transition);
+    text-decoration: none;
+}
+
+.artist-modal-socials a:hover {
+    border-color: var(--color-primary);
+    color: var(--color-primary);
+}
+
+/* ===== FULL LINEUP MODAL ===== */
+.lineup-modal-days {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 1.75rem;
+    flex-wrap: wrap;
+}
+
+.lineup-modal-day-btn {
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    color: rgba(255, 255, 255, 0.7);
+    padding: 0.45rem 1.1rem;
+    border-radius: 100px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    cursor: pointer;
+    font-family: var(--font-body);
+    transition: var(--transition);
+}
+
+.lineup-modal-day-btn.active,
+.lineup-modal-day-btn:hover {
+    background: var(--gradient-primary);
+    border-color: transparent;
+    color: var(--color-bg);
+}
+
+.lineup-modal-stage { margin-bottom: 1.75rem; }
+
+.lineup-modal-stage-name {
+    font-size: 0.72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: var(--color-primary);
+    margin-bottom: 0.6rem;
+    padding-bottom: 0.4rem;
+    border-bottom: 1px solid rgba(255, 0, 255, 0.2);
+}
+
+.lineup-modal-artist {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.55rem 0.25rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    transition: padding-left var(--transition);
+}
+
+.lineup-modal-artist--known { cursor: pointer; }
+
+.lineup-modal-artist--known:hover { padding-left: 0.75rem; }
+
+.lineup-modal-artist--known:hover .lm-artist-name { color: var(--color-primary); }
+
+.lm-artist-name {
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: color var(--transition);
+}
+
+.lm-artist-meta {
+    font-size: 0.8rem;
+    color: var(--color-text-muted);
+}
+
+@media (max-width: 560px) {
+    .contact-grid { grid-template-columns: 1fr; }
+    .artist-modal-name { font-size: 1.5rem; }
+    .artist-modal-name-top { font-size: 1.5rem; }
+}

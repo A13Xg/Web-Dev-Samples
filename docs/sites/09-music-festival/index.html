@@ -77,7 +77,7 @@
             <div class="lineup-day">
                 <h3>Friday</h3>
                 <div class="artists">
-                    <div class="artist artist-headliner">
+                    <div class="artist artist-headliner" onclick="showArtist('The Echoes')" style="cursor:pointer">
                         <img src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=600&h=600&fit=crop" alt="The Echoes">
                         <div class="artist-info">
                             <span class="artist-time">10:00 PM</span>
@@ -85,15 +85,15 @@
                             <span class="artist-stage">Main Stage</span>
                         </div>
                     </div>
-                    <div class="artist">
+                    <div class="artist" onclick="showArtist('Luna Nova')" style="cursor:pointer">
                         <h4>Luna Nova</h4>
                         <span>8:00 PM • Horizon Stage</span>
                     </div>
-                    <div class="artist">
+                    <div class="artist" onclick="showArtist('DJ Prism')" style="cursor:pointer">
                         <h4>DJ Prism</h4>
                         <span>6:30 PM • Electric Tent</span>
                     </div>
-                    <div class="artist">
+                    <div class="artist" onclick="showArtist('Solar Winds')" style="cursor:pointer">
                         <h4>Solar Winds</h4>
                         <span>5:00 PM • Main Stage</span>
                     </div>
@@ -103,7 +103,7 @@
             <div class="lineup-day">
                 <h3>Saturday</h3>
                 <div class="artists">
-                    <div class="artist artist-headliner">
+                    <div class="artist artist-headliner" onclick="showArtist('Neon Dreams')" style="cursor:pointer">
                         <img src="https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?w=600&h=600&fit=crop" alt="Neon Dreams">
                         <div class="artist-info">
                             <span class="artist-time">10:00 PM</span>
@@ -111,15 +111,15 @@
                             <span class="artist-stage">Main Stage</span>
                         </div>
                     </div>
-                    <div class="artist">
+                    <div class="artist" onclick="showArtist('Velocity')" style="cursor:pointer">
                         <h4>Velocity</h4>
                         <span>8:00 PM • Horizon Stage</span>
                     </div>
-                    <div class="artist">
+                    <div class="artist" onclick="showArtist('Crystal Lake')" style="cursor:pointer">
                         <h4>Crystal Lake</h4>
                         <span>6:30 PM • Acoustic Grove</span>
                     </div>
-                    <div class="artist">
+                    <div class="artist" onclick="showArtist('Binary Code')" style="cursor:pointer">
                         <h4>Binary Code</h4>
                         <span>5:00 PM • Electric Tent</span>
                     </div>
@@ -129,7 +129,7 @@
             <div class="lineup-day">
                 <h3>Sunday</h3>
                 <div class="artists">
-                    <div class="artist artist-headliner">
+                    <div class="artist artist-headliner" onclick="showArtist('Midnight Sun')" style="cursor:pointer">
                         <img src="https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?w=600&h=600&fit=crop" alt="Midnight Sun">
                         <div class="artist-info">
                             <span class="artist-time">9:00 PM</span>
@@ -137,15 +137,15 @@
                             <span class="artist-stage">Main Stage</span>
                         </div>
                     </div>
-                    <div class="artist">
+                    <div class="artist" onclick="showArtist('Aurora')" style="cursor:pointer">
                         <h4>Aurora</h4>
                         <span>7:30 PM • Horizon Stage</span>
                     </div>
-                    <div class="artist">
+                    <div class="artist" onclick="showArtist('The Satellites')" style="cursor:pointer">
                         <h4>The Satellites</h4>
                         <span>6:00 PM • Main Stage</span>
                     </div>
-                    <div class="artist">
+                    <div class="artist" onclick="showArtist('Cosmic Rays')" style="cursor:pointer">
                         <h4>Cosmic Rays</h4>
                         <span>4:30 PM • Electric Tent</span>
                     </div>
@@ -332,8 +332,8 @@
                 <a href="#tickets">Tickets</a>
                 <a href="javascript:void(0)" onclick="showFAQ()">FAQ</a>
                 <a href="javascript:void(0)" onclick="showContact()">Contact</a>
-                <a href="javascript:void(0)" onclick="alert('Check our careers page at horizonfest.com/jobs')">Jobs</a>
-                <a href="javascript:void(0)" onclick="alert('Press inquiries: press@horizonfest.com')">Press</a>
+                <a href="https://example.com/horizonfest-jobs" target="_blank" rel="noopener noreferrer">Jobs</a>
+                <a href="https://example.com/horizonfest-press" target="_blank" rel="noopener noreferrer">Press</a>
             </div>
         </div>
         <div class="footer-bottom">
@@ -455,6 +455,146 @@
     .ticket-confirm-details span { color: rgba(255,255,255,0.55); }
     .ticket-confirm-details strong { color: #fff; }
     </style>
+
+    <!-- FAQ Modal -->
+    <div id="faq-modal" class="modal-overlay" style="display:none;" onclick="closeModal('faq-modal',event)" role="dialog" aria-modal="true" aria-labelledby="faq-modal-title">
+        <div class="modal-container">
+            <button class="modal-close" onclick="closeModal('faq-modal')" aria-label="Close">&times;</button>
+            <h2 class="modal-title" id="faq-modal-title">FAQ</h2>
+            <p class="modal-subtitle">Everything you need to know before you go.</p>
+            <ul class="faq-list">
+                <li class="faq-item">
+                    <button class="faq-question" onclick="toggleFAQ(this)">What should I bring?<span class="faq-icon">+</span></button>
+                    <div class="faq-answer">Tickets (digital or print), a valid government-issued ID, sunscreen, comfortable shoes, a reusable water bottle, and a poncho for unpredictable weather. Small blankets and low-back folding chairs are welcome on the lawn areas.</div>
+                </li>
+                <li class="faq-item">
+                    <button class="faq-question" onclick="toggleFAQ(this)">Are there camping options?<span class="faq-icon">+</span></button>
+                    <div class="faq-answer">Yes! On-site camping is available adjacent to the festival grounds. Options include general tent camping, car camping (vehicle + tent), and premium glamping packages with pre-pitched bell tents and bedding. Camping passes are sold separately from festival tickets.</div>
+                </li>
+                <li class="faq-item">
+                    <button class="faq-question" onclick="toggleFAQ(this)">Can I bring outside food or drinks?<span class="faq-icon">+</span></button>
+                    <div class="faq-answer">Outside beverages (except factory-sealed water bottles) are not permitted. Our Culinary Village features 50+ food vendors spanning every taste and dietary need, from vegan bowls to wood-fired pizza. Snack bars and craft beverages are available throughout the grounds.</div>
+                </li>
+                <li class="faq-item">
+                    <button class="faq-question" onclick="toggleFAQ(this)">What is the parking situation?<span class="faq-icon">+</span></button>
+                    <div class="faq-answer">Free general parking is available in Lots A–D off Festival Way. ADA-accessible spots are in Lot A, nearest the main entrance. We strongly encourage carpooling. Shuttles run from Sunset Valley Transit Center every 20 minutes, 12PM–3AM each day.</div>
+                </li>
+                <li class="faq-item">
+                    <button class="faq-question" onclick="toggleFAQ(this)">Are tickets refundable?<span class="faq-icon">+</span></button>
+                    <div class="faq-answer">All ticket sales are final — no refunds are issued. However, tickets are fully transferable. You can transfer your ticket to another person via the Horizon Fest app up to 24 hours before the event.</div>
+                </li>
+                <li class="faq-item">
+                    <button class="faq-question" onclick="toggleFAQ(this)">What happens if it rains?<span class="faq-icon">+</span></button>
+                    <div class="faq-answer">Horizon Fest is a rain-or-shine event and the show goes on in light rain — we recommend bringing a compact poncho. In the event of severe weather or lightning, all stage performances will pause and attendees will be directed to designated shelter zones on the grounds.</div>
+                </li>
+                <li class="faq-item">
+                    <button class="faq-question" onclick="toggleFAQ(this)">Are dogs allowed?<span class="faq-icon">+</span></button>
+                    <div class="faq-answer">We love animals, but only trained service animals with proper documentation are permitted on the festival grounds. Please contact us at info@horizonfest.com if you have any questions regarding service animal access.</div>
+                </li>
+                <li class="faq-item">
+                    <button class="faq-question" onclick="toggleFAQ(this)">Can I re-enter after leaving?<span class="faq-icon">+</span></button>
+                    <div class="faq-answer">Yes! Re-entry is allowed each day. Upon exit, present your wristband for a hand stamp. Wristbands are issued at check-in and must be worn at all times. Lost or removed wristbands cannot be replaced without a purchase receipt.</div>
+                </li>
+                <li class="faq-item">
+                    <button class="faq-question" onclick="toggleFAQ(this)">Is the festival accessible?<span class="faq-icon">+</span></button>
+                    <div class="faq-answer">Horizon Fest is committed to full accessibility. The grounds include paved accessible pathways, dedicated viewing platforms at every stage, accessible restrooms, and an Accessibility Services tent near the main entrance. Email access@horizonfest.com to arrange support in advance.</div>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Contact Modal -->
+    <div id="contact-modal" class="modal-overlay" style="display:none;" onclick="closeModal('contact-modal',event)" role="dialog" aria-modal="true" aria-labelledby="contact-modal-title">
+        <div class="modal-container">
+            <button class="modal-close" onclick="closeModal('contact-modal')" aria-label="Close">&times;</button>
+            <h2 class="modal-title" id="contact-modal-title">Contact Us</h2>
+            <p class="modal-subtitle">We'd love to hear from you. Reach out via any of the channels below.</p>
+            <div class="contact-grid">
+                <div class="contact-info-item">
+                    <div class="contact-label">General Inquiries</div>
+                    <div class="contact-value">info@horizonfest.com</div>
+                </div>
+                <div class="contact-info-item">
+                    <div class="contact-label">Phone</div>
+                    <div class="contact-value">1-800-HORIZON-1</div>
+                </div>
+                <div class="contact-info-item">
+                    <div class="contact-label">Address</div>
+                    <div class="contact-value">1 Festival Way, Sunset Valley, CA 94025</div>
+                </div>
+                <div class="contact-info-item">
+                    <div class="contact-label">Press &amp; Media</div>
+                    <div class="contact-value">press@horizonfest.com</div>
+                </div>
+                <div class="contact-info-item">
+                    <div class="contact-label">Artist Bookings</div>
+                    <div class="contact-value">booking@horizonfest.com</div>
+                </div>
+                <div class="contact-info-item">
+                    <div class="contact-label">Follow Us</div>
+                    <div class="contact-value">@horizonfest on all platforms</div>
+                </div>
+            </div>
+            <hr class="contact-divider">
+            <div id="contact-form-wrap">
+                <p class="contact-form-title">Send a Message</p>
+                <div class="contact-field">
+                    <label for="contact-name">Name</label>
+                    <input type="text" id="contact-name" placeholder="Your full name" autocomplete="name">
+                </div>
+                <div class="contact-field">
+                    <label for="contact-email">Email</label>
+                    <input type="email" id="contact-email" placeholder="you@example.com" autocomplete="email">
+                </div>
+                <div class="contact-field">
+                    <label for="contact-subject">Subject</label>
+                    <select id="contact-subject">
+                        <option value="">Select a topic&hellip;</option>
+                        <option>General Question</option>
+                        <option>Ticket Support</option>
+                        <option>Press &amp; Media</option>
+                        <option>Artist Booking</option>
+                        <option>Accessibility</option>
+                        <option>Sponsorship</option>
+                        <option>Other</option>
+                    </select>
+                </div>
+                <div class="contact-field">
+                    <label for="contact-message">Message</label>
+                    <textarea id="contact-message" placeholder="How can we help?"></textarea>
+                </div>
+                <div id="contact-error" style="color:#f87171;font-size:0.85rem;margin-bottom:0.75rem;display:none;"></div>
+                <button class="btn btn-primary btn-full" onclick="submitContactForm()">Send Message</button>
+            </div>
+            <div id="contact-success-wrap" style="display:none;" class="contact-success">
+                <div class="contact-success-icon">&#10003;</div>
+                <h3>Message Sent!</h3>
+                <p>Thanks for reaching out. We'll get back to you at <strong id="contact-confirm-email"></strong> within 2 business days.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Artist Detail Modal -->
+    <div id="artist-modal" class="modal-overlay" style="display:none;" onclick="closeModal('artist-modal',event)" role="dialog" aria-modal="true">
+        <div class="modal-container" id="artist-modal-inner">
+            <!-- content injected by showArtist() -->
+        </div>
+    </div>
+
+    <!-- Full Lineup Modal -->
+    <div id="lineup-modal" class="modal-overlay" style="display:none;" onclick="closeModal('lineup-modal',event)" role="dialog" aria-modal="true" aria-labelledby="lineup-modal-title">
+        <div class="modal-container" style="max-width:680px;">
+            <button class="modal-close" onclick="closeModal('lineup-modal')" aria-label="Close">&times;</button>
+            <h2 class="modal-title" id="lineup-modal-title">Full Lineup</h2>
+            <p class="modal-subtitle">50+ artists across 4 stages &mdash; August 16&ndash;18, 2024</p>
+            <div class="lineup-modal-days">
+                <button class="lineup-modal-day-btn active" onclick="switchLineupDay('friday',this)">Fri Aug 16</button>
+                <button class="lineup-modal-day-btn" onclick="switchLineupDay('saturday',this)">Sat Aug 17</button>
+                <button class="lineup-modal-day-btn" onclick="switchLineupDay('sunday',this)">Sun Aug 18</button>
+            </div>
+            <div id="lineup-modal-content"></div>
+        </div>
+    </div>
 
     <script src="js/main.js"></script>
 </body>
