@@ -3,7 +3,7 @@
 <div align="center">
 
 ![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)
-![Templates](https://img.shields.io/badge/Templates-13-blueviolet.svg)
+![Templates](https://img.shields.io/badge/Templates-65-blueviolet.svg)
 ![Status](https://img.shields.io/badge/Status-Active-success.svg)
 [![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Live-brightgreen.svg)](https://a13xg.github.io/Web-Dev-Samples/)
 [![Changelog](https://img.shields.io/badge/Changelog-View-informational.svg)](CHANGELOG.md)
