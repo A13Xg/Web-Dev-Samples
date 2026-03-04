@@ -174,3 +174,213 @@ const chartContainer = document.querySelector('.chart-container');
 if (chartContainer) {
     dashboardObserver.observe(chartContainer);
 }
+
+// ===== MODAL SYSTEM =====
+
+function openModal(id) {
+    const overlay = document.getElementById(id);
+    if (!overlay) return;
+    overlay.classList.add('active');
+    document.body.style.overflow = 'hidden';
+    const focusable = overlay.querySelector('input, select, textarea, button:not(.modal-close)');
+    if (focusable) setTimeout(() => focusable.focus(), 50);
+}
+
+function closeModal(id) {
+    const overlay = document.getElementById(id);
+    if (!overlay) return;
+    overlay.classList.remove('active');
+    document.body.style.overflow = '';
+}
+
+function resetModal(id) {
+    const overlay = document.getElementById(id);
+    if (!overlay) return;
+    const form = overlay.querySelector('form');
+    if (form) form.reset();
+    const success = overlay.querySelector('.modal-success');
+    if (success) success.classList.remove('visible');
+    const formContent = overlay.querySelector('.modal-form-content');
+    if (formContent) formContent.style.display = '';
+    overlay.querySelectorAll('.field-error').forEach(el => el.classList.remove('visible'));
+    overlay.querySelectorAll('.error').forEach(el => el.classList.remove('error'));
+}
+
+function showSuccess(modalId, successId) {
+    const formContent = document.querySelector(`#${modalId} .modal-form-content`);
+    const success = document.getElementById(successId);
+    if (formContent) formContent.style.display = 'none';
+    if (success) success.classList.add('visible');
+}
+
+function openSignInModal() {
+    resetModal('modal-signin');
+    // Restore forgot password link visibility
+    const forgotLink = document.querySelector('#modal-signin .forgot-link');
+    const forgotSuccess = document.querySelector('#modal-signin .forgot-success');
+    if (forgotLink) forgotLink.hidden = false;
+    if (forgotSuccess) forgotSuccess.hidden = true;
+    openModal('modal-signin');
+}
+
+function openTrialModal(plan) {
+    resetModal('modal-trial');
+    if (plan) {
+        const planSelect = document.getElementById('trial-plan');
+        if (planSelect) planSelect.value = plan;
+    }
+    openModal('modal-trial');
+}
+
+function openDemoModal() {
+    openModal('modal-demo');
+}
+
+function openScheduleDemoModal() {
+    resetModal('modal-schedule');
+    populateScheduleDates();
+    openModal('modal-schedule');
+}
+
+function populateScheduleDates() {
+    const select = document.getElementById('schedule-date');
+    if (!select) return;
+    while (select.options.length > 1) select.remove(1);
+    const days = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+    const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+    const today = new Date();
+    for (let i = 1; i <= 7; i++) {
+        const d = new Date(today);
+        d.setDate(today.getDate() + i);
+        const label = `${days[d.getDay()]}, ${months[d.getMonth()]} ${d.getDate()}`;
+        const val = d.toISOString().slice(0, 10);
+        const opt = document.createElement('option');
+        opt.value = val;
+        opt.textContent = label;
+        select.appendChild(opt);
+    }
+}
+
+function handleForgotPassword() {
+    const forgotLink = document.querySelector('#modal-signin .forgot-link');
+    const forgotSuccess = document.querySelector('#modal-signin .forgot-success');
+    if (forgotLink) forgotLink.hidden = true;
+    if (forgotSuccess) forgotSuccess.hidden = false;
+}
+
+// ESC key closes any open modal
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+        document.querySelectorAll('.modal-overlay.active').forEach(m => closeModal(m.id));
+    }
+});
+
+// Backdrop click closes modal
+document.querySelectorAll('.modal-overlay').forEach(overlay => {
+    overlay.addEventListener('click', (e) => {
+        if (e.target === overlay) closeModal(overlay.id);
+    });
+});
+
+// ===== FORM VALIDATION HELPERS =====
+
+function validateEmail(email) {
+    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+}
+
+function showFieldError(inputId, errorId) {
+    const input = document.getElementById(inputId);
+    const error = document.getElementById(errorId);
+    if (input) input.classList.add('error');
+    if (error) error.classList.add('visible');
+}
+
+function clearFieldError(inputId, errorId) {
+    const input = document.getElementById(inputId);
+    const error = document.getElementById(errorId);
+    if (input) input.classList.remove('error');
+    if (error) error.classList.remove('visible');
+}
+
+function bindClearOnInput(ids) {
+    ids.forEach(id => {
+        const el = document.getElementById(id);
+        if (!el) return;
+        const evt = (el.tagName === 'SELECT') ? 'change' : 'input';
+        el.addEventListener(evt, () => clearFieldError(id, `${id}-error`));
+    });
+}
+
+// ===== SIGN IN FORM =====
+document.getElementById('signin-form')?.addEventListener('submit', (e) => {
+    e.preventDefault();
+    let valid = true;
+    clearFieldError('signin-email', 'signin-email-error');
+    clearFieldError('signin-password', 'signin-password-error');
+    if (!validateEmail(document.getElementById('signin-email').value)) {
+        showFieldError('signin-email', 'signin-email-error');
+        valid = false;
+    }
+    if (!document.getElementById('signin-password').value) {
+        showFieldError('signin-password', 'signin-password-error');
+        valid = false;
+    }
+    if (valid) showSuccess('modal-signin', 'signin-success');
+});
+bindClearOnInput(['signin-email', 'signin-password']);
+
+// ===== TRIAL SIGNUP FORM =====
+document.getElementById('trial-form')?.addEventListener('submit', (e) => {
+    e.preventDefault();
+    let valid = true;
+    const textFields = [
+        { id: 'trial-firstname', check: v => v.trim() !== '' },
+        { id: 'trial-lastname',  check: v => v.trim() !== '' },
+        { id: 'trial-email',     check: validateEmail },
+        { id: 'trial-company',   check: v => v.trim() !== '' },
+        { id: 'trial-password',  check: v => v.length >= 8 },
+    ];
+    textFields.forEach(({ id, check }) => {
+        clearFieldError(id, `${id}-error`);
+        if (!check(document.getElementById(id).value)) {
+            showFieldError(id, `${id}-error`);
+            valid = false;
+        }
+    });
+    const terms = document.getElementById('trial-terms');
+    const termsError = document.getElementById('trial-terms-error');
+    if (!terms.checked) {
+        termsError.classList.add('visible');
+        valid = false;
+    } else {
+        termsError.classList.remove('visible');
+    }
+    if (valid) showSuccess('modal-trial', 'trial-success');
+});
+bindClearOnInput(['trial-firstname', 'trial-lastname', 'trial-email', 'trial-company', 'trial-password']);
+document.getElementById('trial-terms')?.addEventListener('change', () => {
+    document.getElementById('trial-terms-error').classList.remove('visible');
+});
+
+// ===== SCHEDULE DEMO FORM =====
+document.getElementById('schedule-form')?.addEventListener('submit', (e) => {
+    e.preventDefault();
+    let valid = true;
+    const fields = [
+        { id: 'schedule-name',      check: v => v.trim() !== '' },
+        { id: 'schedule-email',     check: validateEmail },
+        { id: 'schedule-company',   check: v => v.trim() !== '' },
+        { id: 'schedule-employees', check: v => v !== '' },
+        { id: 'schedule-date',      check: v => v !== '' },
+        { id: 'schedule-time',      check: v => v !== '' },
+    ];
+    fields.forEach(({ id, check }) => {
+        clearFieldError(id, `${id}-error`);
+        if (!check(document.getElementById(id).value)) {
+            showFieldError(id, `${id}-error`);
+            valid = false;
+        }
+    });
+    if (valid) showSuccess('modal-schedule', 'schedule-success');
+});
+bindClearOnInput(['schedule-name', 'schedule-email', 'schedule-company', 'schedule-employees', 'schedule-date', 'schedule-time']);

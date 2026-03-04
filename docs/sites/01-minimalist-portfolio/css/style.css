@@ -259,6 +259,12 @@ section {
 .project-card {
     position: relative;
     overflow: hidden;
+    cursor: pointer;
+}
+
+.project-card:focus-visible {
+    outline: 2px solid var(--color-accent);
+    outline-offset: 4px;
 }
 
 .project-card a {
@@ -667,4 +673,216 @@ section {
     padding: 1rem 1.5rem;
     margin-bottom: 1.5rem;
     font-size: 1rem;
+}
+
+/* ===== PROJECT CASE STUDY MODAL ===== */
+.cs-modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.75);
+    z-index: 2000;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 2rem 1rem;
+    overflow-y: auto;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+.cs-modal-overlay.is-open {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.cs-modal-card {
+    background: var(--color-bg);
+    width: 100%;
+    max-width: 860px;
+    position: relative;
+    transform: translateY(20px);
+    transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.cs-modal-overlay.is-open .cs-modal-card {
+    transform: translateY(0);
+}
+
+.cs-modal-close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    z-index: 10;
+    width: 2.5rem;
+    height: 2.5rem;
+    background: rgba(250, 250, 250, 0.9);
+    border: 1px solid var(--color-border);
+    font-size: 1.25rem;
+    line-height: 1;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: var(--transition);
+}
+
+.cs-modal-close:hover {
+    background: var(--color-text);
+    color: var(--color-bg);
+    border-color: var(--color-text);
+}
+
+.cs-modal-image {
+    width: 100%;
+    aspect-ratio: 16/7;
+    overflow: hidden;
+}
+
+.cs-modal-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.cs-modal-body {
+    padding: 2.5rem;
+}
+
+.cs-modal-meta {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 0.75rem;
+}
+
+.cs-modal-category {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--color-accent);
+    font-weight: 500;
+}
+
+.cs-modal-year {
+    font-size: 0.75rem;
+    color: var(--color-text-light);
+}
+
+.cs-modal-year::before {
+    content: '·';
+    margin-right: 1rem;
+    color: var(--color-border);
+}
+
+.cs-modal-title {
+    font-family: var(--font-display);
+    font-size: 2.25rem;
+    font-weight: 500;
+    letter-spacing: -0.02em;
+    margin-bottom: 1rem;
+}
+
+.cs-modal-desc {
+    font-size: 1.05rem;
+    color: var(--color-text-light);
+    line-height: 1.7;
+    margin-bottom: 2rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid var(--color-border);
+}
+
+.cs-modal-sections {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-bottom: 2rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid var(--color-border);
+}
+
+.cs-modal-section h4 {
+    font-family: var(--font-display);
+    font-size: 0.7rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--color-text-light);
+    margin-bottom: 0.75rem;
+}
+
+.cs-modal-section p {
+    font-size: 0.875rem;
+    color: var(--color-text);
+    line-height: 1.7;
+}
+
+.cs-modal-skills {
+    margin-bottom: 2rem;
+}
+
+.cs-modal-skills h4 {
+    font-family: var(--font-display);
+    font-size: 0.7rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--color-text-light);
+    margin-bottom: 0.75rem;
+}
+
+.cs-modal-skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.cs-modal-skills-list span {
+    padding: 0.35rem 0.85rem;
+    border: 1px solid var(--color-border);
+    font-size: 0.8rem;
+    border-radius: 50px;
+    color: var(--color-text);
+}
+
+.cs-modal-live-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+    padding: 0.875rem 1.75rem;
+    background: var(--color-text);
+    color: var(--color-bg);
+    border-radius: 50px;
+    transition: var(--transition);
+}
+
+.cs-modal-live-btn:hover {
+    background: var(--color-accent);
+}
+
+@media (max-width: 768px) {
+    .cs-modal-overlay {
+        padding: 0;
+        align-items: flex-end;
+    }
+
+    .cs-modal-card {
+        max-width: 100%;
+        border-radius: 0;
+    }
+
+    .cs-modal-sections {
+        grid-template-columns: 1fr;
+        gap: 1.25rem;
+    }
+
+    .cs-modal-body {
+        padding: 1.5rem;
+    }
+
+    .cs-modal-title {
+        font-size: 1.75rem;
+    }
 }

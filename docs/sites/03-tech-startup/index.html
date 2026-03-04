@@ -27,8 +27,8 @@
                 <li><a href="#features">Features</a></li>
                 <li><a href="#pricing">Pricing</a></li>
                 <li><a href="#about">About</a></li>
-                <li><a href="javascript:void(0)" onclick="alert('Sign in functionality coming soon!')" class="nav-link-secondary">Sign In</a></li>
-                <li><a href="javascript:void(0)" onclick="alert('Start your 14-day free trial!\n\nRedirecting to signup...')" class="nav-cta">Start Free Trial</a></li>
+                <li><a href="javascript:void(0)" onclick="openSignInModal()" class="nav-link-secondary">Sign In</a></li>
+                <li><a href="javascript:void(0)" onclick="openTrialModal()" class="nav-cta">Start Free Trial</a></li>
             </ul>
             <button class="menu-toggle" aria-label="Menu">
                 <span></span>
@@ -46,13 +46,13 @@
             <h1>Automate Your Workflow with <span class="gradient-text">Intelligent AI</span></h1>
             <p>Nexus AI transforms how teams work. Automate repetitive tasks, generate insights, and supercharge productivity with our cutting-edge AI platform.</p>
             <div class="hero-cta">
-                <a href="javascript:void(0)" onclick="alert('Start your 14-day free trial!\n\nNo credit card required.')" class="btn btn-primary">
+                <a href="javascript:void(0)" onclick="openTrialModal()" class="btn btn-primary">
                     <span>Start Free Trial</span>
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                         <path d="M5 12h14M12 5l7 7-7 7"/>
                     </svg>
                 </a>
-                <a href="javascript:void(0)" onclick="alert('Demo request received!\n\nOur team will contact you shortly.')" class="btn btn-secondary">
+                <a href="javascript:void(0)" onclick="openDemoModal()" class="btn btn-secondary">
                     <svg viewBox="0 0 24 24" fill="currentColor">
                         <polygon points="5,3 19,12 5,21"/>
                     </svg>
@@ -270,7 +270,7 @@
                     <li><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>Basic analytics</li>
                     <li><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>Email support</li>
                 </ul>
-                <a href="javascript:void(0)" onclick="alert('Starter plan signup\n\nLet\\'s get you started!')" class="btn btn-outline-dark">Get Started</a>
+                <a href="javascript:void(0)" onclick="openTrialModal('starter')" class="btn btn-outline-dark">Get Started</a>
             </div>
 
             <div class="pricing-card pricing-card-featured">
@@ -290,7 +290,7 @@
                     <li><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>Priority support</li>
                     <li><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>Custom workflows</li>
                 </ul>
-                <a href="javascript:void(0)" onclick="alert('Pro plan signup\n\nStart your 14-day free trial!')" class="btn btn-primary">Start Free Trial</a>
+                <a href="javascript:void(0)" onclick="openTrialModal('pro')" class="btn btn-primary">Start Free Trial</a>
             </div>
 
             <div class="pricing-card">
@@ -366,8 +366,8 @@
             <h2>Ready to supercharge your workflow?</h2>
             <p>Join 10,000+ teams already using Nexus AI to work smarter.</p>
             <div class="cta-buttons">
-                <a href="javascript:void(0)" onclick="alert('Start your 14-day free trial today!\n\nNo credit card required.')" class="btn btn-primary btn-large">Start Your Free Trial</a>
-                <a href="javascript:void(0)" onclick="alert('Demo scheduled!\n\nOur team will contact you within 24 hours.')" class="btn btn-secondary">Schedule a Demo</a>
+                <a href="javascript:void(0)" onclick="openTrialModal()" class="btn btn-primary btn-large">Start Your Free Trial</a>
+                <a href="javascript:void(0)" onclick="openScheduleDemoModal()" class="btn btn-secondary">Schedule a Demo</a>
             </div>
             <span class="cta-note">No credit card required. 14-day free trial.</span>
         </div>
@@ -395,29 +395,29 @@
                     <h4>Product</h4>
                     <a href="#features">Features</a>
                     <a href="#pricing">Pricing</a>
-                    <a href="javascript:void(0)" onclick="alert('View our integrations!\n\nWe support 200+ tools.')">Integrations</a>
-                    <a href="javascript:void(0)" onclick="alert('Changelog\n\nCheck out the latest updates.')">Changelog</a>
+                    <a href="https://example.com/nexus-integrations" target="_blank" rel="noopener noreferrer">Integrations</a>
+                    <a href="https://example.com/nexus-changelog" target="_blank" rel="noopener noreferrer">Changelog</a>
                 </div>
                 <div class="footer-column">
                     <h4>Company</h4>
-                    <a href="javascript:void(0)" onclick="alert('About Nexus AI\n\nBuilding the future of automation.')">About</a>
-                    <a href="javascript:void(0)" onclick="alert('Join our team!\n\nWe\\'re hiring.')">Careers</a>
-                    <a href="javascript:void(0)" onclick="alert('Read our blog\n\nLatest insights and updates.')">Blog</a>
-                    <a href="javascript:void(0)" onclick="alert('Press Kit\n\nMedia resources available.')">Press</a>
+                    <a href="https://example.com/nexus-about" target="_blank" rel="noopener noreferrer">About</a>
+                    <a href="https://example.com/nexus-careers" target="_blank" rel="noopener noreferrer">Careers</a>
+                    <a href="https://example.com/nexus-blog" target="_blank" rel="noopener noreferrer">Blog</a>
+                    <a href="https://example.com/nexus-press" target="_blank" rel="noopener noreferrer">Press</a>
                 </div>
                 <div class="footer-column">
                     <h4>Resources</h4>
-                    <a href="javascript:void(0)" onclick="alert('Documentation\n\nComplete API reference.')">Documentation</a>
-                    <a href="javascript:void(0)" onclick="alert('API Reference\n\nBuild with Nexus AI.')">API Reference</a>
-                    <a href="javascript:void(0)" onclick="alert('Tutorials\n\nLearn how to use Nexus AI.')">Tutorials</a>
-                    <a href="javascript:void(0)" onclick="alert('Community\n\nJoin our community forum.')">Community</a>
+                    <a href="https://example.com/nexus-documentation" target="_blank" rel="noopener noreferrer">Documentation</a>
+                    <a href="https://example.com/nexus-api-reference" target="_blank" rel="noopener noreferrer">API Reference</a>
+                    <a href="https://example.com/nexus-tutorials" target="_blank" rel="noopener noreferrer">Tutorials</a>
+                    <a href="https://example.com/nexus-community" target="_blank" rel="noopener noreferrer">Community</a>
                 </div>
                 <div class="footer-column">
                     <h4>Legal</h4>
-                    <a href="javascript:void(0)" onclick="alert('Privacy Policy\n\nYour privacy matters to us.')">Privacy</a>
-                    <a href="javascript:void(0)" onclick="alert('Terms of Service\n\nOur terms and conditions.')">Terms</a>
-                    <a href="javascript:void(0)" onclick="alert('Security\n\nWe take security seriously.')">Security</a>
-                    <a href="javascript:void(0)" onclick="alert('Cookie Policy\n\nHow we use cookies.')">Cookies</a>
+                    <a href="https://example.com/nexus-privacy" target="_blank" rel="noopener noreferrer">Privacy</a>
+                    <a href="https://example.com/nexus-terms" target="_blank" rel="noopener noreferrer">Terms</a>
+                    <a href="https://example.com/nexus-security" target="_blank" rel="noopener noreferrer">Security</a>
+                    <a href="https://example.com/nexus-cookies" target="_blank" rel="noopener noreferrer">Cookies</a>
                 </div>
             </div>
         </div>
@@ -425,6 +425,211 @@
             <span>&copy; 2024 Nexus AI. All rights reserved.</span>
         </div>
     </footer>
+
+    <!-- ===== SIGN IN MODAL ===== -->
+    <div id="modal-signin" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="signin-title">
+        <div class="modal-card">
+            <button class="modal-close" aria-label="Close" onclick="closeModal('modal-signin')">&times;</button>
+            <div class="modal-form-content">
+                <div class="modal-header">
+                    <h2 id="signin-title">Welcome back</h2>
+                    <p>Sign in to your Nexus AI account</p>
+                </div>
+                <form id="signin-form" novalidate>
+                    <div class="form-group">
+                        <label for="signin-email">Email address</label>
+                        <input type="email" id="signin-email" placeholder="you@company.com" autocomplete="email">
+                        <span class="field-error" id="signin-email-error">Please enter a valid email address.</span>
+                    </div>
+                    <div class="form-group">
+                        <label for="signin-password">Password</label>
+                        <input type="password" id="signin-password" placeholder="••••••••" autocomplete="current-password">
+                        <span class="field-error" id="signin-password-error">Password is required.</span>
+                    </div>
+                    <button type="submit" class="btn btn-primary modal-submit">Sign In</button>
+                </form>
+                <div class="form-footer">
+                    <a href="javascript:void(0)" class="forgot-link" onclick="handleForgotPassword()">Forgot Password?</a>
+                    <span class="forgot-success" hidden>✓ Password reset link sent to your email.</span>
+                </div>
+            </div>
+            <div class="modal-success" id="signin-success">
+                <div class="success-icon">
+                    <svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>
+                </div>
+                <h3>Welcome back!</h3>
+                <p>You have successfully signed in. Redirecting to your dashboard…</p>
+                <button class="btn btn-primary" onclick="closeModal('modal-signin')">Go to Dashboard</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== TRIAL SIGNUP MODAL ===== -->
+    <div id="modal-trial" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="trial-title">
+        <div class="modal-card modal-card-wide">
+            <button class="modal-close" aria-label="Close" onclick="closeModal('modal-trial')">&times;</button>
+            <div class="modal-form-content">
+                <div class="modal-header">
+                    <h2 id="trial-title">Start your free trial</h2>
+                    <p>14 days free. No credit card required.</p>
+                </div>
+                <form id="trial-form" novalidate>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="trial-firstname">First Name</label>
+                            <input type="text" id="trial-firstname" placeholder="Jane" autocomplete="given-name">
+                            <span class="field-error" id="trial-firstname-error">First name is required.</span>
+                        </div>
+                        <div class="form-group">
+                            <label for="trial-lastname">Last Name</label>
+                            <input type="text" id="trial-lastname" placeholder="Smith" autocomplete="family-name">
+                            <span class="field-error" id="trial-lastname-error">Last name is required.</span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="trial-email">Work Email</label>
+                        <input type="email" id="trial-email" placeholder="you@company.com" autocomplete="email">
+                        <span class="field-error" id="trial-email-error">Please enter a valid email address.</span>
+                    </div>
+                    <div class="form-group">
+                        <label for="trial-company">Company Name</label>
+                        <input type="text" id="trial-company" placeholder="Acme Inc." autocomplete="organization">
+                        <span class="field-error" id="trial-company-error">Company name is required.</span>
+                    </div>
+                    <div class="form-group">
+                        <label for="trial-plan">Plan</label>
+                        <select id="trial-plan">
+                            <option value="starter">Starter — $29/mo</option>
+                            <option value="pro" selected>Pro — $79/mo (Most Popular)</option>
+                            <option value="enterprise">Enterprise — Custom</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="trial-password">Password</label>
+                        <input type="password" id="trial-password" placeholder="At least 8 characters" autocomplete="new-password">
+                        <span class="field-error" id="trial-password-error">Password must be at least 8 characters.</span>
+                    </div>
+                    <div class="form-checkbox">
+                        <input type="checkbox" id="trial-terms">
+                        <label for="trial-terms">I agree to the <a href="https://example.com/nexus-terms" target="_blank" rel="noopener noreferrer">Terms of Service</a> and <a href="https://example.com/nexus-privacy" target="_blank" rel="noopener noreferrer">Privacy Policy</a>.</label>
+                    </div>
+                    <span class="field-error" id="trial-terms-error">You must agree to the terms to continue.</span>
+                    <button type="submit" class="btn btn-primary modal-submit">Create Free Account</button>
+                </form>
+            </div>
+            <div class="modal-success" id="trial-success">
+                <div class="success-icon">
+                    <svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>
+                </div>
+                <h3>Account created!</h3>
+                <p>Check your email for a confirmation link to get started.</p>
+                <button class="btn btn-primary" onclick="closeModal('modal-trial')">Done</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== WATCH DEMO MODAL ===== -->
+    <div id="modal-demo" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="demo-title">
+        <div class="modal-card modal-card-wide">
+            <button class="modal-close" aria-label="Close" onclick="closeModal('modal-demo')">&times;</button>
+            <div class="modal-header">
+                <h2 id="demo-title">See Nexus AI in action</h2>
+                <p>Watch how teams automate their workflows in minutes.</p>
+            </div>
+            <div class="demo-player">
+                <div class="demo-player-overlay"></div>
+                <button class="demo-play-btn" aria-label="Play demo">
+                    <svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg>
+                </button>
+                <div class="demo-player-info">
+                    <span class="demo-player-title">Nexus AI Platform Overview</span>
+                    <span class="demo-player-duration">3:47</span>
+                </div>
+            </div>
+            <p class="demo-description">Discover how Nexus AI connects your tools, automates repetitive tasks, and surfaces real-time insights — all without writing a single line of code.</p>
+            <a href="javascript:void(0)" onclick="closeModal('modal-demo'); openTrialModal('pro');" class="btn btn-primary modal-submit">Start Free Trial</a>
+        </div>
+    </div>
+
+    <!-- ===== SCHEDULE DEMO MODAL ===== -->
+    <div id="modal-schedule" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="schedule-title">
+        <div class="modal-card modal-card-wide">
+            <button class="modal-close" aria-label="Close" onclick="closeModal('modal-schedule')">&times;</button>
+            <div class="modal-form-content">
+                <div class="modal-header">
+                    <h2 id="schedule-title">Schedule a Demo</h2>
+                    <p>Book a live walkthrough with one of our product experts.</p>
+                </div>
+                <form id="schedule-form" novalidate>
+                    <div class="form-group">
+                        <label for="schedule-name">Full Name</label>
+                        <input type="text" id="schedule-name" placeholder="Jane Smith" autocomplete="name">
+                        <span class="field-error" id="schedule-name-error">Full name is required.</span>
+                    </div>
+                    <div class="form-group">
+                        <label for="schedule-email">Work Email</label>
+                        <input type="email" id="schedule-email" placeholder="you@company.com" autocomplete="email">
+                        <span class="field-error" id="schedule-email-error">Please enter a valid email address.</span>
+                    </div>
+                    <div class="form-group">
+                        <label for="schedule-company">Company Name</label>
+                        <input type="text" id="schedule-company" placeholder="Acme Inc." autocomplete="organization">
+                        <span class="field-error" id="schedule-company-error">Company name is required.</span>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="schedule-employees">Number of Employees</label>
+                            <select id="schedule-employees">
+                                <option value="">Select…</option>
+                                <option value="1-10">1–10</option>
+                                <option value="11-50">11–50</option>
+                                <option value="51-200">51–200</option>
+                                <option value="201-500">201–500</option>
+                                <option value="500+">500+</option>
+                            </select>
+                            <span class="field-error" id="schedule-employees-error">Please select a range.</span>
+                        </div>
+                        <div class="form-group">
+                            <label for="schedule-date">Preferred Date</label>
+                            <select id="schedule-date">
+                                <option value="">Select…</option>
+                            </select>
+                            <span class="field-error" id="schedule-date-error">Please select a date.</span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="schedule-time">Preferred Time</label>
+                        <select id="schedule-time">
+                            <option value="">Select…</option>
+                            <option value="9am">9:00 AM</option>
+                            <option value="10am">10:00 AM</option>
+                            <option value="11am">11:00 AM</option>
+                            <option value="12pm">12:00 PM</option>
+                            <option value="1pm">1:00 PM</option>
+                            <option value="2pm">2:00 PM</option>
+                            <option value="3pm">3:00 PM</option>
+                            <option value="4pm">4:00 PM</option>
+                            <option value="5pm">5:00 PM</option>
+                        </select>
+                        <span class="field-error" id="schedule-time-error">Please select a time.</span>
+                    </div>
+                    <div class="form-group">
+                        <label for="schedule-message">Message <span class="label-optional">(optional)</span></label>
+                        <textarea id="schedule-message" placeholder="Tell us about your team's needs…"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary modal-submit">Schedule Demo</button>
+                </form>
+            </div>
+            <div class="modal-success" id="schedule-success">
+                <div class="success-icon">
+                    <svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>
+                </div>
+                <h3>Demo scheduled!</h3>
+                <p>We'll send a calendar invite shortly. See you then!</p>
+                <button class="btn btn-primary" onclick="closeModal('modal-schedule')">Done</button>
+            </div>
+        </div>
+    </div>
 
     <script src="js/main.js"></script>
 </body>

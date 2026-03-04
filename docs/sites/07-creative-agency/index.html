@@ -72,56 +72,48 @@
         </div>
 
         <div class="projects">
-            <article class="project" id="project-lumina">
-                <a href="https://example.com/linkID-70142" target="_blank" rel="noopener noreferrer">
-                    <div class="project-image">
-                        <img src="https://images.unsplash.com/photo-1561070791-2526d30994b5?w=1000&h=700&fit=crop" alt="Lumina Project">
-                    </div>
-                    <div class="project-info">
-                        <span class="project-category">Branding / Web</span>
-                        <h3>Lumina</h3>
-                        <p>Complete brand identity and e-commerce platform for sustainable lighting company.</p>
-                    </div>
-                </a>
+            <article class="project" id="project-lumina" data-project="lumina" role="button" tabindex="0" aria-label="View Lumina case study">
+                <div class="project-image">
+                    <img src="https://images.unsplash.com/photo-1561070791-2526d30994b5?w=1000&h=700&fit=crop" alt="Lumina Project">
+                </div>
+                <div class="project-info">
+                    <span class="project-category">Branding / Web</span>
+                    <h3>Lumina</h3>
+                    <p>Complete brand identity and e-commerce platform for sustainable lighting company.</p>
+                </div>
             </article>
 
-            <article class="project" id="project-prism">
-                <a href="https://example.com/linkID-70243" target="_blank" rel="noopener noreferrer">
-                    <div class="project-image">
-                        <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=1000&h=700&fit=crop" alt="Prism Project">
-                    </div>
-                    <div class="project-info">
-                        <span class="project-category">Art Direction</span>
-                        <h3>Prism</h3>
-                        <p>Visual identity system for a contemporary art gallery.</p>
-                    </div>
-                </a>
+            <article class="project" id="project-prism" data-project="prism" role="button" tabindex="0" aria-label="View Prism case study">
+                <div class="project-image">
+                    <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=1000&h=700&fit=crop" alt="Prism Project">
+                </div>
+                <div class="project-info">
+                    <span class="project-category">Art Direction</span>
+                    <h3>Prism</h3>
+                    <p>Visual identity system for a contemporary art gallery.</p>
+                </div>
             </article>
 
-            <article class="project" id="project-horizon">
-                <a href="https://example.com/linkID-70344" target="_blank" rel="noopener noreferrer">
-                    <div class="project-image">
-                        <img src="https://images.unsplash.com/photo-1558655146-d09347e92766?w=1000&h=700&fit=crop" alt="Horizon Project">
-                    </div>
-                    <div class="project-info">
-                        <span class="project-category">Product Design</span>
-                        <h3>Horizon</h3>
-                        <p>Mobile app design for next-generation investment platform.</p>
-                    </div>
-                </a>
+            <article class="project" id="project-horizon" data-project="horizon" role="button" tabindex="0" aria-label="View Horizon case study">
+                <div class="project-image">
+                    <img src="https://images.unsplash.com/photo-1558655146-d09347e92766?w=1000&h=700&fit=crop" alt="Horizon Project">
+                </div>
+                <div class="project-info">
+                    <span class="project-category">Product Design</span>
+                    <h3>Horizon</h3>
+                    <p>Mobile app design for next-generation investment platform.</p>
+                </div>
             </article>
 
-            <article class="project" id="project-apex">
-                <a href="https://example.com/linkID-70445" target="_blank" rel="noopener noreferrer">
-                    <div class="project-image">
-                        <img src="https://images.unsplash.com/photo-1611532736597-de2d4265fba3?w=1000&h=700&fit=crop" alt="Apex Project">
-                    </div>
-                    <div class="project-info">
-                        <span class="project-category">Branding / Strategy</span>
-                        <h3>Apex</h3>
-                        <p>Brand strategy and identity for premium athletic wear brand.</p>
-                    </div>
-                </a>
+            <article class="project" id="project-apex" data-project="apex" role="button" tabindex="0" aria-label="View Apex case study">
+                <div class="project-image">
+                    <img src="https://images.unsplash.com/photo-1611532736597-de2d4265fba3?w=1000&h=700&fit=crop" alt="Apex Project">
+                </div>
+                <div class="project-info">
+                    <span class="project-category">Branding / Strategy</span>
+                    <h3>Apex</h3>
+                    <p>Brand strategy and identity for premium athletic wear brand.</p>
+                </div>
             </article>
         </div>
 
@@ -361,6 +353,43 @@
             <span>&copy; 2024 Studio Nova. All rights reserved.</span>
         </div>
     </footer>
+
+    <!-- Project Case Study Modal -->
+    <div id="project-modal" class="cs-modal-overlay" aria-hidden="true">
+        <div class="cs-modal-card" role="dialog" aria-modal="true" aria-labelledby="cs-modal-title">
+            <button class="cs-modal-close" aria-label="Close">&times;</button>
+            <div class="cs-modal-image">
+                <img id="cs-modal-img" src="" alt="">
+            </div>
+            <div class="cs-modal-body">
+                <div class="cs-modal-meta">
+                    <span id="cs-modal-category" class="cs-modal-category"></span>
+                    <span id="cs-modal-year" class="cs-modal-year"></span>
+                </div>
+                <h2 id="cs-modal-title" class="cs-modal-title"></h2>
+                <p id="cs-modal-desc" class="cs-modal-desc"></p>
+                <div class="cs-modal-sections">
+                    <div class="cs-modal-section">
+                        <h4>Challenge</h4>
+                        <p id="cs-modal-challenge"></p>
+                    </div>
+                    <div class="cs-modal-section">
+                        <h4>Approach</h4>
+                        <p id="cs-modal-approach"></p>
+                    </div>
+                    <div class="cs-modal-section">
+                        <h4>Result</h4>
+                        <p id="cs-modal-result"></p>
+                    </div>
+                </div>
+                <div class="cs-modal-skills">
+                    <h4>Skills &amp; Tools</h4>
+                    <div id="cs-modal-skills-list" class="cs-modal-skills-list"></div>
+                </div>
+                <a id="cs-modal-live-link" href="#" target="_blank" rel="noopener noreferrer" class="cs-modal-live-btn">View Live ↗</a>
+            </div>
+        </div>
+    </div>
 
     <script src="js/main.js"></script>
 </body>
