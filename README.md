@@ -6,9 +6,6 @@
 ![Status](https://img.shields.io/badge/Status-Active-success.svg)
 [![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Live-brightgreen.svg)](https://a13xg.github.io/Web-Dev-Samples/)
 [![Changelog](https://img.shields.io/badge/Changelog-View-informational.svg)](CHANGELOG.md)
-[![Wiki](https://img.shields.io/badge/Wiki-View-lightgrey.svg)](WIKI.md)
-![Made with HTML](https://img.shields.io/badge/Made_with-HTML5-E34F26?logo=html5&logoColor=white)
-![Made with CSS](https://img.shields.io/badge/Made_with-CSS3-1572B6?logo=css3&logoColor=white)
 ![Node.js](https://img.shields.io/badge/Node.js-14+-339933?logo=node.js&logoColor=white)
 
 
