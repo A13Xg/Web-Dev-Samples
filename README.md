@@ -2,7 +2,6 @@
 
 <div align="center">
 
-![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)
 ![Templates](https://img.shields.io/badge/Templates-65-blueviolet.svg)
 ![Status](https://img.shields.io/badge/Status-Active-success.svg)
 [![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Live-brightgreen.svg)](https://a13xg.github.io/Web-Dev-Samples/)
@@ -15,7 +14,7 @@
 
 </div>
 
-A curated collection of **65 fully interactive, self-contained website templates**, each built with distinct aesthetics and modern HTML/CSS/JS techniques. Every template functions as a real website — working forms, cart interactions, booking modals, article readers, search filters, and more — not just static mockups.
+A curated collection of **13 fully interactive, self-contained website templates**, each built with distinct aesthetics and modern HTML/CSS/JS techniques. Every template functions as a real website — working forms, cart interactions, booking modals, article readers, search filters, and more — not just static mockups.
 
 ---
 
