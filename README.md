@@ -8,20 +8,14 @@
 [![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Live-brightgreen.svg)](https://a13xg.github.io/Web-Dev-Samples/)
 [![Changelog](https://img.shields.io/badge/Changelog-View-informational.svg)](CHANGELOG.md)
 [![Wiki](https://img.shields.io/badge/Wiki-View-lightgrey.svg)](WIKI.md)
-
 ![Made with HTML](https://img.shields.io/badge/Made_with-HTML5-E34F26?logo=html5&logoColor=white)
 ![Made with CSS](https://img.shields.io/badge/Made_with-CSS3-1572B6?logo=css3&logoColor=white)
-![Made with JavaScript](https://img.shields.io/badge/Made_with-JavaScript-F7DF1E?logo=javascript&logoColor=black)
 ![Node.js](https://img.shields.io/badge/Node.js-14+-339933?logo=node.js&logoColor=white)
-![Express](https://img.shields.io/badge/Express-4.x-000000?logo=express&logoColor=white)
 
-![Responsive](https://img.shields.io/badge/Responsive-Yes-00D9FF.svg)
-![No Dependencies](https://img.shields.io/badge/Dependencies-None-ff69b4.svg)
-![Interactive](https://img.shields.io/badge/Interactive-100%25-orange.svg)
 
 </div>
 
-A curated collection of **13 fully interactive, self-contained website templates**, each built with distinct aesthetics and modern HTML/CSS/JS techniques. Every template functions as a real website — working forms, cart interactions, booking modals, article readers, search filters, and more — not just static mockups.
+A curated collection of **65 fully interactive, self-contained website templates**, each built with distinct aesthetics and modern HTML/CSS/JS techniques. Every template functions as a real website — working forms, cart interactions, booking modals, article readers, search filters, and more — not just static mockups.
 
 ---
 
