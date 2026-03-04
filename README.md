@@ -9,11 +9,16 @@
 ![Node.js](https://img.shields.io/badge/Node.js-14+-339933?logo=node.js&logoColor=white)
 
 
+
 </div>
+
+
+
 
 A curated collection of **13 fully interactive, self-contained website templates**, each built with distinct aesthetics and modern HTML/CSS/JS techniques. Every template functions as a real website — working forms, cart interactions, booking modals, article readers, search filters, and more — not just static mockups.
 
----
+
+
 
 <div align="center">
 
@@ -29,7 +34,7 @@ A curated collection of **13 fully interactive, self-contained website templates
 
 ## ◆ Templates
 
-### 🆕 Featured Additions
+### Featured Additions
 
 | # | Name | Category | Highlights |
 |---|------|----------|------------|
