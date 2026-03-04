@@ -7,6 +7,7 @@
 | ID | Title / Task | Description | Type |
 | :--- | :--- | :--- | :--- |
 | **CHG-001** | Cosmic vs. Space | Re-design Cosmic Concrete/Space Galaxy so they aren't similar. | `UI/UX` | | `Medium` |
+| **CHG-002** | Organic Biomorphic Template | The Organic biomorphic template still has a strange mask over the button that makes it appear rounded. | `UI/UX` | | `Mediun` |
 | **CHG-SAMPLE** | Template | This is a template | `IGNORE` | | `NONE` |
 
 
