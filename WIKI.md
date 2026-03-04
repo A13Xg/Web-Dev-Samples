@@ -1,6 +1,6 @@
 # Web Dev Samples — Wiki
 
-A detailed reference guide for the **Web Dev Samples** project.
+A detailed technical reference guide for the **Web Dev Samples** project.
 
 ---
 
@@ -8,8 +8,27 @@ A detailed reference guide for the **Web Dev Samples** project.
 
 1. [Project Overview](#project-overview)
 2. [Template Index](#template-index)
-3. [The Theme Atlas — Full Theme List](#the-theme-atlas--full-theme-list)
-4. [Theme Categories](#theme-categories)
+3. [Template Reference — Sites 01–12](#template-reference--sites-0112)
+   - [01 Minimalist Portfolio](#01-minimalist-portfolio)
+   - [02 Gourmet Restaurant](#02-gourmet-restaurant)
+   - [03 Tech Startup](#03-tech-startup)
+   - [04 Fashion E-commerce](#04-fashion-e-commerce)
+   - [05 Travel Adventure](#05-travel-adventure)
+   - [06 Fitness Studio](#06-fitness-studio)
+   - [07 Creative Agency](#07-creative-agency)
+   - [08 News Magazine](#08-news-magazine)
+   - [09 Music Festival](#09-music-festival)
+   - [10 Law Firm](#10-law-firm)
+   - [11 Outdoor Trail Guide](#11-outdoor-trail-guide)
+   - [12 Indie Game Dev](#12-indie-game-dev)
+4. [Site 13: The Theme Atlas](#site-13-the-theme-atlas)
+   - [Application Structure](#application-structure)
+   - [HTML Schema](#html-schema)
+   - [Page-level Palette and Typography](#page-level-palette-and-typography)
+   - [Category Filter System](#category-filter-system)
+   - [Theme Card Schema](#theme-card-schema)
+   - [Copy-CSS Feature](#copy-css-feature)
+   - [All 65 Themes — Individual Breakdown](#all-65-themes--individual-breakdown)
 5. [Using the Copy-CSS Feature](#using-the-copy-css-feature)
 6. [Local Development](#local-development)
 7. [Project Structure](#project-structure)
