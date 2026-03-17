@@ -424,6 +424,8 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 10px;
         }
 
         .tech-stack {
@@ -788,6 +790,65 @@
             width: 100%;
             height: 100%;
         }
+
+        /* Copy AI Prompt Button */
+        .copy-prompt-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 8px 16px;
+            background: rgba(139, 92, 246, 0.1);
+            border: 1px solid rgba(139, 92, 246, 0.3);
+            border-radius: 10px;
+            font-size: 12px;
+            font-weight: 600;
+            color: #c4b5fd;
+            transition: all 0.3s ease;
+            font-family: inherit;
+            white-space: nowrap;
+            position: relative;
+            z-index: 2;
+        }
+
+        .copy-prompt-btn:hover {
+            background: rgba(139, 92, 246, 0.25);
+            border-color: rgba(139, 92, 246, 0.5);
+            color: #e9d5ff;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(139, 92, 246, 0.3);
+        }
+
+        .copy-prompt-btn svg {
+            width: 14px;
+            height: 14px;
+            flex-shrink: 0;
+        }
+
+        /* Toast Notification */
+        .prompt-toast {
+            position: fixed;
+            bottom: 32px;
+            right: 32px;
+            background: rgba(15, 10, 40, 0.95);
+            border: 1px solid rgba(139, 92, 246, 0.4);
+            color: #c4b5fd;
+            padding: 12px 20px;
+            border-radius: 12px;
+            font-size: 14px;
+            font-weight: 600;
+            opacity: 0;
+            transform: translateY(10px);
+            transition: opacity 0.3s ease, transform 0.3s ease;
+            z-index: 10000;
+            pointer-events: none;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+        }
+
+        .prompt-toast.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
     </style>
 </head>
 <body>
@@ -851,6 +912,10 @@
                                 <span class="tech"><span class="short">CSS</span><span class="full">CSS</span></span>
                                 <span class="tech"><span class="short">JS</span><span class="full">JavaScript</span></span>
                             </div>
+                            <button class="copy-prompt-btn" data-site="theme-atlas" onclick="event.preventDefault();event.stopPropagation();copyPrompt(this)">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><rect x="8" y="2" width="8" height="4" rx="1" ry="1"/></svg>
+                                Copy AI Prompt
+                            </button>
                             <span class="view-btn">
                                 Explore Library
                                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -881,6 +946,10 @@
                                 <span class="tech"><span class="short">CSS</span><span class="full">CSS</span></span>
                                 <span class="tech"><span class="short">JS</span><span class="full">JavaScript</span></span>
                             </div>
+                            <button class="copy-prompt-btn" data-site="indie-game" onclick="event.preventDefault();event.stopPropagation();copyPrompt(this)">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><rect x="8" y="2" width="8" height="4" rx="1" ry="1"/></svg>
+                                Copy AI Prompt
+                            </button>
                             <span class="view-btn">
                                 Explore
                                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -912,6 +981,10 @@
                                 <span class="tech"><span class="short">CSS</span><span class="full">CSS</span></span>
                                 <span class="tech"><span class="short">JS</span><span class="full">JavaScript</span></span>
                             </div>
+                            <button class="copy-prompt-btn" data-site="trail-guide" onclick="event.preventDefault();event.stopPropagation();copyPrompt(this)">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><rect x="8" y="2" width="8" height="4" rx="1" ry="1"/></svg>
+                                Copy AI Prompt
+                            </button>
                             <span class="view-btn">
                                 Explore
                                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -943,6 +1016,10 @@
                                 <span class="tech"><span class="short">CSS</span><span class="full">CSS</span></span>
                                 <span class="tech"><span class="short">JS</span><span class="full">JavaScript</span></span>
                             </div>
+                            <button class="copy-prompt-btn" data-site="portfolio" onclick="event.preventDefault();event.stopPropagation();copyPrompt(this)">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><rect x="8" y="2" width="8" height="4" rx="1" ry="1"/></svg>
+                                Copy AI Prompt
+                            </button>
                             <span class="view-btn">
                                 Explore
                                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -973,6 +1050,10 @@
                                 <span class="tech"><span class="short">CSS</span><span class="full">CSS</span></span>
                                 <span class="tech"><span class="short">JS</span><span class="full">JavaScript</span></span>
                             </div>
+                            <button class="copy-prompt-btn" data-site="restaurant" onclick="event.preventDefault();event.stopPropagation();copyPrompt(this)">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><rect x="8" y="2" width="8" height="4" rx="1" ry="1"/></svg>
+                                Copy AI Prompt
+                            </button>
                             <span class="view-btn">
                                 Explore
                                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -1003,6 +1084,10 @@
                                 <span class="tech"><span class="short">CSS</span><span class="full">CSS</span></span>
                                 <span class="tech"><span class="short">JS</span><span class="full">JavaScript</span></span>
                             </div>
+                            <button class="copy-prompt-btn" data-site="tech-startup" onclick="event.preventDefault();event.stopPropagation();copyPrompt(this)">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><rect x="8" y="2" width="8" height="4" rx="1" ry="1"/></svg>
+                                Copy AI Prompt
+                            </button>
                             <span class="view-btn">
                                 Explore
                                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -1034,6 +1119,10 @@
                                 <span class="tech"><span class="short">CSS</span><span class="full">CSS</span></span>
                                 <span class="tech"><span class="short">JS</span><span class="full">JavaScript</span></span>
                             </div>
+                            <button class="copy-prompt-btn" data-site="fashion-ecommerce" onclick="event.preventDefault();event.stopPropagation();copyPrompt(this)">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><rect x="8" y="2" width="8" height="4" rx="1" ry="1"/></svg>
+                                Copy AI Prompt
+                            </button>
                             <span class="view-btn">
                                 Explore
                                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -1064,6 +1153,10 @@
                                 <span class="tech"><span class="short">CSS</span><span class="full">CSS</span></span>
                                 <span class="tech"><span class="short">JS</span><span class="full">JavaScript</span></span>
                             </div>
+                            <button class="copy-prompt-btn" data-site="travel" onclick="event.preventDefault();event.stopPropagation();copyPrompt(this)">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><rect x="8" y="2" width="8" height="4" rx="1" ry="1"/></svg>
+                                Copy AI Prompt
+                            </button>
                             <span class="view-btn">
                                 Explore
                                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -1094,6 +1187,10 @@
                                 <span class="tech"><span class="short">CSS</span><span class="full">CSS</span></span>
                                 <span class="tech"><span class="short">JS</span><span class="full">JavaScript</span></span>
                             </div>
+                            <button class="copy-prompt-btn" data-site="fitness" onclick="event.preventDefault();event.stopPropagation();copyPrompt(this)">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><rect x="8" y="2" width="8" height="4" rx="1" ry="1"/></svg>
+                                Copy AI Prompt
+                            </button>
                             <span class="view-btn">
                                 Explore
                                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -1124,6 +1221,10 @@
                                 <span class="tech"><span class="short">CSS</span><span class="full">CSS</span></span>
                                 <span class="tech"><span class="short">JS</span><span class="full">JavaScript</span></span>
                             </div>
+                            <button class="copy-prompt-btn" data-site="agency" onclick="event.preventDefault();event.stopPropagation();copyPrompt(this)">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><rect x="8" y="2" width="8" height="4" rx="1" ry="1"/></svg>
+                                Copy AI Prompt
+                            </button>
                             <span class="view-btn">
                                 Explore
                                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -1154,6 +1255,10 @@
                                 <span class="tech"><span class="short">CSS</span><span class="full">CSS</span></span>
                                 <span class="tech"><span class="short">JS</span><span class="full">JavaScript</span></span>
                             </div>
+                            <button class="copy-prompt-btn" data-site="news-magazine" onclick="event.preventDefault();event.stopPropagation();copyPrompt(this)">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><rect x="8" y="2" width="8" height="4" rx="1" ry="1"/></svg>
+                                Copy AI Prompt
+                            </button>
                             <span class="view-btn">
                                 Explore
                                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -1185,6 +1290,10 @@
                                 <span class="tech"><span class="short">CSS</span><span class="full">CSS</span></span>
                                 <span class="tech"><span class="short">JS</span><span class="full">JavaScript</span></span>
                             </div>
+                            <button class="copy-prompt-btn" data-site="music-festival" onclick="event.preventDefault();event.stopPropagation();copyPrompt(this)">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><rect x="8" y="2" width="8" height="4" rx="1" ry="1"/></svg>
+                                Copy AI Prompt
+                            </button>
                             <span class="view-btn">
                                 Explore
                                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -1216,6 +1325,10 @@
                                 <span class="tech"><span class="short">CSS</span><span class="full">CSS</span></span>
                                 <span class="tech"><span class="short">JS</span><span class="full">JavaScript</span></span>
                             </div>
+                            <button class="copy-prompt-btn" data-site="law-firm" onclick="event.preventDefault();event.stopPropagation();copyPrompt(this)">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><rect x="8" y="2" width="8" height="4" rx="1" ry="1"/></svg>
+                                Copy AI Prompt
+                            </button>
                             <span class="view-btn">
                                 Explore
                                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -1233,6 +1346,8 @@
             <p>Crafted with HTML, CSS &amp; JavaScript</p>
         </footer>
     </div>
+
+    <div class="prompt-toast" id="promptToast">✓ AI prompt copied to clipboard!</div>
 
     <!-- Particle Canvas -->
     <canvas id="particle-canvas"></canvas>
@@ -1520,6 +1635,472 @@
                 if (!particlesEnabled) particles = [];
             });
         });
+
+    // ── AI Prompt Copy System ─────────────────────────────────────────
+    const sitePrompts = {
+'theme-atlas': `Build a comprehensive web design theme showcase and reference library website called "[SITE_NAME: The Theme Atlas]" for "[BUSINESS/CREATOR: Web Dev Samples]".
+
+## Site Purpose
+[PURPOSE: This is an interactive reference library that showcases a large collection of named web design themes. Each theme is displayed with a live visual sample, color palette swatches, a description, a category tag, and a one-click CSS snippet copy button. The goal is to let designers and developers browse, preview, and grab theme styles instantly.]
+
+## Sections & Layout
+1. [HEADER: A centered site header with an animated gradient title (shifting hues), a subtitle describing the library, and badge pills showing stats like total theme count and categories.]
+2. [FILTER_NAV: A horizontal row of pill-shaped filter buttons (e.g., "All", "Dark", "Light", "Retro", "Modern", "Artistic", "Minimal") that show/hide theme cards by category using JavaScript classList toggling.]
+3. [THEME_GRID: A 2-column responsive grid of theme cards. Each card contains:
+   - A card header with the theme name, a colored category tag, and a short description
+   - A color palette row of circular swatches showing 4-5 key colors
+   - A live sample block visually styled in that theme, containing a heading, paragraph, button, info panel, and text input — all styled to match the theme
+   - A card actions footer with a "Copy CSS" button (data attribute maps to a CSS snippet)]
+4. [FOOTER: A simple centered footer with copyright and project attribution.]
+5. [SCROLL_TOP_BTN: A fixed-position circular button in the bottom-right that appears on scroll and smooth-scrolls to the top.]
+6. [TOAST: A small fixed notification that briefly appears after copying, confirming "Copied to clipboard!"]
+
+## Visual Design
+- [COLOR_SCHEME: Dark UI shell — background #12121a, card backgrounds #1a1a26, borders rgba(255,255,255,0.07), text #e8e8f0, muted text #8888aa. Accent gradient: #667eea → #764ba2.]
+- [TYPOGRAPHY: Font family 'Space Grotesk' for headings and UI, 'Inter' for body text. Weights 300-900. Title uses background-clip text with animated gradient.]
+- [SPACING: Cards have 20-24px internal padding, 24px grid gap, 40px page side padding, 80px bottom padding.]
+- [BORDERS: 1px solid rgba(255,255,255,0.07) on cards, 16px border-radius. Category tags are pill-shaped (border-radius: 100px) with translucent colored backgrounds.]
+- [EFFECTS: Cards lift on hover (translateY -4px) with box-shadow. Filter buttons glow when active with gradient background. Header title has animated gradient text (background-position animation).]
+
+## Interactivity & Features
+- [FILTER_SYSTEM: Clicking a filter button sets it as active, iterates all theme cards, and hides/shows based on data-category attribute match.]
+- [COPY_CSS: Each card has a copy button mapped to a CSS snippet object by ID. Uses navigator.clipboard.writeText with a textarea fallback. Shows a toast notification on success.]
+- [SCROLL_ANIMATIONS: An IntersectionObserver adds an "in-view" class to cards as they enter the viewport for staggered fade-in.]
+- [SCROLL_TO_TOP: Button toggles visibility based on scrollY > 400, smooth-scrolls to top on click.]
+
+## Responsive Design
+- [BREAKPOINT_768PX: Grid switches from 2 columns to 1 column. Side padding reduces to 16px. Header padding reduces.]
+
+## Content Scale
+- [THEME_COUNT: Include approximately 60-65 distinct themes across categories like Dark, Light, Retro, Modern, Artistic, and Minimal. Each theme needs a unique sample block with fully styled heading, paragraph, button, panel, and input elements.]`,
+
+'indie-game': `Build a [SITE_TYPE: cyberpunk indie game development studio and game announcement] website for "[BUSINESS_NAME: Pixel Forge Studios]", a [BUSINESS_DESCRIPTION: small indie game studio developing a cyberpunk roguelike game].
+
+## Site Purpose
+[PURPOSE: Announce and promote an in-development video game with a cyberpunk aesthetic. The site should create excitement, showcase the game's visual identity, display development progress, and collect wishlist signups from interested players.]
+
+## Sections & Layout
+1. [NAV: A fixed transparent navigation bar with the studio logo/name on the left, anchor links (Game, Gallery, Devlog, Roadmap, Wishlist) in the center, and a styled CTA button on the right.]
+2. [HERO: A full-viewport hero section with a large game title featuring animated glitch text effects (pseudo-element layers with color shifts in cyan and magenta), a tagline, platform availability tags, and two CTA buttons. Include a hero background with subtle scanline overlay.]
+3. [FEATURES: A multi-column features section with icon-topped cards highlighting game mechanics (e.g., procedural generation, augmented combat, hacking systems, branching narrative). Each card has a neon-colored icon, title, and description.]
+4. [GALLERY: A CSS-only scene gallery showing game concept art or screenshots in a responsive grid with hover zoom and overlay captions. Each image has a scene title and description on hover.]
+5. [DEVLOG: A section displaying development blog cards in a grid. Each card has a date, dev-phase tag (e.g., Alpha, Beta, Concept), title, summary, and "Read more" link.]
+6. [ROADMAP: A vertical timeline with alternating left-right milestone entries, each with a glowing dot connector, date, title, description, and completion status indicator.]
+7. [WISHLIST: An email signup section with a heading, description, email input field, and submit button. On submission, show an inline success message.]
+8. [FOOTER: Dark footer with studio info, social links, and copyright.]
+
+## Visual Design
+- [COLOR_SCHEME: Ultra-dark base (#0a0a0f, #11111e for cards), neon accents — cyan (#00f5ff), magenta (#ff006e), purple (#8b00ff), neon green (#39ff14). Gradients between neon colors for borders and glows.]
+- [TYPOGRAPHY: Monospace display font (e.g., Share Tech Mono) for headings and code-style elements. Geometric sans-serif (e.g., Rajdhani) for UI and body text. Text shadows with neon glow effects.]
+- [EFFECTS: Scanline overlay across the entire page using a pseudo-element with repeating linear-gradient (2px transparent/rgba bands). Glitch animation on the hero title using CSS keyframes with clip-path and color-shifted pseudo-elements. Neon box-shadows on buttons and cards. CRT monitor aesthetic.]
+- [SPACING: Generous padding (80-100px vertical sections), card padding 24-32px.]
+
+## Interactivity & Features
+- [GLITCH_TEXT: CSS-only glitch animation using ::before and ::after pseudo-elements with clip-path, transform offsets, and color-shift filters.]
+- [SCANLINE_FX: A fixed full-page pseudo-element with repeating-linear-gradient creating horizontal scanlines.]
+- [EMAIL_FORM: Client-side email validation, submit shows inline success message, button changes text.]
+- [SCROLL_ANIMATIONS: Fade-in-up reveals on scroll using IntersectionObserver.]
+- [MOBILE_MENU: Hamburger toggle for navigation on smaller screens.]
+
+## Responsive Design
+- [BREAKPOINTS: 768px — single column layouts, reduced padding, collapsed navigation. 480px — further size reductions.]`,
+
+'trail-guide': `Build a [SITE_TYPE: outdoor trail guide and hiking adventure] website for "[BUSINESS_NAME: Trailhead Co.]", a [BUSINESS_DESCRIPTION: national park and outdoor adventure company offering guided hiking experiences and trail information].
+
+## Site Purpose
+[PURPOSE: Provide hikers and outdoor enthusiasts with trail information, adventure packages, trail guides, and trip planning tools. The site should evoke the feeling of being in nature with earthy colors and rugged typography.]
+
+## Sections & Layout
+1. [NAV: A fixed navigation bar with the company logo, anchor links (Trails, Packages, Guides, Conditions, Contact), and a CTA button.]
+2. [HERO: A full-viewport hero with a dramatic landscape background image, overlay gradient, large bold heading, subtitle, and dual CTA buttons (Explore Trails, Book Adventure). Include stats like "200+ trails" and "50K hikers served".]
+3. [TRAILS: A responsive grid of trail cards. Each card displays a trail photo, trail name, location, difficulty badge (Easy/Moderate/Hard/Expert color-coded green/yellow/orange/red), distance, elevation gain, estimated time, and a "View Trail" button.]
+4. [PACKAGES: Three-tier adventure package cards (Day Hike, Weekend Trek, Expedition) with pricing, included features checklist, and booking CTA. The middle tier is visually emphasized as "Most Popular".]
+5. [GUIDES: An accordion-style trail guide section. Each item expands on click to reveal detailed trail information, what to bring, best seasons, and safety tips. The toggle icon rotates on expand.]
+6. [ELEVATION: An SVG-based elevation profile visualization showing a trail's elevation changes over distance, with labeled peaks and waypoints.]
+7. [WEATHER: A weather conditions widget showing current temperature, conditions icon, wind speed, humidity, and sunrise/sunset times for the trail area.]
+8. [CONTACT: A contact form with fields for name, email, trail interest dropdown, group size, and message. Submit shows confirmation.]
+9. [FOOTER: Multi-column footer with company info, quick links, contact details, and social media icons.]
+
+## Visual Design
+- [COLOR_SCHEME: Earthy natural palette — forest dark (#1a3a2a), forest green (#40916c), warm tan (#d4a574), sky blue (#4a90d9), cream background (#f5efe6), dark text (#2d3436).]
+- [TYPOGRAPHY: Bold condensed sans-serif (e.g., Oswald) for headings giving a rugged feel. Elegant serif (e.g., Lora) for body text providing readability. Strong weight contrast between headings and body.]
+- [SPACING: Sections with 80-100px vertical padding. Cards with 20-24px padding. Generous whitespace for breathing room.]
+- [IMAGERY: Full-width landscape photography for hero and section backgrounds. Trail photos for cards.]
+
+## Interactivity & Features
+- [ACCORDION: Click-to-expand trail guides with smooth height transition and rotating chevron icon.]
+- [DIFFICULTY_BADGES: Color-coded badges (green=Easy, yellow=Moderate, orange=Hard, red=Expert) on each trail card.]
+- [FORM_VALIDATION: Required field validation, email format check, submission success state.]
+- [SCROLL_ANIMATIONS: Staggered fade-in reveals on scroll using IntersectionObserver.]
+- [COUNTER_ANIMATIONS: Stats numbers animate from 0 to target on scroll into view.]
+
+## Responsive Design
+- [BREAKPOINTS: 1024px — 2-column trail grid. 768px — single column, stacked package cards, full-width sections. 480px — reduced padding, smaller typography.]`,
+
+'portfolio': `Build a [SITE_TYPE: minimalist designer portfolio] website for "[PERSON_NAME: Elena Voss]", a [PERSON_DESCRIPTION: digital designer and creative director with 8 years of experience].
+
+## Site Purpose
+[PURPOSE: Showcase design work, communicate professional identity, and provide a way for potential clients to get in touch. The portfolio should feel clean, sophisticated, and let the work speak for itself through generous whitespace and carefully restrained design.]
+
+## Sections & Layout
+1. [NAV: A fixed top navigation bar with the designer's name/logo on the left and anchor links (Work, About, Contact) on the right. Adds a subtle bottom border on scroll. Include a hamburger menu for mobile.]
+2. [HERO: A two-column hero section. Left side has a large display heading introducing the designer (e.g., "Digital Designer & Creative Director"), a short tagline, and a CTA button. Right side features a hero image or abstract visual. Include a scroll-down indicator animation (bouncing arrow).]
+3. [PROJECTS: A "Selected Work" section with a grid of project cards (2-column mixed grid). Each card has a large project image, project title, category tags, and year. On hover, an overlay appears with a brief description and "View Project" link. Clicking opens a case study modal.]
+4. [CASE_STUDY_MODAL: A full-screen overlay modal showing project details — large hero image, project title, client name, year, tags, and three content blocks: "The Challenge", "The Approach", and "The Result". Close button in the top-right corner.]
+5. [ABOUT: A two-column section (text + image). The text side has a heading, multi-paragraph bio, and stats (50+ projects, 8 years experience, 12 awards). The image side shows a portrait photo.]
+6. [CONTACT: A contact section with the designer's email displayed prominently, a contact form (name, email, subject, message fields), and social media links. Form submission shows inline success.]
+7. [FOOTER: Minimal footer with copyright, year, and back-to-top link.]
+
+## Visual Design
+- [COLOR_SCHEME: Clean minimal palette — off-white background (#fafafa), near-black text (#1a1a1a), bright blue accent (#0066ff), light gray borders (#e5e5e5), medium gray secondary text (#666).]
+- [TYPOGRAPHY: Geometric sans-serif display font (e.g., Space Grotesk, weights 300-700) for headings. Clean sans-serif (e.g., Inter, weights 300-500) for body text. Large heading sizes with tight letter-spacing (-0.02em). Generous line-height (1.6-1.8) on body.]
+- [SPACING: Very generous whitespace — sections with 120px vertical padding, large gap between elements. Breathing room is a design feature.]
+- [EFFECTS: Subtle hover animations (0.4s cubic-bezier transitions), image scale on hover (1.02x), smooth scroll behavior. No harsh shadows — use border-based card definition.]
+
+## Interactivity & Features
+- [SCROLL_REVEALS: Fade-in-up animations on scroll using IntersectionObserver with staggered timing.]
+- [MODAL_SYSTEM: Click project card to open a detailed case study modal with challenge/approach/result. Close via button or overlay click.]
+- [FORM_VALIDATION: Required fields, email validation, submit button changes to success state.]
+- [NAV_SCROLL: Navigation gets a border-bottom when user scrolls past the hero section.]
+- [MOBILE_MENU: Hamburger icon toggles a slide-in or dropdown mobile menu.]
+
+## Responsive Design
+- [BREAKPOINTS: 1024px — project grid adjusts. 768px — single column layouts, full-width hero, stacked about section. 480px — smaller headings, reduced padding.]`,
+
+'restaurant': `Build a [SITE_TYPE: luxury fine dining restaurant] website for "[RESTAURANT_NAME: Maison Noir]", a [RESTAURANT_DESCRIPTION: Michelin-starred fine dining establishment with a focus on seasonal tasting menus, established in 1987].
+
+## Site Purpose
+[PURPOSE: Create an elegant digital presence that conveys exclusivity and culinary excellence. The site should make visitors feel the luxury of the dining experience, showcase the menu, and allow reservations.]
+
+## Sections & Layout
+1. [TOP_BAR: A thin top bar with contact information (phone, email) and operating hours.]
+2. [NAV: A fixed navigation with the restaurant logo/name, a tagline (e.g., "Est. 1987"), anchor links (Story, Menu, Experience, Gallery, Reservations), and a "Reserve" CTA button.]
+3. [HERO: A full-viewport hero section with a dramatic food/restaurant background image, a dark gradient overlay, the restaurant name in large serif type, a tagline, rating badges (e.g., Michelin stars), and a "Reserve Your Table" CTA button.]
+4. [STORY: A two-column "Our Story" section. Left side has an image with a decorative border/frame effect. Right side has the heading, multi-paragraph narrative, and the head chef's name.]
+5. [PARALLAX_QUOTE: A parallax section with a background image that scrolls at a different speed, containing an elegant pull quote from a food critic or the chef.]
+6. [MENU: A tasting menu section displaying 4 courses (numbered I, II, III, IV) with alternating image-text layouts. Each course shows a dish photo, course name, dish title, description, and supplementary details.]
+7. [EXPERIENCE: A 4-card grid section showing dining experiences (Private Dining, Chef's Table, Wine Cellar, Culinary Classes). Each card has an image, title, description, and capacity/pricing details.]
+8. [GALLERY: A mixed-grid photo gallery (2x2 large image, side images) showcasing the restaurant interior, dishes, and ambiance.]
+9. [RESERVATIONS: A reservation form section with a background image and overlay. Form includes date picker, time dropdown, guest count, name, email, phone, and special requests textarea. Submission shows a success card with confirmed details.]
+10. [FOOTER: A dark multi-column footer with address, hours, contact, navigation links, and social media.]
+
+## Visual Design
+- [COLOR_SCHEME: Luxury dark palette — black background (#0a0a0a), off-white text (#f5f5f5), gold accent (#c9a962), muted gray (#888). Gold is used sparingly for borders, accents, and hover states.]
+- [TYPOGRAPHY: Elegant serif (e.g., Cormorant Garamond, weights 300-600) for headings and display text. Clean sans-serif (e.g., Montserrat, weights 300-500) for body text. Generous letter-spacing on headings (0.05em+). Uppercase transforms on labels and nav links.]
+- [SPACING: Very generous — 10rem (160px) section padding, large margins between elements, breathing room everywhere to convey luxury and exclusivity.]
+- [EFFECTS: Subtle parallax on scroll (background-attachment: fixed or JS 0.3x scroll rate). Gold border hover effects on cards. Smooth fade-in-up animations. A page loader with pulsing restaurant name on initial load.]
+
+## Interactivity & Features
+- [PARALLAX: Background images move at 0.3x scroll speed for depth.]
+- [RESERVATION_FORM: Date, time, and guest dropdowns. Form submission shows a success card with reservation summary.]
+- [PAGE_LOADER: Initial loading screen with pulsing/fading restaurant name, fades out after content loads.]
+- [SCROLL_ANIMATIONS: Staggered fade-in-up with 0.1s delays per item on IntersectionObserver trigger.]
+- [GALLERY_HOVER: Images scale subtly (1.02-1.05x) on hover.]
+
+## Responsive Design
+- [BREAKPOINTS: 1024px — 2-column grids become single column, menu courses stack vertically. 768px — full-width everything, reduced padding. Navigation collapses to mobile menu.]`,
+
+'tech-startup': `Build a [SITE_TYPE: SaaS technology startup landing page] website for "[COMPANY_NAME: Nexus AI]", a [COMPANY_DESCRIPTION: intelligent automation platform that uses AI to streamline business workflows].
+
+## Site Purpose
+[PURPOSE: Convert visitors into trial signups and demo bookings. The page should communicate the product's value proposition, showcase features, present pricing, and build trust through social proof. It should feel modern, innovative, and trustworthy.]
+
+## Sections & Layout
+1. [NAV: A fixed navigation bar with the product logo (icon + name), anchor links (Features, Pricing, Testimonials), a "Sign In" text link, and a prominent "Start Free Trial" CTA button.]
+2. [HERO: A large hero section with an announcement badge/pill at the top (e.g., "Now with AI v3.0"), a large gradient-text heading, a descriptive subtitle, two CTA buttons (Start Free Trial, Watch Demo), and a row of stats (10K+ users, 5M+ tasks automated, 99.9% uptime) with animated counters.]
+3. [FEATURES: A section displaying product features in cards. Each card has an icon with a gradient background orb, a feature title, and a description. Cards have hover lift effects. Include mouse-tracking gradient orb animations in the background.]
+4. [PROCESS: A numbered steps section (3-4 steps) explaining how the product works. Each step card has a large step number, heading, and description. Staggered reveal animation on scroll.]
+5. [PRICING: A pricing section with an annual/monthly toggle switch. Three pricing tier cards (Free, Pro, Enterprise) with plan name, price, billing period, feature checklist, and CTA button. The middle tier is visually featured (scaled up, highlighted border, "Popular" badge).]
+6. [DASHBOARD_PREVIEW: A visual mockup of the product dashboard showing bar charts, metrics, and UI elements. Bar charts animate to full height on scroll intersection.]
+7. [TESTIMONIALS: A testimonial section with customer quotes, names, titles, and company logos. Carousel or grid layout.]
+8. [CTA_MODALS: Multiple modal overlays for Sign In (email/password form), Free Trial (multi-field registration form), Schedule Demo (contact form), and Demo Video (embedded video player). All modals close via button or overlay click.]
+9. [FOOTER: Multi-column footer with product links, company info, legal links, and social icons.]
+
+## Visual Design
+- [COLOR_SCHEME: Modern dark gradient base. Hero background with radial gradient blobs (blue, purple, cyan, magenta). Card backgrounds with subtle glassmorphic effects. Accent colors: bright cyan/blue gradient for CTAs, purple for secondary actions.]
+- [TYPOGRAPHY: Clean sans-serif (e.g., Inter, weights 300-800) for all text. Large bold headings (clamp-based responsive sizing). Gradient text on hero heading using background-clip.]
+- [SPACING: Sections with 80-120px vertical padding. Cards with 24-32px padding. Stats row with generous gaps.]
+- [EFFECTS: Floating gradient orbs that subtly follow mouse movement. Pricing toggle with smooth transition. Counter animations on stats. Bar chart grow animations. Glassmorphic card effects (backdrop-filter blur, translucent backgrounds).]
+
+## Interactivity & Features
+- [GRADIENT_ORBS: Background elements that respond to cursor position using mousemove event, creating a subtle parallax depth effect.]
+- [PRICING_TOGGLE: Annual/Monthly toggle that dynamically updates all pricing values using data attributes.]
+- [MODAL_SYSTEM: Multiple modals (Sign In, Trial, Demo, Video) each with their own form/content. Open/close with transitions.]
+- [COUNTER_ANIMATION: Stats count up from 0 to target value on scroll intersection with easing.]
+- [BAR_CHART_ANIMATION: Dashboard bar elements grow from 0 to target height on IntersectionObserver trigger.]
+- [FORM_VALIDATION: Email format validation, password minimum length, required fields, loading states on submit.]
+
+## Responsive Design
+- [BREAKPOINTS: 1024px — feature cards stack to 2 columns, pricing cards stack. 768px — single column everything, full-width CTAs. Mobile navigation with hamburger menu.]`,
+
+'fashion-ecommerce': `Build a [SITE_TYPE: luxury fashion e-commerce boutique] website for "[BRAND_NAME: NOIR]", a [BRAND_DESCRIPTION: contemporary fashion brand offering curated collections of premium clothing and accessories].
+
+## Site Purpose
+[PURPOSE: Provide an immersive online shopping experience that communicates luxury, allows product browsing, and facilitates purchases. The site should feel like walking into a high-end boutique — sophisticated, curated, and conversion-focused.]
+
+## Sections & Layout
+1. [ANNOUNCEMENT_BAR: A slim top banner with a promotional message (e.g., "Free shipping on orders over $200") that can be dismissed.]
+2. [NAV: A multi-element navigation with a hamburger menu toggle on the left, the brand logo centered, and utility icons (search, account, cart with item count badge) on the right. Navigation links split across a dropdown or full-width mega menu (Women, Men, Accessories, New Arrivals, Sale).]
+3. [HERO_SLIDER: A full-width hero carousel/slider with multiple slides. Each slide has a large background image, a category tag, a heading, and dual CTA buttons (Shop Now, Explore). Slide transitions are smooth crossfades. Include navigation dots or arrows.]
+4. [CATEGORIES: A category showcase section with large image cards (Women, Men, Accessories). Each card has an overlay with the category name and a hover scale effect.]
+5. [PRODUCTS: A product grid displaying items. Each product card has a product image, brand/designer name, product name, price (with optional sale price in a different color), and a quick-add button. Image hover shows a secondary product image or zoom effect.]
+6. [FEATURED_COLLECTION: A curated collection section with a banner image, collection title, description, and a grid of featured products.]
+7. [NEWSLETTER: An email signup section with a heading ("Join the Club"), description, email input, and subscribe button.]
+8. [FOOTER: A multi-column footer with customer service links, company info, social media icons, payment method icons, and copyright.]
+
+## Visual Design
+- [COLOR_SCHEME: Clean luxury palette — white background (#ffffff), dark text (#1a1a1a), burgundy/wine accent (#c41e3a), light gray borders (#e0e0e0). The accent color is used sparingly for sale prices, CTAs, and hover states.]
+- [TYPOGRAPHY: Elegant serif (e.g., Playfair Display, including italic) for brand and heading text. Clean sans-serif (e.g., Outfit, weights 300-600) for body text, navigation, and product info. Mix of uppercase and sentence case.]
+- [SPACING: Clean and airy — product grid with consistent gap, generous card padding, breathing room between sections.]
+- [EFFECTS: Product image hover zoom or swap. Smooth slide transitions on hero carousel. Subtle border and shadow on hover for product cards.]
+
+## Interactivity & Features
+- [HERO_SLIDER: Auto-advancing carousel with manual navigation (dots/arrows). Crossfade transitions between slides.]
+- [CART_SYSTEM: Visual cart icon with dynamic item count badge. Add-to-cart buttons on product cards.]
+- [PRODUCT_HOVER: Secondary image or zoom on product card hover. Quick-view or quick-add functionality.]
+- [SEARCH_OVERLAY: Search icon opens a fullscreen or dropdown search overlay with input field.]
+- [MOBILE_MENU: Hamburger icon toggles a full-height slide-in navigation panel.]
+- [NEWSLETTER_FORM: Email validation and submission with success message.]
+
+## Responsive Design
+- [BREAKPOINTS: 1024px — product grid 3 columns. 768px — product grid 2 columns, stacked categories, mobile navigation. 480px — single column products, simplified layout.]`,
+
+'travel': `Build a [SITE_TYPE: adventure travel and destination discovery] website for "[BRAND_NAME: Wanderlust]", a [BRAND_DESCRIPTION: travel storytelling platform showcasing breathtaking destinations, travel stories, and guides for adventurous travelers].
+
+## Site Purpose
+[PURPOSE: Inspire wanderlust and provide destination discovery. The site should showcase stunning photography, tell compelling travel stories, and guide visitors to explore destinations. It should feel immersive, aspirational, and editorially curated.]
+
+## Sections & Layout
+1. [NAV: A fixed navigation with the brand logo, main links (Destinations, Stories, Guides), a search icon, and a "Subscribe" button.]
+2. [HERO: A full-viewport hero featuring a single stunning destination with a large background image, destination name in large display text, a brief description, and a "Read Story" CTA. Include scroll cue (arrow or text). Show stats: "127 Countries, 500+ Stories".]
+3. [DESTINATIONS: A "Popular Destinations" grid with mixed-size cards (one large 2x2 featured card, rest standard size). Each card has a full-bleed photo, destination name overlay, region tag, and brief tagline. Hover effect zooms image slightly.]
+4. [STORIES: A featured stories section with one large featured story card (image + title + excerpt + author + read time) and a grid of smaller recent story cards. Each card shows category, title, excerpt, author, and read time.]
+5. [GUIDES: A travel guides section with category-based guide cards (e.g., "Budget Travel", "Solo Adventures", "Food & Culture"). Each has an icon/image, title, description, and article count.]
+6. [NEWSLETTER: A signup section with a heading, description about travel updates, email input, and subscribe button.]
+7. [FOOTER: Multi-column footer with destination links, categories, about info, and social media.]
+
+## Visual Design
+- [COLOR_SCHEME: Warm editorial palette — off-white to cream backgrounds, dark gray/brown text, earthy accent tones (amber, forest green, terracotta). Photography-driven color with minimal UI interference.]
+- [TYPOGRAPHY: Elegant serif (e.g., Libre Baskerville) for headlines and editorial content conveying authority. Clean sans-serif (e.g., Source Sans 3, weights 300-600) for body and UI text. Large display sizes on hero text.]
+- [SPACING: Magazine-style generous spacing — large section padding, breathing room around cards, generous line-height for readability.]
+- [IMAGERY: Photography is the primary design element. Full-bleed hero images, high-quality destination photos, story thumbnails. Images have subtle overlay gradients for text readability.]
+
+## Interactivity & Features
+- [DESTINATION_MODALS: Clicking a destination card opens a detailed modal with full-size imagery, description, and related stories.]
+- [STORY_MODALS: Clicking a story card opens the full story view with images, narrative text, and author info.]
+- [IMAGE_HOVER: Destination and story cards zoom images slightly (1.02x) on hover for interactivity.]
+- [SCROLL_ANIMATIONS: Fade-in-up reveals on scroll with IntersectionObserver.]
+- [NEWSLETTER: Email validation and subscription with success confirmation.]
+
+## Responsive Design
+- [BREAKPOINTS: 1024px — destination grid adjusts, stories grid becomes 2 columns. 768px — single column throughout, full-width cards. 480px — reduced padding and simplified layout.]`,
+
+'fitness': `Build a [SITE_TYPE: high-energy fitness studio and gym] website for "[STUDIO_NAME: Iron Pulse Fitness]", a [STUDIO_DESCRIPTION: modern fitness studio offering group classes, personal training, and membership packages].
+
+## Site Purpose
+[PURPOSE: Drive gym membership signups and class bookings. The site should convey energy, power, and motivation through bold design, showcase available classes, present pricing, and make it easy to join or book a class.]
+
+## Sections & Layout
+1. [NAV: A fixed dark navigation bar with the studio logo, anchor links (Classes, Trainers, Pricing, Contact), and a "Join Now" CTA button.]
+2. [HERO: A full-viewport hero with a high-energy background image (gym/workout), dark overlay, bold uppercase heading in a condensed typeface, a motivational tagline, and CTA buttons. Stats row on the right or bottom showing numbers like "500+ Members", "20+ Classes Weekly".]
+3. [INTRO: A brief introduction section with 3 feature cards (e.g., "Expert Trainers", "Modern Equipment", "Flexible Hours"). Each has an icon, heading, and description.]
+4. [CLASSES: A responsive grid of class cards (e.g., HIIT, Yoga, CrossFit, Boxing, Spin, Strength). Each card shows a class image, class name, duration badge, instructor name, intensity level (color-coded: green=Low, orange=Medium, red=High), calories burned, and a "Book Class" button.]
+5. [CTA_BANNER: A mid-page call-to-action banner with a background image, motivational text, and a "Start Your Journey" button.]
+6. [TRAINERS: A 4-column grid of trainer cards. Each shows a photo (grayscale by default, full color on hover), trainer name, specialization, and social media links that appear on hover.]
+7. [PRICING: A 3-tier pricing section (Basic, Pro, Elite) with an annual/monthly toggle. Each tier has the plan name, price, billing period, feature checklist, and CTA button. The middle tier is featured (scaled up, highlighted).]
+8. [TESTIMONIALS: Client testimonial cards with quote, name, membership duration, and results achieved.]
+9. [CONTACT: A two-column contact section (info + map on left, contact form on right) with phone, email, address, hours, and form fields (name, email, interest dropdown, message).]
+10. [FOOTER: Dark footer with studio info, quick links, hours, and social media.]
+
+## Visual Design
+- [COLOR_SCHEME: High-contrast dark theme — black background (#0a0a0a), white text (#ffffff), intense red primary accent (#ff4d4d), neon green secondary accent (#00ff88), gray muted (#888). Red is used for CTAs and emphasis, green for success and highlights.]
+- [TYPOGRAPHY: Bold condensed sans-serif (e.g., Bebas Neue) for headings — impactful and energetic. Clean sans-serif (e.g., Inter, weights 300-600) for body text. Uppercase transforms on many headings. Extra-large hero text.]
+- [SPACING: Sections with 80-100px vertical padding. Cards with consistent padding and gaps.]
+- [EFFECTS: Trainer photos desaturate by default (filter: grayscale(100%)) and colorize on hover. Cards lift on hover. Intensity badges pulse or glow slightly. High-energy feel overall.]
+
+## Interactivity & Features
+- [CLASS_BOOKING_MODAL: "Book Class" button opens a modal with class name, date picker, time selection, and attendee form. Shows confirmation on submit.]
+- [MEMBERSHIP_MODAL: "Join Now" buttons open a membership signup modal with personal details, plan selection, and payment placeholder.]
+- [PRICING_TOGGLE: Annual/Monthly switch updates all pricing values dynamically.]
+- [TRAINER_HOVER: Grayscale-to-color image transition, social links fade in from bottom.]
+- [COUNTER_ANIMATIONS: Stats animate from 0 on scroll intersection.]
+- [FORM_VALIDATION: Required fields, email validation, success states on submit.]
+
+## Responsive Design
+- [BREAKPOINTS: 1024px — class grid 2 columns, trainer grid 2 columns. 768px — single column, full-width cards, mobile navigation. 480px — simplified layout, reduced spacing.]`,
+
+'agency': `Build a [SITE_TYPE: contemporary creative agency portfolio] website for "[AGENCY_NAME: Studio Nova]", a [AGENCY_DESCRIPTION: creative agency specializing in branding, web design, and motion graphics, established in 2018].
+
+## Site Purpose
+[PURPOSE: Showcase the agency's creative work, communicate their design philosophy, highlight the team, and attract new client inquiries. The site should feel bold, design-forward, and demonstrate the agency's creative capabilities through its own design.]
+
+## Sections & Layout
+1. [CUSTOM_CURSOR: A custom cursor system with a small dot (8px) and a larger following circle (40px) that scales up when hovering interactive elements.]
+2. [NAV: A fixed navigation with the agency name in a split multi-line logo treatment (e.g., "STUDIO" on top, "NOVA" below), anchor links in a row, and a "Let's Talk" CTA. Navigation uses mix-blend-mode: difference for contrast against changing backgrounds.]
+3. [HERO: A two-column hero section. Left side has a large heading ("We create brands that matter"), a subtitle, and CTA buttons. Right side has a featured image with a floating badge ("Est. 2018"). Smooth parallax on scroll.]
+4. [MARQUEE: A full-width looping marquee banner with repeated text (e.g., "Branding • Web Design • Motion • Strategy •") scrolling horizontally using CSS animation. Divider dots between words.]
+5. [WORK: A "Selected Work" section with 4 project entries in alternating left-right layouts (image + text). Each project shows a large image (1.5fr in grid), project number, title, category tags, year, and a brief description. Image scales on hover.]
+6. [STATS: A 4-column stats section with animated counters (120+ Projects, 15 Awards, 50+ Clients, 6 Years) that count up on scroll intersection.]
+7. [SERVICES: A 2x2 grid of service cards. Each card has a service number (01-04), service name, description, and a bulleted list of sub-services.]
+8. [ABOUT: A two-part about section — narrative text on the left, image on the right, followed by a team grid (4 members) with photos, names, and roles.]
+9. [CLIENTS: A horizontal row of client names/logos showing past and current clients.]
+10. [CONTACT: A two-column contact section (info + social links on left, inquiry form on right) with name, email, project type dropdown, budget range, and message fields.]
+11. [PROJECT_MODAL: A detailed case study modal with project hero image, title, client, year, category, and challenge/approach/result narrative blocks.]
+12. [FOOTER: Minimal footer with copyright and back-to-top.]
+
+## Visual Design
+- [COLOR_SCHEME: Warm neutral base — off-white background (#f5f5f0), near-black text (#1a1a1a), bright orange-red accent (#ff5733). The accent color is used for hover states, active elements, and highlights.]
+- [TYPOGRAPHY: Bold modern sans-serif (e.g., Syne, weights 400-800) for headings — distinctive and authoritative. Clean sans-serif (e.g., DM Sans, weights 400-500) for body text. Large display sizes (clamp-based). Strong weight hierarchy.]
+- [SPACING: Generous whitespace — sections with 100-140px vertical padding. Large gaps between project entries. Breathing room as a design statement.]
+- [EFFECTS: Custom cursor with dot + circle follower. Mix-blend-mode on navigation. Marquee infinite scroll animation. Image hover zoom. Grayscale-to-color team photos on hover.]
+
+## Interactivity & Features
+- [CUSTOM_CURSOR: JavaScript-driven custom cursor with a small dot and a larger circle that follows with slight delay. Scales up on interactive element hover.]
+- [MARQUEE: CSS animation (translateX -50% over 20s linear infinite) on doubled content for seamless looping.]
+- [COUNTER_ANIMATION: Stats count from 0 to target with easing on IntersectionObserver trigger.]
+- [PROJECT_MODAL: Click project to open case study modal with detailed challenge/approach/result content.]
+- [FORM_VALIDATION: Required fields, email validation, dropdown selections, submit success state.]
+- [SCROLL_ANIMATIONS: Fade-in-up reveals with staggered timing on scroll intersection.]
+
+## Responsive Design
+- [BREAKPOINTS: 1024px — project entries stack, services 2 columns. 768px — single column, team grid 2 columns, mobile navigation, marquee hidden or slowed. 480px — further simplification.]`,
+
+'news-magazine': `Build a [SITE_TYPE: modern editorial news magazine] website for "[PUBLICATION_NAME: The Daily Chronicle]", a [PUBLICATION_DESCRIPTION: digital news publication covering world affairs, technology, culture, business, and opinion].
+
+## Site Purpose
+[PURPOSE: Deliver news and editorial content in a clean, readable format. The site should feel authoritative and trustworthy, with clear content hierarchy, easy category navigation, and an engaging reading experience that keeps visitors informed.]
+
+## Sections & Layout
+1. [HEADER: A top header bar with the current date on the left, the publication name centered, and utility buttons (Subscribe, Search) on the right.]
+2. [NAV: A horizontal category navigation bar with links (World, Technology, Culture, Business, Opinion, Sports). Active category is highlighted.]
+3. [FEATURED: A featured articles section with a 2:1 grid — a large featured article on the left (2fr with large image, category tag, headline, excerpt, author, and read time) and two smaller stacked articles on the right (1fr each).]
+4. [MAIN_CONTENT: A two-column main content area (2fr + 1fr). The main column has a list of article cards, each with a thumbnail image, category, headline, excerpt, author, date, and read time. The sidebar contains:]
+5. [SIDEBAR: The sidebar includes:
+   - Opinion cards with author photo, name, article title, and excerpt
+   - A "Trending" list with numbered items (1-5) using CSS counter pseudo-elements
+   - A newsletter signup card with heading, description, email input, and subscribe button]
+6. [CATEGORY_SECTIONS: Additional category-specific sections (e.g., Technology, Culture) with 3-column article grids. Each article has an image, category tag, title, excerpt, and metadata.]
+7. [FOOTER: A dark multi-column footer with publication sections, company links, social media icons, and copyright.]
+
+## Visual Design
+- [COLOR_SCHEME: Classic editorial palette — white background (#ffffff), dark text (#1a1a1a), burgundy/wine accent (#c41e3a), light gray borders (#e0e0e0), medium gray secondary text (#666). The accent color is for category tags, links on hover, and featured elements.]
+- [TYPOGRAPHY: Serif font (e.g., Lora) for article headlines conveying authority and editorial quality. Clean sans-serif (e.g., Source Sans 3) for body text, metadata, and UI elements. Clear size hierarchy from featured headlines to body text.]
+- [SPACING: Newspaper-inspired grid layout with consistent gaps. Articles breathe with adequate padding. Sidebar has clear separation from main content.]
+- [IMAGERY: Large featured images for hero articles, smaller thumbnails for list articles. 16:9 or 3:2 aspect ratios. Images zoom subtly on hover (1.03x).]
+
+## Interactivity & Features
+- [TRENDING_COUNTER: CSS-generated counters for the trending list using ::before pseudo-element with counter-increment.]
+- [IMAGE_HOVER: Article images zoom slightly (1.03x with overflow hidden) on card hover. Titles change to accent color.]
+- [NEWSLETTER: Email signup with validation and subscribe confirmation.]
+- [READ_TIME: Each article displays estimated read time (e.g., "5 min read") with bullet-separated metadata.]
+- [SCROLL_ANIMATIONS: Subtle fade-in on scroll for content sections.]
+
+## Responsive Design
+- [BREAKPOINTS: 1024px — featured section stacks, main content becomes full-width with sidebar below. 768px — all grids become single column, simplified header. 480px — reduced typography and padding.]`,
+
+'music-festival': `Build a [SITE_TYPE: electronic music festival event] website for "[FESTIVAL_NAME: Neon Horizon Festival]", a [FESTIVAL_DESCRIPTION: multi-day electronic music and arts festival featuring international DJs, immersive light shows, and interactive art installations].
+
+## Site Purpose
+[PURPOSE: Drive ticket sales and build excitement for an upcoming music festival. The site should capture the high-energy, neon-lit atmosphere of electronic music events, showcase the artist lineup, present ticket options, and create urgency with countdown timers.]
+
+## Sections & Layout
+1. [NAV: A fixed transparent navigation with the festival logo, anchor links (Lineup, Schedule, Tickets, Info), and a "Get Tickets" CTA button.]
+2. [HERO: A full-viewport hero with a dramatic background image/video, a large festival name with glitch/neon text effects, the event dates and location, a countdown timer (days/hours/minutes/seconds), and a "Get Tickets" CTA button.]
+3. [LINEUP: An artist lineup section with a grid of artist cards. Each card shows the artist's photo, name, genre tag, and set time. Include headliner cards that are larger and more prominent. Filter by day or stage.]
+4. [SCHEDULE: A day-by-day schedule with selectable day tabs. Each day shows a timeline of performances with time slots, artist names, stage names, and genre indicators. Color-coded by stage.]
+5. [TICKETS: A ticket pricing section with tier cards (General Admission, VIP, Platinum). Each tier shows the ticket name, price, list of included perks, availability status (e.g., "Limited" with urgency color), and a "Buy Now" button that opens a purchase modal.]
+6. [TICKET_MODAL: A purchase modal with ticket type selection, quantity, attendee details (name, email), and order summary. Shows a confirmation screen on "purchase".]
+7. [EXPERIENCE: A section showcasing festival experiences (Main Stage, Art Installations, Food Village, Camping). Each has an image, title, and description.]
+8. [SPONSORS: A row of sponsor logos/names.]
+9. [FAQ: An accordion FAQ section with common questions and expandable answers.]
+10. [FOOTER: Dark footer with festival info, social links, and copyright.]
+
+## Visual Design
+- [COLOR_SCHEME: Electric neon palette — near-black background (#0a0a0f), magenta (#ff00ff), cyan (#00ffff), hot pink (#ff006e), neon green. Gradients between neon colors. Glowing box-shadows and text-shadows throughout.]
+- [TYPOGRAPHY: Monospace display font (e.g., Share Tech Mono) for headings and countdown. Geometric sans-serif (e.g., Rajdhani) for body and UI text. Uppercase transforms with wide letter-spacing on headings.]
+- [EFFECTS: Glitch text animation on festival name (clip-path, color-shift pseudo-elements). Scanline overlay on hero section. Neon glow on buttons and cards. Pulsing animations on countdown digits. Color-shifting gradients.]
+- [SPACING: Full-width sections, card-based layouts with consistent gaps. Generous padding for impact.]
+
+## Interactivity & Features
+- [COUNTDOWN: A live countdown timer updating every second showing days, hours, minutes, seconds until the event. Digits have pulsing glow animation.]
+- [DAY_TABS: Schedule section has clickable day tabs that filter the timeline to show performances for the selected day.]
+- [TICKET_MODAL: Opens on "Buy Now" click. Shows ticket selection, quantity, form fields, order summary with total. Confirmation screen on submit.]
+- [FAQ_ACCORDION: Click to expand/collapse answers with smooth height transition.]
+- [SCROLL_ANIMATIONS: Neon-fade-in reveals on scroll using IntersectionObserver.]
+- [LINEUP_FILTER: Optional filter by day or genre to narrow down the artist grid.]
+
+## Responsive Design
+- [BREAKPOINTS: 1024px — lineup grid 3 columns, schedule adjusts. 768px — 2-column grid, stacked tickets, mobile nav. 480px — single column, simplified countdown, reduced effects.]`,
+
+'law-firm': `Build a [SITE_TYPE: distinguished corporate law firm] website for "[FIRM_NAME: Sterling & Associates]", a [FIRM_DESCRIPTION: full-service law firm specializing in corporate law, litigation, real estate, and family law, with a team of experienced attorneys].
+
+## Site Purpose
+[PURPOSE: Establish trust and professionalism, showcase the firm's practice areas and attorney expertise, and generate consultation requests. The site should feel authoritative, trustworthy, and dignified — communicating competence and reliability.]
+
+## Sections & Layout
+1. [TOP_BAR: A thin contact bar at the top with phone number and email as clickable links.]
+2. [NAV: A navigation bar with the firm logo/name, a tagline, main links (About, Practice Areas, Team, Testimonials, Contact), a hamburger menu toggle for mobile, and a "Free Consultation" CTA.]
+3. [HERO: A full-width hero with a law-themed background image (courthouse, library), a dark gradient overlay, a large serif heading establishing authority, a subtitle, two CTA buttons (Schedule Consultation, Our Practice Areas), and a stats row (500+ cases won, 30+ years experience, 15+ attorneys).]
+4. [ABOUT: A two-column about section — image with a gold decorative border on the left, text content on the right with heading, multi-paragraph firm history, and feature cards with icons (Experience, Dedication, Results).]
+5. [PRACTICE_AREAS: A 3-column grid of practice area cards (Corporate Law, Litigation, Real Estate, Family Law, Employment Law, Immigration). Each card has an icon, practice area name, description, and hover effect (border turns gold, card lifts).]
+6. [TEAM: A 4-column grid of attorney cards. Each shows a photo, name, title/position, and specialization. Clicking an attorney card opens a detailed bio modal.]
+7. [BIO_MODAL: A two-column modal showing the attorney's photo on the left and on the right: name, title, practice areas tags, full biography, and a "Schedule Consultation" CTA. Close button in corner.]
+8. [TESTIMONIALS: A 3-column section of client testimonial cards on a dark background. Each has a quote icon, testimonial text, client name, and case type.]
+9. [CONTACT: A two-column contact section (firm info + map placeholder on left, consultation request form on right). Form includes name, email, phone, practice area dropdown, and message. Submit button shows "Sending..." then "Request Sent!" with green confirmation.]
+10. [FAQ: An accordion section with common legal questions. Click to expand answers with smooth transition and rotating icon (+ to ×).]
+11. [FOOTER: Multi-column footer with firm info, practice area links, contact details, office hours, and disclaimer text.]
+
+## Visual Design
+- [COLOR_SCHEME: Corporate trustworthy palette — navy (#1a2a4a) as primary, gold (#c9a962) as accent, white (#ffffff) backgrounds, dark text (#2d3748), muted gray (#6c757d). Gold accents convey prestige; navy conveys authority.]
+- [TYPOGRAPHY: Traditional serif (e.g., Cormorant Garamond) for headings and firm name — conveys authority and tradition. Clean sans-serif (e.g., Open Sans) for body text and UI — ensures readability. Uppercase on section labels with letter-spacing.]
+- [SPACING: Professional generous spacing — 100px section padding, clear visual hierarchy, ample breathing room between elements.]
+- [EFFECTS: Parallax hero (background moves at 0.3x scroll). Gold border hover on practice area cards. Fade-in-up on scroll. Header hides on scroll down (translateY), reappears on scroll up. Grayscale attorney photos that colorize on hover.]
+
+## Interactivity & Features
+- [ATTORNEY_MODAL: Click attorney card to open detailed biography modal with photo, bio, practice areas, and consultation CTA.]
+- [FAQ_ACCORDION: Click-to-toggle with smooth height animation and rotating icon (45deg rotation on +).]
+- [FORM_SUBMISSION: Button text changes to "Sending...", then "Request Sent!" with green background on success.]
+- [HEADER_SCROLL: Navigation slides up on scroll down (past 200px), reappears on scroll up.]
+- [PARALLAX_HERO: Hero background image moves at 0.3x scroll rate.]
+- [SCROLL_ANIMATIONS: Fade-in-up reveals on IntersectionObserver intersection.]
+
+## Responsive Design
+- [BREAKPOINTS: 1024px — practice area grid 2 columns, team grid 2 columns. 768px — single column layouts, mobile navigation, stacked hero, simplified modals. 480px — reduced padding, smaller typography.]`
+};
+
+    function copyPrompt(btn) {
+        var id = btn.getAttribute('data-site');
+        var prompt = sitePrompts[id] || '/* no prompt available */';
+        var toastEl = document.getElementById('promptToast');
+
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+            navigator.clipboard.writeText(prompt).then(function() {
+                showPromptToast(toastEl);
+            }, function() {
+                showPromptToast(toastEl);
+            });
+        } else {
+            var ta = document.createElement('textarea');
+            ta.value = prompt;
+            ta.style.cssText = 'position:fixed;opacity:0';
+            document.body.appendChild(ta);
+            ta.focus();
+            ta.select();
+            try { document.execCommand('copy'); } catch(e) {}
+            document.body.removeChild(ta);
+            showPromptToast(toastEl);
+        }
+    }
+
+    var promptToastTimer = null;
+    function showPromptToast(toastEl) {
+        toastEl.classList.add('show');
+        if (promptToastTimer) clearTimeout(promptToastTimer);
+        promptToastTimer = setTimeout(function() {
+            toastEl.classList.remove('show');
+        }, 2500);
+    }
+
     </script>
 </body>
 </html>
