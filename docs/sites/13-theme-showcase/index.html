@@ -42,6 +42,8 @@ body{font-family:'Space Grotesk','Inter',sans-serif;background:#12121a;color:#e8
 .card-actions{padding:10px 24px 16px;display:flex;justify-content:flex-end;margin-top:auto}
 .copy-btn{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1);color:#8888aa;padding:5px 14px;border-radius:8px;font-size:.75rem;font-weight:600;cursor:pointer;transition:all .2s;font-family:inherit}
 .copy-btn:hover{background:rgba(99,102,241,.15);color:#667eea;border-color:rgba(99,102,241,.3)}
+.copy-prompt-btn{background:rgba(139,92,246,.1);border:1px solid rgba(139,92,246,.3);color:#a78bfa;padding:5px 14px;border-radius:8px;font-size:.75rem;font-weight:600;cursor:pointer;transition:all .2s;font-family:inherit}
+.copy-prompt-btn:hover{background:rgba(139,92,246,.25);color:#c4b5fd;border-color:rgba(139,92,246,.5)}
 .site-footer{text-align:center;padding:28px 40px;border-top:1px solid rgba(255,255,255,.06);color:#44445a;font-size:.85rem}
 .scroll-top{position:fixed;bottom:32px;right:32px;width:46px;height:46px;background:linear-gradient(135deg,#667eea,#764ba2);border:none;border-radius:50%;color:#fff;font-size:1.2rem;cursor:pointer;opacity:0;transform:translateY(20px);transition:opacity .3s,transform .3s;z-index:100;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 16px rgba(99,102,241,.4)}
 .scroll-top.visible{opacity:1;transform:translateY(0)}
@@ -675,7 +677,7 @@ body{font-family:'Space Grotesk','Inter',sans-serif;background:#12121a;color:#e8
       <div class="spanel">&#10022; Glass card — blur &amp; soft translucent borders</div>
       <input class="sinput" type="text" placeholder="Type something&#8230;">
     </div>
-    <div class="card-actions"><button class="copy-btn" data-theme="1">&#8984; Copy CSS</button></div>
+    <div class="card-actions"><button class="copy-btn" data-theme="1">&#8984; Copy CSS</button><button class="copy-prompt-btn" data-theme="1">&#9998; Copy Style Prompt</button></div>
   </article>
 
   <!-- 2 -->
@@ -695,7 +697,7 @@ body{font-family:'Space Grotesk','Inter',sans-serif;background:#12121a;color:#e8
       <div class="spanel">Inset shadow creates a recessed, tactile panel feel.</div>
       <input class="sinput" type="text" placeholder="Focus input&#8230;">
     </div>
-    <div class="card-actions"><button class="copy-btn" data-theme="2">&#8984; Copy CSS</button></div>
+    <div class="card-actions"><button class="copy-btn" data-theme="2">&#8984; Copy CSS</button><button class="copy-prompt-btn" data-theme="2">&#9998; Copy Style Prompt</button></div>
   </article>
 
   <!-- 3 -->
@@ -715,7 +717,7 @@ body{font-family:'Space Grotesk','Inter',sans-serif;background:#12121a;color:#e8
       <div class="spanel">WARNING: This panel has strong opinions about design.</div>
       <input class="sinput" type="text" placeholder="Raw input field">
     </div>
-    <div class="card-actions"><button class="copy-btn" data-theme="3">&#8984; Copy CSS</button></div>
+    <div class="card-actions"><button class="copy-btn" data-theme="3">&#8984; Copy CSS</button><button class="copy-prompt-btn" data-theme="3">&#9998; Copy Style Prompt</button></div>
   </article>
 
   <!-- 4 -->
@@ -735,7 +737,7 @@ body{font-family:'Space Grotesk','Inter',sans-serif;background:#12121a;color:#e8
       <div class="spanel">System status: nominal. All systems operating dark.</div>
       <input class="sinput" type="text" placeholder="Enter command&#8230;">
     </div>
-    <div class="card-actions"><button class="copy-btn" data-theme="4">&#8984; Copy CSS</button></div>
+    <div class="card-actions"><button class="copy-btn" data-theme="4">&#8984; Copy CSS</button><button class="copy-prompt-btn" data-theme="4">&#9998; Copy Style Prompt</button></div>
   </article>
 
   <!-- 5 -->
@@ -755,7 +757,7 @@ body{font-family:'Space Grotesk','Inter',sans-serif;background:#12121a;color:#e8
       <div class="spanel">&#9658; STATUS: ONLINE &#160;|&#160; PING: 2ms &#160;|&#160; ENCRYPTED</div>
       <input class="sinput" type="text" placeholder="Enter access code_">
     </div>
-    <div class="card-actions"><button class="copy-btn" data-theme="5">&#8984; Copy CSS</button></div>
+    <div class="card-actions"><button class="copy-btn" data-theme="5">&#8984; Copy CSS</button><button class="copy-prompt-btn" data-theme="5">&#9998; Copy Style Prompt</button></div>
   </article>
 
   <!-- 6 -->
@@ -775,7 +777,7 @@ body{font-family:'Space Grotesk','Inter',sans-serif;background:#12121a;color:#e8
       <div class="spanel">Quiet content block. No distractions present here.</div>
       <input class="sinput" type="text" placeholder="Search&#8230;">
     </div>
-    <div class="card-actions"><button class="copy-btn" data-theme="6">&#8984; Copy CSS</button></div>
+    <div class="card-actions"><button class="copy-btn" data-theme="6">&#8984; Copy CSS</button><button class="copy-prompt-btn" data-theme="6">&#9998; Copy Style Prompt</button></div>
   </article>
 
   <!-- 7 -->
@@ -795,7 +797,7 @@ body{font-family:'Space Grotesk','Inter',sans-serif;background:#12121a;color:#e8
       <div class="spanel">Card at elevation 2 — subtle depth and clear hierarchy.</div>
       <input class="sinput" type="text" placeholder="Filled text field">
     </div>
-    <div class="card-actions"><button class="copy-btn" data-theme="7">&#8984; Copy CSS</button></div>
+    <div class="card-actions"><button class="copy-btn" data-theme="7">&#8984; Copy CSS</button><button class="copy-prompt-btn" data-theme="7">&#9998; Copy Style Prompt</button></div>
   </article>
 
   <!-- 8 -->
@@ -815,7 +817,7 @@ body{font-family:'Space Grotesk','Inter',sans-serif;background:#12121a;color:#e8
       <div class="spanel">Green accent border signals a positive status condition.</div>
       <input class="sinput" type="text" placeholder="Flat text input">
     </div>
-    <div class="card-actions"><button class="copy-btn" data-theme="8">&#8984; Copy CSS</button></div>
+    <div class="card-actions"><button class="copy-btn" data-theme="8">&#8984; Copy CSS</button><button class="copy-prompt-btn" data-theme="8">&#9998; Copy Style Prompt</button></div>
   </article>
 
   <!-- 9 -->
@@ -835,7 +837,7 @@ body{font-family:'Space Grotesk','Inter',sans-serif;background:#12121a;color:#e8
       <div class="spanel">Inset panel — embossed leather or pressed cold metal.</div>
       <input class="sinput" type="text" placeholder="Handwritten entry&#8230;">
     </div>
-    <div class="card-actions"><button class="copy-btn" data-theme="9">&#8984; Copy CSS</button></div>
+    <div class="card-actions"><button class="copy-btn" data-theme="9">&#8984; Copy CSS</button><button class="copy-prompt-btn" data-theme="9">&#9998; Copy Style Prompt</button></div>
   </article>
 
   <!-- 10 -->
@@ -855,7 +857,7 @@ body{font-family:'Space Grotesk','Inter',sans-serif;background:#12121a;color:#e8
       <div class="spanel">Secondary information level — gray field, black rule.</div>
       <input class="sinput" type="text" placeholder="Enter text">
     </div>
-    <div class="card-actions"><button class="copy-btn" data-theme="10">&#8984; Copy CSS</button></div>
+    <div class="card-actions"><button class="copy-btn" data-theme="10">&#8984; Copy CSS</button><button class="copy-prompt-btn" data-theme="10">&#9998; Copy Style Prompt</button></div>
   </article>
 
   <!-- 11 -->
@@ -875,7 +877,7 @@ body{font-family:'Space Grotesk','Inter',sans-serif;background:#12121a;color:#e8
       <div class="spanel">Teal card with bold offset shadow. Classic Memphis feel.</div>
       <input class="sinput" type="text" placeholder="Bold energetic input">
     </div>
-    <div class="card-actions"><button class="copy-btn" data-theme="11">&#8984; Copy CSS</button></div>
+    <div class="card-actions"><button class="copy-btn" data-theme="11">&#8984; Copy CSS</button><button class="copy-prompt-btn" data-theme="11">&#9998; Copy Style Prompt</button></div>
   </article>
 
   <!-- 12 -->
@@ -895,7 +897,7 @@ body{font-family:'Space Grotesk','Inter',sans-serif;background:#12121a;color:#e8
       <div class="spanel">WAVE DETECTED &#8212; resonance at 88.8 MHz</div>
       <input class="sinput" type="text" placeholder="&#22812;&#12398;&#20837;&#21147;&#8230;">
     </div>
-    <div class="card-actions"><button class="copy-btn" data-theme="12">&#8984; Copy CSS</button></div>
+    <div class="card-actions"><button class="copy-btn" data-theme="12">&#8984; Copy CSS</button><button class="copy-prompt-btn" data-theme="12">&#9998; Copy Style Prompt</button></div>
   </article>
 
   <!-- 13 -->
@@ -915,7 +917,7 @@ body{font-family:'Space Grotesk','Inter',sans-serif;background:#12121a;color:#e8
       <div class="spanel">&#11088; VISITOR COUNTER: 000042 &#11088;</div>
       <input class="sinput" type="text" placeholder="Sign my guestbook">
     </div>
-    <div class="card-actions"><button class="copy-btn" data-theme="13">&#8984; Copy CSS</button></div>
+    <div class="card-actions"><button class="copy-btn" data-theme="13">&#8984; Copy CSS</button><button class="copy-prompt-btn" data-theme="13">&#9998; Copy Style Prompt</button></div>
   </article>
 
   <!-- 14 -->
@@ -935,7 +937,7 @@ body{font-family:'Space Grotesk','Inter',sans-serif;background:#12121a;color:#e8
       <div class="spanel">Today&#8217;s recipe: elderflower cordial &amp; pressed violets.</div>
       <input class="sinput" type="text" placeholder="Write in your journal&#8230;">
     </div>
-    <div class="card-actions"><button class="copy-btn" data-theme="14">&#8984; Copy CSS</button></div>
+    <div class="card-actions"><button class="copy-btn" data-theme="14">&#8984; Copy CSS</button><button class="copy-prompt-btn" data-theme="14">&#9998; Copy Style Prompt</button></div>
   </article>
 
   <!-- 15 -->
@@ -955,7 +957,7 @@ body{font-family:'Space Grotesk','Inter',sans-serif;background:#12121a;color:#e8
       <div class="spanel">&#8220;To study is to court the darkness and make it your friend.&#8221;</div>
       <input class="sinput" type="text" placeholder="Write your thesis&#8230;">
     </div>
-    <div class="card-actions"><button class="copy-btn" data-theme="15">&#8984; Copy CSS</button></div>
+    <div class="card-actions"><button class="copy-btn" data-theme="15">&#8984; Copy CSS</button><button class="copy-prompt-btn" data-theme="15">&#9998; Copy Style Prompt</button></div>
   </article>
 
   <!-- 16 -->
@@ -975,7 +977,7 @@ body{font-family:'Space Grotesk','Inter',sans-serif;background:#12121a;color:#e8
       <div class="spanel">Reserve your table at the Grand Palais &#8212; Est. 1924.</div>
       <input class="sinput" type="text" placeholder="Your name, please&#8230;">
     </div>
-    <div class="card-actions"><button class="copy-btn" data-theme="16">&#8984; Copy CSS</button></div>
+    <div class="card-actions"><button class="copy-btn" data-theme="16">&#8984; Copy CSS</button><button class="copy-prompt-btn" data-theme="16">&#9998; Copy Style Prompt</button></div>
   </article>
 
   <!-- 17 -->
@@ -995,7 +997,7 @@ body{font-family:'Space Grotesk','Inter',sans-serif;background:#12121a;color:#e8
       <div class="spanel">Function block &#8212; blue primary with strong yellow accent.</div>
       <input class="sinput" type="text" placeholder="Structure your input">
     </div>
-    <div class="card-actions"><button class="copy-btn" data-theme="17">&#8984; Copy CSS</button></div>
+    <div class="card-actions"><button class="copy-btn" data-theme="17">&#8984; Copy CSS</button><button class="copy-prompt-btn" data-theme="17">&#9998; Copy Style Prompt</button></div>
   </article>
 
   <!-- 18 -->
@@ -1015,7 +1017,7 @@ body{font-family:'Space Grotesk','Inter',sans-serif;background:#12121a;color:#e8
       <div class="spanel">A worn surface holds more truth than a polished one ever will.</div>
       <input class="sinput" type="text" placeholder="Leave a quiet note&#8230;">
     </div>
-    <div class="card-actions"><button class="copy-btn" data-theme="18">&#8984; Copy CSS</button></div>
+    <div class="card-actions"><button class="copy-btn" data-theme="18">&#8984; Copy CSS</button><button class="copy-prompt-btn" data-theme="18">&#9998; Copy Style Prompt</button></div>
   </article>
 
   <!-- 19 -->
@@ -1035,7 +1037,7 @@ body{font-family:'Space Grotesk','Inter',sans-serif;background:#12121a;color:#e8
       <div class="spanel">Catalogue No. 47 &#8212; Autumn Collection, Brown &amp; Co.</div>
       <input class="sinput" type="text" placeholder="Write to us&#8230;">
     </div>
-    <div class="card-actions"><button class="copy-btn" data-theme="19">&#8984; Copy CSS</button></div>
+    <div class="card-actions"><button class="copy-btn" data-theme="19">&#8984; Copy CSS</button><button class="copy-prompt-btn" data-theme="19">&#9998; Copy Style Prompt</button></div>
   </article>
 
   <!-- 20 -->
@@ -1055,7 +1057,7 @@ body{font-family:'Space Grotesk','Inter',sans-serif;background:#12121a;color:#e8
       <div class="spanel">[ REALITY OVERRIDE: FULLY ACTIVE ]</div>
       <input class="sinput" type="text" placeholder="Describe what you see&#8230;">
     </div>
-    <div class="card-actions"><button class="copy-btn" data-theme="20">&#8984; Copy CSS</button></div>
+    <div class="card-actions"><button class="copy-btn" data-theme="20">&#8984; Copy CSS</button><button class="copy-prompt-btn" data-theme="20">&#9998; Copy Style Prompt</button></div>
   </article>
 
   <!-- 21 -->
@@ -1075,7 +1077,7 @@ body{font-family:'Space Grotesk','Inter',sans-serif;background:#12121a;color:#e8
       <div class="spanel">Soft light filters through the shifting gradient atmosphere.</div>
       <input class="sinput" type="text" placeholder="Search the sky&#8230;">
     </div>
-    <div class="card-actions"><button class="copy-btn" data-theme="21">&#8984; Copy CSS</button></div>
+    <div class="card-actions"><button class="copy-btn" data-theme="21">&#8984; Copy CSS</button><button class="copy-prompt-btn" data-theme="21">&#9998; Copy Style Prompt</button></div>
   </article>
 
   <!-- 22 -->
@@ -1095,7 +1097,7 @@ body{font-family:'Space Grotesk','Inter',sans-serif;background:#12121a;color:#e8
       <div class="spanel">Fluffy card. Handle with care. Extremely cute component.</div>
       <input class="sinput" type="text" placeholder="Gentle input&#8230;">
     </div>
-    <div class="card-actions"><button class="copy-btn" data-theme="22">&#8984; Copy CSS</button></div>
+    <div class="card-actions"><button class="copy-btn" data-theme="22">&#8984; Copy CSS</button><button class="copy-prompt-btn" data-theme="22">&#9998; Copy Style Prompt</button></div>
   </article>
 
   <!-- 23 -->
@@ -1115,7 +1117,7 @@ body{font-family:'Space Grotesk','Inter',sans-serif;background:#12121a;color:#e8
       <div class="spanel">&#9612; Dispatch from the underground. No clean edges here.</div>
       <input class="sinput" type="text" placeholder="Tag the wall&#8230;">
     </div>
-    <div class="card-actions"><button class="copy-btn" data-theme="23">&#8984; Copy CSS</button></div>
+    <div class="card-actions"><button class="copy-btn" data-theme="23">&#8984; Copy CSS</button><button class="copy-prompt-btn" data-theme="23">&#9998; Copy Style Prompt</button></div>
   </article>
 
   <!-- 24 -->
@@ -1135,7 +1137,7 @@ body{font-family:'Space Grotesk','Inter',sans-serif;background:#12121a;color:#e8
       <div class="spanel">Words carry weight, rhythm, and undeniable visual presence.</div>
       <input class="sinput" type="text" placeholder="Write something powerful">
     </div>
-    <div class="card-actions"><button class="copy-btn" data-theme="24">&#8984; Copy CSS</button></div>
+    <div class="card-actions"><button class="copy-btn" data-theme="24">&#8984; Copy CSS</button><button class="copy-prompt-btn" data-theme="24">&#9998; Copy Style Prompt</button></div>
   </article>
 
   <!-- 25 -->
@@ -1155,7 +1157,7 @@ body{font-family:'Space Grotesk','Inter',sans-serif;background:#12121a;color:#e8
       <div class="spanel">Mid-tone panel &#8212; every shade belongs to the same family.</div>
       <input class="sinput" type="text" placeholder="Search&#8230;">
     </div>
-    <div class="card-actions"><button class="copy-btn" data-theme="25">&#8984; Copy CSS</button></div>
+    <div class="card-actions"><button class="copy-btn" data-theme="25">&#8984; Copy CSS</button><button class="copy-prompt-btn" data-theme="25">&#9998; Copy Style Prompt</button></div>
   </article>
 
   <!-- 26 -->
@@ -1175,7 +1177,7 @@ body{font-family:'Space Grotesk','Inter',sans-serif;background:#12121a;color:#e8
       <div class="spanel">Dark overlay on the vivid gradient field below.</div>
       <input class="sinput" type="text" placeholder="Enter search term&#8230;">
     </div>
-    <div class="card-actions"><button class="copy-btn" data-theme="26">&#8984; Copy CSS</button></div>
+    <div class="card-actions"><button class="copy-btn" data-theme="26">&#8984; Copy CSS</button><button class="copy-prompt-btn" data-theme="26">&#9998; Copy Style Prompt</button></div>
   </article>
 
   <!-- 27 -->
@@ -1195,7 +1197,7 @@ body{font-family:'Space Grotesk','Inter',sans-serif;background:#12121a;color:#e8
       <div class="spanel">Organic blob &#8212; soft, fluid, and alive.</div>
       <input class="sinput" type="text" placeholder="Search nature&#8230;">
     </div>
-    <div class="card-actions"><button class="copy-btn" data-theme="27">&#8984; Copy CSS</button></div>
+    <div class="card-actions"><button class="copy-btn" data-theme="27">&#8984; Copy CSS</button><button class="copy-prompt-btn" data-theme="27">&#9998; Copy Style Prompt</button></div>
   </article>
 
   <!-- 28 -->
@@ -1215,7 +1217,7 @@ body{font-family:'Space Grotesk','Inter',sans-serif;background:#12121a;color:#e8
       <div class="spanel">Clean card &#8212; minimal contrast, maximum calm presence.</div>
       <input class="sinput" type="text" placeholder="Search&#8230;">
     </div>
-    <div class="card-actions"><button class="copy-btn" data-theme="28">&#8984; Copy CSS</button></div>
+    <div class="card-actions"><button class="copy-btn" data-theme="28">&#8984; Copy CSS</button><button class="copy-prompt-btn" data-theme="28">&#9998; Copy Style Prompt</button></div>
   </article>
 
   <!-- 29 -->
@@ -1235,7 +1237,7 @@ body{font-family:'Space Grotesk','Inter',sans-serif;background:#12121a;color:#e8
       <div class="spanel">&#9658; SECTOR 7-G // ANOMALY: NONE // STATUS: CLEAR</div>
       <input class="sinput" type="text" placeholder="ENTER QUERY_">
     </div>
-    <div class="card-actions"><button class="copy-btn" data-theme="29">&#8984; Copy CSS</button></div>
+    <div class="card-actions"><button class="copy-btn" data-theme="29">&#8984; Copy CSS</button><button class="copy-prompt-btn" data-theme="29">&#9998; Copy Style Prompt</button></div>
   </article>
 
   <!-- 30 -->
@@ -1255,7 +1257,7 @@ body{font-family:'Space Grotesk','Inter',sans-serif;background:#12121a;color:#e8
       <div class="spanel">&#9733; GOLD PANEL &#8212; the richest, most layered possible surface &#9733;</div>
       <input class="sinput" type="text" placeholder="Add more here&#8230;">
     </div>
-    <div class="card-actions"><button class="copy-btn" data-theme="30">&#8984; Copy CSS</button></div>
+    <div class="card-actions"><button class="copy-btn" data-theme="30">&#8984; Copy CSS</button><button class="copy-prompt-btn" data-theme="30">&#9998; Copy Style Prompt</button></div>
   </article>
 
   <!-- 31 -->
@@ -1275,7 +1277,7 @@ body{font-family:'Space Grotesk','Inter',sans-serif;background:#12121a;color:#e8
       <div class="spanel">&#9658; Process 1337: running // CPU 2% // MEM 128MB</div>
       <input class="sinput" type="text" placeholder="Enter command_">
     </div>
-    <div class="card-actions"><button class="copy-btn" data-theme="31">&#8984; Copy CSS</button></div>
+    <div class="card-actions"><button class="copy-btn" data-theme="31">&#8984; Copy CSS</button><button class="copy-prompt-btn" data-theme="31">&#9998; Copy Style Prompt</button></div>
   </article>
 
   <!-- 32 -->
@@ -1295,7 +1297,7 @@ body{font-family:'Space Grotesk','Inter',sans-serif;background:#12121a;color:#e8
       <div class="spanel"><span>Stats</span><span>Charts</span></div>
       <input class="sinput" type="text" placeholder="Search items&#8230;">
     </div>
-    <div class="card-actions"><button class="copy-btn" data-theme="32">&#8984; Copy CSS</button></div>
+    <div class="card-actions"><button class="copy-btn" data-theme="32">&#8984; Copy CSS</button><button class="copy-prompt-btn" data-theme="32">&#9998; Copy Style Prompt</button></div>
   </article>
 
   <!-- 33 -->
@@ -1315,7 +1317,7 @@ body{font-family:'Space Grotesk','Inter',sans-serif;background:#12121a;color:#e8
       <div class="spanel">Frosted glass card &#8212; content floats above the glow.</div>
       <input class="sinput" type="text" placeholder="Search&#8230;">
     </div>
-    <div class="card-actions"><button class="copy-btn" data-theme="33">&#8984; Copy CSS</button></div>
+    <div class="card-actions"><button class="copy-btn" data-theme="33">&#8984; Copy CSS</button><button class="copy-prompt-btn" data-theme="33">&#9998; Copy Style Prompt</button></div>
   </article>
 
   <!-- 34 -->
@@ -1335,7 +1337,7 @@ body{font-family:'Space Grotesk','Inter',sans-serif;background:#12121a;color:#e8
       <div class="spanel">&#9658; DECRYPT: 5f4dcc3b5aa765d61d8327deb882cf99</div>
       <input class="sinput" type="text" placeholder="Follow the white rabbit_">
     </div>
-    <div class="card-actions"><button class="copy-btn" data-theme="34">&#8984; Copy CSS</button></div>
+    <div class="card-actions"><button class="copy-btn" data-theme="34">&#8984; Copy CSS</button><button class="copy-prompt-btn" data-theme="34">&#9998; Copy Style Prompt</button></div>
   </article>
 
   <!-- 35 -->
@@ -1355,7 +1357,7 @@ body{font-family:'Space Grotesk','Inter',sans-serif;background:#12121a;color:#e8
       <div class="spanel">Fluffy panel &#8212; handle with maximum gentleness and care.</div>
       <input class="sinput" type="text" placeholder="Write something cute&#8230;">
     </div>
-    <div class="card-actions"><button class="copy-btn" data-theme="35">&#8984; Copy CSS</button></div>
+    <div class="card-actions"><button class="copy-btn" data-theme="35">&#8984; Copy CSS</button><button class="copy-prompt-btn" data-theme="35">&#9998; Copy Style Prompt</button></div>
   </article>
 
   <!-- 36 -->
@@ -1375,7 +1377,7 @@ body{font-family:'Space Grotesk','Inter',sans-serif;background:#12121a;color:#e8
       <div class="spanel">Chrome panel &#8212; caught between light and shadow.</div>
       <input class="sinput" type="text" placeholder="Input field&#8230;">
     </div>
-    <div class="card-actions"><button class="copy-btn" data-theme="36">&#8984; Copy CSS</button></div>
+    <div class="card-actions"><button class="copy-btn" data-theme="36">&#8984; Copy CSS</button><button class="copy-prompt-btn" data-theme="36">&#9998; Copy Style Prompt</button></div>
   </article>
 
   <!-- 37 -->
@@ -1395,7 +1397,7 @@ body{font-family:'Space Grotesk','Inter',sans-serif;background:#12121a;color:#e8
       <div class="spanel">-- SPECIFICATION NOTE: All dimensions in millimetres --</div>
       <input class="sinput" type="text" placeholder="ANNOTATION_">
     </div>
-    <div class="card-actions"><button class="copy-btn" data-theme="37">&#8984; Copy CSS</button></div>
+    <div class="card-actions"><button class="copy-btn" data-theme="37">&#8984; Copy CSS</button><button class="copy-prompt-btn" data-theme="37">&#9998; Copy Style Prompt</button></div>
   </article>
 
   <!-- 38 -->
@@ -1415,7 +1417,7 @@ body{font-family:'Space Grotesk','Inter',sans-serif;background:#12121a;color:#e8
       <div class="spanel">SPEECH BUBBLE: &#8220;To the rescue!&#8221;</div>
       <input class="sinput" type="text" placeholder="Narration box text&#8230;">
     </div>
-    <div class="card-actions"><button class="copy-btn" data-theme="38">&#8984; Copy CSS</button></div>
+    <div class="card-actions"><button class="copy-btn" data-theme="38">&#8984; Copy CSS</button><button class="copy-prompt-btn" data-theme="38">&#9998; Copy Style Prompt</button></div>
   </article>
 
   <!-- 39 -->
@@ -1435,7 +1437,7 @@ body{font-family:'Space Grotesk','Inter',sans-serif;background:#12121a;color:#e8
       <div class="spanel">C:\&gt; DIR /W // 12 file(s) // 14,336 bytes free</div>
       <input class="sinput" type="text" placeholder="C:\&gt;_">
     </div>
-    <div class="card-actions"><button class="copy-btn" data-theme="39">&#8984; Copy CSS</button></div>
+    <div class="card-actions"><button class="copy-btn" data-theme="39">&#8984; Copy CSS</button><button class="copy-prompt-btn" data-theme="39">&#9998; Copy Style Prompt</button></div>
   </article>
 
   <!-- 40 -->
@@ -1455,7 +1457,7 @@ body{font-family:'Space Grotesk','Inter',sans-serif;background:#12121a;color:#e8
       <div class="spanel">The sky gradient shifts — violet to amber in twenty breathtaking steps.</div>
       <input class="sinput" type="text" placeholder="Set a reminder&#8230;">
     </div>
-    <div class="card-actions"><button class="copy-btn" data-theme="40">&#8984; Copy CSS</button></div>
+    <div class="card-actions"><button class="copy-btn" data-theme="40">&#8984; Copy CSS</button><button class="copy-prompt-btn" data-theme="40">&#9998; Copy Style Prompt</button></div>
   </article>
 
   <!-- 41 -->
@@ -1475,7 +1477,7 @@ body{font-family:'Space Grotesk','Inter',sans-serif;background:#12121a;color:#e8
       <div class="spanel">Foil panel — color changes with every viewing angle.</div>
       <input class="sinput" type="text" placeholder="Catch the light&#8230;">
     </div>
-    <div class="card-actions"><button class="copy-btn" data-theme="41">&#8984; Copy CSS</button></div>
+    <div class="card-actions"><button class="copy-btn" data-theme="41">&#8984; Copy CSS</button><button class="copy-prompt-btn" data-theme="41">&#9998; Copy Style Prompt</button></div>
   </article>
 
   <!-- 42 -->
@@ -1495,7 +1497,7 @@ body{font-family:'Space Grotesk','Inter',sans-serif;background:#12121a;color:#e8
       <div class="spanel">0000: 89 50 4E 47 0D 0A 1A 0A 00 00 00 0D 49 48 44 52</div>
       <input class="sinput" type="text" placeholder="0x00000000_">
     </div>
-    <div class="card-actions"><button class="copy-btn" data-theme="42">&#8984; Copy CSS</button></div>
+    <div class="card-actions"><button class="copy-btn" data-theme="42">&#8984; Copy CSS</button><button class="copy-prompt-btn" data-theme="42">&#9998; Copy Style Prompt</button></div>
   </article>
 
   <!-- 43 -->
@@ -1515,7 +1517,7 @@ body{font-family:'Space Grotesk','Inter',sans-serif;background:#12121a;color:#e8
       <div class="spanel">&#9135; Bar &amp; Grill &#8212; Est. 1988 &#9135; Neon still glowing strong</div>
       <input class="sinput" type="text" placeholder="Leave a message&#8230;">
     </div>
-    <div class="card-actions"><button class="copy-btn" data-theme="43">&#8984; Copy CSS</button></div>
+    <div class="card-actions"><button class="copy-btn" data-theme="43">&#8984; Copy CSS</button><button class="copy-prompt-btn" data-theme="43">&#9998; Copy Style Prompt</button></div>
   </article>
 
   <!-- 44 -->
@@ -1535,7 +1537,7 @@ body{font-family:'Space Grotesk','Inter',sans-serif;background:#12121a;color:#e8
       <div class="spanel">&#8220;Everyone&#8217;s hiding something in this city. Everyone.&#8221;</div>
       <input class="sinput" type="text" placeholder="File your report&#8230;">
     </div>
-    <div class="card-actions"><button class="copy-btn" data-theme="44">&#8984; Copy CSS</button></div>
+    <div class="card-actions"><button class="copy-btn" data-theme="44">&#8984; Copy CSS</button><button class="copy-prompt-btn" data-theme="44">&#9998; Copy Style Prompt</button></div>
   </article>
 
   <!-- 45 -->
@@ -1555,7 +1557,7 @@ body{font-family:'Space Grotesk','Inter',sans-serif;background:#12121a;color:#e8
       <div class="spanel">&#127807; Coordinates: 51°N 0°W // Canopy density: 94%</div>
       <input class="sinput" type="text" placeholder="Log your sighting&#8230;">
     </div>
-    <div class="card-actions"><button class="copy-btn" data-theme="45">&#8984; Copy CSS</button></div>
+    <div class="card-actions"><button class="copy-btn" data-theme="45">&#8984; Copy CSS</button><button class="copy-prompt-btn" data-theme="45">&#9998; Copy Style Prompt</button></div>
   </article>
 
   <!-- 46 -->
@@ -1575,7 +1577,7 @@ body{font-family:'Space Grotesk','Inter',sans-serif;background:#12121a;color:#e8
       <div class="spanel">&#9634; Thermocline: 400m // Salinity: 35ppt // Visibility: 0m</div>
       <input class="sinput" type="text" placeholder="Log depth reading&#8230;">
     </div>
-    <div class="card-actions"><button class="copy-btn" data-theme="46">&#8984; Copy CSS</button></div>
+    <div class="card-actions"><button class="copy-btn" data-theme="46">&#8984; Copy CSS</button><button class="copy-prompt-btn" data-theme="46">&#9998; Copy Style Prompt</button></div>
   </article>
 
   <!-- 47 -->
@@ -1595,7 +1597,7 @@ body{font-family:'Space Grotesk','Inter',sans-serif;background:#12121a;color:#e8
       <div class="spanel">&#9650; ANOMALY AT GRID REF 7-C // SOURCE TEMP: 312K</div>
       <input class="sinput" type="text" placeholder="QUERY SENSOR_">
     </div>
-    <div class="card-actions"><button class="copy-btn" data-theme="47">&#8984; Copy CSS</button></div>
+    <div class="card-actions"><button class="copy-btn" data-theme="47">&#8984; Copy CSS</button><button class="copy-prompt-btn" data-theme="47">&#9998; Copy Style Prompt</button></div>
   </article>
 
   <!-- 48 -->
@@ -1615,7 +1617,7 @@ body{font-family:'Space Grotesk','Inter',sans-serif;background:#12121a;color:#e8
       <div class="spanel">&#8220;In theory there is no difference between theory and practice.&#8221;</div>
       <input class="sinput" type="text" placeholder="Write on the board&#8230;">
     </div>
-    <div class="card-actions"><button class="copy-btn" data-theme="48">&#8984; Copy CSS</button></div>
+    <div class="card-actions"><button class="copy-btn" data-theme="48">&#8984; Copy CSS</button><button class="copy-prompt-btn" data-theme="48">&#9998; Copy Style Prompt</button></div>
   </article>
 
   <!-- 49 -->
@@ -1635,7 +1637,7 @@ body{font-family:'Space Grotesk','Inter',sans-serif;background:#12121a;color:#e8
       <div class="spanel">&#9654; console.log(&#39;Tokyo Night initialized&#39;) // output: &#10003;</div>
       <input class="sinput" type="text" placeholder="// comment your code&#8230;">
     </div>
-    <div class="card-actions"><button class="copy-btn" data-theme="49">&#8984; Copy CSS</button></div>
+    <div class="card-actions"><button class="copy-btn" data-theme="49">&#8984; Copy CSS</button><button class="copy-prompt-btn" data-theme="49">&#9998; Copy Style Prompt</button></div>
   </article>
 
   <!-- 50 -->
@@ -1655,7 +1657,7 @@ body{font-family:'Space Grotesk','Inter',sans-serif;background:#12121a;color:#e8
       <div class="spanel">&#9670; CHECKPOINT &#8212; LAP TIME: 01:24.88 &#8212; RECORD &#9670;</div>
       <input class="sinput" type="text" placeholder="ENTER INITIALS_">
     </div>
-    <div class="card-actions"><button class="copy-btn" data-theme="50">&#8984; Copy CSS</button></div>
+    <div class="card-actions"><button class="copy-btn" data-theme="50">&#8984; Copy CSS</button><button class="copy-prompt-btn" data-theme="50">&#9998; Copy Style Prompt</button></div>
   </article>
 
   <!-- 51 -->
@@ -1675,7 +1677,7 @@ body{font-family:'Space Grotesk','Inter',sans-serif;background:#12121a;color:#e8
       <div class="spanel">Parchment note — carefully preserved, lovingly restored.</div>
       <input class="sinput" type="text" placeholder="Pen your thoughts&#8230;">
     </div>
-    <div class="card-actions"><button class="copy-btn" data-theme="51">&#8984; Copy CSS</button></div>
+    <div class="card-actions"><button class="copy-btn" data-theme="51">&#8984; Copy CSS</button><button class="copy-prompt-btn" data-theme="51">&#9998; Copy Style Prompt</button></div>
   </article>
 
   <!-- 52 -->
@@ -1695,7 +1697,7 @@ body{font-family:'Space Grotesk','Inter',sans-serif;background:#12121a;color:#e8
       <div class="spanel">&#9881; Pressure gauge reading: 87 PSI // Status: Optimal</div>
       <input class="sinput" type="text" placeholder="Log entry&#8230;">
     </div>
-    <div class="card-actions"><button class="copy-btn" data-theme="52">&#8984; Copy CSS</button></div>
+    <div class="card-actions"><button class="copy-btn" data-theme="52">&#8984; Copy CSS</button><button class="copy-prompt-btn" data-theme="52">&#9998; Copy Style Prompt</button></div>
   </article>
 
   <!-- 53 -->
@@ -1715,7 +1717,7 @@ body{font-family:'Space Grotesk','Inter',sans-serif;background:#12121a;color:#e8
       <div class="spanel">Coordinates: Sector 7G // Luminosity: 4.3x10^26 watts</div>
       <input class="sinput" type="text" placeholder="Set destination&#8230;">
     </div>
-    <div class="card-actions"><button class="copy-btn" data-theme="53">&#8984; Copy CSS</button></div>
+    <div class="card-actions"><button class="copy-btn" data-theme="53">&#8984; Copy CSS</button><button class="copy-prompt-btn" data-theme="53">&#9998; Copy Style Prompt</button></div>
   </article>
 
   <!-- 54 -->
@@ -1735,7 +1737,7 @@ body{font-family:'Space Grotesk','Inter',sans-serif;background:#12121a;color:#e8
       <div class="spanel">Carbon offset: -12 tons // Renewable: 100%</div>
       <input class="sinput" type="text" placeholder="Take action&#8230;">
     </div>
-    <div class="card-actions"><button class="copy-btn" data-theme="54">&#8984; Copy CSS</button></div>
+    <div class="card-actions"><button class="copy-btn" data-theme="54">&#8984; Copy CSS</button><button class="copy-prompt-btn" data-theme="54">&#9998; Copy Style Prompt</button></div>
   </article>
 
   <!-- 55 -->
@@ -1755,7 +1757,7 @@ body{font-family:'Space Grotesk','Inter',sans-serif;background:#12121a;color:#e8
       <div class="spanel">&#9888; WARN: Integrity check failed at 0xFF3A92</div>
       <input class="sinput" type="text" placeholder="[REDACTED]_">
     </div>
-    <div class="card-actions"><button class="copy-btn" data-theme="55">&#8984; Copy CSS</button></div>
+    <div class="card-actions"><button class="copy-btn" data-theme="55">&#8984; Copy CSS</button><button class="copy-prompt-btn" data-theme="55">&#9998; Copy Style Prompt</button></div>
   </article>
 
   <!-- 56 -->
@@ -1775,7 +1777,7 @@ body{font-family:'Space Grotesk','Inter',sans-serif;background:#12121a;color:#e8
       <div class="spanel">&#9733; Premium Collection — Curated since 1847</div>
       <input class="sinput" type="text" placeholder="Inquire here&#8230;">
     </div>
-    <div class="card-actions"><button class="copy-btn" data-theme="56">&#8984; Copy CSS</button></div>
+    <div class="card-actions"><button class="copy-btn" data-theme="56">&#8984; Copy CSS</button><button class="copy-prompt-btn" data-theme="56">&#9998; Copy Style Prompt</button></div>
   </article>
 
   <!-- 57 -->
@@ -1795,7 +1797,7 @@ body{font-family:'Space Grotesk','Inter',sans-serif;background:#12121a;color:#e8
       <div class="spanel">Temperature: -18°C // Ice density: 0.92 g/cm³</div>
       <input class="sinput" type="text" placeholder="Search the ice&#8230;">
     </div>
-    <div class="card-actions"><button class="copy-btn" data-theme="57">&#8984; Copy CSS</button></div>
+    <div class="card-actions"><button class="copy-btn" data-theme="57">&#8984; Copy CSS</button><button class="copy-prompt-btn" data-theme="57">&#9998; Copy Style Prompt</button></div>
   </article>
 
   <!-- 58 -->
@@ -1815,7 +1817,7 @@ body{font-family:'Space Grotesk','Inter',sans-serif;background:#12121a;color:#e8
       <div class="spanel">Location: 25°N 15°E // Humidity: 12% // Wind: Light breeze</div>
       <input class="sinput" type="text" placeholder="Leave your mark&#8230;">
     </div>
-    <div class="card-actions"><button class="copy-btn" data-theme="58">&#8984; Copy CSS</button></div>
+    <div class="card-actions"><button class="copy-btn" data-theme="58">&#8984; Copy CSS</button><button class="copy-prompt-btn" data-theme="58">&#9998; Copy Style Prompt</button></div>
   </article>
 
   <!-- 59 -->
@@ -1835,7 +1837,7 @@ body{font-family:'Space Grotesk','Inter',sans-serif;background:#12121a;color:#e8
       <div class="spanel">Premium Tier // Exclusive Members Only // VIP Access</div>
       <input class="sinput" type="text" placeholder="Enter your desires&#8230;">
     </div>
-    <div class="card-actions"><button class="copy-btn" data-theme="59">&#8984; Copy CSS</button></div>
+    <div class="card-actions"><button class="copy-btn" data-theme="59">&#8984; Copy CSS</button><button class="copy-prompt-btn" data-theme="59">&#9998; Copy Style Prompt</button></div>
   </article>
 
   <!-- 60 -->
@@ -1855,7 +1857,7 @@ body{font-family:'Space Grotesk','Inter',sans-serif;background:#12121a;color:#e8
       <div class="spanel">PROCESSOR: ACTIVE // MEMORY: 99% // STATUS: OPTIMAL</div>
       <input class="sinput" type="text" placeholder="Input command&#8230;">
     </div>
-    <div class="card-actions"><button class="copy-btn" data-theme="60">&#8984; Copy CSS</button></div>
+    <div class="card-actions"><button class="copy-btn" data-theme="60">&#8984; Copy CSS</button><button class="copy-prompt-btn" data-theme="60">&#9998; Copy Style Prompt</button></div>
   </article>
   <!-- 61 -->
   <article class="theme-card" data-category="dark">
@@ -1874,7 +1876,7 @@ body{font-family:'Space Grotesk','Inter',sans-serif;background:#12121a;color:#e8
       <div class="spanel">&#9760; Transylvania &#8212; Est. 1431 // Moon Phase: Full</div>
       <input class="sinput" type="text" placeholder="Confess your sins&#8230;">
     </div>
-    <div class="card-actions"><button class="copy-btn" data-theme="61">&#8984; Copy CSS</button></div>
+    <div class="card-actions"><button class="copy-btn" data-theme="61">&#8984; Copy CSS</button><button class="copy-prompt-btn" data-theme="61">&#9998; Copy Style Prompt</button></div>
   </article>
 
   <!-- 62 -->
@@ -1894,7 +1896,7 @@ body{font-family:'Space Grotesk','Inter',sans-serif;background:#12121a;color:#e8
       <div class="spanel">&#9672; Limited Edition &#8212; Series 001 of 250</div>
       <input class="sinput" type="text" placeholder="Request consultation&#8230;">
     </div>
-    <div class="card-actions"><button class="copy-btn" data-theme="62">&#8984; Copy CSS</button></div>
+    <div class="card-actions"><button class="copy-btn" data-theme="62">&#8984; Copy CSS</button><button class="copy-prompt-btn" data-theme="62">&#9998; Copy Style Prompt</button></div>
   </article>
 
   <!-- 63 -->
@@ -1914,7 +1916,7 @@ body{font-family:'Space Grotesk','Inter',sans-serif;background:#12121a;color:#e8
       <div class="spanel">&#127808; Three pastels, infinite calm</div>
       <input class="sinput" type="text" placeholder="Search softly&#8230;">
     </div>
-    <div class="card-actions"><button class="copy-btn" data-theme="63">&#8984; Copy CSS</button></div>
+    <div class="card-actions"><button class="copy-btn" data-theme="63">&#8984; Copy CSS</button><button class="copy-prompt-btn" data-theme="63">&#9998; Copy Style Prompt</button></div>
   </article>
 
   <!-- 64 -->
@@ -1934,7 +1936,7 @@ body{font-family:'Space Grotesk','Inter',sans-serif;background:#12121a;color:#e8
       <div class="spanel">&#9670; Three axes — one coherent geometry</div>
       <input class="sinput" type="text" placeholder="Map the grid&#8230;">
     </div>
-    <div class="card-actions"><button class="copy-btn" data-theme="64">&#8984; Copy CSS</button></div>
+    <div class="card-actions"><button class="copy-btn" data-theme="64">&#8984; Copy CSS</button><button class="copy-prompt-btn" data-theme="64">&#9998; Copy Style Prompt</button></div>
   </article>
 
   <!-- 65 -->
@@ -1954,7 +1956,7 @@ body{font-family:'Space Grotesk','Inter',sans-serif;background:#12121a;color:#e8
       <div class="spanel">&#9672; Station: Kepler-442b // Surface: Concrete // Atmo: Nebula</div>
       <input class="sinput" type="text" placeholder="Broadcast signal&#8230;">
     </div>
-    <div class="card-actions"><button class="copy-btn" data-theme="65">&#8984; Copy CSS</button></div>
+    <div class="card-actions"><button class="copy-btn" data-theme="65">&#8984; Copy CSS</button><button class="copy-prompt-btn" data-theme="65">&#9998; Copy Style Prompt</button></div>
   </article>
 
 </main>
@@ -2052,6 +2054,75 @@ body{font-family:'Space Grotesk','Inter',sans-serif;background:#12121a;color:#e8
     65:'.cosmic{background:#06040f;border:2px solid #2a2a3a;border-radius:6px;color:#d8c8f8;text-shadow:0 0 10px rgba(180,100,255,.5);}.cosmic-btn{background:transparent;border:2px solid rgba(180,100,255,.55);color:#b464ff;box-shadow:0 0 10px rgba(180,100,255,.2);}.cosmic-text{color:#999;font-family:monospace;}'
   };
 
+  var stylePrompts={
+    1:'Apply a Glassmorphism visual style to the entire site. Use a vivid gradient background (e.g., linear-gradient(135deg, rgba(30,27,75,0.85), rgba(99,102,241,0.45))). All cards, panels, and containers must have translucent frosted-glass surfaces: background rgba(255,255,255,0.08), backdrop-filter: blur(12px), -webkit-backdrop-filter: blur(12px), border: 1px solid rgba(255,255,255,0.15), border-radius: 12px. Text colors: headings #e0e0ff with font-weight 600, body text rgba(168,200,255,0.8) at 0.77rem. Buttons: background rgba(99,102,241,0.35) with backdrop-filter blur(8px), border 1px solid rgba(163,168,255,0.4), color #c7caff, padding 6px 14px, border-radius 8px, font-size 0.74rem, font-weight 600. Info panels: background rgba(255,255,255,0.08), backdrop-filter blur(12px), border 1px solid rgba(255,255,255,0.15), border-radius 8px, color rgba(200,210,255,0.9). Input fields: background rgba(255,255,255,0.06), border 1px solid rgba(168,200,255,0.25), border-radius 7px, color #c7caff. Font family: \'Inter\', sans-serif. Everything should look like frosted glass layered over a vibrant gradient.',
+    2:'Apply a Neumorphism visual style to the entire site. Set the global background to #e0e5ec. All elements appear extruded from or pressed into this background using only soft box-shadows — no visible borders. Card surfaces: background #e0e5ec, border-radius 12px, box-shadow: 6px 6px 12px #b8bec7, -6px -6px 12px #fff. Headings: color #4a5568, font-weight 700, font-family \'Inter\', sans-serif. Body text: color #718096. Buttons: background #e0e5ec, border none, border-radius 8px, box-shadow 5px 5px 10px #b8bec7 -5px -5px 10px #fff, color #6d8ab4. Inset elements: box-shadow inset 4px 4px 8px #b8bec7, inset -4px -4px 8px #fff. No hard borders anywhere — depth is created entirely through dual-direction soft shadows on a uniform gray background.',
+    3:'Apply a Brutalism visual style to the entire site. Background: pure #fff white. All borders: 3px solid #000 black with border-radius: 0 (no rounded corners anywhere). Box-shadow: 4-6px offset shadows in solid black (e.g., 6px 6px 0 #000). Typography: font-weight 900, text-transform uppercase, font-family \'Space Grotesk\', sans-serif. Headings: color #000. Primary buttons: background #f00 red, border 3px solid #000, color #fff, font-weight 900, text-transform uppercase, box-shadow 4px 4px 0 #000. Alert panels: background #ff0 yellow, border 3px solid #000, color #000. Input fields: background #fff, border 3px solid #000. No gradients, no rounded corners, no subtle shadows. Everything is raw, heavy, and intentionally unpolished.',
+    4:'Apply an AMOLED Dark visual style to the entire site. Background: pure #000000 black. Card surfaces: #0a0a0a with border 1px solid #1a1a1a, border-radius 8px. Accent color: #00e5ff (electric cyan) for headings and interactive elements. Heading text: color #00e5ff, font-weight 600, font-family \'Inter\', sans-serif. Body text: color #555555. Buttons: background transparent, border 1px solid #00e5ff, border-radius 4px, color #00e5ff. Info panels: background #0a0a0a, border 1px solid #1a1a1a, color #777. Input fields: background #0a0a0a, border 1px solid #1a1a1a, color #ccc. Pure black base with razor-thin dark gray borders. Only the accent cyan provides color. Maximum contrast for OLED displays.',
+    5:'Apply a Neon Cyberpunk visual style to the entire site. Background: #0a0a0f near-black. Add a top-edge glow line on cards using linear-gradient(90deg, transparent, #00f5ff, transparent). Headings: color #00f5ff cyan, font-weight 700, font-family \'Space Grotesk\', sans-serif, text-shadow 0 0 10px rgba(0,245,255,0.6). Body text: color #444466. Buttons: background transparent, border 1px solid #ff006e magenta, color #ff006e, text-transform uppercase, letter-spacing 0.05em, box-shadow 0 0 10px rgba(255,0,110,0.25), text-shadow 0 0 8px rgba(255,0,110,0.7). Info panels: background rgba(0,245,255,0.04), border 1px solid rgba(0,245,255,0.2), color #39ff14 neon green, font-family monospace, text-shadow 0 0 6px rgba(57,255,20,0.4). Input fields: background rgba(255,255,255,0.03), border 1px solid rgba(0,245,255,0.2), color #00f5ff. Neon glow — cyan headings, magenta buttons, green terminal text.',
+    6:'Apply a Minimalism visual style to the entire site. Background: #ffffff pure white. Card surfaces: #f9f9f9, border 1px solid #eee, border-radius 8px. Headings: color #111, font-weight 600, font-family \'Inter\', sans-serif. Body text: color #888, line-height 1.6. Buttons: background #2563eb blue, border none, border-radius 6px, color #fff. Info panels: background #f5f5f5, border 1px solid #eee, color #666. Input fields: background #fff, border 1px solid #ddd, color #333. Maximum whitespace. Only one accent color (#2563eb). No shadows, no gradients, no decorative elements.',
+    7:'Apply a Material Design visual style to the entire site. Background: #fafafa. Card surfaces: #fff with border-radius 4px, box-shadow 0 2px 4px rgba(0,0,0,0.1). Primary: #1976d2 blue. Headings: color #333, font-weight 600. Buttons: background #1976d2, color #fff, border none, border-radius 4px, box-shadow 0 2px 4px rgba(0,0,0,0.2) and 0 4px 8px rgba(25,118,210,0.3), text-transform uppercase. Info panels: background #fff, box-shadow 0 1px 3px rgba(0,0,0,0.12), border-left 3px solid #1976d2. Input fields: background #fff, border-bottom 2px solid #1976d2. Elevation creates hierarchy through layered shadows.',
+    8:'Apply a Flat Design visual style to the entire site. Background: #ecf0f1. Cards: background #fff, no shadows, no gradients, border-radius 4px. Primary: #3498db blue. Secondary: #2ecc71 green. Alert: #e74c3c red. Headings: color #2c3e50. Buttons: background #3498db, border none, border-radius 4px, color #fff. Zero box-shadows anywhere. Info panels: background #fff, border-left 4px solid #2ecc71. Input fields: border 2px solid #bdc3c7. Completely flat — solid colors only, no shadows, no gradients.',
+    9:'Apply a Skeuomorphism visual style to the entire site. Background: linear-gradient(180deg, #f5deb3, #e8c899) warm beige. Card surfaces: linear-gradient(180deg, #f5deb3, #d4a96e), border 2px solid #8b7355, border-radius 8px, box-shadow 0 2px 6px rgba(0,0,0,0.3) and inset 0 1px 0 rgba(255,255,255,0.2). Headings: color #3d2b1f, font-family \'Playfair Display\', serif. Buttons: background linear-gradient(145deg, #d4a96a, #8b6914), border 2px solid #5a3a1a, box-shadow 2px 2px 4px rgba(0,0,0,0.4) and inset 0 1px 0 rgba(255,255,255,0.2). Everything looks physically real — leather textures, metallic buttons, visible depth.',
+    10:'Apply a Swiss International Style to the entire site. Background: #ffffff. Font-family: \'Inter\', Helvetica, sans-serif. Headings: font-weight 700, color #000. Primary accent: #ff0000 red — used for highlights and borders only. Buttons: background #000, color #fff, border-radius 0, text-transform uppercase, letter-spacing 0.05em. Info panels: border-left 4px solid #ff0000. Input fields: border-bottom 2px solid #000, border-radius 0. Grid-aligned, rational, typographically driven. Only red and black on white.',
+    11:'Apply a Memphis Style to the entire site. Background: #ffd700 bright gold. Borders: 3px solid #000. Box-shadow: 4px 4px 0 #000. Headings: color #000, font-weight 900, text-transform uppercase. Buttons: background #ff69b4 hot pink, border 3px solid #000, border-radius 100px, color #000. Info panels: background #00cfff cyan, border 3px solid #000. Mix of bright primary colors: gold, pink, cyan. Heavy outlines, playful boldness.',
+    12:'Apply a Vaporwave visual style to the entire site. Background: linear-gradient(180deg, #0d0221, #261447, #3d1068) deep purple gradient. Text: color #ff71ce pink, text-shadow 0 0 10px rgba(255,113,206,0.7). Buttons: background linear-gradient(90deg, #ff71ce, #01cdfe), color #0d0221. Info panels: background rgba(255,113,206,0.08), border 1px solid rgba(255,113,206,0.3), color #01cdfe. Accent colors: #01cdfe cyan, #b967ff purple. Dreamy retro digital aesthetic with neon pink and cyan on dark purple.',
+    13:'Apply a Y2K Internet visual style to the entire site. Background: linear-gradient(135deg, #c0c0c0, #e8e8e8, #c0c0c0) metallic silver. Borders: 2px outset #888 creating raised beveled effects. Buttons: border 2px outset #888, background linear-gradient(180deg, #fff, #c0c0c0, #a0a0a0). Info panels: background #e0e8f0, border 2px inset #888. Beveled edges, metallic gradients, early-2000s web UI aesthetics.',
+    14:'Apply a Cottagecore visual style to the entire site. Background: #f5f0e8 warm cream. Cards: border 1px solid #d4c4a8, border-radius 12px. Headings: color #4a5940, font-family \'Playfair Display\', serif. Buttons: background #8fbc8f sage green, border-radius 20px, color #fff. Warm, muted, earthy palette. Soft sage greens, warm creams, antique browns.',
+    15:'Apply a Dark Academia visual style to the entire site. Background: #1a1209 very dark brown. Cards: background #241a10, border 1px solid #3d2b1f. Headings: color #c9a96e antique gold, font-family \'Playfair Display\', serif. Buttons: border 1px solid #c9a96e, color #c9a96e, background transparent. Dark scholarly aesthetic — aged paper tones, antique gold accents, deep browns.',
+    16:'Apply an Art Deco visual style to the entire site. Background: #000000. Border: 2px solid #c9a846 gold. Headings: color #c9a846, font-family \'Playfair Display\', serif, letter-spacing 0.12em, text-transform uppercase. Buttons: background #c9a846, color #000, text-transform uppercase, letter-spacing 0.1em. Geometric gold lines on black. Gatsby-era luxury and symmetry.',
+    17:'Apply a Bauhaus visual style to the entire site. Background: #f5f5f0. Use only #ff0000, #0000ff, #ffff00, and #000. Headings: font-weight 800, text-transform uppercase. Primary buttons: background #ff0000, border-radius 0, color #fff. Blue panels: background #0000ff, color #fff, border-left 8px solid #ffff00. Strong geometric shapes, primary colors only. Form follows function.',
+    18:'Apply a Wabi-Sabi visual style to the entire site. Background: #f7f3ee parchment. Cards: border 1px solid #d4c4b0, border-radius 2px. Headings: color #5a4a3a, font-family \'Playfair Display\', serif, font-weight 400. Buttons: border 1px solid #c4b4a0, color #5a4a3a, background transparent. Imperfect, organic, restrained. Muted earth tones, minimal decoration.',
+    19:'Apply a Retro Vintage visual style to the entire site. Background: #f4e8d0 aged cream. Cards: border 2px solid #c8a96e. Headings: color #3d2b1f, font-family \'Playfair Display\', serif. Buttons: background #c8522a burnt orange, border 2px solid #8b3a1a, color #f4e8d0. Info panels: border 2px dashed #c8a96e. Aged paper colors, warm browns and burnt oranges.',
+    20:'Apply a Psychedelic visual style to the entire site. Background: linear-gradient(135deg, #ff00ff, #ff4500, #ffff00, #00ffff), background-size 300% 300% with continuous animation. Headings: color #fff, text-shadow 2px 2px 0 #ff00ff, -2px -2px 0 #00ffff. Buttons: background #ff00ff, border 2px solid #fff, border-radius 100px. Apply filter hue-rotate animation cycling 360deg. Maximum visual intensity.',
+    21:'Apply an Aurora Gradient visual style to the entire site. Background: linear-gradient(135deg, #667eea, #764ba2, #f093fb, #a8edea), background-size 300% 300%, animated 8s ease infinite. Cards: background rgba(255,255,255,0.08), backdrop-filter blur(10px), border 1px solid rgba(255,255,255,0.15), border-radius 14px. Headings: color #fff. Buttons: background rgba(255,255,255,0.15), backdrop-filter blur(8px), color #fff. Frosted glass over shifting aurora gradients.',
+    22:'Apply a Claymorphism visual style to the entire site. Background: linear-gradient(135deg, #ffd6e7, #c1fba4). Cards: border-radius 18px, border 2px solid rgba(255,255,255,0.8), box-shadow 0 8px 24px rgba(255,150,200,0.25), background rgba(255,255,255,0.6). Buttons: background linear-gradient(135deg, #ff9ec8, #c79eff), border-radius 100px, border 2px solid rgba(255,255,255,0.5). Soft, puffy, candy-like surfaces with pastel gradients.',
+    23:'Apply a Grunge Distressed visual style to the entire site. Background: #2a1a0a dark muddy brown. Cards: border 1px solid #5a3a1a. Headings: color #c8a96e, text-transform uppercase, letter-spacing 0.05em. Buttons: background #8b4513, border 2px solid #5a2d0a, color #f4e8d0, text-transform uppercase. Weathered, distressed, underground aesthetic.',
+    24:'Apply a Typographic visual style to the entire site. Background: #fff. Hero headings: font-size clamp(2rem, 8vw, 6rem), font-weight 900, letter-spacing -0.04em, line-height 1, font-family \'Space Grotesk\', sans-serif. No borders on cards — use spacing and hierarchy only. Links: color #111, border-bottom 2px solid #111. Typography communicates everything. No icons, minimal color.',
+    25:'Apply a Monochromatic Blue visual style. Use only shades of blue. Background: #e8f4f8. Cards: background #d0e8f5, border 1px solid #7ab8d4. Headings: color #1a5276. Buttons: background #2980b9, color #e8f4f8. Dark sections: background #2980b9, color #e8f4f8. Only blue — from near-white to deep navy. Tonal harmony.',
+    26:'Apply a Duotone visual style using only #ff6b35 orange and #004e89 deep blue. Background: linear-gradient(135deg, #ff6b35, #004e89). Cards: background rgba(0,78,137,0.9). Headings: color #ff6b35. Buttons: background #fff, color #ff6b35. Everything exists in the interplay between these two colors.',
+    27:'Apply an Organic Biomorphic visual style. Background: #e8f5e9. All containers use blob border-radius: 38% 62% 56% 44% / 44% 38% 62% 56%. Cards: background #f1f8e9, border 2px solid #a5d6a7. Buttons: background #66bb6a, border-radius 50% 20% 40% 30% / 30% 50% 20% 40%. No straight edges — everything is rounded with asymmetric organic blob shapes. Natural green palette.',
+    28:'Apply a Nordic Scandinavian visual style. Background: #f5f5f0 warm off-white. Cards: background #fff, border 1px solid #e0e0d8, border-radius 8px. Headings: color #2d3436, font-family \'Inter\'. Body text: color #636e72. Buttons: background #2d3436, color #f5f5f0. Muted, calm, functional. Warm whites, soft grays. Clean lines, lots of whitespace.',
+    29:'Apply a Futurism Sci-Fi HUD visual style. Background: #000814 dark navy. Cards: border 1px solid rgba(0,180,216,0.3), border-radius 2px. Headings: color #90e0ef, font-family monospace, text-transform uppercase, letter-spacing 0.1em. Buttons: border 1px solid #90e0ef, color #90e0ef, text-transform uppercase. Military-grade HUD aesthetic with monospace type and translucent cyan on near-black.',
+    30:'Apply a Maximalism visual style. Background: linear-gradient(135deg, #8b0000, #ff8c00, #ffd700). Cards: border 4px solid #4b0082, backdrop-filter blur(6px). Headings: font-family \'Playfair Display\', serif, font-weight 900, text-shadow 2px 2px 4px rgba(0,0,0,0.5). Buttons: background #4b0082, color #ffd700, border 3px solid #ffd700. Everything is loud, layered, ornate. More is more.',
+    31:'Apply a Terminal CLI visual style. Background: #0c0c0c. All text: color #00ff41 green, font-family monospace, text-shadow 0 0 6px rgba(0,255,65,0.5). Buttons: border 1px solid #00ff41, color #00ff41, background transparent, border-radius 0. Everything looks like a vintage green-phosphor terminal. Monospace only.',
+    32:'Apply a Bento Grid visual style. Background: #f0ede8 warm beige. Cells: background #fff, border 1px solid #ddd9d0, border-radius 8px, padding 12px. Outer container: border-radius 14px. Headings: color #1a1a1a. Buttons: background #1a1a1a, color #f0ede8. CSS Grid with varied cell sizes. Japanese-inspired modular layout.',
+    33:'Apply a Frosted iOS visual style. Background: linear-gradient(135deg, #1a1a2e, #16213e). All panels: background rgba(255,255,255,0.1), backdrop-filter blur(20px), border 1px solid rgba(255,255,255,0.18), border-radius 16px. Headings: color #fff, font-family -apple-system, \'SF Pro Display\', sans-serif. Buttons: background rgba(0,122,255,0.8), border-radius 12px. Apple-style frosted glass with deep blur.',
+    34:'Apply a Matrix Code visual style. Background: #000000. All text: color #00ff41, font-family monospace, text-shadow 0 0 10px rgba(0,255,65,0.7). Buttons: border 1px solid #00ff41, box-shadow 0 0 10px rgba(0,255,65,0.3), border-radius 0. Everything glows green on black like Matrix digital rain.',
+    35:'Apply a Kawaii Pastel visual style. Background: linear-gradient(135deg, #fde8f5, #e8d8ff). Cards: border-radius 20px, border 2px solid rgba(255,182,193,0.5). Buttons: background linear-gradient(135deg, #ff9ec8, #c79eff), border-radius 100px, color #fff. Cute, bubbly, pink and lavender. Add decorative stars and hearts.',
+    36:'Apply a Liquid Chrome visual style. Background: linear-gradient(145deg, #9e9e9e, #e8e8e8, #bdbdbd) metallic silver. Cards: background linear-gradient(145deg, #e0e0e0, #f5f5f5, #d0d0d0). Headings: background linear-gradient(90deg, #666, #999, #666), -webkit-background-clip text, -webkit-text-fill-color transparent. Buttons: background linear-gradient(145deg, #424242, #212121), color #e0e0e0. Polished chrome metallic surfaces.',
+    37:'Apply a Blueprint visual style. Background: #1a3a6b with grid overlay: linear-gradient(rgba(255,255,255,0.08) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.08) 1px, transparent 1px), background-size 18px 18px. Text: color #90b8e8. Buttons: border 2px solid #90b8e8, background transparent, border-radius 0. Architectural blueprint drawings on grid paper.',
+    38:'Apply a Comic Book Pop visual style. Background: #fff. Cards: border 3px solid #000, box-shadow 5px 5px 0 #000. Headings: font-weight 900, text-transform uppercase. Buttons: background #ff0 yellow, border 2.5px solid #000, box-shadow 3px 3px 0 #000, font-weight 900. Bold outlines, halftone dots, POW energy.',
+    39:'Apply an Amber Terminal visual style. Background: #0d0900. All text: color #ff8c00 amber, font-family monospace, text-shadow 0 0 8px rgba(255,140,0,0.5). Cards: border 1px solid #2a1800. Buttons: border 1px solid #ff8c00, background transparent, border-radius 0. Vintage amber-phosphor CRT monitor. Everything glows warm orange on black.',
+    40:'Apply a Sunset Horizon visual style. Background: linear-gradient(180deg, #1a0a2e, #4a1a7a, #c2185b, #ff6f00, #ffca28). Cards: background rgba(255,255,255,0.1), backdrop-filter blur(10px), border-radius 10px. Headings: color #fff. Buttons: background rgba(255,255,255,0.2), border 1px solid rgba(255,255,255,0.3), color #fff. Vertical sunset gradient from night sky to golden horizon.',
+    41:'Apply a Holographic Foil visual style. Background: linear-gradient(135deg, #ff007f, #ffd700, #00ff80, #00bfff, #8000ff), background-size 400% 400%, animated 5s ease infinite. Cards: background rgba(0,0,0,0.3), backdrop-filter blur(8px). Headings: text-shadow 0 0 20px rgba(255,255,255,0.5). Constantly shifting rainbow iridescence like holographic foil.',
+    42:'Apply a Hex Data visual style. Background: #050508. Text: color #58a6ff, font-family monospace, letter-spacing 0.06em. Cards: background #0d1117, border 1px solid #21262d. Buttons: background #21262d, border 1px solid #30363d, color #58a6ff. GitHub-dark inspired data visualization aesthetic.',
+    43:'Apply a Neon Sign visual style. Background: #1a0a00. Text: color #ff3300, text-shadow 0 0 10px rgba(255,51,0,0.9), 0 0 30px rgba(255,51,0,0.5). Buttons: border 2px solid #ff3300, box-shadow 0 0 12px rgba(255,51,0,0.3), inset 0 0 8px rgba(255,51,0,0.1). Everything glows like a neon bar sign.',
+    44:'Apply a Noir Detective visual style. Background: #111111. Headings: color #fff, font-family \'Playfair Display\', serif, font-style italic. Accent: #cc0000 blood red. Buttons: border 1px solid #cc0000, color #cc0000, font-style italic. Info panels: border-left 3px solid #cc0000. Film noir — stark contrast, italic serif, blood red accent.',
+    45:'Apply a Dark Forest visual style. Background: linear-gradient(160deg, #0a1a0a, #1a2e1a). Cards: border 1px solid #1a3a1a. Headings: color #86efac, text-shadow 0 0 8px rgba(134,239,172,0.3). Buttons: border 1px solid #86efac, color #86efac. Bioluminescent green glow in pitch-dark forest.',
+    46:'Apply an Ocean Abyss visual style. Background: linear-gradient(180deg, #001a2e, #003355, #001428). Headings: color #00d4ff, text-shadow 0 0 10px rgba(0,212,255,0.5). Buttons: border 1px solid #00d4ff, color #00d4ff, background rgba(0,212,255,0.1). Deep ocean with bioluminescent cyan glow.',
+    47:'Apply an Infrared visual style. Background: linear-gradient(135deg, #000, #8b0000, #cc4400). Headings: color #ffff00, font-family monospace, text-transform uppercase. Buttons: background #cc4400, border 1px solid #ffff00, color #ffff00. Thermal camera aesthetic — heat from black through red to bright yellow.',
+    48:'Apply a Chalk Blackboard visual style. Background: #2d3a2d green-gray chalkboard. Cards: border 6px solid #5c4a3a wooden frame, box-shadow inset 0 0 30px rgba(0,0,0,0.4). Text: color rgba(255,255,255,0.9), font-family \'Playfair Display\', serif. Buttons: border 2px dashed rgba(255,255,255,0.6), background transparent. Chalk-drawn on green board with wooden frame.',
+    49:'Apply a Tokyo Night visual style. Background: #1a1b26 dark blue-gray. Cards: background #24283b, border 1px solid #2f3450. Headings: color #7aa2f7, font-family monospace. Strings: color #9ece6a green. Comments: color #565f89. Accent: #bb9af7 purple. Buttons: background #3b4261, color #7aa2f7. Code editor Tokyo Night color scheme.',
+    50:'Apply a Synthwave Racing visual style. Background: linear-gradient(180deg, #0a001a, #2a0055, #c800ff). Headings: color #ff2d78, font-weight 900, text-transform uppercase, text-shadow 0 0 12px rgba(255,45,120,0.9). Buttons: background linear-gradient(90deg, #ff2d78, #c800ff), color #fff, text-transform uppercase. Outrun/synthwave — hot neon pink and purple.',
+    51:'Apply a Paper Vintage visual style. Background: #f9f6ed aged cream. Cards: border 1px solid #d4cab4, box-shadow 0 2px 8px rgba(139,105,20,0.15), inset 0 0 60px rgba(210,180,140,0.08). Headings: color #3e2723, font-family \'Playfair Display\', serif. Buttons: background #8d6e63, color #f9f6ed. Aged parchment, sepia tones.',
+    52:'Apply a Steampunk Brass visual style. Background: radial-gradient(circle at 30% 40%, #4e3b31, #2c1810). Cards: border 3px solid #cd7f32 brass. Headings: color #cd7f32, font-family \'Playfair Display\', serif. Buttons: background linear-gradient(145deg, #cd7f32, #b8860b), color #2c1810, box-shadow 0 2px 4px rgba(0,0,0,0.4). Victorian industrial with brass and leather.',
+    53:'Apply a Space Galaxy visual style. Background: radial-gradient(ellipse at 20% 30%, #1a0033, #000011 50%, #000). Cards: border 1px solid rgba(100,50,180,0.2), box-shadow 0 0 30px rgba(100,50,200,0.1). Headings: color #b39ddb, text-shadow 0 0 10px rgba(179,157,219,0.5). Buttons: background linear-gradient(135deg, #5e35b1, #311b92), border-radius 100px. Cosmic nebula in deep space.',
+    54:'Apply an Eco Green visual style. Background: linear-gradient(135deg, #f1f8e9, #dcedc8). Cards: border 2px solid #9ccc65, border-radius 10px. Headings: color #33691e. Buttons: background #7cb342, border-radius 100px, color #fff. Clean environmental aesthetic — leaf greens, natural whites.',
+    55:'Apply a Glitch Art visual style. Background: #0a0014. Text: color #ff006e, font-family monospace, text-transform uppercase. Headings: text-shadow 2px 0 #00f5ff, -2px 0 #39ff14. Buttons: border 2px solid #ff006e, box-shadow 2px 2px 0 #00f5ff, -2px -2px 0 #39ff14. Corrupted digital — pixel displacement, RGB channel separation.',
+    56:'Apply a Luxury Gold visual style. Background: linear-gradient(135deg, #fff8e1, #fffde7, #fff8e1). Cards: border 3px solid #ffd700. Headings: color #9c6f19, font-family \'Playfair Display\', serif. Buttons: background linear-gradient(135deg, #ffd700, #daa520), color #3e2723. Opulent gold and cream. Premium and regal.',
+    57:'Apply an Arctic Ice visual style. Background: linear-gradient(145deg, #e0f2f7, #b2ebf2, #e0f2f7). Cards: border 2px solid #80deea, border-radius 10px. Headings: color #006064. Buttons: background linear-gradient(135deg, #00acc1, #0097a7), border-radius 100px, color #fff. Crystal-clear icy blue, glacial white.',
+    58:'Apply a Desert Sunset visual style. Background: linear-gradient(180deg, #fff3e0, #ffe0b2, #ffcc80, #ffb74d). Headings: color #e65100. Buttons: background linear-gradient(135deg, #ff6f00, #e65100), color #fff. Info panels: border-left 3px solid #ff6f00. Warm amber to burnt orange. Desert heat.',
+    59:'Apply a Velvet Dreams visual style. Background: linear-gradient(135deg, #1a0a2e, #2a0a4e, #3a0a5e) royal purple. Headings: color #d4af37 gold, font-family \'Playfair Display\', serif. Buttons: background linear-gradient(135deg, #d4af37, #aa8c2a), color #1a0a2e, box-shadow 0 4px 12px rgba(212,175,55,0.3). Deep purple velvet with gold threading.',
+    60:'Apply a Circuit Board visual style. Background: #0d1117. Cards: border 2px solid #333. Headings: color #00ff88, font-family monospace, text-shadow 0 0 8px rgba(0,255,136,0.5). Body text: color #00dd66, font-family monospace. Buttons: border 2px solid #00ff88, color #00ff88, text-transform uppercase, font-family monospace. PCB-trace aesthetic, technical green on dark.',
+    61:'Apply a Vampire visual style. Background: linear-gradient(135deg, #0a0000, #1a0005). Cards: border 2px solid #8b0000. Headings: color #dc143c, font-family \'Playfair Display\', serif, text-shadow 0 0 12px rgba(220,20,60,0.6). Buttons: background linear-gradient(135deg, #8b0000, #c0000a), border 1px solid #dc143c, box-shadow 0 0 10px rgba(220,20,60,0.35). Gothic blood-red on obsidian black.',
+    62:'Apply a Luxury Modern visual style. Background: #0a0a0a. Cards: border 1px solid #2a2a2a, border-radius 12px. Headings: color #d4af37 gold, font-family \'Playfair Display\', serif, letter-spacing 0.05em. Body text: color #c0c0c0 silver. Buttons: background linear-gradient(135deg, #c0c0c0, #a8a8a8), color #0a0a0a, text-transform uppercase, letter-spacing 0.08em. Obsidian black with gold and silver metallics.',
+    63:'Apply a Pastel Bloom visual style. Background: #aad4f5 pastel blue. Cards: border 2px solid #80c4f0, border-radius 16px. Headings: color #1a5c8a. Buttons: background #ffaaaa pastel red, border-radius 100px, color #8b1a1a. Green panels: background #aaf0c4, border 2px solid #88e8ae. Three flat pastels: blue, red, green. No gradients. Soft and airy.',
+    64:'Apply a Cubism visual style. Background: #1a2e50 deep navy. Headings: color #f5c842, text-transform uppercase. Buttons: background #e86a2e, clip-path polygon(0 0, 100% 0, 94% 100%, 6% 100%), color #fff, text-transform uppercase. Info panels: background rgba(26,128,128,0.28), border-left 4px solid #1ab8b8, transform skewX(-2deg). Angular clip-paths, skewed transforms. Navy, orange, teal, gold.',
+    65:'Apply a Cosmic Concrete visual style. Background: #06040f ultra-dark. Cards: border 2px solid #2a2a3a, border-radius 6px. Headings: color #d8c8f8, text-shadow 0 0 10px rgba(180,100,255,0.5). Body text: color #999, font-family monospace. Buttons: border 2px solid rgba(180,100,255,0.55), color #b464ff, box-shadow 0 0 10px rgba(180,100,255,0.2). Brutalist concrete meets cosmic nebula depth.'
+  };
+
+
   // COPY
   var toast=document.getElementById('toast');
   var timer=null;
@@ -2071,6 +2142,25 @@ body{font-family:'Space Grotesk','Inter',sans-serif;background:#12121a;color:#e8
       }
     });
   });
+
+  // COPY STYLE PROMPT
+  document.querySelectorAll('.copy-prompt-btn').forEach(function(btn){
+    btn.addEventListener('click',function(){
+      var id=btn.getAttribute('data-theme');
+      var prompt=stylePrompts[id]||'/* no style prompt */';
+      if(navigator.clipboard&&navigator.clipboard.writeText){
+        navigator.clipboard.writeText(prompt).then(showToast,showToast);
+      } else {
+        var ta=document.createElement('textarea');
+        ta.value=prompt;ta.style.cssText='position:fixed;opacity:0';
+        document.body.appendChild(ta);ta.focus();ta.select();
+        try{document.execCommand('copy');}catch(e){}
+        document.body.removeChild(ta);
+        showToast();
+      }
+    });
+  });
+
   function showToast(){
     toast.classList.add('show');
     if(timer)clearTimeout(timer);
