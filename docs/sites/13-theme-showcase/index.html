@@ -38,11 +38,11 @@ body{font-family:'Space Grotesk','Inter',sans-serif;background:#12121a;color:#e8
 .card-description{font-size:.82rem;color:#888899;line-height:1.5}
 .color-palette{display:flex;gap:6px;padding:10px 24px}
 .swatch{width:22px;height:22px;border-radius:50%;border:2px solid rgba(255,255,255,.12);flex-shrink:0}
-.sample-block{margin:0 16px 8px;border-radius:10px;overflow:hidden;padding:18px;position:relative}
-.card-actions{padding:10px 24px 16px;display:flex;justify-content:flex-end;margin-top:auto}
+.sample-block{margin:0 16px 16px;border-radius:10px;overflow:hidden;padding:24px;position:relative}
+.card-actions{padding:14px 24px 20px;display:flex;justify-content:flex-end;gap:8px;margin-top:auto}
 .copy-btn{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1);color:#8888aa;padding:5px 14px;border-radius:8px;font-size:.75rem;font-weight:600;cursor:pointer;transition:all .2s;font-family:inherit}
 .copy-btn:hover{background:rgba(99,102,241,.15);color:#667eea;border-color:rgba(99,102,241,.3)}
-.copy-prompt-btn{background:rgba(139,92,246,.1);border:1px solid rgba(139,92,246,.3);color:#a78bfa;padding:5px 14px;border-radius:8px;font-size:.75rem;font-weight:600;cursor:pointer;transition:all .2s;font-family:inherit}
+.copy-prompt-btn{background:rgba(139,92,246,.1);border:1px solid rgba(139,92,246,.3);color:#a78bfa;padding:7px;border-radius:8px;cursor:pointer;transition:all .2s;display:inline-flex;align-items:center;justify-content:center}
 .copy-prompt-btn:hover{background:rgba(139,92,246,.25);color:#c4b5fd;border-color:rgba(139,92,246,.5)}
 .site-footer{text-align:center;padding:28px 40px;border-top:1px solid rgba(255,255,255,.06);color:#44445a;font-size:.85rem}
 .scroll-top{position:fixed;bottom:32px;right:32px;width:46px;height:46px;background:linear-gradient(135deg,#667eea,#764ba2);border:none;border-radius:50%;color:#fff;font-size:1.2rem;cursor:pointer;opacity:0;transform:translateY(20px);transition:opacity .3s,transform .3s;z-index:100;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 16px rgba(99,102,241,.4)}
@@ -677,7 +677,7 @@ body{font-family:'Space Grotesk','Inter',sans-serif;background:#12121a;color:#e8
       <div class="spanel">&#10022; Glass card — blur &amp; soft translucent borders</div>
       <input class="sinput" type="text" placeholder="Type something&#8230;">
     </div>
-    <div class="card-actions"><button class="copy-btn" data-theme="1">&#8984; Copy CSS</button><button class="copy-prompt-btn" data-theme="1">&#9998; Copy Style Prompt</button></div>
+    <div class="card-actions"><button class="copy-btn" data-theme="1">&#8984; Copy CSS</button><button class="copy-prompt-btn" data-theme="1" title="Copy Style Prompt"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="10" rx="2"/><circle cx="9" cy="16" r="1"/><circle cx="15" cy="16" r="1"/><path d="M12 11V7"/><circle cx="12" cy="5" r="2"/><path d="M3 16H1M21 16h2"/></svg></button></div>
   </article>
 
   <!-- 2 -->
@@ -697,7 +697,7 @@ body{font-family:'Space Grotesk','Inter',sans-serif;background:#12121a;color:#e8
       <div class="spanel">Inset shadow creates a recessed, tactile panel feel.</div>
       <input class="sinput" type="text" placeholder="Focus input&#8230;">
     </div>
-    <div class="card-actions"><button class="copy-btn" data-theme="2">&#8984; Copy CSS</button><button class="copy-prompt-btn" data-theme="2">&#9998; Copy Style Prompt</button></div>
+    <div class="card-actions"><button class="copy-btn" data-theme="2">&#8984; Copy CSS</button><button class="copy-prompt-btn" data-theme="2" title="Copy Style Prompt"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="10" rx="2"/><circle cx="9" cy="16" r="1"/><circle cx="15" cy="16" r="1"/><path d="M12 11V7"/><circle cx="12" cy="5" r="2"/><path d="M3 16H1M21 16h2"/></svg></button></div>
   </article>
 
   <!-- 3 -->
@@ -717,7 +717,7 @@ body{font-family:'Space Grotesk','Inter',sans-serif;background:#12121a;color:#e8
       <div class="spanel">WARNING: This panel has strong opinions about design.</div>
       <input class="sinput" type="text" placeholder="Raw input field">
     </div>
-    <div class="card-actions"><button class="copy-btn" data-theme="3">&#8984; Copy CSS</button><button class="copy-prompt-btn" data-theme="3">&#9998; Copy Style Prompt</button></div>
+    <div class="card-actions"><button class="copy-btn" data-theme="3">&#8984; Copy CSS</button><button class="copy-prompt-btn" data-theme="3" title="Copy Style Prompt"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="10" rx="2"/><circle cx="9" cy="16" r="1"/><circle cx="15" cy="16" r="1"/><path d="M12 11V7"/><circle cx="12" cy="5" r="2"/><path d="M3 16H1M21 16h2"/></svg></button></div>
   </article>
 
   <!-- 4 -->
@@ -737,7 +737,7 @@ body{font-family:'Space Grotesk','Inter',sans-serif;background:#12121a;color:#e8
       <div class="spanel">System status: nominal. All systems operating dark.</div>
       <input class="sinput" type="text" placeholder="Enter command&#8230;">
     </div>
-    <div class="card-actions"><button class="copy-btn" data-theme="4">&#8984; Copy CSS</button><button class="copy-prompt-btn" data-theme="4">&#9998; Copy Style Prompt</button></div>
+    <div class="card-actions"><button class="copy-btn" data-theme="4">&#8984; Copy CSS</button><button class="copy-prompt-btn" data-theme="4" title="Copy Style Prompt"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="10" rx="2"/><circle cx="9" cy="16" r="1"/><circle cx="15" cy="16" r="1"/><path d="M12 11V7"/><circle cx="12" cy="5" r="2"/><path d="M3 16H1M21 16h2"/></svg></button></div>
   </article>
 
   <!-- 5 -->
@@ -757,7 +757,7 @@ body{font-family:'Space Grotesk','Inter',sans-serif;background:#12121a;color:#e8
       <div class="spanel">&#9658; STATUS: ONLINE &#160;|&#160; PING: 2ms &#160;|&#160; ENCRYPTED</div>
       <input class="sinput" type="text" placeholder="Enter access code_">
     </div>
-    <div class="card-actions"><button class="copy-btn" data-theme="5">&#8984; Copy CSS</button><button class="copy-prompt-btn" data-theme="5">&#9998; Copy Style Prompt</button></div>
+    <div class="card-actions"><button class="copy-btn" data-theme="5">&#8984; Copy CSS</button><button class="copy-prompt-btn" data-theme="5" title="Copy Style Prompt"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="10" rx="2"/><circle cx="9" cy="16" r="1"/><circle cx="15" cy="16" r="1"/><path d="M12 11V7"/><circle cx="12" cy="5" r="2"/><path d="M3 16H1M21 16h2"/></svg></button></div>
   </article>
 
   <!-- 6 -->
@@ -777,7 +777,7 @@ body{font-family:'Space Grotesk','Inter',sans-serif;background:#12121a;color:#e8
       <div class="spanel">Quiet content block. No distractions present here.</div>
       <input class="sinput" type="text" placeholder="Search&#8230;">
     </div>
-    <div class="card-actions"><button class="copy-btn" data-theme="6">&#8984; Copy CSS</button><button class="copy-prompt-btn" data-theme="6">&#9998; Copy Style Prompt</button></div>
+    <div class="card-actions"><button class="copy-btn" data-theme="6">&#8984; Copy CSS</button><button class="copy-prompt-btn" data-theme="6" title="Copy Style Prompt"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="10" rx="2"/><circle cx="9" cy="16" r="1"/><circle cx="15" cy="16" r="1"/><path d="M12 11V7"/><circle cx="12" cy="5" r="2"/><path d="M3 16H1M21 16h2"/></svg></button></div>
   </article>
 
   <!-- 7 -->
@@ -797,7 +797,7 @@ body{font-family:'Space Grotesk','Inter',sans-serif;background:#12121a;color:#e8
       <div class="spanel">Card at elevation 2 — subtle depth and clear hierarchy.</div>
       <input class="sinput" type="text" placeholder="Filled text field">
     </div>
-    <div class="card-actions"><button class="copy-btn" data-theme="7">&#8984; Copy CSS</button><button class="copy-prompt-btn" data-theme="7">&#9998; Copy Style Prompt</button></div>
+    <div class="card-actions"><button class="copy-btn" data-theme="7">&#8984; Copy CSS</button><button class="copy-prompt-btn" data-theme="7" title="Copy Style Prompt"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="10" rx="2"/><circle cx="9" cy="16" r="1"/><circle cx="15" cy="16" r="1"/><path d="M12 11V7"/><circle cx="12" cy="5" r="2"/><path d="M3 16H1M21 16h2"/></svg></button></div>
   </article>
 
   <!-- 8 -->
@@ -817,7 +817,7 @@ body{font-family:'Space Grotesk','Inter',sans-serif;background:#12121a;color:#e8
       <div class="spanel">Green accent border signals a positive status condition.</div>
       <input class="sinput" type="text" placeholder="Flat text input">
     </div>
-    <div class="card-actions"><button class="copy-btn" data-theme="8">&#8984; Copy CSS</button><button class="copy-prompt-btn" data-theme="8">&#9998; Copy Style Prompt</button></div>
+    <div class="card-actions"><button class="copy-btn" data-theme="8">&#8984; Copy CSS</button><button class="copy-prompt-btn" data-theme="8" title="Copy Style Prompt"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="10" rx="2"/><circle cx="9" cy="16" r="1"/><circle cx="15" cy="16" r="1"/><path d="M12 11V7"/><circle cx="12" cy="5" r="2"/><path d="M3 16H1M21 16h2"/></svg></button></div>
   </article>
 
   <!-- 9 -->
@@ -837,7 +837,7 @@ body{font-family:'Space Grotesk','Inter',sans-serif;background:#12121a;color:#e8
       <div class="spanel">Inset panel — embossed leather or pressed cold metal.</div>
       <input class="sinput" type="text" placeholder="Handwritten entry&#8230;">
     </div>
-    <div class="card-actions"><button class="copy-btn" data-theme="9">&#8984; Copy CSS</button><button class="copy-prompt-btn" data-theme="9">&#9998; Copy Style Prompt</button></div>
+    <div class="card-actions"><button class="copy-btn" data-theme="9">&#8984; Copy CSS</button><button class="copy-prompt-btn" data-theme="9" title="Copy Style Prompt"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="10" rx="2"/><circle cx="9" cy="16" r="1"/><circle cx="15" cy="16" r="1"/><path d="M12 11V7"/><circle cx="12" cy="5" r="2"/><path d="M3 16H1M21 16h2"/></svg></button></div>
   </article>
 
   <!-- 10 -->
@@ -857,7 +857,7 @@ body{font-family:'Space Grotesk','Inter',sans-serif;background:#12121a;color:#e8
       <div class="spanel">Secondary information level — gray field, black rule.</div>
       <input class="sinput" type="text" placeholder="Enter text">
     </div>
-    <div class="card-actions"><button class="copy-btn" data-theme="10">&#8984; Copy CSS</button><button class="copy-prompt-btn" data-theme="10">&#9998; Copy Style Prompt</button></div>
+    <div class="card-actions"><button class="copy-btn" data-theme="10">&#8984; Copy CSS</button><button class="copy-prompt-btn" data-theme="10" title="Copy Style Prompt"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="10" rx="2"/><circle cx="9" cy="16" r="1"/><circle cx="15" cy="16" r="1"/><path d="M12 11V7"/><circle cx="12" cy="5" r="2"/><path d="M3 16H1M21 16h2"/></svg></button></div>
   </article>
 
   <!-- 11 -->
@@ -877,7 +877,7 @@ body{font-family:'Space Grotesk','Inter',sans-serif;background:#12121a;color:#e8
       <div class="spanel">Teal card with bold offset shadow. Classic Memphis feel.</div>
       <input class="sinput" type="text" placeholder="Bold energetic input">
     </div>
-    <div class="card-actions"><button class="copy-btn" data-theme="11">&#8984; Copy CSS</button><button class="copy-prompt-btn" data-theme="11">&#9998; Copy Style Prompt</button></div>
+    <div class="card-actions"><button class="copy-btn" data-theme="11">&#8984; Copy CSS</button><button class="copy-prompt-btn" data-theme="11" title="Copy Style Prompt"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="10" rx="2"/><circle cx="9" cy="16" r="1"/><circle cx="15" cy="16" r="1"/><path d="M12 11V7"/><circle cx="12" cy="5" r="2"/><path d="M3 16H1M21 16h2"/></svg></button></div>
   </article>
 
   <!-- 12 -->
@@ -897,7 +897,7 @@ body{font-family:'Space Grotesk','Inter',sans-serif;background:#12121a;color:#e8
       <div class="spanel">WAVE DETECTED &#8212; resonance at 88.8 MHz</div>
       <input class="sinput" type="text" placeholder="&#22812;&#12398;&#20837;&#21147;&#8230;">
     </div>
-    <div class="card-actions"><button class="copy-btn" data-theme="12">&#8984; Copy CSS</button><button class="copy-prompt-btn" data-theme="12">&#9998; Copy Style Prompt</button></div>
+    <div class="card-actions"><button class="copy-btn" data-theme="12">&#8984; Copy CSS</button><button class="copy-prompt-btn" data-theme="12" title="Copy Style Prompt"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="10" rx="2"/><circle cx="9" cy="16" r="1"/><circle cx="15" cy="16" r="1"/><path d="M12 11V7"/><circle cx="12" cy="5" r="2"/><path d="M3 16H1M21 16h2"/></svg></button></div>
   </article>
 
   <!-- 13 -->
@@ -917,7 +917,7 @@ body{font-family:'Space Grotesk','Inter',sans-serif;background:#12121a;color:#e8
       <div class="spanel">&#11088; VISITOR COUNTER: 000042 &#11088;</div>
       <input class="sinput" type="text" placeholder="Sign my guestbook">
     </div>
-    <div class="card-actions"><button class="copy-btn" data-theme="13">&#8984; Copy CSS</button><button class="copy-prompt-btn" data-theme="13">&#9998; Copy Style Prompt</button></div>
+    <div class="card-actions"><button class="copy-btn" data-theme="13">&#8984; Copy CSS</button><button class="copy-prompt-btn" data-theme="13" title="Copy Style Prompt"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="10" rx="2"/><circle cx="9" cy="16" r="1"/><circle cx="15" cy="16" r="1"/><path d="M12 11V7"/><circle cx="12" cy="5" r="2"/><path d="M3 16H1M21 16h2"/></svg></button></div>
   </article>
 
   <!-- 14 -->
@@ -937,7 +937,7 @@ body{font-family:'Space Grotesk','Inter',sans-serif;background:#12121a;color:#e8
       <div class="spanel">Today&#8217;s recipe: elderflower cordial &amp; pressed violets.</div>
       <input class="sinput" type="text" placeholder="Write in your journal&#8230;">
     </div>
-    <div class="card-actions"><button class="copy-btn" data-theme="14">&#8984; Copy CSS</button><button class="copy-prompt-btn" data-theme="14">&#9998; Copy Style Prompt</button></div>
+    <div class="card-actions"><button class="copy-btn" data-theme="14">&#8984; Copy CSS</button><button class="copy-prompt-btn" data-theme="14" title="Copy Style Prompt"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="10" rx="2"/><circle cx="9" cy="16" r="1"/><circle cx="15" cy="16" r="1"/><path d="M12 11V7"/><circle cx="12" cy="5" r="2"/><path d="M3 16H1M21 16h2"/></svg></button></div>
   </article>
 
   <!-- 15 -->
@@ -957,7 +957,7 @@ body{font-family:'Space Grotesk','Inter',sans-serif;background:#12121a;color:#e8
       <div class="spanel">&#8220;To study is to court the darkness and make it your friend.&#8221;</div>
       <input class="sinput" type="text" placeholder="Write your thesis&#8230;">
     </div>
-    <div class="card-actions"><button class="copy-btn" data-theme="15">&#8984; Copy CSS</button><button class="copy-prompt-btn" data-theme="15">&#9998; Copy Style Prompt</button></div>
+    <div class="card-actions"><button class="copy-btn" data-theme="15">&#8984; Copy CSS</button><button class="copy-prompt-btn" data-theme="15" title="Copy Style Prompt"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="10" rx="2"/><circle cx="9" cy="16" r="1"/><circle cx="15" cy="16" r="1"/><path d="M12 11V7"/><circle cx="12" cy="5" r="2"/><path d="M3 16H1M21 16h2"/></svg></button></div>
   </article>
 
   <!-- 16 -->
@@ -977,7 +977,7 @@ body{font-family:'Space Grotesk','Inter',sans-serif;background:#12121a;color:#e8
       <div class="spanel">Reserve your table at the Grand Palais &#8212; Est. 1924.</div>
       <input class="sinput" type="text" placeholder="Your name, please&#8230;">
     </div>
-    <div class="card-actions"><button class="copy-btn" data-theme="16">&#8984; Copy CSS</button><button class="copy-prompt-btn" data-theme="16">&#9998; Copy Style Prompt</button></div>
+    <div class="card-actions"><button class="copy-btn" data-theme="16">&#8984; Copy CSS</button><button class="copy-prompt-btn" data-theme="16" title="Copy Style Prompt"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="10" rx="2"/><circle cx="9" cy="16" r="1"/><circle cx="15" cy="16" r="1"/><path d="M12 11V7"/><circle cx="12" cy="5" r="2"/><path d="M3 16H1M21 16h2"/></svg></button></div>
   </article>
 
   <!-- 17 -->
@@ -997,7 +997,7 @@ body{font-family:'Space Grotesk','Inter',sans-serif;background:#12121a;color:#e8
       <div class="spanel">Function block &#8212; blue primary with strong yellow accent.</div>
       <input class="sinput" type="text" placeholder="Structure your input">
     </div>
-    <div class="card-actions"><button class="copy-btn" data-theme="17">&#8984; Copy CSS</button><button class="copy-prompt-btn" data-theme="17">&#9998; Copy Style Prompt</button></div>
+    <div class="card-actions"><button class="copy-btn" data-theme="17">&#8984; Copy CSS</button><button class="copy-prompt-btn" data-theme="17" title="Copy Style Prompt"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="10" rx="2"/><circle cx="9" cy="16" r="1"/><circle cx="15" cy="16" r="1"/><path d="M12 11V7"/><circle cx="12" cy="5" r="2"/><path d="M3 16H1M21 16h2"/></svg></button></div>
   </article>
 
   <!-- 18 -->
@@ -1017,7 +1017,7 @@ body{font-family:'Space Grotesk','Inter',sans-serif;background:#12121a;color:#e8
       <div class="spanel">A worn surface holds more truth than a polished one ever will.</div>
       <input class="sinput" type="text" placeholder="Leave a quiet note&#8230;">
     </div>
-    <div class="card-actions"><button class="copy-btn" data-theme="18">&#8984; Copy CSS</button><button class="copy-prompt-btn" data-theme="18">&#9998; Copy Style Prompt</button></div>
+    <div class="card-actions"><button class="copy-btn" data-theme="18">&#8984; Copy CSS</button><button class="copy-prompt-btn" data-theme="18" title="Copy Style Prompt"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="10" rx="2"/><circle cx="9" cy="16" r="1"/><circle cx="15" cy="16" r="1"/><path d="M12 11V7"/><circle cx="12" cy="5" r="2"/><path d="M3 16H1M21 16h2"/></svg></button></div>
   </article>
 
   <!-- 19 -->
@@ -1037,7 +1037,7 @@ body{font-family:'Space Grotesk','Inter',sans-serif;background:#12121a;color:#e8
       <div class="spanel">Catalogue No. 47 &#8212; Autumn Collection, Brown &amp; Co.</div>
       <input class="sinput" type="text" placeholder="Write to us&#8230;">
     </div>
-    <div class="card-actions"><button class="copy-btn" data-theme="19">&#8984; Copy CSS</button><button class="copy-prompt-btn" data-theme="19">&#9998; Copy Style Prompt</button></div>
+    <div class="card-actions"><button class="copy-btn" data-theme="19">&#8984; Copy CSS</button><button class="copy-prompt-btn" data-theme="19" title="Copy Style Prompt"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="10" rx="2"/><circle cx="9" cy="16" r="1"/><circle cx="15" cy="16" r="1"/><path d="M12 11V7"/><circle cx="12" cy="5" r="2"/><path d="M3 16H1M21 16h2"/></svg></button></div>
   </article>
 
   <!-- 20 -->
@@ -1057,7 +1057,7 @@ body{font-family:'Space Grotesk','Inter',sans-serif;background:#12121a;color:#e8
       <div class="spanel">[ REALITY OVERRIDE: FULLY ACTIVE ]</div>
       <input class="sinput" type="text" placeholder="Describe what you see&#8230;">
     </div>
-    <div class="card-actions"><button class="copy-btn" data-theme="20">&#8984; Copy CSS</button><button class="copy-prompt-btn" data-theme="20">&#9998; Copy Style Prompt</button></div>
+    <div class="card-actions"><button class="copy-btn" data-theme="20">&#8984; Copy CSS</button><button class="copy-prompt-btn" data-theme="20" title="Copy Style Prompt"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="10" rx="2"/><circle cx="9" cy="16" r="1"/><circle cx="15" cy="16" r="1"/><path d="M12 11V7"/><circle cx="12" cy="5" r="2"/><path d="M3 16H1M21 16h2"/></svg></button></div>
   </article>
 
   <!-- 21 -->
@@ -1077,7 +1077,7 @@ body{font-family:'Space Grotesk','Inter',sans-serif;background:#12121a;color:#e8
       <div class="spanel">Soft light filters through the shifting gradient atmosphere.</div>
       <input class="sinput" type="text" placeholder="Search the sky&#8230;">
     </div>
-    <div class="card-actions"><button class="copy-btn" data-theme="21">&#8984; Copy CSS</button><button class="copy-prompt-btn" data-theme="21">&#9998; Copy Style Prompt</button></div>
+    <div class="card-actions"><button class="copy-btn" data-theme="21">&#8984; Copy CSS</button><button class="copy-prompt-btn" data-theme="21" title="Copy Style Prompt"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="10" rx="2"/><circle cx="9" cy="16" r="1"/><circle cx="15" cy="16" r="1"/><path d="M12 11V7"/><circle cx="12" cy="5" r="2"/><path d="M3 16H1M21 16h2"/></svg></button></div>
   </article>
 
   <!-- 22 -->
@@ -1097,7 +1097,7 @@ body{font-family:'Space Grotesk','Inter',sans-serif;background:#12121a;color:#e8
       <div class="spanel">Fluffy card. Handle with care. Extremely cute component.</div>
       <input class="sinput" type="text" placeholder="Gentle input&#8230;">
     </div>
-    <div class="card-actions"><button class="copy-btn" data-theme="22">&#8984; Copy CSS</button><button class="copy-prompt-btn" data-theme="22">&#9998; Copy Style Prompt</button></div>
+    <div class="card-actions"><button class="copy-btn" data-theme="22">&#8984; Copy CSS</button><button class="copy-prompt-btn" data-theme="22" title="Copy Style Prompt"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="10" rx="2"/><circle cx="9" cy="16" r="1"/><circle cx="15" cy="16" r="1"/><path d="M12 11V7"/><circle cx="12" cy="5" r="2"/><path d="M3 16H1M21 16h2"/></svg></button></div>
   </article>
 
   <!-- 23 -->
@@ -1117,7 +1117,7 @@ body{font-family:'Space Grotesk','Inter',sans-serif;background:#12121a;color:#e8
       <div class="spanel">&#9612; Dispatch from the underground. No clean edges here.</div>
       <input class="sinput" type="text" placeholder="Tag the wall&#8230;">
     </div>
-    <div class="card-actions"><button class="copy-btn" data-theme="23">&#8984; Copy CSS</button><button class="copy-prompt-btn" data-theme="23">&#9998; Copy Style Prompt</button></div>
+    <div class="card-actions"><button class="copy-btn" data-theme="23">&#8984; Copy CSS</button><button class="copy-prompt-btn" data-theme="23" title="Copy Style Prompt"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="10" rx="2"/><circle cx="9" cy="16" r="1"/><circle cx="15" cy="16" r="1"/><path d="M12 11V7"/><circle cx="12" cy="5" r="2"/><path d="M3 16H1M21 16h2"/></svg></button></div>
   </article>
 
   <!-- 24 -->
@@ -1137,7 +1137,7 @@ body{font-family:'Space Grotesk','Inter',sans-serif;background:#12121a;color:#e8
       <div class="spanel">Words carry weight, rhythm, and undeniable visual presence.</div>
       <input class="sinput" type="text" placeholder="Write something powerful">
     </div>
-    <div class="card-actions"><button class="copy-btn" data-theme="24">&#8984; Copy CSS</button><button class="copy-prompt-btn" data-theme="24">&#9998; Copy Style Prompt</button></div>
+    <div class="card-actions"><button class="copy-btn" data-theme="24">&#8984; Copy CSS</button><button class="copy-prompt-btn" data-theme="24" title="Copy Style Prompt"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="10" rx="2"/><circle cx="9" cy="16" r="1"/><circle cx="15" cy="16" r="1"/><path d="M12 11V7"/><circle cx="12" cy="5" r="2"/><path d="M3 16H1M21 16h2"/></svg></button></div>
   </article>
 
   <!-- 25 -->
@@ -1157,7 +1157,7 @@ body{font-family:'Space Grotesk','Inter',sans-serif;background:#12121a;color:#e8
       <div class="spanel">Mid-tone panel &#8212; every shade belongs to the same family.</div>
       <input class="sinput" type="text" placeholder="Search&#8230;">
     </div>
-    <div class="card-actions"><button class="copy-btn" data-theme="25">&#8984; Copy CSS</button><button class="copy-prompt-btn" data-theme="25">&#9998; Copy Style Prompt</button></div>
+    <div class="card-actions"><button class="copy-btn" data-theme="25">&#8984; Copy CSS</button><button class="copy-prompt-btn" data-theme="25" title="Copy Style Prompt"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="10" rx="2"/><circle cx="9" cy="16" r="1"/><circle cx="15" cy="16" r="1"/><path d="M12 11V7"/><circle cx="12" cy="5" r="2"/><path d="M3 16H1M21 16h2"/></svg></button></div>
   </article>
 
   <!-- 26 -->
@@ -1177,7 +1177,7 @@ body{font-family:'Space Grotesk','Inter',sans-serif;background:#12121a;color:#e8
       <div class="spanel">Dark overlay on the vivid gradient field below.</div>
       <input class="sinput" type="text" placeholder="Enter search term&#8230;">
     </div>
-    <div class="card-actions"><button class="copy-btn" data-theme="26">&#8984; Copy CSS</button><button class="copy-prompt-btn" data-theme="26">&#9998; Copy Style Prompt</button></div>
+    <div class="card-actions"><button class="copy-btn" data-theme="26">&#8984; Copy CSS</button><button class="copy-prompt-btn" data-theme="26" title="Copy Style Prompt"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="10" rx="2"/><circle cx="9" cy="16" r="1"/><circle cx="15" cy="16" r="1"/><path d="M12 11V7"/><circle cx="12" cy="5" r="2"/><path d="M3 16H1M21 16h2"/></svg></button></div>
   </article>
 
   <!-- 27 -->
@@ -1197,7 +1197,7 @@ body{font-family:'Space Grotesk','Inter',sans-serif;background:#12121a;color:#e8
       <div class="spanel">Organic blob &#8212; soft, fluid, and alive.</div>
       <input class="sinput" type="text" placeholder="Search nature&#8230;">
     </div>
-    <div class="card-actions"><button class="copy-btn" data-theme="27">&#8984; Copy CSS</button><button class="copy-prompt-btn" data-theme="27">&#9998; Copy Style Prompt</button></div>
+    <div class="card-actions"><button class="copy-btn" data-theme="27">&#8984; Copy CSS</button><button class="copy-prompt-btn" data-theme="27" title="Copy Style Prompt"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="10" rx="2"/><circle cx="9" cy="16" r="1"/><circle cx="15" cy="16" r="1"/><path d="M12 11V7"/><circle cx="12" cy="5" r="2"/><path d="M3 16H1M21 16h2"/></svg></button></div>
   </article>
 
   <!-- 28 -->
@@ -1217,7 +1217,7 @@ body{font-family:'Space Grotesk','Inter',sans-serif;background:#12121a;color:#e8
       <div class="spanel">Clean card &#8212; minimal contrast, maximum calm presence.</div>
       <input class="sinput" type="text" placeholder="Search&#8230;">
     </div>
-    <div class="card-actions"><button class="copy-btn" data-theme="28">&#8984; Copy CSS</button><button class="copy-prompt-btn" data-theme="28">&#9998; Copy Style Prompt</button></div>
+    <div class="card-actions"><button class="copy-btn" data-theme="28">&#8984; Copy CSS</button><button class="copy-prompt-btn" data-theme="28" title="Copy Style Prompt"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="10" rx="2"/><circle cx="9" cy="16" r="1"/><circle cx="15" cy="16" r="1"/><path d="M12 11V7"/><circle cx="12" cy="5" r="2"/><path d="M3 16H1M21 16h2"/></svg></button></div>
   </article>
 
   <!-- 29 -->
@@ -1237,7 +1237,7 @@ body{font-family:'Space Grotesk','Inter',sans-serif;background:#12121a;color:#e8
       <div class="spanel">&#9658; SECTOR 7-G // ANOMALY: NONE // STATUS: CLEAR</div>
       <input class="sinput" type="text" placeholder="ENTER QUERY_">
     </div>
-    <div class="card-actions"><button class="copy-btn" data-theme="29">&#8984; Copy CSS</button><button class="copy-prompt-btn" data-theme="29">&#9998; Copy Style Prompt</button></div>
+    <div class="card-actions"><button class="copy-btn" data-theme="29">&#8984; Copy CSS</button><button class="copy-prompt-btn" data-theme="29" title="Copy Style Prompt"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="10" rx="2"/><circle cx="9" cy="16" r="1"/><circle cx="15" cy="16" r="1"/><path d="M12 11V7"/><circle cx="12" cy="5" r="2"/><path d="M3 16H1M21 16h2"/></svg></button></div>
   </article>
 
   <!-- 30 -->
@@ -1257,7 +1257,7 @@ body{font-family:'Space Grotesk','Inter',sans-serif;background:#12121a;color:#e8
       <div class="spanel">&#9733; GOLD PANEL &#8212; the richest, most layered possible surface &#9733;</div>
       <input class="sinput" type="text" placeholder="Add more here&#8230;">
     </div>
-    <div class="card-actions"><button class="copy-btn" data-theme="30">&#8984; Copy CSS</button><button class="copy-prompt-btn" data-theme="30">&#9998; Copy Style Prompt</button></div>
+    <div class="card-actions"><button class="copy-btn" data-theme="30">&#8984; Copy CSS</button><button class="copy-prompt-btn" data-theme="30" title="Copy Style Prompt"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="10" rx="2"/><circle cx="9" cy="16" r="1"/><circle cx="15" cy="16" r="1"/><path d="M12 11V7"/><circle cx="12" cy="5" r="2"/><path d="M3 16H1M21 16h2"/></svg></button></div>
   </article>
 
   <!-- 31 -->
@@ -1277,7 +1277,7 @@ body{font-family:'Space Grotesk','Inter',sans-serif;background:#12121a;color:#e8
       <div class="spanel">&#9658; Process 1337: running // CPU 2% // MEM 128MB</div>
       <input class="sinput" type="text" placeholder="Enter command_">
     </div>
-    <div class="card-actions"><button class="copy-btn" data-theme="31">&#8984; Copy CSS</button><button class="copy-prompt-btn" data-theme="31">&#9998; Copy Style Prompt</button></div>
+    <div class="card-actions"><button class="copy-btn" data-theme="31">&#8984; Copy CSS</button><button class="copy-prompt-btn" data-theme="31" title="Copy Style Prompt"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="10" rx="2"/><circle cx="9" cy="16" r="1"/><circle cx="15" cy="16" r="1"/><path d="M12 11V7"/><circle cx="12" cy="5" r="2"/><path d="M3 16H1M21 16h2"/></svg></button></div>
   </article>
 
   <!-- 32 -->
@@ -1297,7 +1297,7 @@ body{font-family:'Space Grotesk','Inter',sans-serif;background:#12121a;color:#e8
       <div class="spanel"><span>Stats</span><span>Charts</span></div>
       <input class="sinput" type="text" placeholder="Search items&#8230;">
     </div>
-    <div class="card-actions"><button class="copy-btn" data-theme="32">&#8984; Copy CSS</button><button class="copy-prompt-btn" data-theme="32">&#9998; Copy Style Prompt</button></div>
+    <div class="card-actions"><button class="copy-btn" data-theme="32">&#8984; Copy CSS</button><button class="copy-prompt-btn" data-theme="32" title="Copy Style Prompt"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="10" rx="2"/><circle cx="9" cy="16" r="1"/><circle cx="15" cy="16" r="1"/><path d="M12 11V7"/><circle cx="12" cy="5" r="2"/><path d="M3 16H1M21 16h2"/></svg></button></div>
   </article>
 
   <!-- 33 -->
@@ -1317,7 +1317,7 @@ body{font-family:'Space Grotesk','Inter',sans-serif;background:#12121a;color:#e8
       <div class="spanel">Frosted glass card &#8212; content floats above the glow.</div>
       <input class="sinput" type="text" placeholder="Search&#8230;">
     </div>
-    <div class="card-actions"><button class="copy-btn" data-theme="33">&#8984; Copy CSS</button><button class="copy-prompt-btn" data-theme="33">&#9998; Copy Style Prompt</button></div>
+    <div class="card-actions"><button class="copy-btn" data-theme="33">&#8984; Copy CSS</button><button class="copy-prompt-btn" data-theme="33" title="Copy Style Prompt"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="10" rx="2"/><circle cx="9" cy="16" r="1"/><circle cx="15" cy="16" r="1"/><path d="M12 11V7"/><circle cx="12" cy="5" r="2"/><path d="M3 16H1M21 16h2"/></svg></button></div>
   </article>
 
   <!-- 34 -->
@@ -1337,7 +1337,7 @@ body{font-family:'Space Grotesk','Inter',sans-serif;background:#12121a;color:#e8
       <div class="spanel">&#9658; DECRYPT: 5f4dcc3b5aa765d61d8327deb882cf99</div>
       <input class="sinput" type="text" placeholder="Follow the white rabbit_">
     </div>
-    <div class="card-actions"><button class="copy-btn" data-theme="34">&#8984; Copy CSS</button><button class="copy-prompt-btn" data-theme="34">&#9998; Copy Style Prompt</button></div>
+    <div class="card-actions"><button class="copy-btn" data-theme="34">&#8984; Copy CSS</button><button class="copy-prompt-btn" data-theme="34" title="Copy Style Prompt"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="10" rx="2"/><circle cx="9" cy="16" r="1"/><circle cx="15" cy="16" r="1"/><path d="M12 11V7"/><circle cx="12" cy="5" r="2"/><path d="M3 16H1M21 16h2"/></svg></button></div>
   </article>
 
   <!-- 35 -->
@@ -1357,7 +1357,7 @@ body{font-family:'Space Grotesk','Inter',sans-serif;background:#12121a;color:#e8
       <div class="spanel">Fluffy panel &#8212; handle with maximum gentleness and care.</div>
       <input class="sinput" type="text" placeholder="Write something cute&#8230;">
     </div>
-    <div class="card-actions"><button class="copy-btn" data-theme="35">&#8984; Copy CSS</button><button class="copy-prompt-btn" data-theme="35">&#9998; Copy Style Prompt</button></div>
+    <div class="card-actions"><button class="copy-btn" data-theme="35">&#8984; Copy CSS</button><button class="copy-prompt-btn" data-theme="35" title="Copy Style Prompt"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="10" rx="2"/><circle cx="9" cy="16" r="1"/><circle cx="15" cy="16" r="1"/><path d="M12 11V7"/><circle cx="12" cy="5" r="2"/><path d="M3 16H1M21 16h2"/></svg></button></div>
   </article>
 
   <!-- 36 -->
@@ -1377,7 +1377,7 @@ body{font-family:'Space Grotesk','Inter',sans-serif;background:#12121a;color:#e8
       <div class="spanel">Chrome panel &#8212; caught between light and shadow.</div>
       <input class="sinput" type="text" placeholder="Input field&#8230;">
     </div>
-    <div class="card-actions"><button class="copy-btn" data-theme="36">&#8984; Copy CSS</button><button class="copy-prompt-btn" data-theme="36">&#9998; Copy Style Prompt</button></div>
+    <div class="card-actions"><button class="copy-btn" data-theme="36">&#8984; Copy CSS</button><button class="copy-prompt-btn" data-theme="36" title="Copy Style Prompt"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="10" rx="2"/><circle cx="9" cy="16" r="1"/><circle cx="15" cy="16" r="1"/><path d="M12 11V7"/><circle cx="12" cy="5" r="2"/><path d="M3 16H1M21 16h2"/></svg></button></div>
   </article>
 
   <!-- 37 -->
@@ -1397,7 +1397,7 @@ body{font-family:'Space Grotesk','Inter',sans-serif;background:#12121a;color:#e8
       <div class="spanel">-- SPECIFICATION NOTE: All dimensions in millimetres --</div>
       <input class="sinput" type="text" placeholder="ANNOTATION_">
     </div>
-    <div class="card-actions"><button class="copy-btn" data-theme="37">&#8984; Copy CSS</button><button class="copy-prompt-btn" data-theme="37">&#9998; Copy Style Prompt</button></div>
+    <div class="card-actions"><button class="copy-btn" data-theme="37">&#8984; Copy CSS</button><button class="copy-prompt-btn" data-theme="37" title="Copy Style Prompt"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="10" rx="2"/><circle cx="9" cy="16" r="1"/><circle cx="15" cy="16" r="1"/><path d="M12 11V7"/><circle cx="12" cy="5" r="2"/><path d="M3 16H1M21 16h2"/></svg></button></div>
   </article>
 
   <!-- 38 -->
@@ -1417,7 +1417,7 @@ body{font-family:'Space Grotesk','Inter',sans-serif;background:#12121a;color:#e8
       <div class="spanel">SPEECH BUBBLE: &#8220;To the rescue!&#8221;</div>
       <input class="sinput" type="text" placeholder="Narration box text&#8230;">
     </div>
-    <div class="card-actions"><button class="copy-btn" data-theme="38">&#8984; Copy CSS</button><button class="copy-prompt-btn" data-theme="38">&#9998; Copy Style Prompt</button></div>
+    <div class="card-actions"><button class="copy-btn" data-theme="38">&#8984; Copy CSS</button><button class="copy-prompt-btn" data-theme="38" title="Copy Style Prompt"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="10" rx="2"/><circle cx="9" cy="16" r="1"/><circle cx="15" cy="16" r="1"/><path d="M12 11V7"/><circle cx="12" cy="5" r="2"/><path d="M3 16H1M21 16h2"/></svg></button></div>
   </article>
 
   <!-- 39 -->
@@ -1437,7 +1437,7 @@ body{font-family:'Space Grotesk','Inter',sans-serif;background:#12121a;color:#e8
       <div class="spanel">C:\&gt; DIR /W // 12 file(s) // 14,336 bytes free</div>
       <input class="sinput" type="text" placeholder="C:\&gt;_">
     </div>
-    <div class="card-actions"><button class="copy-btn" data-theme="39">&#8984; Copy CSS</button><button class="copy-prompt-btn" data-theme="39">&#9998; Copy Style Prompt</button></div>
+    <div class="card-actions"><button class="copy-btn" data-theme="39">&#8984; Copy CSS</button><button class="copy-prompt-btn" data-theme="39" title="Copy Style Prompt"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="10" rx="2"/><circle cx="9" cy="16" r="1"/><circle cx="15" cy="16" r="1"/><path d="M12 11V7"/><circle cx="12" cy="5" r="2"/><path d="M3 16H1M21 16h2"/></svg></button></div>
   </article>
 
   <!-- 40 -->
@@ -1457,7 +1457,7 @@ body{font-family:'Space Grotesk','Inter',sans-serif;background:#12121a;color:#e8
       <div class="spanel">The sky gradient shifts — violet to amber in twenty breathtaking steps.</div>
       <input class="sinput" type="text" placeholder="Set a reminder&#8230;">
     </div>
-    <div class="card-actions"><button class="copy-btn" data-theme="40">&#8984; Copy CSS</button><button class="copy-prompt-btn" data-theme="40">&#9998; Copy Style Prompt</button></div>
+    <div class="card-actions"><button class="copy-btn" data-theme="40">&#8984; Copy CSS</button><button class="copy-prompt-btn" data-theme="40" title="Copy Style Prompt"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="10" rx="2"/><circle cx="9" cy="16" r="1"/><circle cx="15" cy="16" r="1"/><path d="M12 11V7"/><circle cx="12" cy="5" r="2"/><path d="M3 16H1M21 16h2"/></svg></button></div>
   </article>
 
   <!-- 41 -->
@@ -1477,7 +1477,7 @@ body{font-family:'Space Grotesk','Inter',sans-serif;background:#12121a;color:#e8
       <div class="spanel">Foil panel — color changes with every viewing angle.</div>
       <input class="sinput" type="text" placeholder="Catch the light&#8230;">
     </div>
-    <div class="card-actions"><button class="copy-btn" data-theme="41">&#8984; Copy CSS</button><button class="copy-prompt-btn" data-theme="41">&#9998; Copy Style Prompt</button></div>
+    <div class="card-actions"><button class="copy-btn" data-theme="41">&#8984; Copy CSS</button><button class="copy-prompt-btn" data-theme="41" title="Copy Style Prompt"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="10" rx="2"/><circle cx="9" cy="16" r="1"/><circle cx="15" cy="16" r="1"/><path d="M12 11V7"/><circle cx="12" cy="5" r="2"/><path d="M3 16H1M21 16h2"/></svg></button></div>
   </article>
 
   <!-- 42 -->
@@ -1497,7 +1497,7 @@ body{font-family:'Space Grotesk','Inter',sans-serif;background:#12121a;color:#e8
       <div class="spanel">0000: 89 50 4E 47 0D 0A 1A 0A 00 00 00 0D 49 48 44 52</div>
       <input class="sinput" type="text" placeholder="0x00000000_">
     </div>
-    <div class="card-actions"><button class="copy-btn" data-theme="42">&#8984; Copy CSS</button><button class="copy-prompt-btn" data-theme="42">&#9998; Copy Style Prompt</button></div>
+    <div class="card-actions"><button class="copy-btn" data-theme="42">&#8984; Copy CSS</button><button class="copy-prompt-btn" data-theme="42" title="Copy Style Prompt"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="10" rx="2"/><circle cx="9" cy="16" r="1"/><circle cx="15" cy="16" r="1"/><path d="M12 11V7"/><circle cx="12" cy="5" r="2"/><path d="M3 16H1M21 16h2"/></svg></button></div>
   </article>
 
   <!-- 43 -->
@@ -1517,7 +1517,7 @@ body{font-family:'Space Grotesk','Inter',sans-serif;background:#12121a;color:#e8
       <div class="spanel">&#9135; Bar &amp; Grill &#8212; Est. 1988 &#9135; Neon still glowing strong</div>
       <input class="sinput" type="text" placeholder="Leave a message&#8230;">
     </div>
-    <div class="card-actions"><button class="copy-btn" data-theme="43">&#8984; Copy CSS</button><button class="copy-prompt-btn" data-theme="43">&#9998; Copy Style Prompt</button></div>
+    <div class="card-actions"><button class="copy-btn" data-theme="43">&#8984; Copy CSS</button><button class="copy-prompt-btn" data-theme="43" title="Copy Style Prompt"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="10" rx="2"/><circle cx="9" cy="16" r="1"/><circle cx="15" cy="16" r="1"/><path d="M12 11V7"/><circle cx="12" cy="5" r="2"/><path d="M3 16H1M21 16h2"/></svg></button></div>
   </article>
 
   <!-- 44 -->
@@ -1537,7 +1537,7 @@ body{font-family:'Space Grotesk','Inter',sans-serif;background:#12121a;color:#e8
       <div class="spanel">&#8220;Everyone&#8217;s hiding something in this city. Everyone.&#8221;</div>
       <input class="sinput" type="text" placeholder="File your report&#8230;">
     </div>
-    <div class="card-actions"><button class="copy-btn" data-theme="44">&#8984; Copy CSS</button><button class="copy-prompt-btn" data-theme="44">&#9998; Copy Style Prompt</button></div>
+    <div class="card-actions"><button class="copy-btn" data-theme="44">&#8984; Copy CSS</button><button class="copy-prompt-btn" data-theme="44" title="Copy Style Prompt"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="10" rx="2"/><circle cx="9" cy="16" r="1"/><circle cx="15" cy="16" r="1"/><path d="M12 11V7"/><circle cx="12" cy="5" r="2"/><path d="M3 16H1M21 16h2"/></svg></button></div>
   </article>
 
   <!-- 45 -->
@@ -1557,7 +1557,7 @@ body{font-family:'Space Grotesk','Inter',sans-serif;background:#12121a;color:#e8
       <div class="spanel">&#127807; Coordinates: 51°N 0°W // Canopy density: 94%</div>
       <input class="sinput" type="text" placeholder="Log your sighting&#8230;">
     </div>
-    <div class="card-actions"><button class="copy-btn" data-theme="45">&#8984; Copy CSS</button><button class="copy-prompt-btn" data-theme="45">&#9998; Copy Style Prompt</button></div>
+    <div class="card-actions"><button class="copy-btn" data-theme="45">&#8984; Copy CSS</button><button class="copy-prompt-btn" data-theme="45" title="Copy Style Prompt"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="10" rx="2"/><circle cx="9" cy="16" r="1"/><circle cx="15" cy="16" r="1"/><path d="M12 11V7"/><circle cx="12" cy="5" r="2"/><path d="M3 16H1M21 16h2"/></svg></button></div>
   </article>
 
   <!-- 46 -->
@@ -1577,7 +1577,7 @@ body{font-family:'Space Grotesk','Inter',sans-serif;background:#12121a;color:#e8
       <div class="spanel">&#9634; Thermocline: 400m // Salinity: 35ppt // Visibility: 0m</div>
       <input class="sinput" type="text" placeholder="Log depth reading&#8230;">
     </div>
-    <div class="card-actions"><button class="copy-btn" data-theme="46">&#8984; Copy CSS</button><button class="copy-prompt-btn" data-theme="46">&#9998; Copy Style Prompt</button></div>
+    <div class="card-actions"><button class="copy-btn" data-theme="46">&#8984; Copy CSS</button><button class="copy-prompt-btn" data-theme="46" title="Copy Style Prompt"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="10" rx="2"/><circle cx="9" cy="16" r="1"/><circle cx="15" cy="16" r="1"/><path d="M12 11V7"/><circle cx="12" cy="5" r="2"/><path d="M3 16H1M21 16h2"/></svg></button></div>
   </article>
 
   <!-- 47 -->
@@ -1597,7 +1597,7 @@ body{font-family:'Space Grotesk','Inter',sans-serif;background:#12121a;color:#e8
       <div class="spanel">&#9650; ANOMALY AT GRID REF 7-C // SOURCE TEMP: 312K</div>
       <input class="sinput" type="text" placeholder="QUERY SENSOR_">
     </div>
-    <div class="card-actions"><button class="copy-btn" data-theme="47">&#8984; Copy CSS</button><button class="copy-prompt-btn" data-theme="47">&#9998; Copy Style Prompt</button></div>
+    <div class="card-actions"><button class="copy-btn" data-theme="47">&#8984; Copy CSS</button><button class="copy-prompt-btn" data-theme="47" title="Copy Style Prompt"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="10" rx="2"/><circle cx="9" cy="16" r="1"/><circle cx="15" cy="16" r="1"/><path d="M12 11V7"/><circle cx="12" cy="5" r="2"/><path d="M3 16H1M21 16h2"/></svg></button></div>
   </article>
 
   <!-- 48 -->
@@ -1617,7 +1617,7 @@ body{font-family:'Space Grotesk','Inter',sans-serif;background:#12121a;color:#e8
       <div class="spanel">&#8220;In theory there is no difference between theory and practice.&#8221;</div>
       <input class="sinput" type="text" placeholder="Write on the board&#8230;">
     </div>
-    <div class="card-actions"><button class="copy-btn" data-theme="48">&#8984; Copy CSS</button><button class="copy-prompt-btn" data-theme="48">&#9998; Copy Style Prompt</button></div>
+    <div class="card-actions"><button class="copy-btn" data-theme="48">&#8984; Copy CSS</button><button class="copy-prompt-btn" data-theme="48" title="Copy Style Prompt"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="10" rx="2"/><circle cx="9" cy="16" r="1"/><circle cx="15" cy="16" r="1"/><path d="M12 11V7"/><circle cx="12" cy="5" r="2"/><path d="M3 16H1M21 16h2"/></svg></button></div>
   </article>
 
   <!-- 49 -->
@@ -1637,7 +1637,7 @@ body{font-family:'Space Grotesk','Inter',sans-serif;background:#12121a;color:#e8
       <div class="spanel">&#9654; console.log(&#39;Tokyo Night initialized&#39;) // output: &#10003;</div>
       <input class="sinput" type="text" placeholder="// comment your code&#8230;">
     </div>
-    <div class="card-actions"><button class="copy-btn" data-theme="49">&#8984; Copy CSS</button><button class="copy-prompt-btn" data-theme="49">&#9998; Copy Style Prompt</button></div>
+    <div class="card-actions"><button class="copy-btn" data-theme="49">&#8984; Copy CSS</button><button class="copy-prompt-btn" data-theme="49" title="Copy Style Prompt"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="10" rx="2"/><circle cx="9" cy="16" r="1"/><circle cx="15" cy="16" r="1"/><path d="M12 11V7"/><circle cx="12" cy="5" r="2"/><path d="M3 16H1M21 16h2"/></svg></button></div>
   </article>
 
   <!-- 50 -->
@@ -1657,7 +1657,7 @@ body{font-family:'Space Grotesk','Inter',sans-serif;background:#12121a;color:#e8
       <div class="spanel">&#9670; CHECKPOINT &#8212; LAP TIME: 01:24.88 &#8212; RECORD &#9670;</div>
       <input class="sinput" type="text" placeholder="ENTER INITIALS_">
     </div>
-    <div class="card-actions"><button class="copy-btn" data-theme="50">&#8984; Copy CSS</button><button class="copy-prompt-btn" data-theme="50">&#9998; Copy Style Prompt</button></div>
+    <div class="card-actions"><button class="copy-btn" data-theme="50">&#8984; Copy CSS</button><button class="copy-prompt-btn" data-theme="50" title="Copy Style Prompt"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="10" rx="2"/><circle cx="9" cy="16" r="1"/><circle cx="15" cy="16" r="1"/><path d="M12 11V7"/><circle cx="12" cy="5" r="2"/><path d="M3 16H1M21 16h2"/></svg></button></div>
   </article>
 
   <!-- 51 -->
@@ -1677,7 +1677,7 @@ body{font-family:'Space Grotesk','Inter',sans-serif;background:#12121a;color:#e8
       <div class="spanel">Parchment note — carefully preserved, lovingly restored.</div>
       <input class="sinput" type="text" placeholder="Pen your thoughts&#8230;">
     </div>
-    <div class="card-actions"><button class="copy-btn" data-theme="51">&#8984; Copy CSS</button><button class="copy-prompt-btn" data-theme="51">&#9998; Copy Style Prompt</button></div>
+    <div class="card-actions"><button class="copy-btn" data-theme="51">&#8984; Copy CSS</button><button class="copy-prompt-btn" data-theme="51" title="Copy Style Prompt"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="10" rx="2"/><circle cx="9" cy="16" r="1"/><circle cx="15" cy="16" r="1"/><path d="M12 11V7"/><circle cx="12" cy="5" r="2"/><path d="M3 16H1M21 16h2"/></svg></button></div>
   </article>
 
   <!-- 52 -->
@@ -1697,7 +1697,7 @@ body{font-family:'Space Grotesk','Inter',sans-serif;background:#12121a;color:#e8
       <div class="spanel">&#9881; Pressure gauge reading: 87 PSI // Status: Optimal</div>
       <input class="sinput" type="text" placeholder="Log entry&#8230;">
     </div>
-    <div class="card-actions"><button class="copy-btn" data-theme="52">&#8984; Copy CSS</button><button class="copy-prompt-btn" data-theme="52">&#9998; Copy Style Prompt</button></div>
+    <div class="card-actions"><button class="copy-btn" data-theme="52">&#8984; Copy CSS</button><button class="copy-prompt-btn" data-theme="52" title="Copy Style Prompt"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="10" rx="2"/><circle cx="9" cy="16" r="1"/><circle cx="15" cy="16" r="1"/><path d="M12 11V7"/><circle cx="12" cy="5" r="2"/><path d="M3 16H1M21 16h2"/></svg></button></div>
   </article>
 
   <!-- 53 -->
@@ -1717,7 +1717,7 @@ body{font-family:'Space Grotesk','Inter',sans-serif;background:#12121a;color:#e8
       <div class="spanel">Coordinates: Sector 7G // Luminosity: 4.3x10^26 watts</div>
       <input class="sinput" type="text" placeholder="Set destination&#8230;">
     </div>
-    <div class="card-actions"><button class="copy-btn" data-theme="53">&#8984; Copy CSS</button><button class="copy-prompt-btn" data-theme="53">&#9998; Copy Style Prompt</button></div>
+    <div class="card-actions"><button class="copy-btn" data-theme="53">&#8984; Copy CSS</button><button class="copy-prompt-btn" data-theme="53" title="Copy Style Prompt"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="10" rx="2"/><circle cx="9" cy="16" r="1"/><circle cx="15" cy="16" r="1"/><path d="M12 11V7"/><circle cx="12" cy="5" r="2"/><path d="M3 16H1M21 16h2"/></svg></button></div>
   </article>
 
   <!-- 54 -->
@@ -1737,7 +1737,7 @@ body{font-family:'Space Grotesk','Inter',sans-serif;background:#12121a;color:#e8
       <div class="spanel">Carbon offset: -12 tons // Renewable: 100%</div>
       <input class="sinput" type="text" placeholder="Take action&#8230;">
     </div>
-    <div class="card-actions"><button class="copy-btn" data-theme="54">&#8984; Copy CSS</button><button class="copy-prompt-btn" data-theme="54">&#9998; Copy Style Prompt</button></div>
+    <div class="card-actions"><button class="copy-btn" data-theme="54">&#8984; Copy CSS</button><button class="copy-prompt-btn" data-theme="54" title="Copy Style Prompt"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="10" rx="2"/><circle cx="9" cy="16" r="1"/><circle cx="15" cy="16" r="1"/><path d="M12 11V7"/><circle cx="12" cy="5" r="2"/><path d="M3 16H1M21 16h2"/></svg></button></div>
   </article>
 
   <!-- 55 -->
@@ -1757,7 +1757,7 @@ body{font-family:'Space Grotesk','Inter',sans-serif;background:#12121a;color:#e8
       <div class="spanel">&#9888; WARN: Integrity check failed at 0xFF3A92</div>
       <input class="sinput" type="text" placeholder="[REDACTED]_">
     </div>
-    <div class="card-actions"><button class="copy-btn" data-theme="55">&#8984; Copy CSS</button><button class="copy-prompt-btn" data-theme="55">&#9998; Copy Style Prompt</button></div>
+    <div class="card-actions"><button class="copy-btn" data-theme="55">&#8984; Copy CSS</button><button class="copy-prompt-btn" data-theme="55" title="Copy Style Prompt"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="10" rx="2"/><circle cx="9" cy="16" r="1"/><circle cx="15" cy="16" r="1"/><path d="M12 11V7"/><circle cx="12" cy="5" r="2"/><path d="M3 16H1M21 16h2"/></svg></button></div>
   </article>
 
   <!-- 56 -->
@@ -1777,7 +1777,7 @@ body{font-family:'Space Grotesk','Inter',sans-serif;background:#12121a;color:#e8
       <div class="spanel">&#9733; Premium Collection — Curated since 1847</div>
       <input class="sinput" type="text" placeholder="Inquire here&#8230;">
     </div>
-    <div class="card-actions"><button class="copy-btn" data-theme="56">&#8984; Copy CSS</button><button class="copy-prompt-btn" data-theme="56">&#9998; Copy Style Prompt</button></div>
+    <div class="card-actions"><button class="copy-btn" data-theme="56">&#8984; Copy CSS</button><button class="copy-prompt-btn" data-theme="56" title="Copy Style Prompt"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="10" rx="2"/><circle cx="9" cy="16" r="1"/><circle cx="15" cy="16" r="1"/><path d="M12 11V7"/><circle cx="12" cy="5" r="2"/><path d="M3 16H1M21 16h2"/></svg></button></div>
   </article>
 
   <!-- 57 -->
@@ -1797,7 +1797,7 @@ body{font-family:'Space Grotesk','Inter',sans-serif;background:#12121a;color:#e8
       <div class="spanel">Temperature: -18°C // Ice density: 0.92 g/cm³</div>
       <input class="sinput" type="text" placeholder="Search the ice&#8230;">
     </div>
-    <div class="card-actions"><button class="copy-btn" data-theme="57">&#8984; Copy CSS</button><button class="copy-prompt-btn" data-theme="57">&#9998; Copy Style Prompt</button></div>
+    <div class="card-actions"><button class="copy-btn" data-theme="57">&#8984; Copy CSS</button><button class="copy-prompt-btn" data-theme="57" title="Copy Style Prompt"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="10" rx="2"/><circle cx="9" cy="16" r="1"/><circle cx="15" cy="16" r="1"/><path d="M12 11V7"/><circle cx="12" cy="5" r="2"/><path d="M3 16H1M21 16h2"/></svg></button></div>
   </article>
 
   <!-- 58 -->
@@ -1817,7 +1817,7 @@ body{font-family:'Space Grotesk','Inter',sans-serif;background:#12121a;color:#e8
       <div class="spanel">Location: 25°N 15°E // Humidity: 12% // Wind: Light breeze</div>
       <input class="sinput" type="text" placeholder="Leave your mark&#8230;">
     </div>
-    <div class="card-actions"><button class="copy-btn" data-theme="58">&#8984; Copy CSS</button><button class="copy-prompt-btn" data-theme="58">&#9998; Copy Style Prompt</button></div>
+    <div class="card-actions"><button class="copy-btn" data-theme="58">&#8984; Copy CSS</button><button class="copy-prompt-btn" data-theme="58" title="Copy Style Prompt"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="10" rx="2"/><circle cx="9" cy="16" r="1"/><circle cx="15" cy="16" r="1"/><path d="M12 11V7"/><circle cx="12" cy="5" r="2"/><path d="M3 16H1M21 16h2"/></svg></button></div>
   </article>
 
   <!-- 59 -->
@@ -1837,7 +1837,7 @@ body{font-family:'Space Grotesk','Inter',sans-serif;background:#12121a;color:#e8
       <div class="spanel">Premium Tier // Exclusive Members Only // VIP Access</div>
       <input class="sinput" type="text" placeholder="Enter your desires&#8230;">
     </div>
-    <div class="card-actions"><button class="copy-btn" data-theme="59">&#8984; Copy CSS</button><button class="copy-prompt-btn" data-theme="59">&#9998; Copy Style Prompt</button></div>
+    <div class="card-actions"><button class="copy-btn" data-theme="59">&#8984; Copy CSS</button><button class="copy-prompt-btn" data-theme="59" title="Copy Style Prompt"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="10" rx="2"/><circle cx="9" cy="16" r="1"/><circle cx="15" cy="16" r="1"/><path d="M12 11V7"/><circle cx="12" cy="5" r="2"/><path d="M3 16H1M21 16h2"/></svg></button></div>
   </article>
 
   <!-- 60 -->
@@ -1857,7 +1857,7 @@ body{font-family:'Space Grotesk','Inter',sans-serif;background:#12121a;color:#e8
       <div class="spanel">PROCESSOR: ACTIVE // MEMORY: 99% // STATUS: OPTIMAL</div>
       <input class="sinput" type="text" placeholder="Input command&#8230;">
     </div>
-    <div class="card-actions"><button class="copy-btn" data-theme="60">&#8984; Copy CSS</button><button class="copy-prompt-btn" data-theme="60">&#9998; Copy Style Prompt</button></div>
+    <div class="card-actions"><button class="copy-btn" data-theme="60">&#8984; Copy CSS</button><button class="copy-prompt-btn" data-theme="60" title="Copy Style Prompt"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="10" rx="2"/><circle cx="9" cy="16" r="1"/><circle cx="15" cy="16" r="1"/><path d="M12 11V7"/><circle cx="12" cy="5" r="2"/><path d="M3 16H1M21 16h2"/></svg></button></div>
   </article>
   <!-- 61 -->
   <article class="theme-card" data-category="dark">
@@ -1876,7 +1876,7 @@ body{font-family:'Space Grotesk','Inter',sans-serif;background:#12121a;color:#e8
       <div class="spanel">&#9760; Transylvania &#8212; Est. 1431 // Moon Phase: Full</div>
       <input class="sinput" type="text" placeholder="Confess your sins&#8230;">
     </div>
-    <div class="card-actions"><button class="copy-btn" data-theme="61">&#8984; Copy CSS</button><button class="copy-prompt-btn" data-theme="61">&#9998; Copy Style Prompt</button></div>
+    <div class="card-actions"><button class="copy-btn" data-theme="61">&#8984; Copy CSS</button><button class="copy-prompt-btn" data-theme="61" title="Copy Style Prompt"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="10" rx="2"/><circle cx="9" cy="16" r="1"/><circle cx="15" cy="16" r="1"/><path d="M12 11V7"/><circle cx="12" cy="5" r="2"/><path d="M3 16H1M21 16h2"/></svg></button></div>
   </article>
 
   <!-- 62 -->
@@ -1896,7 +1896,7 @@ body{font-family:'Space Grotesk','Inter',sans-serif;background:#12121a;color:#e8
       <div class="spanel">&#9672; Limited Edition &#8212; Series 001 of 250</div>
       <input class="sinput" type="text" placeholder="Request consultation&#8230;">
     </div>
-    <div class="card-actions"><button class="copy-btn" data-theme="62">&#8984; Copy CSS</button><button class="copy-prompt-btn" data-theme="62">&#9998; Copy Style Prompt</button></div>
+    <div class="card-actions"><button class="copy-btn" data-theme="62">&#8984; Copy CSS</button><button class="copy-prompt-btn" data-theme="62" title="Copy Style Prompt"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="10" rx="2"/><circle cx="9" cy="16" r="1"/><circle cx="15" cy="16" r="1"/><path d="M12 11V7"/><circle cx="12" cy="5" r="2"/><path d="M3 16H1M21 16h2"/></svg></button></div>
   </article>
 
   <!-- 63 -->
@@ -1916,7 +1916,7 @@ body{font-family:'Space Grotesk','Inter',sans-serif;background:#12121a;color:#e8
       <div class="spanel">&#127808; Three pastels, infinite calm</div>
       <input class="sinput" type="text" placeholder="Search softly&#8230;">
     </div>
-    <div class="card-actions"><button class="copy-btn" data-theme="63">&#8984; Copy CSS</button><button class="copy-prompt-btn" data-theme="63">&#9998; Copy Style Prompt</button></div>
+    <div class="card-actions"><button class="copy-btn" data-theme="63">&#8984; Copy CSS</button><button class="copy-prompt-btn" data-theme="63" title="Copy Style Prompt"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="10" rx="2"/><circle cx="9" cy="16" r="1"/><circle cx="15" cy="16" r="1"/><path d="M12 11V7"/><circle cx="12" cy="5" r="2"/><path d="M3 16H1M21 16h2"/></svg></button></div>
   </article>
 
   <!-- 64 -->
@@ -1936,7 +1936,7 @@ body{font-family:'Space Grotesk','Inter',sans-serif;background:#12121a;color:#e8
       <div class="spanel">&#9670; Three axes — one coherent geometry</div>
       <input class="sinput" type="text" placeholder="Map the grid&#8230;">
     </div>
-    <div class="card-actions"><button class="copy-btn" data-theme="64">&#8984; Copy CSS</button><button class="copy-prompt-btn" data-theme="64">&#9998; Copy Style Prompt</button></div>
+    <div class="card-actions"><button class="copy-btn" data-theme="64">&#8984; Copy CSS</button><button class="copy-prompt-btn" data-theme="64" title="Copy Style Prompt"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="10" rx="2"/><circle cx="9" cy="16" r="1"/><circle cx="15" cy="16" r="1"/><path d="M12 11V7"/><circle cx="12" cy="5" r="2"/><path d="M3 16H1M21 16h2"/></svg></button></div>
   </article>
 
   <!-- 65 -->
@@ -1956,7 +1956,7 @@ body{font-family:'Space Grotesk','Inter',sans-serif;background:#12121a;color:#e8
       <div class="spanel">&#9672; Station: Kepler-442b // Surface: Concrete // Atmo: Nebula</div>
       <input class="sinput" type="text" placeholder="Broadcast signal&#8230;">
     </div>
-    <div class="card-actions"><button class="copy-btn" data-theme="65">&#8984; Copy CSS</button><button class="copy-prompt-btn" data-theme="65">&#9998; Copy Style Prompt</button></div>
+    <div class="card-actions"><button class="copy-btn" data-theme="65">&#8984; Copy CSS</button><button class="copy-prompt-btn" data-theme="65" title="Copy Style Prompt"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="10" rx="2"/><circle cx="9" cy="16" r="1"/><circle cx="15" cy="16" r="1"/><path d="M12 11V7"/><circle cx="12" cy="5" r="2"/><path d="M3 16H1M21 16h2"/></svg></button></div>
   </article>
 
 </main>
