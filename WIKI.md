@@ -28,7 +28,7 @@ A detailed technical reference guide for the **Web Dev Samples** project.
    - [Category Filter System](#category-filter-system)
    - [Theme Card Schema](#theme-card-schema)
    - [Copy-CSS Feature](#copy-css-feature)
-   - [All 65 Themes — Individual Breakdown](#all-65-themes--individual-breakdown)
+   - [All 100 Themes — Individual Breakdown](#all-100-themes--individual-breakdown)
 5. [Using the Copy-CSS Feature](#using-the-copy-css-feature)
 6. [Local Development](#local-development)
 7. [Project Structure](#project-structure)
@@ -39,7 +39,7 @@ A detailed technical reference guide for the **Web Dev Samples** project.
 
 **Web Dev Samples** is a curated collection of 13 fully interactive, self-contained website templates built with pure HTML, CSS, and JavaScript — no frameworks, no build tools, no external dependencies. Each template demonstrates a distinct visual identity and includes real working interactions (forms, modals, carts, search, etc.).
 
-The flagship template, **The Theme Atlas** (Site 13), is a comprehensive CSS/design-theme reference library showcasing **65 named design themes**, each with a live sample block, color palette swatches, category filtering, and a one-click copy-CSS button.
+The flagship template, **The Theme Atlas** (Site 13), is a comprehensive CSS/design-theme reference library showcasing **100 named design themes**, each with a live sample block, color palette swatches, category filtering, a one-click copy-CSS button, and a robot-icon AI style prompt button.
 
 ---
 
@@ -59,13 +59,13 @@ The flagship template, **The Theme Atlas** (Site 13), is a comprehensive CSS/des
 | 10 | Law Firm | Corporate | Consultation form, attorney profiles, practice-area cards |
 | 11 | Outdoor Trail Guide | Adventure | Trail cards, package booking modal, SVG elevation chart |
 | 12 | Indie Game Dev | Gaming | CSS glitch hero, gallery lightbox, roadmap timeline |
-| 13 | The Theme Atlas | UI Reference | **65 design themes**, category filter, copy-CSS button |
+| 13 | The Theme Atlas | UI Reference | **100 design themes**, category filter, copy-CSS button, AI style prompt |
 
 ---
 
 ## The Theme Atlas — Full Theme List
 
-### Dark (18 themes)
+### Dark (31 themes)
 
 | # | Theme | Description |
 |---|-------|-------------|
@@ -84,8 +84,28 @@ The flagship template, **The Theme Atlas** (Site 13), is a comprehensive CSS/des
 | 61 | **Vampire** | Gothic crimson on obsidian black, eternal night |
 | 62 | **Luxury Modern** | Obsidian black with gold and silver metallics |
 | 65 | **Cosmic Concrete** | Near-black with dense galaxy star field, nebula glows, and purple accents |
+| 70 | **Corpo Cyber** | Sterile mega-corporation cold navy and electric blue |
+| 71 | **Neon Monsoon** | Rain-drenched Blade Runner neon — hot pink and cyan |
+| 72 | **Biohack Green** | Biotech lab neon lime on biological black |
+| 73 | **Street Chrome** | Gritty mirror-chrome with scorched orange accent |
+| 74 | **Cyber Jade** | East Asian cyberpunk neon jade on deep black |
+| 75 | **Dieselpunk Noir** | 1930s oil-soaked industrial, aged brass on near-black |
+| 78 | **Dieselpunk Military** | WWII olive drab and military amber, diesel grit |
+| 79 | **Steampunk Clockwork** | Burnished copper gears on rich mahogany |
+| 80 | **Steampunk Maritime** | Nautical brass and teal patina on deep ocean navy |
+| 81 | **Steampunk Aether** | Tesla coil violet and amber on purple-black |
+| 85 | **Moonbase Alpha** | Space: 1999 colony grey-blue on space black |
+| 88 | **Biopunk Lab** | Genetically engineered neon lime and vivid purple |
+| 90 | **Lunarpunk** | Moon colony silver and deep blue on space black |
+| 91 | **Technoir Future** | Clinical tech dystopia — rose and cold blue on near-black |
+| 92 | **Post-Apocalyptic Rust** | Scorched rust orange and dust-grey on burned brown |
+| 94 | **Dark Fantasy** | Arcane purple glow and ancient gold on midnight |
+| 95 | **Gothic Victorian** | Mourning lavender and deep violet on black velvet |
+| 97 | **Quantum Grid** | Particle physics teal and blue on void-black grid |
+| 98 | **Cypherpunk** | PGP terminal green on absolute black |
+| 99 | **Midnight Espresso** | Caramel glow and sienna on espresso black |
 
-### Light (9 themes)
+### Light (10 themes)
 
 | # | Theme | Description |
 |---|-------|-------------|
@@ -98,8 +118,9 @@ The flagship template, **The Theme Atlas** (Site 13), is a comprehensive CSS/des
 | 56 | Luxury Gold | Warm gold on cream, sophisticated serif |
 | 57 | Arctic Ice | Crystal-clear cyan and white, frozen water |
 | 63 | **Pastel Bloom** | Flat pastel Light Blue, Light Red, and Light Green — calm, airy, no gradients |
+| 87 | **Solarpunk** | Eco-futurism luminous green and solar gold |
 
-### Retro (7 themes)
+### Retro (11 themes)
 
 | # | Theme | Description |
 |---|-------|-------------|
@@ -110,8 +131,18 @@ The flagship template, **The Theme Atlas** (Site 13), is a comprehensive CSS/des
 | 23 | Grunge Distressed | Dark brown, rough texture, heavy uppercase type |
 | 36 | Chrome Metal | Metallic silver gradient, dark polished button |
 | 50 | Synthwave Racing | 80s arcade neon grid, hot pink and electric purple |
+| 66 | **CassettePunk Lo-Fi** | VHS tape neon pink and cyan on deep navy |
+| 67 | **Walkman Wave** | 80s portable audio — electric orange and teal on indigo |
+| 68 | **C64 Microcomputer** | Commodore 64 purple chassis, phosphor-white text |
+| 69 | **Betamax Static** | Sony Betamax grey static and oxide black |
+| 77 | **Atompunk** | 1950s atomic-age boomerang curves and rocket red |
+| 82 | **Raygun Gothic** | Flash Gordon cobalt blue with chrome silver and rocket red |
+| 83 | **Space Age 1960s** | NASA Apollo-era cream, mission red and cosmic blue |
+| 84 | **Googie Architecture** | Atomic roadside starburst coral and turquoise |
+| 86 | **Populuxe** | 1950s tail-fin coral orange and turquoise on cream |
+| 96 | **Acid House Rave** | 1990s warehouse rave acid yellow and magenta on black |
 
-### Modern (15 themes)
+### Modern (17 themes)
 
 | # | Theme | Description |
 |---|-------|-------------|
@@ -130,15 +161,17 @@ The flagship template, **The Theme Atlas** (Site 13), is a comprehensive CSS/des
 | 54 | Eco Green | Natural greens and soft whites, earth-conscious |
 | 58 | Desert Sunset | Warm sand to burning orange, Sahara palette |
 | 60 | Circuit Board | Dark monochrome with neon-green circuit patterns |
+| 89 | **Nanopunk Crystal** | Crystal-lattice nanotechnology pale blue and deep blue |
+| 100 | **Prismatic Bloom** | Prismatic rainbow bloom through crystal white |
 
-### Artistic (12 themes)
+### Artistic (14 themes)
 
 | # | Theme | Description |
 |---|-------|-------------|
 | 3 | Brutalism | Bold black borders, raw red, newspaper weight |
 | 11 | Memphis Style | Yellow background, black borders, offset shadows |
 | 17 | Bauhaus | Primary colours, geometric shapes, bold rules |
-| 27 | Organic Biomorphic | Blob shapes on organic child elements, flowing curves, nature-inspired forms |
+| 27 | Organic Biomorphic | Blob shapes on organic child elements, flowing curves |
 | 38 | Comic Book | Bold outlines, offset shadows, halftone energy |
 | 40 | Infrared | False-colour thermal palette, heat as hue |
 | 47 | Chalk Blackboard | Dusty chalk marks on deep green slate |
@@ -146,8 +179,10 @@ The flagship template, **The Theme Atlas** (Site 13), is a comprehensive CSS/des
 | 55 | Glitch Art | RGB-shift digital corruption, data-mosh aesthetic |
 | 59 | Velvet Dreams | Deep purples and gold, luxurious velvet texture |
 | 64 | **Cubism** | Isometric grid on deep navy; gold, orange, and teal geometric planes |
+| 76 | **Decopunk Machine** | Art Deco gold filigree over dark plum machinery |
+| 93 | **Neobrutalism** | Bold borders, offset shadows, neon yellow highlights |
 
-### Minimal (6 themes)
+### Minimal (8 themes)
 
 | # | Theme | Description |
 |---|-------|-------------|
@@ -159,8 +194,6 @@ The flagship template, **The Theme Atlas** (Site 13), is a comprehensive CSS/des
 | 24 | Typographic | Oversized type as the primary design element |
 | 30 | Maximalism | Bold gradients, decorative serif, explosive colour |
 | 44 | Noir Detective | Black and white film noir, single red accent |
-| 45 | Dark Forest | Deep layered greens, mossy shadow |
-| 48 | Chalk Blackboard | Dusty chalk on green slate classroom aesthetic |
 
 > **Note:** Theme numbers map to the `data-theme` attribute used by the copy-CSS button.
 
@@ -257,7 +290,7 @@ Web-Dev-Samples/
 │       ├── 10-law-firm/
 │       ├── 11-outdoor-trail-guide/
 │       ├── 12-indie-game-dev/
-│       └── 13-theme-showcase/   ← 65 design themes
+│       └── 13-theme-showcase/   ← 100 design themes
 │           └── index.html
 └── node_modules/
 ```

@@ -5,7 +5,61 @@ Format follows [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ---
 
-## [Unreleased] — 2026-02-26
+## [Unreleased] — 2026-03-18
+
+### Added
+
+#### The Theme Atlas (`docs/sites/13-theme-showcase/`)
+- **35 new themes** expanding the library from **65 to 100 themes**:
+  - **CassettePunk Lo-Fi** (66) — VHS-era tape decks, scanlines, neon pink and cyan on deep navy
+  - **Walkman Wave** (67) — 80s portable audio, electric orange and teal on deep indigo
+  - **C64 Microcomputer** (68) — Commodore 64 medium-purple chassis with phosphor-white text
+  - **Betamax Static** (69) — Sony Betamax grey static and oxide on near-black
+  - **Corpo Cyber** (70) — Sterile mega-corporation cold navy and electric blue
+  - **Neon Monsoon** (71) — Rain-drenched Blade Runner hot-pink and cyan on near-black
+  - **Biohack Green** (72) — Biotech lab neon lime with vivid purple on biological black
+  - **Street Chrome** (73) — Gritty mirror-chrome and scorched orange on off-black
+  - **Cyber Jade** (74) — East Asian cyberpunk neon jade on deep forest black
+  - **Dieselpunk Noir** (75) — 1930s oil-soaked industrial, aged brass on near-black brown
+  - **Decopunk Machine** (76) — Art Deco gold filigree on dark plum industrial machinery
+  - **Atompunk** (77) — 1950s atomic-age boomerang curves, starburst red and sky blue on cream
+  - **Dieselpunk Military** (78) — WWII olive drab and military amber, diesel industrial grit
+  - **Steampunk Clockwork** (79) — Burnished copper gears and mahogany Victorian engineering
+  - **Steampunk Maritime** (80) — Nautical brass instruments and teal patina on deep ocean navy
+  - **Steampunk Aether** (81) — Tesla coil violet and amber gas-lamp warmth on purple-black
+  - **Raygun Gothic** (82) — Flash Gordon cobalt blue with chrome silver and rocket red
+  - **Space Age 1960s** (83) — NASA Apollo-era cream, mission red and cosmic blue
+  - **Googie Architecture** (84) — Atomic roadside starburst coral and turquoise on warm cream
+  - **Moonbase Alpha** (85) — Space: 1999 utilitarian grey-blue on space black
+  - **Populuxe** (86) — 1950s tail-fin coral-orange and turquoise consumer optimism
+  - **Solarpunk** (87) — Eco-futurism luminous green and solar gold on pale mint
+  - **Biopunk Lab** (88) — Genetically engineered neon lime and vivid purple on near-black
+  - **Nanopunk Crystal** (89) — Crystal-lattice nanotechnology pale blue with deep blue and cyan
+  - **Lunarpunk** (90) — Moon colony silver and deep blue on space black
+  - **Technoir Future** (91) — Clinical tech dystopia neon rose and cold blue on near-black
+  - **Post-Apocalyptic Rust** (92) — Scorched rust orange and dust-grey on burned brown-black
+  - **Neobrutalism** (93) — Bold borders, offset shadows, neon yellow highlights on white
+  - **Dark Fantasy** (94) — Arcane purple glow and ancient gold on midnight violet-black
+  - **Gothic Victorian** (95) — Mourning lavender and deep violet on black velvet
+  - **Acid House Rave** (96) — 1990s warehouse rave acid yellow and magenta on pitch black
+  - **Quantum Grid** (97) — Particle physics quantum teal and energy blue on void-black grid
+  - **Cypherpunk** (98) — PGP encrypted terminal green on absolute black
+  - **Midnight Espresso** (99) — Late-night caramel glow and sienna on espresso black
+  - **Prismatic Bloom** (100) — Prismatic spectral rainbow bloom through crystal white
+- Each new theme includes: CSS sample block styles, HTML card with swatches, JS CSS snippet, and JS AI style prompt
+
+### Changed
+
+#### The Theme Atlas (`docs/sites/13-theme-showcase/`)
+- Updated page `<title>` from "65 Web Design Themes" to **"100 Web Design Themes"**
+- Updated header subtitle from "65 web design themes" to **"100 web design themes"**
+- Updated header badge from "65 Themes" to **"100 Themes"**
+- Updated component badge from "290+ Components" to **"490+ Components"**
+- `README.md`: badge and table updated from 65 → **100**
+- `WIKI.md`: all references updated to 100; theme tables expanded with all 35 new themes
+
+---
+
 
 ### Changed
 
