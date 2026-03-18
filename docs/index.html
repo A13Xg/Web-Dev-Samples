@@ -795,17 +795,13 @@
         .copy-prompt-btn {
             display: inline-flex;
             align-items: center;
-            gap: 6px;
-            padding: 8px 16px;
+            justify-content: center;
+            padding: 8px;
             background: rgba(139, 92, 246, 0.1);
             border: 1px solid rgba(139, 92, 246, 0.3);
             border-radius: 10px;
-            font-size: 12px;
-            font-weight: 600;
             color: #c4b5fd;
             transition: all 0.3s ease;
-            font-family: inherit;
-            white-space: nowrap;
             position: relative;
             z-index: 2;
         }
@@ -819,8 +815,8 @@
         }
 
         .copy-prompt-btn svg {
-            width: 14px;
-            height: 14px;
+            width: 18px;
+            height: 18px;
             flex-shrink: 0;
         }
 
@@ -912,9 +908,8 @@
                                 <span class="tech"><span class="short">CSS</span><span class="full">CSS</span></span>
                                 <span class="tech"><span class="short">JS</span><span class="full">JavaScript</span></span>
                             </div>
-                            <button class="copy-prompt-btn" data-site="theme-atlas" onclick="event.preventDefault();event.stopPropagation();copyPrompt(this)">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><rect x="8" y="2" width="8" height="4" rx="1" ry="1"/></svg>
-                                Copy AI Prompt
+                            <button class="copy-prompt-btn" data-site="theme-atlas" onclick="event.preventDefault();event.stopPropagation();copyPrompt(this)" title="Copy AI Prompt">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="10" rx="2"/><circle cx="9" cy="16" r="1"/><circle cx="15" cy="16" r="1"/><path d="M12 11V7"/><circle cx="12" cy="5" r="2"/><path d="M3 16H1M21 16h2"/></svg>
                             </button>
                             <span class="view-btn">
                                 Explore Library
@@ -946,9 +941,8 @@
                                 <span class="tech"><span class="short">CSS</span><span class="full">CSS</span></span>
                                 <span class="tech"><span class="short">JS</span><span class="full">JavaScript</span></span>
                             </div>
-                            <button class="copy-prompt-btn" data-site="indie-game" onclick="event.preventDefault();event.stopPropagation();copyPrompt(this)">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><rect x="8" y="2" width="8" height="4" rx="1" ry="1"/></svg>
-                                Copy AI Prompt
+                            <button class="copy-prompt-btn" data-site="indie-game" onclick="event.preventDefault();event.stopPropagation();copyPrompt(this)" title="Copy AI Prompt">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="10" rx="2"/><circle cx="9" cy="16" r="1"/><circle cx="15" cy="16" r="1"/><path d="M12 11V7"/><circle cx="12" cy="5" r="2"/><path d="M3 16H1M21 16h2"/></svg>
                             </button>
                             <span class="view-btn">
                                 Explore
@@ -981,9 +975,8 @@
                                 <span class="tech"><span class="short">CSS</span><span class="full">CSS</span></span>
                                 <span class="tech"><span class="short">JS</span><span class="full">JavaScript</span></span>
                             </div>
-                            <button class="copy-prompt-btn" data-site="trail-guide" onclick="event.preventDefault();event.stopPropagation();copyPrompt(this)">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><rect x="8" y="2" width="8" height="4" rx="1" ry="1"/></svg>
-                                Copy AI Prompt
+                            <button class="copy-prompt-btn" data-site="trail-guide" onclick="event.preventDefault();event.stopPropagation();copyPrompt(this)" title="Copy AI Prompt">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="10" rx="2"/><circle cx="9" cy="16" r="1"/><circle cx="15" cy="16" r="1"/><path d="M12 11V7"/><circle cx="12" cy="5" r="2"/><path d="M3 16H1M21 16h2"/></svg>
                             </button>
                             <span class="view-btn">
                                 Explore
@@ -1016,9 +1009,8 @@
                                 <span class="tech"><span class="short">CSS</span><span class="full">CSS</span></span>
                                 <span class="tech"><span class="short">JS</span><span class="full">JavaScript</span></span>
                             </div>
-                            <button class="copy-prompt-btn" data-site="portfolio" onclick="event.preventDefault();event.stopPropagation();copyPrompt(this)">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><rect x="8" y="2" width="8" height="4" rx="1" ry="1"/></svg>
-                                Copy AI Prompt
+                            <button class="copy-prompt-btn" data-site="portfolio" onclick="event.preventDefault();event.stopPropagation();copyPrompt(this)" title="Copy AI Prompt">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="10" rx="2"/><circle cx="9" cy="16" r="1"/><circle cx="15" cy="16" r="1"/><path d="M12 11V7"/><circle cx="12" cy="5" r="2"/><path d="M3 16H1M21 16h2"/></svg>
                             </button>
                             <span class="view-btn">
                                 Explore
@@ -1050,9 +1042,8 @@
                                 <span class="tech"><span class="short">CSS</span><span class="full">CSS</span></span>
                                 <span class="tech"><span class="short">JS</span><span class="full">JavaScript</span></span>
                             </div>
-                            <button class="copy-prompt-btn" data-site="restaurant" onclick="event.preventDefault();event.stopPropagation();copyPrompt(this)">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><rect x="8" y="2" width="8" height="4" rx="1" ry="1"/></svg>
-                                Copy AI Prompt
+                            <button class="copy-prompt-btn" data-site="restaurant" onclick="event.preventDefault();event.stopPropagation();copyPrompt(this)" title="Copy AI Prompt">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="10" rx="2"/><circle cx="9" cy="16" r="1"/><circle cx="15" cy="16" r="1"/><path d="M12 11V7"/><circle cx="12" cy="5" r="2"/><path d="M3 16H1M21 16h2"/></svg>
                             </button>
                             <span class="view-btn">
                                 Explore
@@ -1084,9 +1075,8 @@
                                 <span class="tech"><span class="short">CSS</span><span class="full">CSS</span></span>
                                 <span class="tech"><span class="short">JS</span><span class="full">JavaScript</span></span>
                             </div>
-                            <button class="copy-prompt-btn" data-site="tech-startup" onclick="event.preventDefault();event.stopPropagation();copyPrompt(this)">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><rect x="8" y="2" width="8" height="4" rx="1" ry="1"/></svg>
-                                Copy AI Prompt
+                            <button class="copy-prompt-btn" data-site="tech-startup" onclick="event.preventDefault();event.stopPropagation();copyPrompt(this)" title="Copy AI Prompt">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="10" rx="2"/><circle cx="9" cy="16" r="1"/><circle cx="15" cy="16" r="1"/><path d="M12 11V7"/><circle cx="12" cy="5" r="2"/><path d="M3 16H1M21 16h2"/></svg>
                             </button>
                             <span class="view-btn">
                                 Explore
@@ -1119,9 +1109,8 @@
                                 <span class="tech"><span class="short">CSS</span><span class="full">CSS</span></span>
                                 <span class="tech"><span class="short">JS</span><span class="full">JavaScript</span></span>
                             </div>
-                            <button class="copy-prompt-btn" data-site="fashion-ecommerce" onclick="event.preventDefault();event.stopPropagation();copyPrompt(this)">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><rect x="8" y="2" width="8" height="4" rx="1" ry="1"/></svg>
-                                Copy AI Prompt
+                            <button class="copy-prompt-btn" data-site="fashion-ecommerce" onclick="event.preventDefault();event.stopPropagation();copyPrompt(this)" title="Copy AI Prompt">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="10" rx="2"/><circle cx="9" cy="16" r="1"/><circle cx="15" cy="16" r="1"/><path d="M12 11V7"/><circle cx="12" cy="5" r="2"/><path d="M3 16H1M21 16h2"/></svg>
                             </button>
                             <span class="view-btn">
                                 Explore
@@ -1153,9 +1142,8 @@
                                 <span class="tech"><span class="short">CSS</span><span class="full">CSS</span></span>
                                 <span class="tech"><span class="short">JS</span><span class="full">JavaScript</span></span>
                             </div>
-                            <button class="copy-prompt-btn" data-site="travel" onclick="event.preventDefault();event.stopPropagation();copyPrompt(this)">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><rect x="8" y="2" width="8" height="4" rx="1" ry="1"/></svg>
-                                Copy AI Prompt
+                            <button class="copy-prompt-btn" data-site="travel" onclick="event.preventDefault();event.stopPropagation();copyPrompt(this)" title="Copy AI Prompt">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="10" rx="2"/><circle cx="9" cy="16" r="1"/><circle cx="15" cy="16" r="1"/><path d="M12 11V7"/><circle cx="12" cy="5" r="2"/><path d="M3 16H1M21 16h2"/></svg>
                             </button>
                             <span class="view-btn">
                                 Explore
@@ -1187,9 +1175,8 @@
                                 <span class="tech"><span class="short">CSS</span><span class="full">CSS</span></span>
                                 <span class="tech"><span class="short">JS</span><span class="full">JavaScript</span></span>
                             </div>
-                            <button class="copy-prompt-btn" data-site="fitness" onclick="event.preventDefault();event.stopPropagation();copyPrompt(this)">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><rect x="8" y="2" width="8" height="4" rx="1" ry="1"/></svg>
-                                Copy AI Prompt
+                            <button class="copy-prompt-btn" data-site="fitness" onclick="event.preventDefault();event.stopPropagation();copyPrompt(this)" title="Copy AI Prompt">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="10" rx="2"/><circle cx="9" cy="16" r="1"/><circle cx="15" cy="16" r="1"/><path d="M12 11V7"/><circle cx="12" cy="5" r="2"/><path d="M3 16H1M21 16h2"/></svg>
                             </button>
                             <span class="view-btn">
                                 Explore
@@ -1221,9 +1208,8 @@
                                 <span class="tech"><span class="short">CSS</span><span class="full">CSS</span></span>
                                 <span class="tech"><span class="short">JS</span><span class="full">JavaScript</span></span>
                             </div>
-                            <button class="copy-prompt-btn" data-site="agency" onclick="event.preventDefault();event.stopPropagation();copyPrompt(this)">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><rect x="8" y="2" width="8" height="4" rx="1" ry="1"/></svg>
-                                Copy AI Prompt
+                            <button class="copy-prompt-btn" data-site="agency" onclick="event.preventDefault();event.stopPropagation();copyPrompt(this)" title="Copy AI Prompt">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="10" rx="2"/><circle cx="9" cy="16" r="1"/><circle cx="15" cy="16" r="1"/><path d="M12 11V7"/><circle cx="12" cy="5" r="2"/><path d="M3 16H1M21 16h2"/></svg>
                             </button>
                             <span class="view-btn">
                                 Explore
@@ -1255,9 +1241,8 @@
                                 <span class="tech"><span class="short">CSS</span><span class="full">CSS</span></span>
                                 <span class="tech"><span class="short">JS</span><span class="full">JavaScript</span></span>
                             </div>
-                            <button class="copy-prompt-btn" data-site="news-magazine" onclick="event.preventDefault();event.stopPropagation();copyPrompt(this)">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><rect x="8" y="2" width="8" height="4" rx="1" ry="1"/></svg>
-                                Copy AI Prompt
+                            <button class="copy-prompt-btn" data-site="news-magazine" onclick="event.preventDefault();event.stopPropagation();copyPrompt(this)" title="Copy AI Prompt">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="10" rx="2"/><circle cx="9" cy="16" r="1"/><circle cx="15" cy="16" r="1"/><path d="M12 11V7"/><circle cx="12" cy="5" r="2"/><path d="M3 16H1M21 16h2"/></svg>
                             </button>
                             <span class="view-btn">
                                 Explore
@@ -1290,9 +1275,8 @@
                                 <span class="tech"><span class="short">CSS</span><span class="full">CSS</span></span>
                                 <span class="tech"><span class="short">JS</span><span class="full">JavaScript</span></span>
                             </div>
-                            <button class="copy-prompt-btn" data-site="music-festival" onclick="event.preventDefault();event.stopPropagation();copyPrompt(this)">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><rect x="8" y="2" width="8" height="4" rx="1" ry="1"/></svg>
-                                Copy AI Prompt
+                            <button class="copy-prompt-btn" data-site="music-festival" onclick="event.preventDefault();event.stopPropagation();copyPrompt(this)" title="Copy AI Prompt">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="10" rx="2"/><circle cx="9" cy="16" r="1"/><circle cx="15" cy="16" r="1"/><path d="M12 11V7"/><circle cx="12" cy="5" r="2"/><path d="M3 16H1M21 16h2"/></svg>
                             </button>
                             <span class="view-btn">
                                 Explore
@@ -1325,9 +1309,8 @@
                                 <span class="tech"><span class="short">CSS</span><span class="full">CSS</span></span>
                                 <span class="tech"><span class="short">JS</span><span class="full">JavaScript</span></span>
                             </div>
-                            <button class="copy-prompt-btn" data-site="law-firm" onclick="event.preventDefault();event.stopPropagation();copyPrompt(this)">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><rect x="8" y="2" width="8" height="4" rx="1" ry="1"/></svg>
-                                Copy AI Prompt
+                            <button class="copy-prompt-btn" data-site="law-firm" onclick="event.preventDefault();event.stopPropagation();copyPrompt(this)" title="Copy AI Prompt">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="10" rx="2"/><circle cx="9" cy="16" r="1"/><circle cx="15" cy="16" r="1"/><path d="M12 11V7"/><circle cx="12" cy="5" r="2"/><path d="M3 16H1M21 16h2"/></svg>
                             </button>
                             <span class="view-btn">
                                 Explore
