@@ -2,7 +2,7 @@
 
 <div align="center">
 
-![Templates](https://img.shields.io/badge/Templates-65-blueviolet.svg)
+![Templates](https://img.shields.io/badge/Templates-100-blueviolet.svg)
 ![Status](https://img.shields.io/badge/Status-Active-success.svg)
 [![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Live-brightgreen.svg)](https://a13xg.github.io/Web-Dev-Samples/)
 [![Changelog](https://img.shields.io/badge/Changelog-View-informational.svg)](CHANGELOG.md)
@@ -40,7 +40,7 @@ A curated collection of **13 fully interactive, self-contained website templates
 |---|------|----------|------------|
 | 11 | **Outdoor Trail Guide** | Adventure | Trail cards with difficulty ratings, package booking modal with confirmation, accordion trail guide, SVG elevation chart, weather widget |
 | 12 | **Indie Game Dev** | Gaming | Cyberpunk glitch hero, CSS-art gallery with lightbox, devlog, roadmap timeline, working email wishlist form |
-| 13 | **The Theme Atlas** | UI Reference | 65 named design themes each with live sample, color swatches, category filter, copy-CSS button |
+| 13 | **The Theme Atlas** | UI Reference | 100 named design themes each with live sample, color swatches, category filter, copy-CSS button, and AI style prompt |
 
 ### Original Collection
 
